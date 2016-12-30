@@ -35,6 +35,9 @@ public class JavaProjekt_switchen {
             case 9:
                 System.out.println("September");
                 break;
+            case 10:
+                System.out.println("Oktober");
+                break;
         }
     
     }
