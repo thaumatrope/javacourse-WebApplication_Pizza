@@ -16,7 +16,7 @@ import java.util.TreeSet;
 public class LottoKlasse {
     private Set<Integer> mySet;
     
-    private String myString:
+    private String myString;
 
     
 
