@@ -1,7 +1,7 @@
 <%-- 
-    Document   : index
-    Created on : 29.12.2016, 12:16:08
-    Author     : User704
+    Document   : bestellung
+    Created on : Jan 3, 2017, 8:35:36 AM
+    Author     : John Westfield
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -68,15 +68,7 @@
                         
                     </fieldset>                    
                     
-                    <br><hr><br>
-                     
-                    <select name="pizza">
-                        <option>Pizza Tonno</option>
-                        <option>Pizza Diavolo</option>
-                        <option>Pizza Hawaii</option>
-                        <option>Pizza Calzone</option>
-                        <option>Pizza Quattro Stagioni</option>                        
-                    </select>
+                    <br><hr><br>                  
                     
                     <table border="0" style="table-layout:fixed">                        
                         <tr>
