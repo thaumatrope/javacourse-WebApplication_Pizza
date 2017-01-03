@@ -7,7 +7,6 @@
 <%@page import="com.westfield.pizza.Pizza"%>
 <%@page import="com.westfield.pizza.PizzaService"%>
 <%@page import="java.util.List"%>
-<%@page import="org.json.JSONArray"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <jsp:useBean id="pizzaService" class="com.westfield.pizza.PizzaService" scope="application"></jsp:useBean> 
@@ -77,7 +76,13 @@
                 
                  
                  
-            }           
+            }       
+            
+            function add_item(){
+            
+            
+            
+            }
 
             function send(){  
                 var xhr = new XMLHttpRequest();
@@ -119,7 +124,10 @@
                             </th>
                             <th>
                                 Gesamtpreis
-                            </th>                             
+                            </th>  
+                            <th style="width: 80px"> 
+                                
+                            </th>  
                             
                          </tr>
                         <tr>
@@ -133,14 +141,19 @@
                                 }
                             %>  
                                      
-                                </select>
+                            </select>
                             </td>
                             <td id="einzelpreis">
 
                             </td>
-                             <td id="gesamtpreis">
+                            <td id="gesamtpreis">
 
                             </td>
+                            <td style="">
+                                <button id="add" value="Hinzufügen" onclick="add_item()" />
+
+                            </td>
+                            
                             
                            
                             
@@ -148,7 +161,14 @@
                         
                         
                     </table> 
-                    
+                    <br><hr><br>        
+                    <div>
+                        
+                        
+                        
+                        
+                        
+                    </div>
                     <br><hr><br>                  
                     
                     <table border="0" style="table-layout:fixed">                        
