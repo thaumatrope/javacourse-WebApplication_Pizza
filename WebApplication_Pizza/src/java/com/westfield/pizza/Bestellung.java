@@ -12,8 +12,19 @@ package com.westfield.pizza;
 public class Bestellung {
     
     private int menge;
-    private Pizza myPizza;
     private int position;
+    private String sorte;
+
+    public String getSorte() {
+        return sorte;
+    }
+
+    public void setSorte(String sorte) {
+        this.sorte = sorte;
+        System.out.println("Bestellung: sorte gesetzt - " + this.sorte);
+    }
+    
+    
 
     public int getPosition() {
         return position;
@@ -29,14 +40,8 @@ public class Bestellung {
 
     public void setMenge(int menge) {
         this.menge = menge;
+        System.out.println("Bestellung: menge gesetzt - " + this.menge);
     }
 
-    public Pizza getMyPizza() {
-        return myPizza;
-    }
-
-    public void setMyPizza(Pizza myPizza) {
-        this.myPizza = myPizza;
-    }
-    
+   
 }

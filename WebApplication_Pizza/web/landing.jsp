@@ -34,42 +34,35 @@
                change();
             };
             
-            function toNumberString(num) { 
-                if (Number.isInteger(num)) { 
-                  return num + ".00"
-                } else {
-                  return num.toString(); 
-                }
-            }
-                     
+                               
             function change(){
                 
                 var menge = parseInt(document.getElementById("select_menge").value);
                 var selection = document.getElementById("select_sorte").value;
                   
-                if (selection == "<%= pizzaService.getPizzaName()[0] %>") {
-                    document.getElementById("einzelpreis").innerHTML = "<%= pizzaService.getPizzaPreise()[0] %>".replace(',','.');
-                    var temp = "<%= pizzaService.getPizzaPreise()[0] %>".replace(',','.');
+                if (selection == "<%= Pizza.getPizzaAngebot().get(0).getName() %>") {
+                    document.getElementById("einzelpreis").innerHTML = "<%= Pizza.getPizzaAngebot().get(0).getPreisFormatted() %>";
+                    var temp = "<%= Pizza.getPizzaAngebot().get(0).getPreis() %>";
                     document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();           
 
-                } else if (selection == "<%= pizzaService.getPizzaName()[1] %>") {
-                    document.getElementById("einzelpreis").innerHTML  = "<%= pizzaService.getPizzaPreise()[1] %>".replace(',','.');
-                    var temp = "<%= pizzaService.getPizzaPreise()[1] %>".replace(',','.');
+                } else if (selection == "<%= Pizza.getPizzaAngebot().get(1).getName() %>") {
+                    document.getElementById("einzelpreis").innerHTML  = "<%= Pizza.getPizzaAngebot().get(1).getPreisFormatted() %>";
+                    var temp = "<%= Pizza.getPizzaAngebot().get(1).getPreis() %>";
                     document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
 
-                } else if (selection == "<%= pizzaService.getPizzaName()[2] %>") {
-                    document.getElementById("einzelpreis").innerHTML = "<%= pizzaService.getPizzaPreise()[2] %>".replace(',','.');
-                    var temp = "<%= pizzaService.getPizzaPreise()[2] %>".replace(',','.');
+                } else if (selection == "<%= Pizza.getPizzaAngebot().get(2).getName() %>") {
+                    document.getElementById("einzelpreis").innerHTML = "<%= Pizza.getPizzaAngebot().get(2).getPreisFormatted() %>";
+                    var temp = "<%= Pizza.getPizzaAngebot().get(2).getPreis() %>";
                     document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
 
-                } else if (selection == "<%= pizzaService.getPizzaName()[3] %>") {
-                    document.getElementById("einzelpreis").innerHTML = "<%= pizzaService.getPizzaPreise()[3] %>".replace(',','.'); 
-                    var temp = "<%= pizzaService.getPizzaPreise()[3] %>".replace(',','.');
+                } else if (selection == "<%= Pizza.getPizzaAngebot().get(3).getName() %>") {
+                    document.getElementById("einzelpreis").innerHTML = "<%= Pizza.getPizzaAngebot().get(3).getPreisFormatted() %>"; 
+                    var temp = "<%= Pizza.getPizzaAngebot().get(3).getPreis() %>";
                     document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
 
-                } else if (selection == "<%= pizzaService.getPizzaName()[4] %>") {
-                    document.getElementById("einzelpreis").innerHTML = "<%= pizzaService.getPizzaPreise()[4] %>".replace(',','.'); 
-                    var temp = "<%= pizzaService.getPizzaPreise()[4] %>".replace(',','.');
+                } else if (selection == "<%= Pizza.getPizzaAngebot().get(4).getName() %>") {
+                    document.getElementById("einzelpreis").innerHTML = "<%= Pizza.getPizzaAngebot().get(4).getPreisFormatted() %>"; 
+                    var temp = "<%= Pizza.getPizzaAngebot().get(4).getPreis() %>";
                     document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
 
                 }
@@ -80,23 +73,26 @@
             
             function add_item(){
             
-            
-            
+                var query = 'menge='+document.getElementById("select_menge").value+'&sorte='+document.getElementById("select_sorte").value;
+                alert(query);
+                send(query);
             }
 
-            function send(){  
-                var xhr = new XMLHttpRequest();
-                xhr.open("POST", '/order_update.jsp', true);
+            function send(query){  
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("POST", '<%= request.getContextPath() + "/order_update.jsp" %>', true);
 
                 //Send the proper header information along with the request
-                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.setRequestHeader("Content-length", query.length);
+                xmlhttp.setRequestHeader("Connection", "close");
 
-                xhr.onreadystatechange = function() {//Call a function when the state changes.
-                    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
-                        // Request finished. Do processing here.
+                xmlhttp.onreadystatechange = function() {//Call a function when the state changes.
+                    if(xmlhttp.readyState == XMLHttpRequest.DONE && xmlhttp.status == 200) {
+                        document.getElementById("bestellungen").innerHTML = xmlhttp.responseText;
                     }
                 }
-                xhr.send(""); 
+                xmlhttp.send(query); 
             }
             
             
@@ -134,7 +130,7 @@
                             <td> <input style="width: 50px; text-align: right" type="number" min="1" max="10" value="1" id="select_menge" onchange="change()"> </td>
                             <td> <select id="select_sorte" name="pizza" onchange="change();">                                  
                             <%      
-                                List<Pizza> sorten = pizzaService.getPizzaAngebot();
+                                List<Pizza> sorten = Pizza.getPizzaAngebot();
                                 for(Pizza myPizza : sorten){
                                     out.print("<option value=\"" + myPizza.getName() + "\">"+ myPizza.getName() + "</option>");
                                 
@@ -149,8 +145,8 @@
                             <td id="gesamtpreis">
 
                             </td>
-                            <td style="">
-                                <button id="add" value="Hinzufügen" onclick="add_item()" />
+                            <td style="width: 80px">
+                                <button id="add" onclick="add_item()" />Hinzufügen</button>
 
                             </td>
                             
@@ -162,7 +158,7 @@
                         
                     </table> 
                     <br><hr><br>        
-                    <div>
+                    <div id="bestellungen">
                         
                         
                         

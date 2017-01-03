@@ -30,65 +30,31 @@ import java.util.logging.Logger;
  */
 public class PizzaService implements AutoCloseable {
     
-    private List<Pizza> pizzaAngebot;
     private Set<Integer> kundennummern;
     private final String saveFile = "Kundennummern.sav";
-    private String[] pizzaPreise;
-    private String[] pizzaName;
+
 
      public PizzaService(){
-        pizzaAngebot = new ArrayList();        
-        pizzaAngebot.add(new Pizza("Pizza Tonno", 13.50));
-        pizzaAngebot.add(new Pizza("Pizza Diavolo", 6.66));
-        pizzaAngebot.add(new Pizza("Pizza Hawaii", 12.30));
-        pizzaAngebot.add(new Pizza("Pizza Calzone", 11.00));
-        pizzaAngebot.add(new Pizza("Pizza Quattro Stagioni", 14.00));
+                
+        new Pizza("Pizza Tonno", 13.50);
+        new Pizza("Pizza Diavolo", 6.66);
+        new Pizza("Pizza Hawaii", 12.30);
+        new Pizza("Pizza Calzone", 11.00);
+        new Pizza("Pizza Quattro Stagioni", 14.00);
          
-        pizzaName = new String[pizzaAngebot.size()];  
-        pizzaName[0] = pizzaAngebot.get(0).getName();
-        pizzaName[1] = pizzaAngebot.get(1).getName(); 
-        pizzaName[2] = pizzaAngebot.get(2).getName();
-        pizzaName[3] = pizzaAngebot.get(3).getName();
-        pizzaName[4] = pizzaAngebot.get(4).getName();
+       
+        //pizzaName[0] = pizzaAngebot.get(0).getName();
+       
         
-        pizzaPreise = new String[pizzaAngebot.size()]; 
-        NumberFormat formatter = new DecimalFormat(".00");  
-        pizzaPreise[0] = formatter.format(pizzaAngebot.get(0).getPreis());
-        pizzaPreise[1] = formatter.format(pizzaAngebot.get(1).getPreis()); 
-        pizzaPreise[2] = formatter.format(pizzaAngebot.get(2).getPreis());
-        pizzaPreise[3] = formatter.format(pizzaAngebot.get(3).getPreis());
-        pizzaPreise[4] = formatter.format(pizzaAngebot.get(4).getPreis());
+        //pizzaPreise = new String[pizzaAngebot.size()]; 
+       
+      
         
         this.checkAndLoadKundennummern();
         
     }
 
-    public String[] getPizzaPreise() {
-        return pizzaPreise;
-    }
-
-    public void setPizzaPreise(String[] pizzaPreise) {
-        this.pizzaPreise = pizzaPreise;
-    }
-
-    public String[] getPizzaName() {
-        return pizzaName;
-    }
-
-    public void setPizzaName(String[] pizzaName) {
-        this.pizzaName = pizzaName;
-    }
-     
-     
-    public List<Pizza> getPizzaAngebot() {
-        return pizzaAngebot;
-    }
-
-    public void setPizzaAngebot(List<Pizza> pizzaAngebot) {
-        this.pizzaAngebot = pizzaAngebot;
-    }
-    
-   
+  
 
     public Set<Integer> getKundennummern() {
         return kundennummern;
@@ -146,5 +112,15 @@ public class PizzaService implements AutoCloseable {
         System.out.println("Kundennummern gespeichert.");
     }
     
+    
+    
+    
+    
+    private void addPosition2Lieferung(Lieferung lieferung, Bestellung bestellung){
+        
+        
+        
+        
+    }
     
 }

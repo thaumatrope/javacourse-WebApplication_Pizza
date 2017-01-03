@@ -18,11 +18,7 @@ public class Lieferung {
 
     public ArrayList<Bestellung> getMyBestellungen() {
         return myBestellungen;
-    }
-
-    public void setMyBestellungen(ArrayList<Bestellung> myBestellungen) {
-        this.myBestellungen = myBestellungen;
-    }
+    }  
 
     public int getBestellnummer() {
         return bestellnummer;
@@ -30,11 +26,9 @@ public class Lieferung {
 
     public void setBestellnummer(int bestellnummer) {
         this.bestellnummer = bestellnummer;
-    }
+    }    
     
-    
-    public Lieferung(){
-        
+    public Lieferung(){        
         myBestellungen = new ArrayList();
     }
     
