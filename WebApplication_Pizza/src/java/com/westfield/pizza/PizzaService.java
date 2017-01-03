@@ -9,10 +9,12 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -122,5 +124,17 @@ public class PizzaService implements AutoCloseable {
         
         
     }
+    
+    public String printPreisFormatted(double preis) {
+        
+        DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.GERMAN);
+        otherSymbols.setDecimalSeparator('.');
+        otherSymbols.setGroupingSeparator('.'); 
+        NumberFormat formatter = new DecimalFormat(".00", otherSymbols);
+        
+        //NumberFormat formatter = new DecimalFormat();        
+        return formatter.format(preis);
+  
+    }  
     
 }

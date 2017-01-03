@@ -12,8 +12,18 @@ package com.westfield.pizza;
 public class Bestellung {
     
     private int menge;
+    private String preis;
     private int position;
     private String sorte;
+
+    public String getPreis() {
+        return preis;
+    }
+
+    public void setPreis(String preis) {        
+        this.preis = preis;
+        System.out.println("Bestellung: preis gesetzt - " + this.preis);
+    }   
 
     public String getSorte() {
         return sorte;

@@ -73,7 +73,10 @@
             
             function add_item(){
             
-                var query = 'menge='+document.getElementById("select_menge").value+'&sorte='+document.getElementById("select_sorte").value;
+                var query = 'menge='+document.getElementById("select_menge").value +
+                        '&sorte='+document.getElementById("select_sorte").value +
+                        '&preis='+document.getElementById("gesamtpreis").innerHTML;
+                
                 send(query);
             }
 
