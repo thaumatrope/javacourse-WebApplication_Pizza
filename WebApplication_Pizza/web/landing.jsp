@@ -74,24 +74,25 @@
             function add_item(){
             
                 var query = 'menge='+document.getElementById("select_menge").value+'&sorte='+document.getElementById("select_sorte").value;
-                alert(query);
                 send(query);
             }
 
-            function send(query){  
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open("POST", '<%= request.getContextPath() + "/order_update.jsp" %>', true);
-
+            function send(query){              
+                
+                var xmlhttp = new XMLHttpRequest();    
+                xmlhttp.open("POST", 'order_update.jsp', true);
+                  
                 //Send the proper header information along with the request
                 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xmlhttp.setRequestHeader("Content-length", query.length);
-                xmlhttp.setRequestHeader("Connection", "close");
-
+                xmlhttp.setRequestHeader("Connection", "close");                
+             
                 xmlhttp.onreadystatechange = function() {//Call a function when the state changes.
-                    if(xmlhttp.readyState == XMLHttpRequest.DONE && xmlhttp.status == 200) {
+                    if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        //var text = xmlhttp.responseText;                    
                         document.getElementById("bestellungen").innerHTML = xmlhttp.responseText;
                     }
-                }
+                }                
                 xmlhttp.send(query); 
             }
             
@@ -103,10 +104,7 @@
         <div>
          
             <fieldset style="width:850px;">
-                <legend>Bitte ausfüllen:</legend><br>
-                
-                
-                <form action="bestellung" method="post">                  
+                <legend>Bitte ausfüllen:</legend><br>                                
                     <table> 
                          <tr>
                             <th>
@@ -159,25 +157,22 @@
                     </table> 
                     <br><hr><br>        
                     <div id="bestellungen">
-                        
-                        
+                     
                         
                         
                         
                     </div>
                     <br><hr><br>                  
-                    
-                    <table border="0" style="table-layout:fixed">                        
-                        <tr>
-                            <td style="width:80px;"><input type="submit" value="Abschicken"></td>
-                            <td style="width:150px;"></td>
-                            <td style="width:80px;"></td>
-                            <td style="width:150px;"></td>
-                        </tr>
-                   
-                    </table> 
-                    
-                </form> 
+                    <form action="bestellung.jsp" method="post"> 
+                        <table border="0" style="table-layout:fixed">                        
+                            <tr>
+                                <td style="width:80px;"><input type="submit" value="Abschicken"></td>
+                                <td style="width:150px;"></td>
+                                <td style="width:80px;"></td>
+                                <td style="width:150px;"></td>
+                            </tr>
+                        </table>                     
+                    </form> 
             </fieldset>
         </div>
     </body>
