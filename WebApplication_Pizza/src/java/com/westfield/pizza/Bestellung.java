@@ -11,6 +11,23 @@ package com.westfield.pizza;
  */
 public class Bestellung {
     
-    private int bestellnummer;
+    private int menge;
+    private Pizza myPizza;
+
+    public int getMenge() {
+        return menge;
+    }
+
+    public void setMenge(int menge) {
+        this.menge = menge;
+    }
+
+    public Pizza getMyPizza() {
+        return myPizza;
+    }
+
+    public void setMyPizza(Pizza myPizza) {
+        this.myPizza = myPizza;
+    }
     
 }

@@ -5,11 +5,37 @@
  */
 package com.westfield.pizza;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author jwest
  */
 public class Lieferung {
     
+    private ArrayList<Bestellung> myBestellungen;
+    private int bestellnummer;
+
+    public ArrayList<Bestellung> getMyBestellungen() {
+        return myBestellungen;
+    }
+
+    public void setMyBestellungen(ArrayList<Bestellung> myBestellungen) {
+        this.myBestellungen = myBestellungen;
+    }
+
+    public int getBestellnummer() {
+        return bestellnummer;
+    }
+
+    public void setBestellnummer(int bestellnummer) {
+        this.bestellnummer = bestellnummer;
+    }
+    
+    
+    public Lieferung(){
+        
+        myBestellungen = new ArrayList();
+    }
     
 }

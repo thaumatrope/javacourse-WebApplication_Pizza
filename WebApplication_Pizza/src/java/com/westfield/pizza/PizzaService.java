@@ -17,6 +17,14 @@ import java.util.List;
 public class PizzaService {
     
     private List<Pizza> pizzaAngebot;
+
+    public List<Pizza> getPizzaAngebot() {
+        return pizzaAngebot;
+    }
+
+    public void setPizzaAngebot(List<Pizza> pizzaAngebot) {
+        this.pizzaAngebot = pizzaAngebot;
+    }
     
     public PizzaService(){
         pizzaAngebot = new ArrayList();
@@ -27,9 +35,7 @@ public class PizzaService {
         pizzaAngebot.add(new Pizza("Pizza Quattro Stagioni", 14.00));        
     }
     
-    public List getSorten(){
-        return pizzaAngebot;
-    }
+   
     
     
     
