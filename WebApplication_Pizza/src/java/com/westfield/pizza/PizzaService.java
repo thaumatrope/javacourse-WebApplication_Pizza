@@ -8,6 +8,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -49,12 +51,13 @@ public class PizzaService implements AutoCloseable {
         pizzaName[3] = pizzaAngebot.get(3).getName();
         pizzaName[4] = pizzaAngebot.get(4).getName();
         
-        pizzaPreise = new String[pizzaAngebot.size()];  
-        pizzaPreise[0] = pizzaAngebot.get(0).getPreis().toString();
-        pizzaPreise[1] = pizzaAngebot.get(1).getPreis().toString(); 
-        pizzaPreise[2] = pizzaAngebot.get(2).getPreis().toString();
-        pizzaPreise[3] = pizzaAngebot.get(3).getPreis().toString();
-        pizzaPreise[4] = pizzaAngebot.get(4).getPreis().toString();
+        pizzaPreise = new String[pizzaAngebot.size()]; 
+        NumberFormat formatter = new DecimalFormat(".00");  
+        pizzaPreise[0] = formatter.format(pizzaAngebot.get(0).getPreis());
+        pizzaPreise[1] = formatter.format(pizzaAngebot.get(1).getPreis()); 
+        pizzaPreise[2] = formatter.format(pizzaAngebot.get(2).getPreis());
+        pizzaPreise[3] = formatter.format(pizzaAngebot.get(3).getPreis());
+        pizzaPreise[4] = formatter.format(pizzaAngebot.get(4).getPreis());
         
         this.checkAndLoadKundennummern();
         

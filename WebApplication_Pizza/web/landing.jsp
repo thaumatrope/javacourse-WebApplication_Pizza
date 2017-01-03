@@ -10,7 +10,6 @@
 <%@page import="org.json.JSONArray"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-
 <jsp:useBean id="pizzaService" class="com.westfield.pizza.PizzaService" scope="application"></jsp:useBean> 
 
 
@@ -31,50 +30,69 @@
            }           
 
         </style>
-        <script type="text/javascript">
+        <script>
+            window.onload = function (){
+               change();
+            };
             
-            $(document).ready(
-               
-                $('#selection').bind('change',
-                    function(){
-                        var selection = $('option:selected',this).text();
-                        alert(selection);
-                        
-                        if (selection == "<%= pizzaService.getPizzaName()[0] %>") {
-                            $('#einzelpreis').text("<%= pizzaService.getPizzaPreise()[0] %>");   
-
-                        } else if (selection == "<%= pizzaService.getPizzaName()[1] %>") {
-                            $('#einzelpreis').text("<%= pizzaService.getPizzaPreise()[1] %>");  
-                          
-                        }} else if (selection == "<%= pizzaService.getPizzaName()[2] %>") {
-                            $('#einzelpreis').text("<%= pizzaService.getPizzaPreise()[2] %>");  
-                          
-                        }} else if (selection == "<%= pizzaService.getPizzaName()[3] %>") {
-                            $('#einzelpreis').text("<%= pizzaService.getPizzaPreise()[3] %>");  
-                          
-                        }} else if (selection == "<%= pizzaService.getPizzaName()[4] %>") {
-                            $('#einzelpreis').text("<%= pizzaService.getPizzaPreise()[4] %>");  
-                          
-                        }
-
-                    }
-                )
-
-            );
-            
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", '/order_update.jsp', true);
-
-            //Send the proper header information along with the request
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-            xhr.onreadystatechange = function() {//Call a function when the state changes.
-                if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
-                    // Request finished. Do processing here.
+            function toNumberString(num) { 
+                if (Number.isInteger(num)) { 
+                  return num + ".00"
+                } else {
+                  return num.toString(); 
                 }
             }
-            xhr.send(""); 
-            
+                     
+            function change(){
+                
+                var menge = parseInt(document.getElementById("select_menge").value);
+                var selection = document.getElementById("select_sorte").value;
+                  
+                if (selection == "<%= pizzaService.getPizzaName()[0] %>") {
+                    document.getElementById("einzelpreis").innerHTML = "<%= pizzaService.getPizzaPreise()[0] %>".replace(',','.');
+                    var temp = "<%= pizzaService.getPizzaPreise()[0] %>".replace(',','.');
+                    document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();           
+
+                } else if (selection == "<%= pizzaService.getPizzaName()[1] %>") {
+                    document.getElementById("einzelpreis").innerHTML  = "<%= pizzaService.getPizzaPreise()[1] %>".replace(',','.');
+                    var temp = "<%= pizzaService.getPizzaPreise()[1] %>".replace(',','.');
+                    document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
+
+                } else if (selection == "<%= pizzaService.getPizzaName()[2] %>") {
+                    document.getElementById("einzelpreis").innerHTML = "<%= pizzaService.getPizzaPreise()[2] %>".replace(',','.');
+                    var temp = "<%= pizzaService.getPizzaPreise()[2] %>".replace(',','.');
+                    document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
+
+                } else if (selection == "<%= pizzaService.getPizzaName()[3] %>") {
+                    document.getElementById("einzelpreis").innerHTML = "<%= pizzaService.getPizzaPreise()[3] %>".replace(',','.'); 
+                    var temp = "<%= pizzaService.getPizzaPreise()[3] %>".replace(',','.');
+                    document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
+
+                } else if (selection == "<%= pizzaService.getPizzaName()[4] %>") {
+                    document.getElementById("einzelpreis").innerHTML = "<%= pizzaService.getPizzaPreise()[4] %>".replace(',','.'); 
+                    var temp = "<%= pizzaService.getPizzaPreise()[4] %>".replace(',','.');
+                    document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
+
+                }
+                
+                 
+                 
+            }           
+
+            function send(){  
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", '/order_update.jsp', true);
+
+                //Send the proper header information along with the request
+                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                xhr.onreadystatechange = function() {//Call a function when the state changes.
+                    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+                        // Request finished. Do processing here.
+                    }
+                }
+                xhr.send(""); 
+            }
             
             
         </script>
@@ -98,11 +116,15 @@
                             </th> 
                              <th>
                                 Einzelpreis
-                            </th> 
+                            </th>
+                            <th>
+                                Gesamtpreis
+                            </th>                             
+                            
                          </tr>
                         <tr>
-                            <td> <input style="width: 50px; text-align: right" type="number" min="1" max="10" value="1"> </td>
-                            <td> <select id="selection" name="pizza">                                  
+                            <td> <input style="width: 50px; text-align: right" type="number" min="1" max="10" value="1" id="select_menge" onchange="change()"> </td>
+                            <td> <select id="select_sorte" name="pizza" onchange="change();">                                  
                             <%      
                                 List<Pizza> sorten = pizzaService.getPizzaAngebot();
                                 for(Pizza myPizza : sorten){
@@ -114,6 +136,9 @@
                                 </select>
                             </td>
                             <td id="einzelpreis">
+
+                            </td>
+                             <td id="gesamtpreis">
 
                             </td>
                             
