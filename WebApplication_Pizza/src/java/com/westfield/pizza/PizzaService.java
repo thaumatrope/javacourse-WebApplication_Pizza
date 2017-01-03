@@ -1,9 +1,20 @@
 package com.westfield.pizza;
 
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,20 +26,54 @@ import java.util.List;
  *
  * @author User704
  */
-public class PizzaService {
+public class PizzaService implements AutoCloseable {
     
     private List<Pizza> pizzaAngebot;
-    private HashSet kundennummern;
+    private Set<Integer> kundennummern;
+    private final String saveFile = "Kundennummern.sav";
+    private String[] pizzaPreise;
+    private String[] pizzaName;
 
      public PizzaService(){
-        pizzaAngebot = new ArrayList();
+        pizzaAngebot = new ArrayList();        
         pizzaAngebot.add(new Pizza("Pizza Tonno", 13.50));
         pizzaAngebot.add(new Pizza("Pizza Diavolo", 6.66));
-        pizzaAngebot.add(new Pizza("Pizza Hawaii", 14.00));
-        pizzaAngebot.add(new Pizza("Pizza Calzone", 14.00));
-        pizzaAngebot.add(new Pizza("Pizza Quattro Stagioni", 14.00));    
+        pizzaAngebot.add(new Pizza("Pizza Hawaii", 12.30));
+        pizzaAngebot.add(new Pizza("Pizza Calzone", 11.00));
+        pizzaAngebot.add(new Pizza("Pizza Quattro Stagioni", 14.00));
+         
+        pizzaName = new String[pizzaAngebot.size()];  
+        pizzaName[0] = pizzaAngebot.get(0).getName();
+        pizzaName[1] = pizzaAngebot.get(1).getName(); 
+        pizzaName[2] = pizzaAngebot.get(2).getName();
+        pizzaName[3] = pizzaAngebot.get(3).getName();
+        pizzaName[4] = pizzaAngebot.get(4).getName();
         
-        kundennummern = new HashSet();
+        pizzaPreise = new String[pizzaAngebot.size()];  
+        pizzaPreise[0] = pizzaAngebot.get(0).getPreis().toString();
+        pizzaPreise[1] = pizzaAngebot.get(1).getPreis().toString(); 
+        pizzaPreise[2] = pizzaAngebot.get(2).getPreis().toString();
+        pizzaPreise[3] = pizzaAngebot.get(3).getPreis().toString();
+        pizzaPreise[4] = pizzaAngebot.get(4).getPreis().toString();
+        
+        this.checkAndLoadKundennummern();
+        
+    }
+
+    public String[] getPizzaPreise() {
+        return pizzaPreise;
+    }
+
+    public void setPizzaPreise(String[] pizzaPreise) {
+        this.pizzaPreise = pizzaPreise;
+    }
+
+    public String[] getPizzaName() {
+        return pizzaName;
+    }
+
+    public void setPizzaName(String[] pizzaName) {
+        this.pizzaName = pizzaName;
     }
      
      
@@ -42,16 +87,61 @@ public class PizzaService {
     
    
 
-    public HashSet getKundennummern() {
+    public Set<Integer> getKundennummern() {
         return kundennummern;
     }
 
-    public void setKundennummern(HashSet kundennummern) {
+    public void setKundennummern(Set kundennummern) {
         this.kundennummern = kundennummern;
     }
     
+    private void saveKundennummern(){
+        
+         // Serialize / save it
+        ObjectOutputStream oos;
+        try {
+            oos = new ObjectOutputStream(new FileOutputStream(saveFile));
+             oos.writeObject(this.getKundennummern());
+             oos.flush(); 
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(PizzaService.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(PizzaService.class.getName()).log(Level.SEVERE, null, ex);
+        }       
+          
+    }
    
+    private void checkAndLoadKundennummern(){
+        
+        File save = new File(saveFile);
+        if(save.isFile()){           
     
+            // Deserialize / load it
+            ObjectInputStream ois;
+            try {
+                ois = new ObjectInputStream(new FileInputStream(saveFile));
+                this.setKundennummern((HashSet<Integer>) ois.readObject());
+            } catch (IOException ex) {
+                Logger.getLogger(PizzaService.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(PizzaService.class.getName()).log(Level.SEVERE, null, ex);
+            }          
+         
+            
+        }else{            
+            
+            this.setKundennummern(new HashSet()); 
+            
+        }
+       
+        
+    }
+
+    @Override
+    public void close() throws Exception {
+        this.saveKundennummern();
+        System.out.println("Kundennummern gespeichert.");
+    }
     
     
 }
