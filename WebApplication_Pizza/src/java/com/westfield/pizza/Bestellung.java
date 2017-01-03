@@ -13,6 +13,15 @@ public class Bestellung {
     
     private int menge;
     private Pizza myPizza;
+    private int position;
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
 
     public int getMenge() {
         return menge;
