@@ -9,6 +9,7 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -17,11 +18,9 @@ import java.util.Locale;
  */
 public class Pizza {
     
-    private static ArrayList<Pizza> pizzaAngebot = new ArrayList();
-    public String[] pizzaPreise;
-    public String[] pizzaNamen;
+    private static List<Pizza> pizzaAngebot = new ArrayList();
 
-    public static ArrayList<Pizza> getPizzaAngebot() {
+    public static List<Pizza> getPizzaAngebot() {
         return pizzaAngebot;
     }
     

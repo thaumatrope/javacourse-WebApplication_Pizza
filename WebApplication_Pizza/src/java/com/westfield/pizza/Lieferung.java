@@ -6,6 +6,7 @@
 package com.westfield.pizza;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -13,10 +14,10 @@ import java.util.ArrayList;
  */
 public class Lieferung {
     
-    private ArrayList<Bestellung> myBestellungen;
+    private List<Bestellung> myBestellungen;
     private int bestellnummer;
 
-    public ArrayList<Bestellung> getMyBestellungen() {
+    public List<Bestellung> getMyBestellungen() {
         return myBestellungen;
     }  
 
