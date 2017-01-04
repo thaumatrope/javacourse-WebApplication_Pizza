@@ -19,20 +19,19 @@ import java.util.Locale;
 public class Pizza {
     
     private static List<Pizza> pizzaAngebot = new ArrayList();
-
-    public static List<Pizza> getPizzaAngebot() {
-        return pizzaAngebot;
-    }
-    
     private String name;
     private Double preis;
+    
+    
+    public static List<Pizza> getPizzaAngebot() {
+        return pizzaAngebot;
+    }   
     
     public Pizza(String name, Double preis){
         this.name = name;
         this.preis = preis;
         this.pizzaAngebot.add(this);
-    }
-    
+    }    
     
     public String getName() {
         return name;
