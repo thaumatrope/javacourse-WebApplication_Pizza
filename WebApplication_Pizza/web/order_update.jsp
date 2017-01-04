@@ -41,18 +41,18 @@
             gesamtpreis += Double.parseDouble(temp.getPreis());
     %>        
         <tr> 
-            <th>
+            <td>
                 <%= temp.getPosition()%>
-            </th>  
-            <th>
+            </td>  
+            <td>
                 <%= temp.getMenge()%>
-            </th> 
-             <th style="width: 250px">
+            </td> 
+             <td style="width: 250px">
                 <%= temp.getSorte()%>
-            </th>
-            <th>
+            </td>
+            <td>
                 <%= temp.getPreis()%>
-            </th>  
+            </td>  
             <th style="width: 80px"> 
                 <%= pizzaService.printPreisFormatted(gesamtpreis)%>
             </th> 
