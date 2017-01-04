@@ -1,0 +1,65 @@
+Robert Heinrich DUI an John Westfield BBL:
+probleme mit sql booleans? ich benutz die auch, im insert statement insert ... myflag boolean etc, und im result set kannste die auch mit rs.getBoolean() auslesen... intern werden die von der datanbank als tinyint(1) oder so abgebildet, aber das sollte eigentlich kein hindernis sein... ausser du testest auf den exakten typ vom result, statt implizit zu casten evtl?
+
+John Westfield BBL an Robert Heinrich DUI:
+ja, ich taste mich vor...
+
+John Westfield BBL an Robert Heinrich DUI:
+da problem ist, dass ich nach Trennung Model und View, ein Datenobjekt zwischen beiden hin und her schiebe, und da hatte ich noch nicht genug zeit
+
+Robert Heinrich DUI an John Westfield BBL:
+darum mag ich die strikte trennung von model und view auch nicht. hört sich ganz toll an auf dem papier vor allem wegen plattformunabhängigkeit, aber wenn man eine komplette trennung anzielt schreibt man sich tot mit genau diesem datentransfer ^^   bei 1 stand-alone anwendung die man nicht irgendwann zwischen frameworks migrieren will kann man genausogut auch die gui für datenhaltung verwenden, in gewissem ausmass...
+
+John Westfield BBL an Robert Heinrich DUI:
+tja...
+
+John Westfield BBL an Robert Heinrich DUI:
+ging ja gerade noch gut, aber ich mache das nantürlich weiter
+
+Ferdinand Schulz LIN an John Westfield BBL:
+was ?
+
+John Westfield BBL an Ferdinand Schulz LIN:
+quatsch mit Soße
+
+
+Robert Heinrich DUI an John Westfield BBL:
+immer diese lästerei über fachinfomatier ;_;
+
+John Westfield BBL an Susanne Schröter:
+https://www.youtube.com/playlist?list=PLE7E8B7F4856C9B19
+
+John Westfield BBL an Ferdinand Schulz LIN:
+Bist du nächste woche wieder dA?
+
+
+John Westfield BBL an Ferdinand Schulz LIN:
+https://www.youtube.com/playlist?list=PLE7E8B7F4856C9B19
+
+John Westfield BBL an Ferdinand Schulz LIN:
+zum Nachschlagen, Nachschauen
+
+
+John Westfield BBL an Ferdinand Schulz LIN:
+Frohe Weihanchten Ferdinand, und falls du noch Infos brauchst,
+du kannst mich unter j.westfield@gmx.de anmailen.
+Null problem. 
+Also, Frohe Weihnachtne, und komm gut ins neue Jahr.
+1.Vorsatz - erkundige dich ausreichend!
+
+John Westfield BBL an Ferdinand Schulz LIN:
+Frohe Weihnachten, und komm gut ins neue Jahr.
+
+
+John Westfield BBL an Ferdinand Schulz LIN:
+bist du nächste Woche wieder da?
+
+John Westfield BBL an Ferdinand Schulz LIN:
+ups, wollte an Rainer schrieben....sorry
+
+
+John Westfield BBL an Rainer Haupt M:
+bist du nächste Woche wieder da?
+
+John Westfield BBL an Foysol Ahmed HAG:
+Frohe Weihnachten, und komm gut ins neue Jahr.

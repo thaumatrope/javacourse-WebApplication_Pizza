@@ -1,0 +1,38 @@
+John Westfield BBL an Christin Möller MNG:
+Guten Morgen, Christin
+Du solltest noch zwei Sachen an dem Code von gestern ändern
+vielleicht hast du das schon selbst
+
+John Westfield BBL an Christin Möller MNG:
+einmal beim aufruf des Dialogs, parent is dein aktuelles JFrame,
+und setLocationRealtiveto(parent) damit es immer mittig vor dem 
+Hauptfenster platziert wird
+
+
+John Westfield BBL an Christin Möller MNG:
+this.setLocationRelativeTo(parent);
+
+Christin Möller MNG an John Westfield BBL:
+Guten Morgen John, ich hatte gestern leider keine Zeit mehr, was zu machen, aber jetzt gehts weiter ;)
+
+John Westfield BBL an Christin Möller MNG:
+na denn
+ich war auch fix&foxi
+
+Christin Möller MNG an John Westfield BBL:
+real hätte ich dir jetzt lebkuchen mitgebracht =)
+
+John Westfield BBL an Christin Möller MNG:
+lecker
+
+John Westfield BBL an Christin Möller MNG:
+:)
+
+Christin Möller MNG an John Westfield BBL:
+mir gefällt das virtuelle nicht so sehr... aber nunja, jetzt haben wir es fast geschafft
+
+Christin Möller MNG an John Westfield BBL:
+so ist drinne, perfekt 
+
+John Westfield BBL an Christin Möller MNG:
+:)

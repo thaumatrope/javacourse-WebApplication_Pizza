@@ -1,0 +1,56 @@
+John Westfield BBL an Christin Möller MNG:
+http://www.herdt.de/artikel/PGOS/Objektorientierter-Softwareentwurf-mit-UML/#description
+
+John Westfield BBL an Christin Möller MNG:
+meine Empfehlung:
+https://www.oreilly.de/buecher/120246/-objektorientierte-analyse-und-design-von-kopf-bis-fuß.html
+
+ich habe mehrere Bücher dieser Reihe von Kopf bis Fuß gelesen,
+und 90% waren erstklassig für den Einstieg.
+
+John Westfield BBL an Christin Möller MNG:
+vom Aufbau her, didaktisch absolut genial
+
+Christin Möller MNG an John Westfield BBL:
+alles klaro, danke john =)
+
+John Westfield BBL an Christin Möller MNG:
+https://docs.oracle.com/javase/tutorial/uiswing/layout/flow.html
+
+Christin Möller MNG an John Westfield BBL:
+die probleme hast du wohl auch ;)
+
+Christin Möller MNG an John Westfield BBL:
+kucke gleich nach
+
+John Westfield BBL an Christin Möller MNG:
+WrapLayout ist abgeleitet von FlowLayout, und bietet eine Methode layoutSize	layoutSize(Container target, boolean preferred) 
+
+Christin Möller MNG an John Westfield BBL:
+Danke John
+
+John Westfield BBL an Boris Dmitriev DÜS:
+ArrayList<ArrayList<String>>
+
+John Westfield BBL an Boris Dmitriev DÜS:
+ArrayList<ArrayList<String>> nodes = new ArrayList<ArrayList<String>>();
+
+ArrayList<String> nodeList = new ArrayList<String>();
+
+nodes.add(nodeList);
+
+Boris Dmitriev DÜS an John Westfield BBL:
+ok Danke)
+
+John Westfield BBL an Boris Dmitriev DÜS:
+du musst jeden Eintrag vorher mit = new ArrayList<String> erstellen!
+ 
+
+John Westfield BBL an Boris Dmitriev DÜS:
+:)
+
+
+John Westfield BBL an Susanne Schröter:
+https://docs.oracle.com/javase/tutorial/uiswing/layout/card.html
+
+zeige mal bitte diese Seite

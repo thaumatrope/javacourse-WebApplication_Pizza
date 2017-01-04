@@ -1,0 +1,10 @@
+Diese Methoden-Deklarationen zeigen ein gültiges überschreiben
+ (unter der voraussetzung dass MyException RuntimeException erweitert):
+
+public class A { public void myMethod(int i) throws MyException {} }
+class B extends A { public void myMethod(int i) throws RuntimeException {} }
+
+
+(korrekte antwort war: richtig)
+
+

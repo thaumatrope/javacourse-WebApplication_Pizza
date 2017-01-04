@@ -1,0 +1,151 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java Basics"
+01.12.2016 10:15 Uhr
+-----------------------------------------------
+-- 10:15 -- John Westfield BBL betritt den Raum Hauptraum
+-- 10:18 -- Robert Heinrich DUI betritt den Raum Hauptraum
+-- 10:21 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+-- 10:22 -- Christin Möller MNG betritt den Raum Hauptraum
+-- 10:23 -- Christin Möller MNG verlässt den Raum
+-- 10:24 -- Christin Möller MNG betritt den Raum Hauptraum
+Silvan Kolb BUX: > ist wieder ansprechbar <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+-- 10:28 -- Martin Mind WADGASSEN betritt den Raum Hauptraum
+Christin Möller MNG: > ist wieder ansprechbar <
+-- 10:29 -- Adam Schwemlein BBL betritt den Raum Hauptraum
+-- 10:30
+-- 10:30 -- Susanne Schröter betritt den Raum Hauptraum
+-- 10:31 -- Andreas Hellrich LD betritt den Raum Hauptraum
+Christin Möller MNG: > stimmt nicht zu <
+John Westfield BBL: > hat eine Frage <
+Robert Heinrich DUI: hätte das nicht nen dozenten haben sollen?
+Robert Heinrich DUI: hatte nur login für ibb portal...
+-- 10:32 -- Boris Dmitriev DÜS betritt den Raum Hauptraum
+-- 10:32 -- Olga Jakowenko SDL betritt den Raum Hauptraum
+Silvan Kolb BUX: > meldet sich <
+Ivanka Pantusheva N: > meldet sich <
+-- 10:34 -- Ferdinand Schulz LIN betritt den Raum Hauptraum
+John Westfield BBL: array ist nicht initilisiert
+Robert Heinrich DUI: array nicht initialisiert
+Stephan Hartmann BBL: xD xD xD
+Boris Dmitriev DÜS: :/
+Stefan Truong S: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Robert Heinrich DUI: > applaudiert <
+John Westfield BBL: > applaudiert <
+Boris Dmitriev DÜS: > stimmt zu <
+Rainer Haupt M: > applaudiert <
+Stephan Hartmann BBL: > stimmt zu <
+Christin Möller MNG: wie kommts?
+Olga Jakowenko SDL: > stimmt zu <
+Foysol Ahmed HAG: > stimmt zu <
+Christin Möller MNG: nette Leute 
+Robert Heinrich DUI: in der konsole ist eh truetype
+Adam Schwemlein BBL: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+-- 10:45
+Christin Möller MNG: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+Christin Möller MNG: > meldet sich <
+Martin Mind WADGASSEN: > meldet sich <
+Robert Heinrich DUI: > stimmt nicht zu <
+Christin Möller MNG: danke
+Martin Mind WADGASSEN: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Martin Mind WADGASSEN: > meldet sich <
+-- 11:00
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Andreas Hellrich LD: > meldet sich <
+Andreas Hellrich LD: > meldet sich <
+-- 11:15
+Martin Mind WADGASSEN: > meldet sich <
+-- 11:30
+Adam Schwemlein BBL: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Adam Schwemlein BBL: John ist leise
+Robert Heinrich DUI: zu leise...
+-- 11:38 -- Christin Möller MNG verlässt den Raum
+Stefan Truong S: > meldet sich <
+Martin Mind WADGASSEN: standbild?
+Boris Dmitriev DÜS: standbild
+Ivanka Pantusheva N: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+Andreas Hellrich LD: > stimmt zu <
+Stefan Truong S: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+-- 11:39 -- Christin Möller MNG betritt den Raum Hauptraum
+-- 11:40 -- Ferdinand Schulz LIN verlässt den Raum
+Stefan Truong S: wieder eingefroren
+Martin Mind WADGASSEN: > stimmt nicht zu <
+Adam Schwemlein BBL: > stimmt nicht zu <
+Stefan Truong S: > stimmt nicht zu <
+Robert Heinrich DUI: > stimmt nicht zu <
+Christin Möller MNG: nö
+Rainer Haupt M: > stimmt nicht zu <
+Boris Dmitriev DÜS: > stimmt nicht zu <
+Ivanka Pantusheva N: > stimmt nicht zu <
+Silvan Kolb BUX: > stimmt nicht zu <
+-- 11:41 -- Susanne Schröter verlässt den Raum
+Rainer Haupt M: > stimmt zu <
+Boris Dmitriev DÜS: ?
+-- 11:44 -- Susanne Schröter betritt den Raum Hauptraum
+Martin Mind WADGASSEN: > stimmt zu <
+Stefan Truong S: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+Stephan Hartmann BBL: > stimmt zu <
+-- 11:45
+Robert Heinrich DUI: else :)
+Christin Möller MNG: > stimmt zu <
+Robert Heinrich DUI: > stimmt nicht zu <
+Boris Dmitriev DÜS: > stimmt nicht zu <
+Martin Mind WADGASSEN: > stimmt nicht zu <
+Ivanka Pantusheva N: > stimmt nicht zu <
+Stephan Hartmann BBL: > stimmt nicht zu <
+Adam Schwemlein BBL: > stimmt nicht zu <
+Robert Heinrich DUI: > stimmt nicht zu <
+Ivanka Pantusheva N: > stimmt nicht zu <
+Martin Mind WADGASSEN: > stimmt nicht zu <
+Boris Dmitriev DÜS: > stimmt nicht zu <
+Christin Möller MNG: tot
+Adam Schwemlein BBL: > stimmt nicht zu <
+Stefan Truong S: > stimmt nicht zu <
+Olga Jakowenko SDL: > stimmt nicht zu <
+John Westfield BBL: > stimmt zu <
+Robert Heinrich DUI: > stimmt nicht zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Stephan Hartmann BBL: > stimmt zu <
+John Westfield BBL: > stimmt nicht zu <
+Andreas Hellrich LD: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt nicht zu <
+Christin Möller MNG: fehler
+Ivanka Pantusheva N: > stimmt nicht zu <
+Stefan Truong S: > stimmt nicht zu <
+Olga Jakowenko SDL: > stimmt zu <
+Foysol Ahmed HAG: > stimmt zu <
+John Westfield BBL: ebenso
+Susanne Schröter: 12:30
+Susanne Schröter: 12:20
+Christin Möller MNG: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+Stephan Hartmann BBL: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Foysol Ahmed HAG: wir haben Morgen LEK oder ?
+Stefan Truong S: > ist momentan nicht ansprechbar <
+John Westfield BBL: > stimmt zu <
+Foysol Ahmed HAG: ok
+-- 11:51 -- Christin Möller MNG verlässt den Raum
+-- 11:51 -- John Westfield BBL verlässt den Raum

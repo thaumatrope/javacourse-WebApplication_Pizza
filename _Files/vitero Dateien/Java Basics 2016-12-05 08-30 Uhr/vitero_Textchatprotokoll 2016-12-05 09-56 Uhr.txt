@@ -1,0 +1,284 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java Basics"
+05.12.2016 08:30 Uhr
+-----------------------------------------------
+-- 08:30 -- John Westfield BBL betritt den Raum Hauptraum
+Stephan Hartmann BBL: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Stefan Truong S: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Silvan Kolb BUX: > meldet sich <
+Christin Möller MNG: -	Datentype-	Name-	Wert
+Stephan Hartmann BBL: > meldet sich <
+Christin Möller MNG: wert?
+John Westfield BBL: Modifizierer Datentyp Bezeichner
+Ferdinand Schulz LIN: > meldet sich <
+Stephan Hartmann BBL: > stimmt zu <
+Christin Möller MNG: gehört der Zugriffsmodifyer dazu?
+Stefan Truong S: > meldet sich <
+John Westfield BBL: bei Konstanten gar nicht möglich ohne modifier
+Stefan Truong S: > stimmt zu <
+Stephan Hartmann BBL: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+Ferdinand Schulz LIN: > meldet sich <
+John Westfield BBL: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Stefan Truong S: > stimmt zu <
+Foysol Ahmed HAG: > stimmt zu <
+Olga Jakowenko SDL: > stimmt zu <
+Olga Jakowenko SDL: > stimmt zu <
+John Westfield BBL: public int ein, zwei = 1;
+Robert Heinrich DUI: > meldet sich <
+-- 08:45
+Robert Heinrich DUI: > stimmt zu <
+Silvan Kolb BUX: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: gehören die Wrapper Klassen auch dazu?
+John Westfield BBL: Integer myInt;
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: finalint;
+Silvan Kolb BUX: > stimmt zu <
+Christin Möller MNG: final
+Stephan Hartmann BBL: final evtl static
+Ivanka Pantusheva N: final
+Christin Möller MNG: const = c?
+Adam Schwemlein BBL: > meldet sich <
+Christin Möller MNG: ne kommt aus c/c++
+Ferdinand Schulz LIN: > ist momentan nicht ansprechbar <
+John Westfield BBL: static ist eine Klassenvariable
+Robert Heinrich DUI: > stimmt zu <
+Ivanka Pantusheva N: =
+Ferdinand Schulz LIN: > ist wieder ansprechbar <
+Ivanka Pantusheva N: ==
+Stephan Hartmann BBL: eine Frage uebersprungen
+Rainer Haupt M: ==
+Christin Möller MNG: ==
+Robert Heinrich DUI: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Ferdinand Schulz LIN: > meldet sich <
+Silvan Kolb BUX: > meldet sich <
+Robert Heinrich DUI: klappt == bei Strings? oder .equals?
+Christin Möller MNG: <;>
+Christin Möller MNG: string != promitiver Datentyp, daher .equal
+Rainer Haupt M: false
+Stefan Truong S: true
+Boris Dmitriev DÜS: false
+Martin Mind WADGASSEN: false
+Christin Möller MNG: true
+Ivanka Pantusheva N: false
+Christin Möller MNG: > stimmt zu <
+Ferdinand Schulz LIN: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: hat sich erledigt
+Silvan Kolb BUX: > stimmt zu <
+Silvan Kolb BUX: > meldet sich <
+Silvan Kolb BUX: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: ok
+-- 09:00
+Christin Möller MNG: =
+Stephan Hartmann BBL: > stimmt zu <
+Stephan Hartmann BBL: > meldet sich <
+Stefan Truong S: double
+Christin Möller MNG: double, int float, byte long
+Boris Dmitriev DÜS: > meldet sich <
+Silvan Kolb BUX: > meldet sich <
+Christin Möller MNG: 00 war weg
+John Westfield BBL: oktal
+Martin Mind WADGASSEN: octale schreibweise
+Stephan Hartmann BBL: > meldet sich <
+Ferdinand Schulz LIN: > meldet sich <
+John Westfield BBL: 0x - hexa, 0 - okta, 0b - binär
+Stephan Hartmann BBL: xD
+John Westfield BBL: 0b11111110
+Stephan Hartmann BBL: double b=5.6;
+Stephan Hartmann BBL: float f=5.6;
+John Westfield BBL: float myFloat = 3.4f
+Christin Möller MNG: float x=1.5
+Stephan Hartmann BBL: iiiigit
+John Westfield BBL: Literale
+John Westfield BBL: > meldet sich <
+Stephan Hartmann BBL: praezession
+John Westfield BBL: IEE754
+John Westfield BBL: IEEE754
+Martin Mind WADGASSEN: int i=1;
+John Westfield BBL: float hat 4 Byte, double 8 Byte
+Christin Möller MNG: -	Byte x= 0x00A;
+Stephan Hartmann BBL: wie inkonsequent
+Christin Möller MNG: bool x=true;
+John Westfield BBL: byte b = (byte)128;
+Ferdinand Schulz LIN: > meldet sich <
+Robert Heinrich DUI: > stimmt zu <
+Stephan Hartmann BBL: > stimmt zu <
+Silvan Kolb BUX: > stimmt zu <
+John Westfield BBL: welche Art von Variable ist gültig bei switch case?
+John Westfield BBL: > meldet sich <
+John Westfield BBL: > stimmt zu <
+Silvan Kolb BUX: min 1 mal
+John Westfield BBL: min. 1x
+Rainer Haupt M: mindestens 1 mal
+John Westfield BBL: shallow - copy
+John Westfield BBL: Polymorphie
+Stefan Truong S: > meldet sich <
+Robert Heinrich DUI: auch keine mehrdimensionalen arrays...
+Boris Dmitriev DÜS: > stimmt zu <
+Robert Heinrich DUI: bzw nur 1. ebene etc...
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: > meldet sich <
+John Westfield BBL: falsch
+Robert Heinrich DUI: also erzeugt String.clone() neuen speicher?
+John Westfield BBL: ja
+John Westfield BBL: > meldet sich <
+-- 09:15
+John Westfield BBL: :)
+Christin Möller MNG: > stimmt zu <
+Stefan Truong S: > meldet sich <
+John Westfield BBL: Polymorphie
+Stephan Hartmann BBL: > meldet sich <
+John Westfield BBL: signatur
+Stephan Hartmann BBL: > meldet sich <
+Silvan Kolb BUX: > meldet sich <
+Christin Möller MNG: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Stephan Hartmann BBL: > meldet sich <
+John Westfield BBL: getter / setter?
+Christin Möller MNG: public
+Ferdinand Schulz LIN: > meldet sich <
+Ferdinand Schulz LIN: > meldet sich <
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: numba
+Christin Möller MNG: zuweisen
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: package Name;
+Christin Möller MNG: > hat verstanden <
+Christin Möller MNG: klicken
+Stephan Hartmann BBL: import <Paketangabe>
+Rainer Haupt M: import
+Ferdinand Schulz LIN: > meldet sich <
+Stephan Hartmann BBL: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Stephan Hartmann BBL: > meldet sich <
+-- 09:30
+Ferdinand Schulz LIN: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: > stimmt nicht zu <
+Christin Möller MNG: keine leerzeichen?
+Robert Heinrich DUI: standardklassen tabu?
+Ferdinand Schulz LIN: > ist wieder ansprechbar <
+Robert Heinrich DUI: ich meinte zB java.util.DieBohne  ...
+Christin Möller MNG: muss also ein eindeutig sein
+Stephan Hartmann BBL: > meldet sich <
+Stephan Hartmann BBL: > stimmt zu <
+Robert Heinrich DUI: deployment ist eh unklar...
+Christin Möller MNG: > stimmt zu <
+John Westfield BBL: :D
+Silvan Kolb BUX: > meldet sich <
+John Westfield BBL: DNS is universell
+John Westfield BBL: > stimmt zu <
+Stephan Hartmann BBL: > applaudiert <
+Rainer Haupt M: > applaudiert <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Christin Möller MNG: d.h. ersthier treffen?
+Susanne Schröter: 9:47
+Christin Möller MNG: > stimmt zu <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist wieder ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+Olga Jakowenko SDL: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+-- 09:44 -- Ivanka Pantusheva N verlässt den Raum
+Christin Möller MNG: > ist wieder ansprechbar <
+-- 09:45
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+-- 09:45 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Stephan Hartmann BBL: waren wir am anfang nicht mal 15 leute?
+Martin Mind WADGASSEN: sind doch 15
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Stephan Hartmann BBL: ne, ohne susanne
+Stephan Hartmann BBL: 15 teilnehmer
+Stefan Truong S: > ist wieder ansprechbar <
+Stephan Hartmann BBL: ah
+Susanne Schröter: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Olga Jakowenko SDL: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: xD
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+Silvan Kolb BUX: A
+Martin Mind WADGASSEN: J
+Silvan Kolb BUX: Raum:A
+Andreas Hellrich LD: B
+Stephan Hartmann BBL: H
+Adam Schwemlein BBL: Raum D
+Boris Dmitriev DÜS: E
+John Westfield BBL: > ist wieder ansprechbar <
+Stefan Truong S: g
+Olga Jakowenko SDL: f
+Rainer Haupt M: I
+Christin Möller MNG: Raum: K
+Robert Heinrich DUI: L
+Foysol Ahmed HAG: N
+Robert Heinrich DUI: reaktionstest
+Ivanka Pantusheva N: m
+Rainer Haupt M: Raum I
+John Westfield BBL: Raum J:
+Robert Heinrich DUI: L
+John Westfield BBL: Raum C - OK
+John Westfield BBL: was gibt es dann dort?
+Ivanka Pantusheva N: m
+Susanne Schröter: http://service.viona24.com/lek/public/FB01_Java_1_Grundlagen_v003/FB01_Java_1_Grundlagen_v003.swf
+-- 09:51 -- Ferdinand Schulz LIN verlässt den Raum
+Susanne Schröter: interface
+Stephan Hartmann BBL: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+-- 09:51 -- Ferdinand Schulz LIN betritt den Raum Hauptraum
+Adam Schwemlein BBL: > stimmt zu <
+-- 09:51 -- Stephan Hartmann BBL verlässt den Raum
+Robert Heinrich DUI: kann auch nicht einloggen
+-- 09:52 -- Martin Mind WADGASSEN verlässt den Raum
+Boris Dmitriev DÜS: was war nochmal das passwort
+-- 09:52 -- Stefan Truong S verlässt den Raum
+John Westfield BBL: ready.
+Christin Möller MNG: wechseln und dann starten?
+Silvan Kolb BUX: > meldet sich <
+-- 09:52 -- Adam Schwemlein BBL verlässt den Raum
+-- 09:52 -- Andreas Hellrich LD verlässt den Raum
+-- 09:52 -- Ivanka Pantusheva N verlässt den Raum
+Ferdinand Schulz LIN: > meldet sich <
+Boris Dmitriev DÜS: e
+Christin Möller MNG: > stimmt zu <
+-- 09:53 -- Rainer Haupt M verlässt den Raum
+Christin Möller MNG: bin dann mal in K
+-- 09:53 -- Christin Möller MNG verlässt den Raum
+John Westfield BBL: können wir beginnen?
+John Westfield BBL: > stimmt zu <
+Robert Heinrich DUI: jetzt gehts...
+-- 09:54 -- Olga Jakowenko SDL verlässt den Raum
+-- 09:54 -- Robert Heinrich DUI verlässt den Raum
+-- 09:55 -- Foysol Ahmed HAG verlässt den Raum
+-- 09:55 -- Olga Jakowenko SDL betritt den Raum Hauptraum
+-- 09:55 -- Olga Jakowenko SDL verlässt den Raum
+-- 09:55 -- Ferdinand Schulz LIN verlässt den Raum
+-- 09:55 -- Foysol Ahmed HAG betritt den Raum Hauptraum
+-- 09:56 -- Boris Dmitriev DÜS verlässt den Raum
+-- 09:56 -- Foysol Ahmed HAG verlässt den Raum
+-- 09:56 -- John Westfield BBL verlässt den Raum

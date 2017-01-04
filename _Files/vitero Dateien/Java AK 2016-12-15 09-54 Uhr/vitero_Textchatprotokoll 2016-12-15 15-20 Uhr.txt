@@ -1,0 +1,377 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java AK"
+15.12.2016 09:54 Uhr
+-----------------------------------------------
+-- 09:54 -- John Westfield BBL betritt den Raum Hauptraum
+-- 10:00
+-- 10:15
+Robert Heinrich DUI: 3 tage sind bissel wenig :)
+Robert Heinrich DUI: vorführeffekt :)
+Robert Heinrich DUI: probier mal clean and build
+Robert Heinrich DUI: was fürn fehler überhaupt?
+Robert Heinrich DUI: gui ist immer abenteuerlich :)
+Stefan Truong S: > stimmt zu <
+-- 10:24 -- Foysol Ahmed HAG betritt den Raum Hauptraum
+-- 10:24 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+-- 10:24 -- Christin Möller MNG betritt den Raum Hauptraum
+-- 10:26 -- Andreas Hellrich LD betritt den Raum Hauptraum
+-- 10:26 -- Rainer Haupt M betritt den Raum Hauptraum
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+-- 10:28 -- Boris Dmitriev DÜS betritt den Raum Hauptraum
+Christin Möller MNG: habt ihr denn ihr projektbeschreibung gelesen?
+-- 10:29 -- Martin Mind WADGASSEN betritt den Raum Hauptraum
+-- 10:29 -- Susanne Schröter betritt den Raum Hauptraum
+Robert Heinrich DUI: morgen :)
+Christin Möller MNG: stumm?
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+Robert Heinrich DUI: man hört nix
+Foysol Ahmed HAG: > stimmt zu <
+-- 10:30
+Robert Heinrich DUI: > stimmt zu <
+Christin Möller MNG: =(
+Martin Mind WADGASSEN: Raum A
+Andreas Hellrich LD: B
+Christin Möller MNG: g
+Rainer Haupt M: F
+Stefan Truong S: I
+Robert Heinrich DUI: h
+Ivanka Pantusheva N: E
+Foysol Ahmed HAG: j
+Adam Schwemlein BBL: C
+Christin Möller MNG: ist da
+Susanne Schröter: JFrme
+Susanne Schröter: JFrame
+Martin Mind WADGASSEN: > stimmt zu <
+Stefan Truong S: > stimmt zu <
+Robert Heinrich DUI: wieviel zeit haben wir diesmal?
+Andreas Hellrich LD: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+Christin Möller MNG: jo
+Andreas Hellrich LD: 60
+Martin Mind WADGASSEN: 60 minuten
+Christin Möller MNG: sind 60 min
+Martin Mind WADGASSEN: Raum A
+Andreas Hellrich LD: B
+Christin Möller MNG: g
+Robert Heinrich DUI: jo, steht da auch
+-- 10:33 -- Martin Mind WADGASSEN verlässt den Raum
+-- 10:33 -- Stefan Truong S verlässt den Raum
+Robert Heinrich DUI: > stimmt zu <
+-- 10:33 -- Ivanka Pantusheva N verlässt den Raum
+-- 10:33 -- Andreas Hellrich LD verlässt den Raum
+-- 10:33 -- Christin Möller MNG verlässt den Raum
+-- 10:33 -- Rainer Haupt M verlässt den Raum
+-- 10:33 -- Adam Schwemlein BBL verlässt den Raum
+-- 10:33 -- Robert Heinrich DUI verlässt den Raum
+-- 10:33 -- Ferdinand Schulz LIN betritt den Raum Hauptraum
+Susanne Schröter: http://service.viona24.com/lek/public/FB01_Java_4_v001/FB01_Java_4_v001.swf
+Susanne Schröter: JFrame
+-- 10:35 -- John Westfield BBL verlässt den Raum
+-- 10:35 -- John Westfield BBL betritt den Raum Nebenraum -  D
+-- 10:39 -- John Westfield BBL verlässt den Raum
+-- 10:39 -- John Westfield BBL betritt den Raum Hauptraum
+Susanne Schröter: JFrame
+-- 10:39 -- Boris Dmitriev DÜS verlässt den Raum
+-- 10:44 -- Andreas Hellrich LD betritt den Raum Hauptraum
+-- 10:45
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Andreas Hellrich LD: > ist wieder ansprechbar <
+-- 10:49 -- John Westfield BBL verlässt den Raum
+-- 10:49 -- John Westfield BBL betritt den Raum Nebenraum -  D
+-- 10:53 -- John Westfield BBL verlässt den Raum
+-- 10:53 -- John Westfield BBL betritt den Raum Hauptraum
+-- 10:53 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+-- 10:53 -- Martin Mind WADGASSEN betritt den Raum Hauptraum
+Martin Mind WADGASSEN: > meldet sich <
+-- 11:00
+-- 11:01 -- Christin Möller MNG betritt den Raum Hauptraum
+-- 11:04 -- Stefan Truong S betritt den Raum Hauptraum
+Stefan Truong S: > meldet sich <
+-- 11:05 -- Stefan Truong S verlässt den Raum
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+-- 11:07 -- Rainer Haupt M betritt den Raum Hauptraum
+-- 11:08 -- Susanne Schröter verlässt den Raum
+-- 11:09 -- Boris Dmitriev DÜS betritt den Raum Hauptraum
+-- 11:10 -- Susanne Schröter betritt den Raum Hauptraum
+Christin Möller MNG: > meldet sich <
+-- 11:11 -- Robert Heinrich DUI betritt den Raum Hauptraum
+Robert Heinrich DUI: bilder laden? 
+Robert Heinrich DUI: verstehe das mit resourcennicht...
+-- 11:15
+Robert Heinrich DUI: f.add(knopf);
+Robert Heinrich DUI: was sind hints?
+Robert Heinrich DUI: ok :)
+Boris Dmitriev DÜS: habe eine falsche
+Martin Mind WADGASSEN: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Christin Möller MNG: ja
+Rainer Haupt M: > stimmt zu <
+Christin Möller MNG: ich hab sogar 3 mal nachgefragt
+-- 11:26 -- Stefan Truong S betritt den Raum Hauptraum
+Andreas Hellrich LD: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Christin Möller MNG: genauso
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+-- 11:30
+Boris Dmitriev DÜS: > meldet sich <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: problem hatte ich auch
+Robert Heinrich DUI: Graphics2D  jo
+Stefan Truong S: hab da gepokert
+Robert Heinrich DUI: sout("type:"+g);    :=)
+John Westfield BBL: evidence
+John Westfield BBL: public void paint(Graphics g)   
+Boris Dmitriev DÜS: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: > meldet sich <
+Robert Heinrich DUI: "in" der methode...
+Stefan Truong S: ein Beispiel?
+Robert Heinrich DUI: frage ist doof formuliert
+Boris Dmitriev DÜS: > stimmt zu <
+Christin Möller MNG: dann müsste es ne 2 sein
+John Westfield BBL: getGraphics();
+-- 11:39 -- Adam Schwemlein BBL betritt den Raum Hauptraum
+-- 11:39 -- Ferdinand Schulz LIN betritt den Raum Hauptraum
+-- 11:39 -- Foysol Ahmed HAG betritt den Raum Hauptraum
+Boris Dmitriev DÜS: )
+Christin Möller MNG: und die richtig haben?
+Stefan Truong S: > meldet sich <
+Ferdinand Schulz LIN: > meldet sich <
+Ferdinand Schulz LIN: > meldet sich <
+Christin Möller MNG: juchuu ne 2 =)
+John Westfield BBL: > meldet sich <
+Robert Heinrich DUI: muss kurz afk...
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+-- 11:45
+Stefan Truong S: > stimmt zu <
+Susanne Schröter: > meldet sich <
+Stefan Truong S: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+Rainer Haupt M: :)
+Robert Heinrich DUI: > ist wieder ansprechbar <
+Ferdinand Schulz LIN: > meldet sich <
+John Westfield BBL: besser als ich!!
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: also note +1
+-- 11:52 -- Ivanka Pantusheva N verlässt den Raum
+-- 11:54 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+John Westfield BBL: > meldet sich <
+Christin Möller MNG: zeigt bild nicht an =(
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: bei dir gehts
+Christin Möller MNG: bei mir nicht
+Christin Möller MNG: also mein programm
+John Westfield BBL: EDT ?
+Robert Heinrich DUI: > meldet sich <
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+Susanne Schröter: 12:30
+John Westfield BBL: > stimmt zu <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+-- 12:00
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Robert Heinrich DUI: falsche main
+Foysol Ahmed HAG: > meldet sich <
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > meldet sich <
+John Westfield BBL: > ist wieder ansprechbar <
+John Westfield BBL: Lol
+John Westfield BBL: X
+Ivanka Pantusheva N: später
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+-- 12:10 -- Ivanka Pantusheva N verlässt den Raum
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+-- 12:11 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+-- 12:15
+-- 12:17 -- Stefan Truong S verlässt den Raum
+-- 12:17 -- Stefan Truong S betritt den Raum Hauptraum
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Robert Heinrich DUI: > ist wieder ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist wieder ansprechbar <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+-- 12:30
+Susanne Schröter: > ist wieder ansprechbar <
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Stefan Truong S: ich versteh nur bahnhof
+Robert Heinrich DUI: ebenfalls :)
+Rainer Haupt M: > ist wieder ansprechbar <
+Robert Heinrich DUI: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Ferdinand Schulz LIN: > meldet sich <
+Robert Heinrich DUI: instanceof Interface  geht aber auch
+Boris Dmitriev DÜS: Object?
+Boris Dmitriev DÜS: > meldet sich <
+-- 12:45
+Christin Möller MNG: immer true
+-- 12:45 -- Ferdinand Schulz LIN verlässt den Raum
+-- 12:45 -- Ferdinand Schulz LIN betritt den Raum Hauptraum
+Stefan Truong S: können sie es rumschicken
+Stefan Truong S: du es rumschicken
+Stefan Truong S: in Bilder.java
+Ferdinand Schulz LIN: > meldet sich <
+Ivanka Pantusheva N: ich habe bilder nicht
+Christin Möller MNG: sql =) gehts los?
+Christin Möller MNG: db
+John Westfield BBL: jdbc
+Robert Heinrich DUI: > applaudiert <
+Stefan Truong S: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Foysol Ahmed HAG: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Ivanka Pantusheva N: > stimmt nicht zu <
+Robert Heinrich DUI: adminrechte wichtig?
+Robert Heinrich DUI: > stimmt zu <
+Andreas Hellrich LD: > meldet sich <
+-- 13:00
+Boris Dmitriev DÜS: > stimmt zu <
+Stefan Truong S: > stimmt zu <
+Christin Möller MNG: flitzt...
+John Westfield BBL: > stimmt zu <
+Christin Möller MNG: localhost?
+Christin Möller MNG: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt nicht zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+Foysol Ahmed HAG: > stimmt nicht zu <
+Robert Heinrich DUI: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Rainer Haupt M: > stimmt nicht zu <
+Adam Schwemlein BBL: > stimmt nicht zu <
+Adam Schwemlein BBL: > stimmt zu <
+Ivanka Pantusheva N: > meldet sich <
+Rainer Haupt M: > stimmt zu <
+Robert Heinrich DUI: welche kollation?
+Robert Heinrich DUI: anscheinend schwedisch :)
+Robert Heinrich DUI: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+-- 13:15
+Robert Heinrich DUI: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Stefan Truong S: libraries jdbc?
+Adam Schwemlein BBL: > stimmt nicht zu <
+Foysol Ahmed HAG: > stimmt zu <
+John Westfield BBL: > meldet sich <
+Ferdinand Schulz LIN: > meldet sich <
+John Westfield BBL: > meldet sich <
+John Westfield BBL: > meldet sich <
+Andreas Hellrich LD: > stimmt zu <
+John Westfield BBL: OSI
+Boris Dmitriev DÜS: ssh
+Christin Möller MNG: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+John Westfield BBL: OSI = alle
+-- 13:30
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+John Westfield BBL: andreas
+Christin Möller MNG: dezember
+Christin Möller MNG: > hat verstanden <
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Christin Möller MNG: ti bei teilnehmer
+Boris Dmitriev DÜS: valuEs
+Ferdinand Schulz LIN: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: ok
+Robert Heinrich DUI: > ist wieder ansprechbar <
+-- 13:45
+Robert Heinrich DUI: erste=1 ?
+Boris Dmitriev DÜS: heißt tabelle teilnehmer?
+Robert Heinrich DUI: zeig mal oberste zeile
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: Google Classloader
+Stefan Truong S: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+-- 14:00
+Robert Heinrich DUI: > stimmt zu <
+Christin Möller MNG: grob
+John Westfield BBL: > stimmt nicht zu <
+John Westfield BBL: > stimmt zu <
+Robert Heinrich DUI: > hat verstanden <
+John Westfield BBL: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Robert Heinrich DUI: "jdbc connect to mysql" googlen
+Robert Heinrich DUI: > meldet sich <
+Ferdinand Schulz LIN: > meldet sich <
+Robert Heinrich DUI: > hat verstanden <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+John Westfield BBL: wird schon
+Robert Heinrich DUI: netzwerk?
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Foysol Ahmed HAG: > meldet sich <
+John Westfield BBL: google URI
+John Westfield BBL: Exception
+-- 14:15
+Christin Möller MNG: > ist wieder ansprechbar <
+John Westfield BBL: > stimmt zu <
+Christin Möller MNG: bis moin =)
+Boris Dmitriev DÜS: tschüss danke
+-- 14:16 -- Susanne Schröter verlässt den Raum
+-- 14:16 -- Martin Mind WADGASSEN verlässt den Raum
+John Westfield BBL: Exception
+-- 14:16 -- Ferdinand Schulz LIN verlässt den Raum
+-- 14:16 -- Boris Dmitriev DÜS verlässt den Raum
+John Westfield BBL: Exception
+Robert Heinrich DUI: ups, hab mist erzählt :(
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: falsche imports?
+Robert Heinrich DUI: das com.mysql.jdbc.Statement raus
+Robert Heinrich DUI: so stimmts
+Robert Heinrich DUI: hat die auch diese spalten?
+John Westfield BBL: bis morgen
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Adam Schwemlein BBL: tschau
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+-- 14:30
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+-- 14:45
+-- 15:00
+Robert Heinrich DUI: ciao, bis morgen
+-- 15:13 -- Robert Heinrich DUI verlässt den Raum
+-- 15:15
+-- 15:18 -- Rainer Haupt M verlässt den Raum
+-- 15:18 -- Christin Möller MNG verlässt den Raum
+-- 15:20 -- John Westfield BBL verlässt den Raum

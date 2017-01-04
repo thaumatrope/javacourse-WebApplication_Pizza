@@ -1,0 +1,321 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java Basics"
+08.12.2016 09:29 Uhr
+-----------------------------------------------
+-- 09:29 -- John Westfield BBL betritt den Raum Hauptraum
+-- 09:30
+-- 09:45
+-- 09:46 -- Robert Heinrich DUI betritt den Raum Hauptraum
+Robert Heinrich DUI: guten morgen
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Stephan Hartmann BBL: > ist momentan nicht ansprechbar <
+Stephan Hartmann BBL: > ist wieder ansprechbar <
+Stephan Hartmann BBL: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+-- 10:00
+-- 10:15
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+-- 10:24 -- Christin Möller MNG betritt den Raum Hauptraum
+-- 10:27 -- Martin Mind WADGASSEN betritt den Raum Hauptraum
+-- 10:27 -- Andreas Hellrich LD betritt den Raum Hauptraum
+-- 10:27 -- Boris Dmitriev DÜS betritt den Raum Hauptraum
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+-- 10:27 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+-- 10:27 -- Olga Jakowenko SDL betritt den Raum Hauptraum
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Olga Jakowenko SDL: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+-- 10:28 -- Susanne Schröter betritt den Raum Hauptraum
+Rainer Haupt M: > ist wieder ansprechbar <
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: welche nummer hatte ich?
+-- 10:30
+John Westfield BBL: > stimmt zu <
+-- 10:30 -- Foysol Ahmed HAG betritt den Raum Hauptraum
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Olga Jakowenko SDL: > ist wieder ansprechbar <
+-- 10:31 -- Adam Schwemlein BBL betritt den Raum Hauptraum
+Stephan Hartmann BBL: > ist wieder ansprechbar <
+Andreas Hellrich LD: statt nextInt next verwenden und string abfragen
+John Westfield BBL: Wo sit die Endlosschleife?
+John Westfield BBL: Wo ist die Endlosschleife?
+John Westfield BBL: > meldet sich <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Robert Heinrich DUI: lambdas?
+John Westfield BBL: ganz toll
+Robert Heinrich DUI: also funktionen on-the-fly erzeugen?
+-- 10:45
+-- 10:45 -- Ferdinand Schulz LIN betritt den Raum Hauptraum
+-- 10:45 -- Ivanka Pantusheva N verlässt den Raum
+-- 10:46 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Robert Heinrich DUI: wo geschieht dasd println?
+Boris Dmitriev DÜS: methode imp. interface?
+Robert Heinrich DUI: und dein rechteck objekt hat keine tostring
+Robert Heinrich DUI: zeig mal rechteck klasse :)
+Boris Dmitriev DÜS: kann Rechteck weiter extenden
+Boris Dmitriev DÜS: ?
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: > meldet sich <
+Robert Heinrich DUI: kommen lambdas noch dran, nächste woche?
+-- 11:00
+John Westfield BBL: falsche Klasse
+Silvan Kolb BUX: > ist wieder ansprechbar <
+John Westfield BBL: paramter
+John Westfield BBL: und instanzen klein schreiben
+Ivanka Pantusheva N: > meldet sich <
+John Westfield BBL: Rechtsklick
+John Westfield BBL: da fhelt ein if
+John Westfield BBL: fehlt ein if (eingabe.equals("e")
+John Westfield BBL: > meldet sich <
+John Westfield BBL: stopUhr.start(); vor das do
+John Westfield BBL: und das if fhelt
+-- 11:15
+John Westfield BBL: System.out.format("The value of wert is: %f.3", wert);
+Robert Heinrich DUI: lösung für das lambda problem...
+John Westfield BBL: coole Stopuhr
+Robert Heinrich DUI: buch seite 774
+Stefan Truong S: > stimmt zu <
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > stimmt zu <
+Ivanka Pantusheva N: ich
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > meldet sich <
+Rainer Haupt M: :)
+Stephan Hartmann BBL: VOLL DABEI
+Ivanka Pantusheva N: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: hab ich auch nicht
+Christin Möller MNG: collections?
+Boris Dmitriev DÜS: > stimmt zu <
+Susanne Schröter: 11:33
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Olga Jakowenko SDL: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: > ist wieder ansprechbar <
+-- 11:30
+Rainer Haupt M: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Silvan Kolb BUX: > ist momentan nicht ansprechbar <
+Silvan Kolb BUX: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > meldet sich <
+Susanne Schröter: > ist wieder ansprechbar <
+Olga Jakowenko SDL: > ist wieder ansprechbar <
+Robert Heinrich DUI: > meldet sich <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > meldet sich <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+John Westfield BBL: ein String ist immer mit \0abgeschlossen
+John Westfield BBL: war das c++?
+-- 11:45
+John Westfield BBL: Java - keine null terminierte Strings
+Robert Heinrich DUI: String.charAt(index)
+John Westfield BBL: 0
+Stefan Truong S: > meldet sich <
+John Westfield BBL: um abzusichern, dass es ein 5er Array bliebt
+Olga Jakowenko SDL: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+Robert Heinrich DUI: sollten wir schon abgeben?
+-- 12:00
+Silvan Kolb BUX: > meldet sich <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: wann wolltest du projekte?
+Boris Dmitriev DÜS: > meldet sich <
+Robert Heinrich DUI: ok
+Christin Möller MNG: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+Silvan Kolb BUX: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Olga Jakowenko SDL: > ist momentan nicht ansprechbar <
+John Westfield BBL: > stimmt zu <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+Stephan Hartmann BBL: Mahlzeit!
+Stephan Hartmann BBL: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+-- 12:15
+Rainer Haupt M: > ist wieder ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+-- 12:30
+Stephan Hartmann BBL: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Robert Heinrich DUI: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist wieder ansprechbar <
+Susanne Schröter: 12:37
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+Silvan Kolb BUX: > ist wieder ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+Stephan Hartmann BBL: > meldet sich <
+Silvan Kolb BUX: > meldet sich <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: > meldet sich <
+Olga Jakowenko SDL: > ist wieder ansprechbar <
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: > meldet sich <
+Stephan Hartmann BBL: tuedelue
+Stefan Truong S: > stimmt zu <
+Christin Möller MNG: 0_0
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Andreas Hellrich LD: entschuldigung für verspätung.
+Stefan Truong S: > meldet sich <
+Robert Heinrich DUI: erzeugt netbeans das nicht?
+John Westfield BBL: formatter fehlt
+John Westfield BBL: %f.4
+-- 12:45
+John Westfield BBL: stopUhr nach hinten
+John Westfield BBL: unix schreibeweise
+John Westfield BBL: Unix Schreibweise
+John Westfield BBL: %6s
+John Westfield BBL: Double.parseString
+John Westfield BBL: parseDouble(String s)
+John Westfield BBL: der formatter ist falsch
+Robert Heinrich DUI: %d ist für integer
+John Westfield BBL: "%-10.4f%n
+John Westfield BBL: %-10.4f%n
+John Westfield BBL: %-10.4f%n
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+John Westfield BBL: > stimmt zu <
+Christin Möller MNG: danke
+-- 13:00
+-- 13:00 -- Ivanka Pantusheva N verlässt den Raum
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+-- 13:00 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Boris Dmitriev DÜS: > meldet sich <
+Robert Heinrich DUI: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > meldet sich <
+Andreas Hellrich LD: kann man in netbeans jars erstellen?
+Stefan Truong S: > meldet sich <
+Boris Dmitriev DÜS: Kannst du noch verteilen?
+Rainer Haupt M: > hat verstanden <
+-- 13:15
+Christin Möller MNG: wie geht das mit den farben?
+Christin Möller MNG: > stimmt zu <
+John Westfield BBL: schöne ascii art
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Christin Möller MNG: simple ascii color
+Robert Heinrich DUI: hier auch
+Robert Heinrich DUI: "personal network storage not allowed"
+Silvan Kolb BUX: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Martin Mind WADGASSEN: gmail nimmt keine archive mehr =(
+Robert Heinrich DUI: nict?
+Ferdinand Schulz LIN: > meldet sich <
+Martin Mind WADGASSEN: also wollte .zip schicken und ging nicht
+Martin Mind WADGASSEN: weilt potentiell gefährlich, hab es über drivelink dann machen
+Robert Heinrich DUI: ewig nix verschickt :)
+-- 13:30
+Stephan Hartmann BBL: nein
+Martin Mind WADGASSEN: nimm googledrive 
+Martin Mind WADGASSEN: > meldet sich <
+John Westfield BBL: > stimmt zu <
+Olga Jakowenko SDL: > hat eine Frage <
+Foysol Ahmed HAG: ich habe geschickt auch
+John Westfield BBL: ich habe das ganze netbeans projekt gezippt
+Christin Möller MNG: gmx?
+Stefan Truong S: .java reicht also?
+Christin Möller MNG: > stimmt zu <
+Robert Heinrich DUI: zips in zips sind verboten
+Robert Heinrich DUI: also archive in archiven
+Olga Jakowenko SDL: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Olga Jakowenko SDL: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+John Westfield BBL: .7z
+Christin Möller MNG: gezippte projekt
+Robert Heinrich DUI: diejar kannste nicht zippen
+Martin Mind WADGASSEN: dann schick ich das später nochmal
+Stephan Hartmann BBL: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Christin Möller MNG: > stimmt nicht zu <
+Olga Jakowenko SDL: > stimmt zu <
+Foysol Ahmed HAG: > stimmt zu <
+Andreas Hellrich LD: > stimmt zu <
+Silvan Kolb BUX: > meldet sich <
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > meldet sich <
+Ivanka Pantusheva N: > stimmt zu <
+Stefan Truong S: > stimmt nicht zu <
+Martin Mind WADGASSEN: ich bin dann weh tschöö
+-- 13:41 -- Martin Mind WADGASSEN verlässt den Raum
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+-- 13:42 -- Stefan Truong S verlässt den Raum
+-- 13:43 -- Foysol Ahmed HAG verlässt den Raum
+-- 13:43 -- Stefan Truong S betritt den Raum Hauptraum
+-- 13:44 -- Stephan Hartmann BBL verlässt den Raum
+-- 13:44 -- Foysol Ahmed HAG betritt den Raum Hauptraum
+-- 13:45
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: bei mir auch nicht ;)
+Christin Möller MNG: dient zu vertiefung, oder?
+Robert Heinrich DUI: 10 min, ja?
+Christin Möller MNG: ja robert
+Robert Heinrich DUI: > stimmt zu <
+Rainer Haupt M: > applaudiert <
+Stefan Truong S: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: dir auch (=
+Christin Möller MNG: =(
+Foysol Ahmed HAG: > stimmt zu <
+Olga Jakowenko SDL: > applaudiert <
+Boris Dmitriev DÜS: danke!) Tschüss
+Silvan Kolb BUX: > stimmt zu <
+Rainer Haupt M: > applaudiert <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+-- 13:51 -- Susanne Schröter verlässt den Raum
+-- 13:51 -- Silvan Kolb BUX verlässt den Raum
+-- 13:51 -- Boris Dmitriev DÜS verlässt den Raum
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+-- 13:51 -- Olga Jakowenko SDL verlässt den Raum
+Stefan Truong S: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+-- 14:00
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+-- 14:15
+-- 14:30
+-- 14:45
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+-- 15:00
+Rainer Haupt M: > ist wieder ansprechbar <
+-- 15:08 -- Foysol Ahmed HAG verlässt den Raum
+-- 15:09 -- Ivanka Pantusheva N verlässt den Raum
+-- 15:09 -- Rainer Haupt M verlässt den Raum
+-- 15:10 -- John Westfield BBL verlässt den Raum
+-- 15:15

@@ -1,0 +1,59 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java Basics"
+01.12.2016 12:25 Uhr
+-----------------------------------------------
+-- 12:25 -- John Westfield BBL betritt den Raum Hauptraum
+Christin Möller MNG: ist es schwer?
+Christin Möller MNG: =(
+John Westfield BBL: LEK?
+Foysol Ahmed HAG: Geben sie beispiel Frage
+Robert Heinrich DUI: programmieren? dachte multiple-choice test
+Christin Möller MNG: > stimmt nicht zu <
+John Westfield BBL: Was ist LEK?
+Martin Mind WADGASSEN: john LEK= lern erfolgskontrolle
+Christin Möller MNG: > stimmt zu <
+Rainer Haupt M: > applaudiert <
+John Westfield BBL: > stimmt zu <
+-- 12:26 -- Stefan Truong S verlässt den Raum
+-- 12:27 -- Stefan Truong S betritt den Raum Hauptraum
+John Westfield BBL: instanziiren
+John Westfield BBL: Square sq = new Square();
+Robert Heinrich DUI: oder static methoden nehmen
+John Westfield BBL: oder du machst Square static
+-- 12:30
+Robert Heinrich DUI: dann ist das C :)
+Adam Schwemlein BBL: > meldet sich <
+John Westfield BBL: bezeichner
+John Westfield BBL: ();
+John Westfield BBL: gibt es in java einen namespace?
+John Westfield BBL: ok
+Christin Möller MNG: oop
+John Westfield BBL: fehler liegt im main
+John Westfield BBL: unten
+John Westfield BBL: genau...
+John Westfield BBL: nope
+-- 12:36 -- Sebastian Rostalski betritt den Raum Hauptraum
+John Westfield BBL: nope
+Foysol Ahmed HAG: Geben sie beispiel Frage
+Foysol Ahmed HAG: Geben sie beispiel Frage
+Susanne Schröter: Morgen KEIN LEK
+John Westfield BBL: nope
+John Westfield BBL: r1
+John Westfield BBL: enter?
+Christin Möller MNG: > stimmt zu <
+Stephan Hartmann BBL: > applaudiert <
+Rainer Haupt M: > applaudiert <
+Robert Heinrich DUI: > applaudiert <
+John Westfield BBL: schleife kaputt
+-- 12:37 -- Sebastian Rostalski verlässt den Raum
+Robert Heinrich DUI: j++
+Christin Möller MNG: k++?
+John Westfield BBL: k
+Christin Möller MNG: in beiden
+John Westfield BBL: for(int i = 1, j = 1; k <a, k++)
+Stephan Hartmann BBL: > stimmt nicht zu <
+Robert Heinrich DUI: nix zu sehen
+Boris Dmitriev DÜS: > stimmt nicht zu <
+Stephan Hartmann BBL: heute ist der wurm drin
+Christin Möller MNG: 46
+-- 12:44 -- John Westfield BBL verlässt den Raum

@@ -1,0 +1,25 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Konsultation Herstell"
+03.01.2017 14:30 Uhr
+-----------------------------------------------
+-- 14:30 -- John Westfield BBL betritt den Raum Hauptraum
+Boris Dmitriev DÜS: > meldet sich <
+Rainer Haupt M: > meldet sich <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Rainer Haupt M: > meldet sich <
+-- 14:45
+Martin Stephan WM: new DecimalFormat("#0.00"); ok??
+-- 14:57 -- Martin Mind WADGASSEN verlässt den Raum
+-- 15:00
+Martin Stephan WM: bye
+-- 15:05 -- Franz-Martin Herstell verlässt den Raum
+-- 15:05 -- Olga Focht IZ verlässt den Raum
+-- 15:05 -- Boris Dmitriev DÜS verlässt den Raum
+-- 15:05 -- Martin Stephan WM verlässt den Raum
+Stefan Truong S: bye. bis morgen
+-- 15:08 -- Stefan Truong S verlässt den Raum
+John Westfield BBL: jsfiddle
+-- 15:15
+-- 15:30
+-- 15:35 -- John Westfield BBL verlässt den Raum

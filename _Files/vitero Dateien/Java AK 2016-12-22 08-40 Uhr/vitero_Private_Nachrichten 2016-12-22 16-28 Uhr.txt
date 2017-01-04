@@ -1,0 +1,25 @@
+John Westfield BBL an Christin Möller MNG:
+https://de.wikipedia.org/wiki/Model_View_Controller
+
+Christin Möller MNG an John Westfield BBL:
+danke, werde ich mich dann gleich belesen...
+wie lange hast du gebraucht, um den durchblick zu haben?
+
+John Westfield BBL an Christin Möller MNG:
+%) Überblick? Das war ein Praktikum, welches mich auf die Intensiv gebracht hat.
+Frents, ist noch online...
+Den Durchblick haben ist eine Attitüde.
+Erfahrung ist das, was du wirklich hast.
+
+Robert Heinrich DUI an John Westfield BBL:
+die wirkliche verwirrung beginnt, wenn du dir ne klasse Character für ein rollenspiel bastelst, und Class für Characterklassen ^^
+
+John Westfield BBL an Robert Heinrich DUI:
+XD
+
+Robert Heinrich DUI an John Westfield BBL:
+lustigerweise ist Character.getClass() natürlich auch per java(.lang?) implementiert.... hab ewig gebraucht den bug zu finden ^^
+
+
+John Westfield BBL an Robert Heinrich DUI:
+WoW!

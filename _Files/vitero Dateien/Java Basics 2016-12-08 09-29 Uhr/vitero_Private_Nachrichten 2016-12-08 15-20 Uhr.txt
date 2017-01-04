@@ -1,0 +1,97 @@
+John Westfield BBL an Christin Möller MNG:
+https://docs.oracle.com/javase/tutorial/java/data/numberformat.html
+
+John Westfield BBL an Christin Möller MNG:
+Sorry für die etwas vage Umschreibung
+
+
+Christin Möller MNG an John Westfield BBL:
+kein problem hat ja alles jetzt geklappt ;)
+
+Christin Möller MNG an John Westfield BBL:
+danke
+
+John Westfield BBL an Christin Möller MNG:
+kein problem, am besten du schreibst dir mal eine klasse
+mit diesen Funktionalitäten
+...als Bibliothek zum wiederverwenden in anderen (Consolen)Projekten
+
+John Westfield BBL an Christin Möller MNG:
+Sonst hast du en Aufwand jedesmal
+
+Christin Möller MNG an John Westfield BBL:
+eine gute idee (=
+
+John Westfield BBL an Christin Möller MNG:
+public void printlnFormatted (String str, float a);
+public void printlnFormatted (String str, float a, float b);
+funktioniert prima mit Überladung
+...nur die Nachkommstellen wären nicht variabel, 
+nachdem du die einmal festgelegt hast, 4 oder so
+
+im PHP kannst du zum Beispiel mit exec() das völlig variabel machen
+...naja, also die komplette Anweisung runtime basteln und ausführen lassen
+
+
+John Westfield BBL an Christin Möller MNG:
+weiß nicht ob das in Java geht :(
+
+
+Christin Möller MNG an John Westfield BBL:
+keine ahnung. bin im programmieren nicht so fit ;) 
+
+John Westfield BBL an Christin Möller MNG:
+wird schon.
+
+Christin Möller MNG an John Westfield BBL:
+muss ja XD brauch ja en neuen job ;)
+
+John Westfield BBL an Christin Möller MNG:
+üben, üben, üben = zeit, zeit, zeit
+
+Christin Möller MNG an John Westfield BBL:
+bin jetzt fleißiger als im studium und laaaaaangsam wirds
+
+John Westfield BBL an Christin Möller MNG:
+was hast du studiert?
+
+
+Christin Möller MNG an John Westfield BBL:
+informatik XD
+
+John Westfield BBL an Christin Möller MNG:
+=:O
+
+Christin Möller MNG an John Westfield BBL:
+habs bisher ohne programmieren geschaft. habe guis mit den anwendern zusammen erstellt und am ende manuell getestet. hier werden leider nur leute gesucht, die alles können
+
+John Westfield BBL an Christin Möller MNG:
+dann hast du ja alles intus
+musst das nur aktivieren
+use the force!  ;D
+
+Christin Möller MNG an John Westfield BBL:
+muss ja ;)
+macht ja auch spaß, wenn man es kann und versteht. man lernt ja immer dazu
+
+John Westfield BBL an Christin Möller MNG:
+und wenn du bezahlt wirst!
+
+John Westfield BBL an Christin Möller MNG:
+:)
+
+Christin Möller MNG an John Westfield BBL:
+genau
+
+John Westfield BBL an Christin Möller MNG:
+??
+
+John Westfield BBL an Christin Möller MNG:
+=(
+
+
+Christin Möller MNG an John Westfield BBL:
+na dasss wir schon um 8 da sein müssen
+
+John Westfield BBL an Christin Möller MNG:
+aso :D

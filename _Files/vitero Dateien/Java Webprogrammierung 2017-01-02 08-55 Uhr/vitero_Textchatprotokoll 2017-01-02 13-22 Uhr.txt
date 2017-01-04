@@ -1,0 +1,102 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java Webprogrammierung"
+02.01.2017 08:55 Uhr
+-----------------------------------------------
+-- 08:55 -- John Westfield BBL betritt den Raum Hauptraum
+Stefan Truong S: > ist wieder ansprechbar <
+-- 08:56 -- Martin Stephan WM betritt den Raum Hauptraum
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Olga Focht IZ: > ist wieder ansprechbar <
+John Westfield BBL: GenereicServlet
+-- 09:00
+John Westfield BBL: interface?
+Stefan Truong S: > meldet sich <
+John Westfield BBL: > meldet sich <
+-- 09:15
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: boris
+John Westfield BBL: html5
+Stefan Truong S: > meldet sich <
+Stefan Truong S: jep :)
+Stefan Truong S: ich versuchs später
+John Westfield BBL: willkommene Pause
+Franz-Martin Herstell: ):30
+Franz-Martin Herstell: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Olga Focht IZ: > ist momentan nicht ansprechbar <
+-- 09:30
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Franz-Martin Herstell: > ist wieder ansprechbar <
+Olga Focht IZ: > ist wieder ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Stefan Truong S: > meldet sich <
+John Westfield BBL: Pentium 2
+John Westfield BBL: nicht bei .jap! ;)
+John Westfield BBL: nichts eght über PHP Debug
+John Westfield BBL: locator
+John Westfield BBL: > meldet sich <
+John Westfield BBL: > meldet sich <
+-- 09:45
+John Westfield BBL: > ist momentan nicht ansprechbar <
+Stefan Truong S: > meldet sich <
+John Westfield BBL: > ist wieder ansprechbar <
+John Westfield BBL: > meldet sich <
+-- 10:00
+Boris Dmitriev DÜS: pool für objekte?
+Boris Dmitriev DÜS: > stimmt zu <
+-- 10:15
+John Westfield BBL: unten getInt
+John Westfield BBL: > meldet sich <
+John Westfield BBL: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: ich dachte über ServletConfig
+John Westfield BBL: > stimmt zu <
+Boris Dmitriev DÜS: > meldet sich <
+-- 10:30
+John Westfield BBL: > meldet sich <
+John Westfield BBL: > meldet sich <
+John Westfield BBL: > meldet sich <
+John Westfield BBL: > meldet sich <
+John Westfield BBL: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+-- 10:33 -- Franz-Martin Herstell verlässt den Raum
+Boris Dmitriev DÜS: verteilen ((
+-- 10:33 -- Martin Mind WADGASSEN verlässt den Raum
+John Westfield BBL: ächz
+-- 10:33 -- Olga Focht IZ verlässt den Raum
+Rainer Haupt M: aaach ja
+Boris Dmitriev DÜS: super
+Boris Dmitriev DÜS: > stimmt zu <
+John Westfield BBL: https://github.com/phanhuy/java-do
+John Westfield BBL: github head first java servlets
+Boris Dmitriev DÜS: JSF
+-- 10:40 -- Boris Dmitriev DÜS verlässt den Raum
+Stefan Truong S: > ist momentan nicht ansprechbar <
+-- 10:45
+John Westfield BBL: http://docs.oracle.com/javaee/6/tut
+John Westfield BBL: The Java EE 6 Tutorial
+John Westfield BBL: Servet Lifecycle
+-- 10:53 -- Martin Stephan WM verlässt den Raum
+Andreas Hellrich LD: > applaudiert <
+-- 11:00
+Stefan Truong S: > ist wieder ansprechbar <
+-- 11:15
+Andreas Hellrich LD: > applaudiert <
+John Westfield BBL: poor Mariah Carey...;)
+-- 11:30
+-- 11:45
+-- 12:00
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+-- 12:15
+-- 12:30
+-- 12:45
+Rainer Haupt M: > ist wieder ansprechbar <
+-- 13:00
+-- 13:15
+-- 13:22 -- Stefan Truong S verlässt den Raum
+-- 13:22 -- Rainer Haupt M verlässt den Raum
+-- 13:22 -- John Westfield BBL verlässt den Raum

@@ -1,0 +1,341 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java AK"
+14.12.2016 07:13 Uhr
+-----------------------------------------------
+-- 07:13 -- John Westfield BBL betritt den Raum
+John Westfield BBL: Guten Morgen
+-- 07:15
+-- 07:30
+-- 07:37 -- Rainer Haupt M betritt den Raum Hauptraum
+Rainer Haupt M: guten Morgen
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+-- 07:45
+-- 07:47 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Rainer Haupt M: > ist wieder ansprechbar <
+Ivanka Pantusheva N: Morgen
+-- 07:50 -- Stefan Truong S betritt den Raum Hauptraum
+Stefan Truong S: morgen
+-- 07:57 -- Boris Dmitriev DÜS betritt den Raum Hauptraum
+Boris Dmitriev DÜS: morgen
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+-- 08:00
+-- 08:00 -- Susanne Schröter betritt den Raum Hauptraum
+-- 08:02 -- Foysol Ahmed HAG betritt den Raum Hauptraum
+Ivanka Pantusheva N: > meldet sich <
+-- 08:02 -- Adam Schwemlein BBL betritt den Raum Hauptraum
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+-- 08:02 -- Robert Heinrich DUI betritt den Raum Hauptraum
+-- 08:03 -- Martin Mind WADGASSEN betritt den Raum Hauptraum
+Robert Heinrich DUI: guten morgen
+-- 08:03 -- Christin Möller MNG betritt den Raum Hauptraum
+-- 08:03 -- Andreas Hellrich LD betritt den Raum Hauptraum
+Foysol Ahmed HAG: > meldet sich <
+Christin Möller MNG: Guten Morgen @ all
+Christin Möller MNG: > meldet sich <
+-- 08:08 -- Dorothea Eggers OL betritt den Raum Hauptraum
+Christin Möller MNG: fame fehlt en r
+Dorothea Eggers OL: Morgen
+Christin Möller MNG: > meldet sich <
+John Westfield BBL: > meldet sich <
+Rainer Haupt M: > stimmt zu <
+Boris Dmitriev DÜS: > meldet sich <
+Andreas Hellrich LD: > meldet sich <
+John Westfield BBL: > stimmt zu <
+Robert Heinrich DUI: kannst editieren
+John Westfield BBL: > meldet sich <
+-- 08:15
+John Westfield BBL: objektorientiert
+Christin Möller MNG: > meldet sich <
+Boris Dmitriev DÜS: front controller im web
+John Westfield BBL: OOA
+John Westfield BBL: OOA + OOD
+-- 08:21 -- Ferdinand Schulz LIN betritt den Raum Hauptraum
+Robert Heinrich DUI: mit dir als dozent?
+Boris Dmitriev DÜS: > meldet sich <
+-- 08:30
+Robert Heinrich DUI: fängt der programmer kurs bei null an?
+Stefan Truong S: budgetphase
+Robert Heinrich DUI: ok
+Dorothea Eggers OL: sorry
+Boris Dmitriev DÜS: echounterdrückung
+Robert Heinrich DUI: wo ist überhaupt mute?
+-- 08:36 -- Christin Möller MNG verlässt den Raum
+Boris Dmitriev DÜS: > meldet sich <
+Stefan Truong S: > meldet sich <
+-- 08:42 -- Christin Möller MNG betritt den Raum Hauptraum
+-- 08:45
+Rainer Haupt M: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: die anzeigen bitte zeigen
+Stefan Truong S: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Robert Heinrich DUI: > meldet sich <
+Christin Möller MNG: > stimmt zu <
+Robert Heinrich DUI: > hat verstanden <
+Stefan Truong S: > meldet sich <
+-- 09:00
+Stefan Truong S: > hat verstanden <
+Boris Dmitriev DÜS: > meldet sich <
+Stefan Truong S: > hat verstanden <
+Robert Heinrich DUI: toString() überladen
+-- 09:07 -- Christin Möller MNG verlässt den Raum
+-- 09:07 -- Christin Möller MNG betritt den Raum Hauptraum
+Christin Möller MNG: kannste mal verteilen?
+Susanne Schröter: 9:15
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+Christin Möller MNG: dank
+John Westfield BBL: > ist wieder ansprechbar <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Dorothea Eggers OL: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+-- 09:15
+Stefan Truong S: > ist wieder ansprechbar <
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Susanne Schröter: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Stefan Truong S: > meldet sich <
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Christin Möller MNG: teilem
+Dorothea Eggers OL: > ist wieder ansprechbar <
+Christin Möller MNG: > stimmt zu <
+Stefan Truong S: > meldet sich <
+-- 09:30
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: > ist wieder ansprechbar <
+Robert Heinrich DUI: > meldet sich <
+Robert Heinrich DUI: updateUI();  in neuZeichnen() ?
+Robert Heinrich DUI: ok :)
+-- 09:45
+John Westfield BBL: validate()
+Robert Heinrich DUI: warum macht repaint() nix?`
+Susanne Schröter: 9:52
+Robert Heinrich DUI: macht updateUI() mehr oder weniger?
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Susanne Schröter: > ist wieder ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+Christin Möller MNG: buttons werden nicht angezeigt
+Boris Dmitriev DÜS: > stimmt zu <
+John Westfield BBL: listener fehlt
+-- 10:00
+Boris Dmitriev DÜS: > meldet sich <
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: > meldet sich <
+Christin Möller MNG: danke
+Christin Möller MNG: buttom, top, left, reight, mittle
+Christin Möller MNG: links oben liegt noch was iwo
+Christin Möller MNG: wenn bei left/right nichts ist=alles center?
+Stefan Truong S: funktioniert \n?
+-- 10:15
+Boris Dmitriev DÜS: > meldet sich <
+Christin Möller MNG: feste größe an north zuweisen?
+Christin Möller MNG: dann über panel im north
+John Westfield BBL: > meldet sich <
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: ein beispiel
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+-- 10:30
+Christin Möller MNG: )
+Boris Dmitriev DÜS: nicht JButtonGroup ??))
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: )
+Christin Möller MNG: ein Ordner
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: ok
+Ferdinand Schulz LIN: > meldet sich <
+Christin Möller MNG: eva-prinzip (=
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: JList auch noch? :)
+Dorothea Eggers OL: > ist momentan nicht ansprechbar <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: ich besteh nich drauf :)
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+-- 10:45
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+Dorothea Eggers OL: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Dorothea Eggers OL: > meldet sich <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: ich höre dich ganz komisch
+Boris Dmitriev DÜS: jetzt ok
+Christin Möller MNG: > applaudiert <
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: da sind schon herstell und so frei
+Christin Möller MNG: na und 2 andere männernamen
+Robert Heinrich DUI: :)
+-- 11:00
+Christin Möller MNG: hätten 2 dimensionen gereicht?
+Christin Möller MNG: 0,1,2 = 3
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: ArrayList<String[]> 
+Martin Mind WADGASSEN: bild hängt?
+John Westfield BBL: ArrayList<ArrayList<String>>
+-- 11:06 -- Christin Möller MNG verlässt den Raum
+-- 11:06 -- Christin Möller MNG betritt den Raum Hauptraum
+Martin Mind WADGASSEN: ah geht wieder
+-- 11:06 -- Christin Möller MNG verlässt den Raum
+-- 11:07 -- Christin Möller MNG betritt den Raum Hauptraum
+Boris Dmitriev DÜS: > meldet sich <
+Ferdinand Schulz LIN: > meldet sich <
+John Westfield BBL: ArrayList<ArrayList<String>>
+Foysol Ahmed HAG: Haben Sie Beispiele Frage für LEK?
+Robert Heinrich DUI: cool 
+John Westfield BBL: gleich morgens wn alle noch im halbslaf snd
+Boris Dmitriev DÜS: ))
+Christin Möller MNG: XD
+Boris Dmitriev DÜS: > meldet sich <
+Foysol Ahmed HAG: ok
+Christin Möller MNG: kannste bitte nochma schicken? hing
+-- 11:15
+Christin Möller MNG: alle
+Christin Möller MNG: =(
+Christin Möller MNG: danke
+Ferdinand Schulz LIN: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+John Westfield BBL: download hängt
+Dorothea Eggers OL: waren bisher immer 60min
+John Westfield BBL: 3 davon
+John Westfield BBL: 5 waren es
+Dorothea Eggers OL: ich bräuchte noch die von gestern
+Boris Dmitriev DÜS: nur ))
+Christin Möller MNG: mit viel inhalt (=
+Robert Heinrich DUI: cardlayout funzt nicht :(
+Dorothea Eggers OL: > stimmt zu <
+Robert Heinrich DUI: an sich ist das klar
+Robert Heinrich DUI: wird aber bei mir nicht gerendert
+Robert Heinrich DUI: egal, find ich schon raus
+Christin Möller MNG: hab auch ein fehler
+Robert Heinrich DUI: das ist ok
+Dorothea Eggers OL: > ist momentan nicht ansprechbar <
+John Westfield BBL: https://docs.oracle.com/javase/tutorial/uiswing/layout/card.html
+John Westfield BBL: https://docs.oracle.com/javase/tutorial/uiswing/layout/card.html
+John Westfield BBL: https://docs.oracle.com/javase/tutorial/uiswing/layout/card.html
+Robert Heinrich DUI: da hab ich von kopiert...
+John Westfield BBL: 	CardLayout Harcore
+Christin Möller MNG: auf englisch ;)
+Christin Möller MNG: schlecht
+Christin Möller MNG: google übersetzer XD
+Christin Möller MNG: leo nehm ic auch
+Boris Dmitriev DÜS: manchmal auch sprechen
+Boris Dmitriev DÜS: )
+Christin Möller MNG: hab noch einen fehler =(
+Dorothea Eggers OL: > ist wieder ansprechbar <
+Stefan Truong S: alternativ linkedin
+Christin Möller MNG: für andere regionen, ja
+Stefan Truong S: github nicht vergessen
+Ferdinand Schulz LIN: > meldet sich <
+Christin Möller MNG: > meldet sich <
+Boris Dmitriev DÜS: muss unbedingt ein Foto dabei sein?
+-- 11:30
+Boris Dmitriev DÜS: ok 
+Boris Dmitriev DÜS: ok)
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: was noch außer textarea
+John Westfield BBL: > stimmt zu <
+Christin Möller MNG: dir auch bis moin
+Boris Dmitriev DÜS: danke! tschuss
+John Westfield BBL: ebenso. Tschuess
+Stefan Truong S: tschuß
+Robert Heinrich DUI: ciao
+-- 11:36 -- Susanne Schröter verlässt den Raum
+-- 11:36 -- Martin Mind WADGASSEN verlässt den Raum
+Stefan Truong S: > ist momentan nicht ansprechbar <
+-- 11:36 -- Dorothea Eggers OL verlässt den Raum
+John Westfield BBL: > ist momentan nicht ansprechbar <
+-- 11:36 -- Boris Dmitriev DÜS verlässt den Raum
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+-- 11:38 -- Adam Schwemlein BBL verlässt den Raum
+-- 11:45
+-- 11:47 -- Ferdinand Schulz LIN verlässt den Raum
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+-- 12:00
+Robert Heinrich DUI: ciao, bis morgen dann...
+-- 12:08 -- Robert Heinrich DUI verlässt den Raum
+Rainer Haupt M: Mahlzeit
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+-- 12:15
+Stefan Truong S: > ist wieder ansprechbar <
+-- 12:30
+Rainer Haupt M: > ist wieder ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+-- 12:45
+-- 12:45 -- Christin Möller MNG verlässt den Raum
+-- 12:49 -- Christin Möller MNG betritt den Raum Hauptraum
+-- 13:00
+-- 13:15
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+-- 13:30
+-- 13:40 -- Rainer Haupt M verlässt den Raum
+-- 13:42 -- Rainer Haupt M betritt den Raum Hauptraum
+-- 13:45
+Stefan Truong S: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+-- 14:00
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+-- 14:15
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+-- 14:30
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+-- 14:45
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+-- 14:52 -- Stefan Truong S verlässt den Raum
+-- 15:00
+-- 15:07 -- Adam Schwemlein BBL betritt den Raum Hauptraum
+Christin Möller MNG: > stimmt zu <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Christin Möller MNG: kein problem
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+-- 15:15
+-- 15:18 -- Foysol Ahmed HAG verlässt den Raum
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+-- 15:23 -- Rainer Haupt M verlässt den Raum
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+-- 15:24 -- Ivanka Pantusheva N verlässt den Raum
+-- 15:26 -- Christin Möller MNG verlässt den Raum
+-- 15:30
+John Westfield BBL: bis morgen
+John Westfield BBL: > ist momentan nicht ansprechbar <
+-- 15:45
+-- 15:47 -- Andreas Hellrich LD verlässt den Raum
+-- 16:00
+-- 16:15
+-- 16:30
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+-- 16:33 -- Adam Schwemlein BBL verlässt den Raum
+-- 16:45
+-- 17:00
+John Westfield BBL: > ist wieder ansprechbar <
+-- 17:12 -- John Westfield BBL verlässt den Raum

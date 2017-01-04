@@ -1,0 +1,40 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Konsultation Herstell"
+03.01.2017 07:35 Uhr
+-----------------------------------------------
+-- 07:35 -- John Westfield BBL betritt den Raum
+-- 07:45
+John Westfield BBL: Guten Morgen
+-- 07:52 -- Andreas Hellrich LD betritt den Raum Hauptraum
+-- 07:55 -- Rainer Haupt M betritt den Raum Hauptraum
+Rainer Haupt M: Guten Morgen
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+-- 07:57 -- Martin Mind WADGASSEN betritt den Raum Hauptraum
+Martin Mind WADGASSEN: guten morgen
+Rainer Haupt M: > ist wieder ansprechbar <
+-- 07:57 -- Stefan Truong S betritt den Raum Hauptraum
+Andreas Hellrich LD: morgen
+Stefan Truong S: morgen
+-- 07:59 -- Franz-Martin Herstell betritt den Raum Hauptraum
+-- 08:00
+-- 08:01 -- Boris Dmitriev DÜS betritt den Raum Hauptraum
+Boris Dmitriev DÜS: morgen
+-- 08:05 -- Martin Stephan WM betritt den Raum Hauptraum
+Martin Stephan WM: moin
+-- 08:06 -- Olga Focht IZ betritt den Raum Hauptraum
+Olga Focht IZ: Morgen!
+-- 08:15
+Rainer Haupt M: > meldet sich <
+-- 08:30
+-- 08:45
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: > meldet sich <
+John Westfield BBL: implizite Initialisierung!
+John Westfield BBL: anderer browser
+John Westfield BBL: step by step
+Boris Dmitriev DÜS: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+-- 08:54 -- Franz-Martin Herstell verlässt den Raum
+-- 08:54 -- Martin Mind WADGASSEN verlässt den Raum
+-- 08:54 -- Olga Focht IZ verlässt den Raum
+-- 08:54 -- John Westfield BBL verlässt den Raum

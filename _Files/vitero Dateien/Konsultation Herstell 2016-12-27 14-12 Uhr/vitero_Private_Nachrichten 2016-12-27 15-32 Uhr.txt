@@ -1,0 +1,44 @@
+John Westfield BBL an Stefan Truong S:
+www.jsptutorial.org
+
+Stefan Truong S an John Westfield BBL:
+danke. 
+
+John Westfield BBL an Stefan Truong S:
+Die Aufgabe ist auch gar nicht so schwer.
+in der "void doSomething methode" packst du in diesme Beispiel
+deinen Code, am besten eine hashmap mit int und boolean.
+
+John Westfield BBL an Stefan Truong S:
+jedesmal wenn du eine Zahl ziehst, setzt du denn boolean auf false,
+so dass diese nicht wieder gezogen wird.
+
+John Westfield BBL an Stefan Truong S:
+ist wirklich easy.
+
+Stefan Truong S an John Westfield BBL:
+danke für den hinweis. Sein Unterricht nervt mich halt ein bisschen da es mir etwas zu unsystematisch abläuft(zeigt z.B. MVC einfach auf ner wikipedia seite!) und er keine Kommentare in den code schreibt. 
+
+John Westfield BBL an Stefan Truong S:
+ich habe das MVC heute noch nicht richtig drauf!! 2008 zum erstne Mal gesehen,
+und Kenntnis genommen.
+Das ist die hohe Kunst,
+da brauchst du schon ein bisschen Zeit das zu erlernen.
+
+John Westfield BBL an Stefan Truong S:
+am Anfang wirkt das richtig viel, 
+Flutwelle, aber das gibt sich später....
+
+Stefan Truong S an John Westfield BBL:
+ja hoff ich mal. Bei meinem Gefühl macht er keinen Unterricht sondern eher nur Konsultation
+
+
+John Westfield BBL an Stefan Truong S:
+ja, ist etwas umständlicher als Susanne
+
+John Westfield BBL an Stefan Truong S:
+aber es kommt ja auf den Inhalt an
+
+John Westfield BBL an Stefan Truong S:
+MVC - Code
+3-Tier- meist implementation der server

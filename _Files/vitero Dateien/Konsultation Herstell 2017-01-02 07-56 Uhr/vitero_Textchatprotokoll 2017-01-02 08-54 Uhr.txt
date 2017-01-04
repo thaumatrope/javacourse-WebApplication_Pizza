@@ -1,0 +1,54 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Konsultation Herstell"
+02.01.2017 07:56 Uhr
+-----------------------------------------------
+-- 07:56 -- John Westfield BBL betritt den Raum
+-- 07:56 -- Rainer Haupt M betritt den Raum Hauptraum
+-- 07:58 -- Stefan Truong S betritt den Raum Hauptraum
+Stefan Truong S: morgen
+John Westfield BBL: morgen
+-- 08:00
+Rainer Haupt M: a guats Neues
+-- 08:00 -- Stefan Truong S verlässt den Raum
+-- 08:01 -- Boris Dmitriev DÜS betritt den Raum Hauptraum
+-- 08:01 -- Franz-Martin Herstell betritt den Raum Hauptraum
+Boris Dmitriev DÜS: morgen
+-- 08:02 -- Martin Stephan WM betritt den Raum Hauptraum
+Martin Stephan WM: morgen und frohes neues jahr
+Martin Stephan WM: > stimmt zu <
+-- 08:03 -- Andreas Hellrich LD betritt den Raum Hauptraum
+John Westfield BBL: > stimmt nicht zu <
+Martin Stephan WM: > stimmt nicht zu <
+John Westfield BBL: source auf dem usb im rechner steck
+-- 08:04 -- Stefan Truong S betritt den Raum Hauptraum
+-- 08:06 -- Olga Focht IZ betritt den Raum Hauptraum
+John Westfield BBL: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: > stimmt zu <
+-- 08:14 -- Martin Mind WADGASSEN betritt den Raum Hauptraum
+-- 08:15
+Stefan Truong S: > meldet sich <
+Martin Mind WADGASSEN: guten morgen
+Boris Dmitriev DÜS: danke
+John Westfield BBL: > meldet sich <
+-- 08:30
+Stefan Truong S: > stimmt nicht zu <
+John Westfield BBL: Online
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: sagte er ja auch
+John Westfield BBL: ABM
+John Westfield BBL: JSR?
+-- 08:45
+John Westfield BBL: include & required
+John Westfield BBL: PHP
+John Westfield BBL: > stimmt zu <
+-- 08:49 -- Stefan Truong S verlässt den Raum
+-- 08:49 -- Franz-Martin Herstell verlässt den Raum
+-- 08:49 -- Martin Mind WADGASSEN verlässt den Raum
+-- 08:49 -- Boris Dmitriev DÜS verlässt den Raum
+-- 08:49 -- Martin Stephan WM verlässt den Raum
+-- 08:49 -- Olga Focht IZ verlässt den Raum
+-- 08:49 -- Andreas Hellrich LD verlässt den Raum
+-- 08:49 -- Rainer Haupt M verlässt den Raum
+-- 08:54 -- John Westfield BBL verlässt den Raum

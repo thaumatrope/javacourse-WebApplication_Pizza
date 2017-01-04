@@ -1,0 +1,156 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java Basics"
+07.12.2016 11:28 Uhr
+-----------------------------------------------
+-- 11:28 -- John Westfield BBL betritt den Raum Hauptraum
+Robert Heinrich DUI: dafür ist dann das casten
+John Westfield BBL: > meldet sich <
+-- 11:30
+Boris Dmitriev DÜS: unikate
+Silvan Kolb BUX: > meldet sich <
+Ivanka Pantusheva N: ein ist referenz andere wert
+Robert Heinrich DUI: wird überschrieben oder alt behalten?
+Silvan Kolb BUX: set: array unique
+Christin Möller MNG: put = push/ pop aus c?
+-- 11:45
+Rainer Haupt M: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Silvan Kolb BUX: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+John Westfield BBL: kein Arra, eine Map
+John Westfield BBL: Java Zauberkiste
+Robert Heinrich DUI: > meldet sich <
+Robert Heinrich DUI: ok
+John Westfield BBL: alles geklaut
+Ferdinand Schulz LIN: > meldet sich <
+Silvan Kolb BUX: > stimmt zu <
+Silvan Kolb BUX: danke
+Boris Dmitriev DÜS: > meldet sich <
+Robert Heinrich DUI: also kein unterricht mehr diese woche?
+Robert Heinrich DUI: ok
+Silvan Kolb BUX: als jar ?
+John Westfield BBL: > stimmt zu <
+Stefan Truong S: > meldet sich <
+Robert Heinrich DUI: instanceof
+John Westfield BBL: > stimmt zu <
+Silvan Kolb BUX: ja
+Boris Dmitriev DÜS: ja
+Boris Dmitriev DÜS: haustiere
+-- 12:00
+Christin Möller MNG: klassen müssen diese methoden haben?
+Robert Heinrich DUI: oder als abstract definieren
+John Westfield BBL: ?
+Robert Heinrich DUI: user bekommen nur interface, nicht den code
+Robert Heinrich DUI: > meldet sich <
+John Westfield BBL: Ferdl hat es noch nicht ganz verstanden
+John Westfield BBL: implements == Schnittstellen!!
+-- 12:15
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: genau
+Stephan Hartmann BBL: > stimmt zu <
+John Westfield BBL: claro
+Christin Möller MNG: > meldet sich <
+Adam Schwemlein BBL: > meldet sich <
+Robert Heinrich DUI: > meldet sich <
+Stephan Hartmann BBL: aber das macht man doch im nachhinein ;)
+Stephan Hartmann BBL: xD
+Boris Dmitriev DÜS: > meldet sich <
+Christin Möller MNG: > stimmt zu <
+Robert Heinrich DUI: morgen abgeben?
+Robert Heinrich DUI: nicht freitag?
+Adam Schwemlein BBL: > stimmt zu <
+Christin Möller MNG: wen betrifft das?
+John Westfield BBL: ich bleib
+Stephan Hartmann BBL: > meldet sich <
+Stephan Hartmann BBL: > meldet sich <
+Stephan Hartmann BBL: ich
+Rainer Haupt M: ich mach weiter :)
+Boris Dmitriev DÜS: > meldet sich <
+Christin Möller MNG: freitag früh abgabe
+Adam Schwemlein BBL: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Rainer Haupt M: > applaudiert <
+Robert Heinrich DUI: powerpoint präsentation :)
+Robert Heinrich DUI: war kein ernst
+Christin Möller MNG: auf einzelne themen nicht eingehen?
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: das was geschrieben worden ist
+Rainer Haupt M: > stimmt zu <
+-- 12:30
+Boris Dmitriev DÜS: > stimmt zu <
+Christin Möller MNG: schönen feierabend bis moin (=
+Robert Heinrich DUI: > applaudiert <
+Stefan Truong S: dankeschön
+Olga Jakowenko SDL: > applaudiert <
+Boris Dmitriev DÜS: danke 
+Stephan Hartmann BBL: ciao
+Boris Dmitriev DÜS: tschüss
+-- 12:30 -- Susanne Schröter verlässt den Raum
+-- 12:30 -- Martin Mind WADGASSEN verlässt den Raum
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+-- 12:30 -- Boris Dmitriev DÜS verlässt den Raum
+Christin Möller MNG: ok
+Rainer Haupt M: > stimmt zu <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+-- 12:31 -- Ferdinand Schulz LIN verlässt den Raum
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+-- 12:31 -- Boris Dmitriev DÜS betritt den Raum Hauptraum
+-- 12:31 -- Adam Schwemlein BBL verlässt den Raum
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Olga Jakowenko SDL: > ist momentan nicht ansprechbar <
+-- 12:31 -- Boris Dmitriev DÜS verlässt den Raum
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+-- 12:45
+-- 12:48 -- Silvan Kolb BUX verlässt den Raum
+-- 12:49 -- Ivanka Pantusheva N verlässt den Raum
+Stefan Truong S: > ist wieder ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+Robert Heinrich DUI: > ist wieder ansprechbar <
+-- 13:00
+Rainer Haupt M: > ist wieder ansprechbar <
+Olga Jakowenko SDL: > ist wieder ansprechbar <
+-- 13:15
+Andreas Hellrich LD: > ist wieder ansprechbar <
+-- 13:28 -- Andreas Hellrich LD verlässt den Raum
+-- 13:30
+Christin Möller MNG: zeig mal
+-- 13:41 -- Stefan Truong S verlässt den Raum
+-- 13:41 -- Rainer Haupt M verlässt den Raum
+-- 13:42 -- Olga Jakowenko SDL verlässt den Raum
+-- 13:45
+-- 13:46 -- Silvan Kolb BUX betritt den Raum Hauptraum
+-- 13:47 -- Silvan Kolb BUX verlässt den Raum
+-- 14:00
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+-- 14:13 -- Stefan Truong S betritt den Raum Hauptraum
+-- 14:13 -- Rainer Haupt M betritt den Raum Hauptraum
+Stefan Truong S: > ist momentan nicht ansprechbar <
+-- 14:15
+Stefan Truong S: > ist wieder ansprechbar <
+-- 14:30
+-- 14:45
+-- 14:47 -- Foysol Ahmed HAG verlässt den Raum
+Christin Möller MNG: hallo?
+-- 15:00
+Robert Heinrich DUI: localizedClock? :)
+-- 15:14 -- Robert Heinrich DUI verlässt den Raum
+-- 15:15
+-- 15:30
+Stephan Hartmann BBL: so, ich packs fuer heute
+Stephan Hartmann BBL: bis morgen
+-- 15:41 -- Stephan Hartmann BBL verlässt den Raum
+-- 15:45
+-- 15:50 -- Rainer Haupt M verlässt den Raum
+-- 15:58 -- Stefan Truong S verlässt den Raum
+John Westfield BBL: alles wech?
+-- 16:00
+John Westfield BBL: bis morgen
+-- 16:05 -- Christin Möller MNG verlässt den Raum
+-- 16:15
+-- 16:20 -- John Westfield BBL verlässt den Raum

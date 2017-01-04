@@ -1,0 +1,476 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java AK"
+12.12.2016 08:13 Uhr
+-----------------------------------------------
+-- 08:13 -- John Westfield BBL betritt den Raum Hauptraum
+John Westfield BBL: Guten Morgen!
+John Westfield BBL: Kennt jemand das neue Passwort?
+Andreas Hellrich LD: nope
+-- 08:15
+Christin Möller MNG: warte john
+Christin Möller MNG: BsiiW-50
+John Westfield BBL: funktioniert nicht bei mir!
+Andreas Hellrich LD: seltsam komm damit nicht an den Stundenplan
+Andreas Hellrich LD: bei mir auch nicht
+Andreas Hellrich LD: BsiW-50
+Christin Möller MNG: warte john
+Christin Möller MNG: bei mir gehts
+Christin Möller MNG: sol ich dir den plan schicken?
+John Westfield BBL: hat geklappt! Danke!
+-- 08:30
+Christin Möller MNG: kein problem
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+-- 08:45
+-- 08:45 -- Robert Heinrich DUI betritt den Raum Hauptraum
+-- 08:48 -- Rainer Haupt M betritt den Raum Hauptraum
+Rainer Haupt M: Guten Morgen
+Christin Möller MNG: > ist wieder ansprechbar <
+Christin Möller MNG: Guten Morgen
+-- 08:51 -- Foysol Ahmed HAG betritt den Raum Hauptraum
+-- 09:00
+-- 09:04 -- Stefan Truong S betritt den Raum Hauptraum
+Stefan Truong S: morgen
+-- 09:15
+-- 09:21 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Ivanka Pantusheva N: morgen
+Robert Heinrich DUI: hab jetzt auch java8 hier:)
+Robert Heinrich DUI: dozent hat nur 3 versuche gebraucht zum installieren ...
+-- 09:30
+-- 09:30 -- Boris Dmitriev DÜS betritt den Raum Hauptraum
+Boris Dmitriev DÜS: morget
+Boris Dmitriev DÜS: morgen
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+-- 09:31 -- Dorothea Eggers OL betritt den Raum Hauptraum
+Dorothea Eggers OL: Morgen
+-- 09:32 -- Martin Mind WADGASSEN betritt den Raum Hauptraum
+Martin Mind WADGASSEN: Guten Morgen
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+-- 09:38 -- Adam Schwemlein BBL betritt den Raum Hauptraum
+Adam Schwemlein BBL: Guten Morgen
+Andreas Hellrich LD: guten Morgen!
+-- 09:40 -- Susanne Schröter betritt den Raum Hauptraum
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Dorothea Eggers OL: ich glaub mein headset ist kaputt...
+Dorothea Eggers OL: ich glaub mein headset ist kaputt...
+Martin Mind WADGASSEN: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Foysol Ahmed HAG: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+John Westfield BBL: 
+John Westfield BBL: Wetter zumn Mäusemelken
+-- 09:45
+Stefan Truong S: echt?
+Stefan Truong S: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+Stefan Truong S: > stimmt zu <
+Dorothea Eggers OL: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Robert Heinrich DUI: wo schaurt man das?
+Adam Schwemlein BBL: > stimmt zu <
+Andreas Hellrich LD: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Christin Möller MNG: db?
+Christin Möller MNG: sammp ist drauf
+Robert Heinrich DUI: > stimmt zu <
+Christin Möller MNG: xammp
+Dorothea Eggers OL: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Foysol Ahmed HAG: > stimmt zu <
+-- 09:54 -- Ferdinand Schulz LIN betritt den Raum Hauptraum
+Boris Dmitriev DÜS: > stimmt zu <
+Stefan Truong S: > meldet sich <
+John Westfield BBL: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Christin Möller MNG: schlääächt ;)
+Christin Möller MNG: ich hatte gefragt
+Rainer Haupt M: ich hatte auch gefragt
+Stefan Truong S: > stimmt zu <
+John Westfield BBL: Hallo Ferdl!
+John Westfield BBL: > stimmt zu <
+-- 10:00
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Foysol Ahmed HAG: was bedeutet GUI ?
+Christin Möller MNG: grafische oberfläche
+Boris Dmitriev DÜS: schade)
+Christin Möller MNG: oldschool
+Boris Dmitriev DÜS: (
+Martin Mind WADGASSEN: retro ist doch wieder modern :D
+Christin Möller MNG: da aber nicht
+Andreas Hellrich LD: mein projekt: textadventure mit gui:)
+Foysol Ahmed HAG: auch LEK
+Christin Möller MNG: 3mal lek
+Christin Möller MNG: hilfsmittel?
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Stefan Truong S: > stimmt zu <
+Dorothea Eggers OL: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Foysol Ahmed HAG: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Andreas Hellrich LD: > stimmt nicht zu <
+John Westfield BBL: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Dorothea Eggers OL: allerdings 2015ausgabe
+Dorothea Eggers OL: 11. 
+John Westfield BBL: 12
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+Christin Möller MNG: openbook
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: riecht gut ;)
+-- 10:15
+Martin Mind WADGASSEN: > stimmt nicht zu <
+Ferdinand Schulz LIN: > meldet sich <
+Dorothea Eggers OL: > meldet sich <
+Foysol Ahmed HAG: erste LEK am Donnerstag?
+Foysol Ahmed HAG: ok
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Christin Möller MNG: teilen?
+Christin Möller MNG: > stimmt zu <
+Stefan Truong S: assertions haben wir die gemacht?
+Robert Heinrich DUI: > ist wieder ansprechbar <
+-- 10:22 -- Robert Heinrich DUI verlässt den Raum
+Boris Dmitriev DÜS: > meldet sich <
+Dorothea Eggers OL: > stimmt zu <
+Christin Möller MNG: 1 semester
+Boris Dmitriev DÜS: > meldet sich <
+-- 10:27 -- Robert Heinrich DUI betritt den Raum Hauptraum
+Boris Dmitriev DÜS: > stimmt zu <
+Robert Heinrich DUI: kannst du das dokument verteilen?
+Ferdinand Schulz LIN: > meldet sich <
+Robert Heinrich DUI: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+Susanne Schröter: 10:34
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Dorothea Eggers OL: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+-- 10:30
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+Dorothea Eggers OL: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Susanne Schröter: > ist wieder ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Stefan Truong S: weihnachten ist ja bald
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Robert Heinrich DUI: > ist wieder ansprechbar <
+Robert Heinrich DUI: baut swing nicht auf awt auf?
+John Westfield BBL: falscher Ort der Initialisierung
+Robert Heinrich DUI: > stimmt zu <
+John Westfield BBL: sorry
+John Westfield BBL: dachte das steht in der Main
+-- 10:45
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+John Westfield BBL: sollte ein enum sein
+Christin Möller MNG: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Ferdinand Schulz LIN: > stimmt zu <
+Dorothea Eggers OL: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Andreas Hellrich LD: > meldet sich <
+Martin Mind WADGASSEN: auf der mvd steht explizit gedrucktes buch
+Stefan Truong S: > meldet sich <
+-- 11:00
+Ferdinand Schulz LIN: > meldet sich <
+Christin Möller MNG: ja
+Stefan Truong S: tastenkürzel?
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Andreas Hellrich LD: hab da n fehler, kannst mal schauen?
+Stefan Truong S: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: anonyme Klasse - anonymes Objekt
+-- 11:15
+John Westfield BBL: anonymem
+John Westfield BBL: anonymen
+Boris Dmitriev DÜS: 26 Zeile
+John Westfield BBL: Dativ hier: anonymen
+John Westfield BBL: > stimmt zu <
+Stefan Truong S: Der Dativ ist dem Genetiv sein Tod
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: import?
+John Westfield BBL: sehe den Wald vor lauter Bäumen nicht :)
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Susanne Schröter: 11:31
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+John Westfield BBL: > stimmt zu <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Dorothea Eggers OL: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+-- 11:30
+Stefan Truong S: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Dorothea Eggers OL: > ist wieder ansprechbar <
+Robert Heinrich DUI: > ist wieder ansprechbar <
+Susanne Schröter: > ist wieder ansprechbar <
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+John Westfield BBL: > meldet sich <
+John Westfield BBL: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Robert Heinrich DUI: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+Andreas Hellrich LD: > meldet sich <
+Robert Heinrich DUI: > stimmt zu <
+Boris Dmitriev DÜS: sind Sie als Dozentin mitdabei?
+Boris Dmitriev DÜS: ok
+Robert Heinrich DUI: altes netbeans?
+Boris Dmitriev DÜS: > meldet sich <
+Ferdinand Schulz LIN: > meldet sich <
+Robert Heinrich DUI: ist quasi callback
+-- 11:45
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > stimmt zu <
+Dorothea Eggers OL: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Foysol Ahmed HAG: > stimmt nicht zu <
+Boris Dmitriev DÜS: )
+Stefan Truong S: eher ein muss :)
+Boris Dmitriev DÜS: einfacher mit HTML)
+-- 12:00
+Stefan Truong S: in vba war es auch einfacher
+Stefan Truong S: machen wir das noch?
+John Westfield BBL: > ist wieder ansprechbar <
+Andreas Hellrich LD: danke, bis nach der Pause :)
+Susanne Schröter: 12:34
+Dorothea Eggers OL: > ist momentan nicht ansprechbar <
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+John Westfield BBL: Polizei war am Telefon, sorry
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+John Westfield BBL: letzte Datei will nicht
+Robert Heinrich DUI: hab die letzte auch nicht
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+-- 12:15
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: hat wer MeinActionListener.java?
+John Westfield BBL: ja ich
+John Westfield BBL: ja ich
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: java1.7 Lambdas nicht möglich(
+John Westfield BBL: ja ich
+John Westfield BBL: bei mir fehlt Fenster2.java
+Stefan Truong S: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+-- 12:30
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+-- 12:30 -- Ivanka Pantusheva N verlässt den Raum
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: danke, stefan
+-- 12:31 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Rainer Haupt M: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Susanne Schröter: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > meldet sich <
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Robert Heinrich DUI: > stimmt zu <
+John Westfield BBL: Java 8
+Boris Dmitriev DÜS: ok
+Boris Dmitriev DÜS: > stimmt zu <
+Dorothea Eggers OL: > ist wieder ansprechbar <
+Ferdinand Schulz LIN: > meldet sich <
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Christin Möller MNG: ist das schwer?
+Christin Möller MNG: fall ich noch nicht rein ;)
+Ferdinand Schulz LIN: > meldet sich <
+John Westfield BBL: ja Sun...Zeiten waren das
+Christin Möller MNG: was kommt dann für mich infrage?
+John Westfield BBL: Java SE 8 Christin
+Boris Dmitriev DÜS: es gibt auch braindumps;)
+-- 12:45
+Ferdinand Schulz LIN: das sind ca 4 Monate
+Christin Möller MNG: gibt es da nicht schon viele?
+Stefan Truong S: > meldet sich <
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: > meldet sich <
+Rainer Haupt M: > meldet sich <
+Robert Heinrich DUI: findet der auch statt? 
+Andreas Hellrich LD: > meldet sich <
+Robert Heinrich DUI: > meldet sich <
+Christin Möller MNG: nach kurs oderbestandenen zertifikat
+Christin Möller MNG: ok
+Christin Möller MNG: den meinte ich ja auch =)
+Ferdinand Schulz LIN: > meldet sich <
+Robert Heinrich DUI: > meldet sich <
+Andreas Hellrich LD: > meldet sich <
+-- 13:00
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Andreas Hellrich LD: > meldet sich <
+Christin Möller MNG: > meldet sich <
+John Westfield BBL: heute noch
+John Westfield BBL: > stimmt zu <
+Ferdinand Schulz LIN: > meldet sich <
+Boris Dmitriev DÜS: macht man bei IBB 7 oder 8er java?
+Boris Dmitriev DÜS: > stimmt zu <
+Ferdinand Schulz LIN: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Andreas Hellrich LD: c# ist eine .NET sprache
+Christin Möller MNG: war das nicht am aussterben?
+John Westfield BBL: MS war Azure/Cloud Entwickler in C#
+-- 13:15
+Adam Schwemlein BBL: Du bist sehr leise
+John Westfield BBL: ja, JavaFX, an eminen Advenutre weiterspinnen
+Christin Möller MNG: für adam http://www.java-tutorial.org/video-tutorial-dame5.html
+Christin Möller MNG: http://www.java-tutorial.org/video-tutorial-dame5.html
+Christin Möller MNG: dame
+Christin Möller MNG: umwandlung von se zu handy?
+Ferdinand Schulz LIN: > meldet sich <
+Christin Möller MNG: > meldet sich <
+Foysol Ahmed HAG: > meldet sich <
+Stefan Truong S: 3Monate brauchen die Firmen durchschnittlich
+Christin Möller MNG: das stimmt stafen
+Christin Möller MNG: stefan
+John Westfield BBL: so einfach wie Brot in der Waschmaschine backen
+-- 13:30
+Christin Möller MNG: nö
+Stefan Truong S: coursera
+Adam Schwemlein BBL: > stimmt nicht zu <
+Boris Dmitriev DÜS: > stimmt nicht zu <
+Ferdinand Schulz LIN: ne
+Boris Dmitriev DÜS: > meldet sich <
+Ferdinand Schulz LIN: schreib mal
+Boris Dmitriev DÜS: > meldet sich <
+Ferdinand Schulz LIN: > meldet sich <
+Boris Dmitriev DÜS: https://github.com/
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: Danke!!
+John Westfield BBL: > stimmt zu <
+Ferdinand Schulz LIN: > stimmt zu <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+-- 13:35 -- Susanne Schröter verlässt den Raum
+-- 13:35 -- Martin Mind WADGASSEN verlässt den Raum
+Christin Möller MNG: danke
+John Westfield BBL: r,
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: danke!
+Dorothea Eggers OL: > stimmt zu <
+Ferdinand Schulz LIN: klich mein 
+John Westfield BBL: ück.
+-- 13:41 -- Rainer Haupt M verlässt den Raum
+Christin Möller MNG: > meldet sich <
+Robert Heinrich DUI: praktikum :)
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+-- 13:44 -- Dorothea Eggers OL verlässt den Raum
+-- 13:45
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: halbe umschulung
+John Westfield BBL: > stimmt zu <
+Boris Dmitriev DÜS: tschüss allerseits
+Stefan Truong S: jungspunt
+Christin Möller MNG: hab ic auch gedacht stafen
+Robert Heinrich DUI: bewirb dich auf praktika
+-- 13:47 -- Boris Dmitriev DÜS verlässt den Raum
+Christin Möller MNG: stefan
+Ferdinand Schulz LIN: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Christin Möller MNG: werden viel gesucht
+Ivanka Pantusheva N: > stimmt zu <
+Christin Möller MNG: dann c++
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Christin Möller MNG: sps wird in thüringen gesucht
+-- 14:00
+Andreas Hellrich LD: kennt sich jemand mit JTextAreas aus?
+John Westfield BBL: > stimmt zu <
+Robert Heinrich DUI: guck dir mal C an für embedded
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+Robert Heinrich DUI: java 1.0 war auch eklig :)
+Robert Heinrich DUI: ganz andere sprache
+John Westfield BBL: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI:  this.setLayout(new FlowLayout());
+-- 14:15
+Stefan Truong S: > ist momentan nicht ansprechbar <
+-- 14:18 -- Adam Schwemlein BBL verlässt den Raum
+-- 14:19 -- Ivanka Pantusheva N verlässt den Raum
+John Westfield BBL: > ist wieder ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Robert Heinrich DUI: verheimlichen :)
+-- 14:30
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Ferdinand Schulz LIN: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+Ferdinand Schulz LIN: > applaudiert <
+Stefan Truong S: > stimmt zu <
+Stefan Truong S: > stimmt zu <
+Robert Heinrich DUI: blumig :)
+Christin Möller MNG: inder=ungut
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: mach dich mal lauter
+Christin Möller MNG: john
+-- 14:45
+Christin Möller MNG: canvas gibts
+John Westfield BBL: nö
+Robert Heinrich DUI: Canvas ist awt, nicht swing
+-- 15:00
+-- 15:15
+-- 15:15 -- Robert Heinrich DUI verlässt den Raum
+-- 15:30
+-- 15:30 -- Christin Möller MNG verlässt den Raum
+Stefan Truong S: ciao leute
+-- 15:32 -- Stefan Truong S verlässt den Raum
+John Westfield BBL: Bis morgen!
+John Westfield BBL: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+-- 15:38 -- John Westfield BBL verlässt den Raum

@@ -1,0 +1,179 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java AK"
+16.12.2016 09:18 Uhr
+-----------------------------------------------
+-- 09:18 -- John Westfield BBL betritt den Raum Hauptraum
+Stefan Truong S: würd mich gerne anschließen
+Robert Heinrich DUI: ibb macht auch umschulungen
+Martin Mind WADGASSEN: unterlagen hätte ich noch ne menge
+Robert Heinrich DUI: > meldet sich <
+John Westfield BBL: selbe Frage hatte ich auch
+Robert Heinrich DUI: joa daher frage ich
+Boris Dmitriev DÜS: > meldet sich <
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > meldet sich <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+-- 09:30
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: > ist wieder ansprechbar <
+Robert Heinrich DUI: > meldet sich <
+Robert Heinrich DUI: ist ein leeres label
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+John Westfield BBL: mach mal ein button draus
+Stefan Truong S: > ist wieder ansprechbar <
+Robert Heinrich DUI: setOpaque(true)
+Robert Heinrich DUI: setOpaque(tre)=
+John Westfield BBL: label.setOpaque(true);
+Robert Heinrich DUI: true
+Christin Möller MNG: ist aber nicht center mit opaque
+Christin Möller MNG: > stimmt zu <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Susanne Schröter: 9:47
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+-- 09:45
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Christin Möller MNG: > hat verstanden <
+Christin Möller MNG: new JLabel("",JLabel.CENTER);
+Susanne Schröter: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+Christin Möller MNG: > stimmt zu <
+Robert Heinrich DUI: > ist wieder ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+-- 10:00
+Boris Dmitriev DÜS: rechte
+John Westfield BBL: doGet, DoPost
+John Westfield BBL: wiedersehen macht freude
+-- 10:07 -- Ivanka Pantusheva N verlässt den Raum
+-- 10:08 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Boris Dmitriev DÜS: nutzt als platzhalter
+Rainer Haupt M: JBoss
+-- 10:15
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+Boris Dmitriev DÜS: > meldet sich <
+Ferdinand Schulz LIN: > meldet sich <
+Stefan Truong S: überladene Methode?
+Stefan Truong S: ist die Methode im Treiber beschrieben?
+Stefan Truong S: > meldet sich <
+-- 10:30
+Ferdinand Schulz LIN: > meldet sich <
+Robert Heinrich DUI: treiber in library
+Robert Heinrich DUI: :)
+John Westfield BBL: > meldet sich <
+-- 10:45
+Ferdinand Schulz LIN: > stimmt zu <
+John Westfield BBL: XD
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Ferdinand Schulz LIN: > ist momentan nicht ansprechbar <
+John Westfield BBL: > stimmt zu <
+-- 11:00
+John Westfield BBL: ich brauche einen Kaffee!
+Boris Dmitriev DÜS: > meldet sich <
+Susanne Schröter: 11:05
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+Christin Möller MNG: > meldet sich <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Robert Heinrich DUI: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Robert Heinrich DUI: spichst du? kein ton
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Robert Heinrich DUI: hast nicht tabelle
+-- 11:09 -- Ivanka Pantusheva N verlässt den Raum
+Robert Heinrich DUI: tableCellRenderer
+-- 11:10 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Robert Heinrich DUI: http://stackoverflow.com/questions/9769909/java-swing-table-transparency
+Ferdinand Schulz LIN: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: throws an die main...tststs
+-- 11:15
+Robert Heinrich DUI: probier "src/MyDriver"
+Stefan Truong S: > meldet sich <
+John Westfield BBL: damit seine DB attraktiv bleibt
+Adam Schwemlein BBL: > stimmt zu <
+John Westfield BBL: T-SQL
+Stefan Truong S: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Christin Möller MNG: geht net
+Stefan Truong S: verteilen bitte
+Ferdinand Schulz LIN: > meldet sich <
+John Westfield BBL: MS ist ADO.Net
+Christin Möller MNG: ne mit der tabelle
+-- 11:30
+John Westfield BBL: war doch oder?
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: table.setShowGrid(false);
+Robert Heinrich DUI: tjo :)
+Stefan Truong S: > ist wieder ansprechbar <
+John Westfield BBL: table.setTableHeader(null);??
+-- 11:45
+Christin Möller MNG: danke
+Christin Möller MNG: versuchs )
+Stefan Truong S: danke susanne
+John Westfield BBL: leckä
+Boris Dmitriev DÜS: Danke! Tschüss!
+John Westfield BBL: eine super 4.Advent!
+Rainer Haupt M: schönes Wochenende, Susanne
+Christin Möller MNG: tschööööööö
+Robert Heinrich DUI: ciao
+-- 11:52 -- Susanne Schröter verlässt den Raum
+-- 11:52 -- Martin Mind WADGASSEN verlässt den Raum
+-- 11:52 -- Boris Dmitriev DÜS verlässt den Raum
+John Westfield BBL: ich habe Koma erreicht...*Augen klapp zu*
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+John Westfield BBL: die solltest du maachen stephan
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Christin Möller MNG: könnt auch da bleibeb
+John Westfield BBL: > ist momentan nicht ansprechbar <
+-- 11:54 -- Andreas Hellrich LD verlässt den Raum
+-- 11:54 -- Stefan Truong S verlässt den Raum
+-- 11:54 -- Foysol Ahmed HAG verlässt den Raum
+-- 11:54 -- Robert Heinrich DUI verlässt den Raum
+-- 12:00
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+-- 12:13 -- Stefan Truong S betritt den Raum Hauptraum
+Stefan Truong S: > ist momentan nicht ansprechbar <
+-- 12:13 -- Foysol Ahmed HAG betritt den Raum Hauptraum
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+-- 12:15
+-- 12:16 -- Andreas Hellrich LD betritt den Raum Hauptraum
+-- 12:30
+-- 12:31 -- Robert Heinrich DUI betritt den Raum Hauptraum
+Rainer Haupt M: > ist wieder ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+-- 12:32 -- Ivanka Pantusheva N verlässt den Raum
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+-- 12:42 -- Rainer Haupt M verlässt den Raum
+-- 12:45
+Stefan Truong S: > ist wieder ansprechbar <
+-- 13:00
+Andreas Hellrich LD: > ist wieder ansprechbar <
+-- 13:07 -- Christin Möller MNG verlässt den Raum
+-- 13:15
+-- 13:30
+-- 13:45
+-- 14:00
+-- 14:05 -- Ferdinand Schulz LIN verlässt den Raum
+-- 14:06 -- Foysol Ahmed HAG verlässt den Raum
+-- 14:15
+John Westfield BBL: > ist wieder ansprechbar <
+-- 14:22 -- John Westfield BBL verlässt den Raum

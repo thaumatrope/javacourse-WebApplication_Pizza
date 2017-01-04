@@ -1,0 +1,35 @@
+John Westfield BBL an Adam Schwemlein BBL:
+immer noch Probleme mit dem Projekt?
+
+
+Adam Schwemlein BBL an John Westfield BBL:
+Ja, es hängt immer wieder.
+
+
+John Westfield BBL an Adam Schwemlein BBL:
+soll ich mal versuchen zu helfen?
+
+
+John Westfield BBL an Adam Schwemlein BBL:
+public int getPositionAusgangsposition (String str){
+return Integer.parseInt(str.substring(1,2));
+}
+public int getPositionZielposition (String str){
+return Integer.parseInt(str.substring(3));
+}
+
+John Westfield BBL an Adam Schwemlein BBL:
+public int getPositionZielposition (String str){
+char c = str.charAt(2);
+switch (c){
+case A: case a:
+return 1;
+break;
+case B: b:
+return 2;
+break;
+
+
+default:
+return 0;
+}

@@ -1,0 +1,92 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java Basics"
+02.12.2016 08:53 Uhr
+-----------------------------------------------
+-- 08:53 -- John Westfield BBL betritt den Raum Hauptraum
+John Westfield BBL: Guten Morgen!
+-- 09:00
+-- 09:08 -- Olga Jakowenko SDL betritt den Raum Hauptraum
+Olga Jakowenko SDL: morgen
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+-- 09:15
+-- 09:28 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Stephan Hartmann BBL: morgen
+-- 09:30
+Ivanka Pantusheva N: morgen
+-- 09:31 -- Boris Dmitriev DÜS betritt den Raum Hauptraum
+Boris Dmitriev DÜS: morgen
+-- 09:35 -- Martin Mind WADGASSEN betritt den Raum Hauptraum
+Martin Mind WADGASSEN: morgen
+-- 09:42 -- Susanne Schröter betritt den Raum Hauptraum
+Stephan Hartmann BBL: schoenen guten morgen
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: Guten Morgen
+Adam Schwemlein BBL: > stimmt nicht zu <
+Stefan Truong S: > stimmt nicht zu <
+John Westfield BBL: > stimmt zu <
+Silvan Kolb BUX: > stimmt nicht zu <
+Stephan Hartmann BBL: > stimmt nicht zu <
+Ivanka Pantusheva N: > stimmt nicht zu <
+Christin Möller MNG: halb 3
+Silvan Kolb BUX: > stimmt nicht zu <
+Martin Mind WADGASSEN: ab halb 3 ging es dann
+Boris Dmitriev DÜS: > stimmt nicht zu <
+Christin Möller MNG: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Martin Mind WADGASSEN: > meldet sich <
+Adam Schwemlein BBL: > stimmt nicht zu <
+Foysol Ahmed HAG: > stimmt nicht zu <
+Robert Heinrich DUI: > stimmt nicht zu <
+Stefan Truong S: > stimmt nicht zu <
+Rainer Haupt M: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Ivanka Pantusheva N: > stimmt nicht zu <
+Silvan Kolb BUX: > stimmt nicht zu <
+Christin Möller MNG: > stimmt nicht zu <
+Boris Dmitriev DÜS: > stimmt nicht zu <
+Olga Jakowenko SDL: > stimmt zu <
+Stephan Hartmann BBL: > stimmt nicht zu <
+Christin Möller MNG: pw ging nicht
+Robert Heinrich DUI: glaub der wird hier in den raum gehängt...
+Rainer Haupt M: campus.ibb.com
+Christin Möller MNG: DWbW-49
+Silvan Kolb BUX: > stimmt zu <
+Martin Mind WADGASSEN: ZLbaK-48
+Christin Möller MNG: Drei Wochen bis Weihnachten
+Stephan Hartmann BBL: ZLb... ist das von dieser woche
+-- 09:45
+Silvan Kolb BUX: > stimmt zu <
+Martin Mind WADGASSEN: ZLbaK-48
+Rainer Haupt M: ZLbaK-48
+Silvan Kolb BUX: > meldet sich <
+Stephan Hartmann BBL: tn
+Silvan Kolb BUX: > meldet sich <
+Ivanka Pantusheva N: > stimmt nicht zu <
+Andreas Hellrich LD: nochmal pw schreiben bitte
+Martin Mind WADGASSEN: ZLbaK-48
+Robert Heinrich DUI: > stimmt zu <
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > hat verstanden <
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Andreas Hellrich LD: Z
+Andreas Hellrich LD: bin kurz drucken
+Silvan Kolb BUX: > meldet sich <
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Robert Heinrich DUI: protected = nur in child klasse sichtbar?
+-- 10:00
+Christin Möller MNG: charakter & spieler
+-- 10:04 -- Ferdinand Schulz LIN betritt den Raum Hauptraum
+Adam Schwemlein BBL: > stimmt zu <
+Silvan Kolb BUX: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+John Westfield BBL: etwas viel...
+John Westfield BBL: > stimmt zu <
+Silvan Kolb BUX: > stimmt zu <
+-- 10:15
+Robert Heinrich DUI: > stimmt zu <
+John Westfield BBL: Was würde den passieren, wenn ich super(name) am Ende des Konstruktors verschieben würde?
+Ivanka Pantusheva N: > meldet sich <
+John Westfield BBL: oh je!

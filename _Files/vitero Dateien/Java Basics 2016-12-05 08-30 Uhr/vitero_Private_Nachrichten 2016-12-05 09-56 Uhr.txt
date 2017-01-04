@@ -1,0 +1,127 @@
+Ferdinand Schulz LIN an John Westfield BBL:
+danke
+
+
+John Westfield BBL an Ferdinand Schulz LIN:
+:)
+
+John Westfield BBL an Ferdinand Schulz LIN:
+https://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html
+
+http://www.java-forum.org/thema/shallow-copy-deep-copy-von-objekten.10312/
+
+Ferdinand Schulz LIN an John Westfield BBL:
+hast du irgendwie schon erfahrung in IT ?
+
+
+John Westfield BBL an Ferdinand Schulz LIN:
+du kommst da etwas durcheinander
+
+ich bin dipl informatiker
+
+
+John Westfield BBL an Ferdinand Schulz LIN:
+"eine variable kopieren" ist etwas vage
+
+Ferdinand Schulz LIN an John Westfield BBL:
+merkt man :)
+
+John Westfield BBL an Ferdinand Schulz LIN:
+du solltest in Java ZUERST unterscheiden
+ist die Variable primitive oder Reference?
+
+
+Ferdinand Schulz LIN an John Westfield BBL:
+reference
+
+John Westfield BBL an Ferdinand Schulz LIN:
+wenn sie primitive ist, musst du dir nichts besonderes merken
+
+Ferdinand Schulz LIN an John Westfield BBL:
+das weiß ich
+
+John Westfield BBL an Ferdinand Schulz LIN:
+bei Reference gibt es aber eine  Besonderheit
+
+John Westfield BBL an Ferdinand Schulz LIN:
+hier heißt Variable kopieren ZWEI Dinge
+
+Ferdinand Schulz LIN an John Westfield BBL:
+ich interessiere mich dafür was passiert referenzen
+
+John Westfield BBL an Ferdinand Schulz LIN:
+jap
+
+John Westfield BBL an Ferdinand Schulz LIN:
+ZWEI DINGE:
+einaml NUR die Reference drauf kopieren, das heißt der gleiche Verweis
+das ist shallow copy
+
+John Westfield BBL an Ferdinand Schulz LIN:
+zum zweiten, nur den Inhalt der Reference kopieren,
+und die in eine neue Speicherstellen zuweisen,
+auf die deine Reference zeigt.
+deep cop
+
+John Westfield BBL an Ferdinand Schulz LIN:
+deep copy
+
+Ferdinand Schulz LIN an John Westfield BBL:
+eine Kopie der Referenz muss doch auf denselben tatsächlichen Wet zeigen ?
+
+Ferdinand Schulz LIN an John Westfield BBL:
+??
+
+John Westfield BBL an Ferdinand Schulz LIN:
+das ist die vage Beschreibung.
+ist tatsächlicher Wert die gleiche Stelle im Speicher
+eine shallow copy - JA
+eine deep copy - Nein
+
+ist tatsächlicher Wert der gleiche absolute Wert
+in beiden Fällen - JA
+
+Ferdinand Schulz LIN an John Westfield BBL:
+Vielen Dank ! Genau das wollte ich wissen 
+
+John Westfield BBL an Ferdinand Schulz LIN:
+ok.
+
+Ferdinand Schulz LIN an John Westfield BBL:
+ist ja auch logisch...wenn 2 referenzen referenzen auf die selbe Stelle im Speicher ziegen dann muss auch der Wert gleich, denn eine Stelle im Speicher hat ja nur einen Wert
+
+
+Ferdinand Schulz LIN an John Westfield BBL:
+lol
+
+John Westfield BBL an Ferdinand Schulz LIN:
+das ist dann wichtig wenn du EINER Referenz einen neuen Wert zuweist
+
+John Westfield BBL an Ferdinand Schulz LIN:
+nur EINER
+
+
+Ferdinand Schulz LIN an John Westfield BBL:
+was passiert dann mit der anderen Referenz ?
+
+John Westfield BBL an Ferdinand Schulz LIN:
+nichts.
+
+Ferdinand Schulz LIN an John Westfield BBL:
+zeigt sie dann auf den neuen Wert ?
+
+Ferdinand Schulz LIN an John Westfield BBL:
+??
+
+John Westfield BBL an Ferdinand Schulz LIN:
+auf die gleiche Stelle im Speicher
+der Wert kann sich dann ändern wenn einen andere Referenz auf die gleiche Stelle zeigt.
+
+John Westfield BBL an Ferdinand Schulz LIN:
+und das sit dann der Fall, wenn du mit = zuweist
+
+John Westfield BBL an Ferdinand Schulz LIN:
+String a = b;
+
+John Westfield BBL an Ferdinand Schulz LIN:
+Sting a = b.clone();  nicht

@@ -1,0 +1,300 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java Basics"
+30.11.2016 10:09 Uhr
+-----------------------------------------------
+-- 10:09 -- John Westfield BBL betritt den Raum Hauptraum
+Andreas Hellrich LD: du kannst die id final machen, dann geht es
+Silvan Kolb BUX: > meldet sich <
+-- 10:15
+Stephan Hartmann BBL: > stimmt zu <
+Christin Möller MNG: > stimmt nicht zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Stefan Truong S: > stimmt nicht zu <
+Olga Jakowenko SDL: > stimmt zu <
+Robert Heinrich DUI: > stimmt nicht zu <
+Rainer Haupt M: > stimmt nicht zu <
+Christin Möller MNG: > meldet sich <
+Stefan Truong S: > meldet sich <
+Stephan Hartmann BBL: super
+Ivanka Pantusheva N: > meldet sich <
+Christin Möller MNG: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: bei mir auch nicht
+Stefan Truong S: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Ferdinand Schulz LIN: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Stephan Hartmann BBL: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Boris Dmitriev DÜS: %
+Christin Möller MNG: > hat verstanden <
+Stefan Truong S: j initialisieren
+Stephan Hartmann BBL: 1
+Silvan Kolb BUX: http://projekteuler.de/funktioniert
+Stephan Hartmann BBL: http nicht https
+Stephan Hartmann BBL: andersrum
+-- 10:30
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: danke, klappt
+Ivanka Pantusheva N: > stimmt zu <
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Susanne Schröter: 10:36
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Silvan Kolb BUX: > ist momentan nicht ansprechbar <
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+Olga Jakowenko SDL: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+-- 10:35 -- Ferdinand Schulz LIN verlässt den Raum
+Olga Jakowenko SDL: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Christin Möller MNG: > ist wieder ansprechbar <
+Susanne Schröter: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+Andreas Hellrich LD: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Olga Jakowenko SDL: > stimmt zu <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Adam Schwemlein BBL: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Boris Dmitriev DÜS: > meldet sich <
+Robert Heinrich DUI: > ist wieder ansprechbar <
+Silvan Kolb BUX: > ist wieder ansprechbar <
+Rainer Haupt M: > ist wieder ansprechbar <
+-- 10:45
+-- 10:48 -- Ferdinand Schulz LIN betritt den Raum Hauptraum
+Stefan Truong S: > meldet sich <
+Stefan Truong S: > meldet sich <
+-- 10:54 -- Foysol Ahmed HAG betritt den Raum Hauptraum
+Martin Mind WADGASSEN: > meldet sich <
+Martin Mind WADGASSEN: > meldet sich <
+Martin Mind WADGASSEN: > hat verstanden <
+Christin Möller MNG: über variabel die sorten zählen?
+Rainer Haupt M: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+-- 11:00
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: > meldet sich <
+John Westfield BBL: die sind momentan nur in der Methode unsereKaffees verfügbar
+John Westfield BBL: Shop.meinKaffee[0].getSorte
+Silvan Kolb BUX: > meldet sich <
+John Westfield BBL: wäre eine direkte Zuweisung an das Array nicht sinnvoller?
+Christin Möller MNG: > meldet sich <
+Christin Möller MNG: array 
+Christin Möller MNG: = noch
+Christin Möller MNG: > meldet sich <
+Silvan Kolb BUX: > meldet sich <
+Christin Möller MNG: > meldet sich <
+Adam Schwemlein BBL: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Silvan Kolb BUX: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+-- 11:15
+Stephan Hartmann BBL: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+Stefan Truong S: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Silvan Kolb BUX: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Andreas Hellrich LD: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Ferdinand Schulz LIN: > meldet sich <
+Ferdinand Schulz LIN: > meldet sich <
+-- 11:30
+Stephan Hartmann BBL: > stimmt zu <
+Stefan Truong S: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+Christin Möller MNG: horst
+Stephan Hartmann BBL: Superman
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Rainer Haupt M: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Stefan Truong S: muss es später anschauen
+Adam Schwemlein BBL: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+John Westfield BBL: ok
+John Westfield BBL: > stimmt zu <
+Stefan Truong S: speichern
+John Westfield BBL: Es gibt dennoch redundante Daten.
+John Westfield BBL: der Kaffepreis
+John Westfield BBL: kann über shop ausgelesen werden
+Christin Möller MNG: er hängt bein runterladen 
+John Westfield BBL: über die Id
+Christin Möller MNG: nochmal neu schicken?
+John Westfield BBL: Kaffee.java
+Christin Möller MNG: > stimmt zu <
+John Westfield BBL: Hier ist der Preisund die Sorte ebenfalls
+John Westfield BBL: beides geht über die ID in Shop
+John Westfield BBL: sorry
+John Westfield BBL: Kaffe Objekt
+John Westfield BBL: :(
+-- 11:45
+John Westfield BBL: mein Fehler
+John Westfield BBL: jup
+Robert Heinrich DUI: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Robert Heinrich DUI: hing zuerst, ging aber jetzt
+Silvan Kolb BUX: > meldet sich <
+Rainer Haupt M: ich hab jetzt abgebrochen
+John Westfield BBL: Klasse Kunde nimmt nur EINE Bestellung
+Rainer Haupt M: alles klar
+John Westfield BBL: noch ein Array?
+John Westfield BBL: neue Klasse? Bestellung?
+John Westfield BBL: dynamische Liste zuerst bitte
+John Westfield BBL: ok
+John Westfield BBL: > stimmt zu <
+-- 12:00
+Christin Möller MNG: > meldet sich <
+John Westfield BBL: fehler sind gute freunde, sie kommen immer wieder
+John Westfield BBL: man verliert sie nie
+John Westfield BBL: :)
+John Westfield BBL: SchankeDöhn!
+Susanne Schröter: 12:33
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Silvan Kolb BUX: > ist momentan nicht ansprechbar <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Robert Heinrich DUI: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Olga Jakowenko SDL: > ist momentan nicht ansprechbar <
+-- 12:15
+Rainer Haupt M: > ist wieder ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Olga Jakowenko SDL: > ist wieder ansprechbar <
+-- 12:30
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+-- 12:31 -- Ivanka Pantusheva N verlässt den Raum
+-- 12:31 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Christin Möller MNG: > ist wieder ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+Susanne Schröter: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+Rainer Haupt M: > stimmt zu <
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+Adam Schwemlein BBL: ich sehe nichts
+-- 12:38 -- Adam Schwemlein BBL verlässt den Raum
+Stephan Hartmann BBL: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Martin Mind WADGASSEN: alles da
+Rainer Haupt M: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Olga Jakowenko SDL: > stimmt zu <
+-- 12:38 -- Adam Schwemlein BBL betritt den Raum Hauptraum
+Adam Schwemlein BBL: Mikro 
+Stephan Hartmann BBL: mikro ist wieder mal kaputt
+Adam Schwemlein BBL: aber ich sehe etwas
+Robert Heinrich DUI: > ist wieder ansprechbar <
+Silvan Kolb BUX: > ist wieder ansprechbar <
+-- 12:40 -- Adam Schwemlein BBL verlässt den Raum
+-- 12:41 -- Adam Schwemlein BBL betritt den Raum Hauptraum
+Martin Mind WADGASSEN: > meldet sich <
+-- 12:43 -- Adam Schwemlein BBL verlässt den Raum
+John Westfield BBL: nur wenn noch ein default folgt
+-- 12:44 -- Adam Schwemlein BBL betritt den Raum Hauptraum
+-- 12:45
+Martin Mind WADGASSEN: > hat verstanden <
+Adam Schwemlein BBL: Mikro geht nicht, aber ich höre
+Martin Mind WADGASSEN: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+Stephan Hartmann BBL: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Christin Möller MNG: true false
+Stefan Truong S: default ist false?
+Olga Jakowenko SDL: > hat eine Frage <
+Robert Heinrich DUI: > stimmt zu <
+-- 12:55 -- Foysol Ahmed HAG verlässt den Raum
+Robert Heinrich DUI: > stimmt nicht zu <
+Stefan Truong S: > stimmt zu <
+-- 12:56 -- Foysol Ahmed HAG betritt den Raum Hauptraum
+Stephan Hartmann BBL: > meldet sich <
+Robert Heinrich DUI: hatte bisher am coffeeshop gearbeitet...
+-- 13:00
+-- 13:01 -- John Westfield BBL verlässt den Raum
+Robert Heinrich DUI: hatte bisher am coffeeshop gearbeitet...
+Robert Heinrich DUI: hatte bisher am coffeeshop gearbeitet...
+-- 13:01 -- John Westfield BBL betritt den Raum Hauptraum
+Stefan Truong S: > meldet sich <
+John Westfield BBL: i++ vs ++i
+John Westfield BBL: im obigen beispeil auch ok
+John Westfield BBL: ja
+Olga Jakowenko SDL: > applaudiert <
+Martin Mind WADGASSEN: > meldet sich <
+-- 13:06 -- Ferdinand Schulz LIN verlässt den Raum
+Martin Mind WADGASSEN: > meldet sich <
+Martin Mind WADGASSEN: > hat verstanden <
+-- 13:10 -- Ferdinand Schulz LIN betritt den Raum Hauptraum
+Olga Jakowenko SDL: > applaudiert <
+John Westfield BBL: Zirkumflex ^
+Adam Schwemlein BBL: > stimmt zu <
+Martin Mind WADGASSEN: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Robert Heinrich DUI: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+-- 13:15
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: 1:1
+John Westfield BBL: OOD 
+Boris Dmitriev DÜS: > stimmt zu <
+Christin Möller MNG: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+John Westfield BBL: nicht Teil des KurseS?
+John Westfield BBL: > stimmt zu <
+Foysol Ahmed HAG: > meldet sich <
+John Westfield BBL: könntest du einen Link mit einer guten Darstellung posten?
+Christin Möller MNG: 5;
+John Westfield BBL: behind
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: semikolon
+John Westfield BBL: > applaudiert <
+Rainer Haupt M: in Zeile 55 fehlt }
+Robert Heinrich DUI: kannst Du ein tutorial für JavaFX empfehlen? :)
+Christin Möller MNG: tschööö
+John Westfield BBL: > stimmt zu <
+Silvan Kolb BUX: > stimmt zu <
+-- 13:25 -- Susanne Schröter verlässt den Raum
+John Westfield BBL: Vielen Dank
+-- 13:25 -- Martin Mind WADGASSEN verlässt den Raum
+-- 13:26 -- Ferdinand Schulz LIN verlässt den Raum
+-- 13:26 -- Boris Dmitriev DÜS verlässt den Raum
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+-- 13:26 -- Olga Jakowenko SDL verlässt den Raum
+Robert Heinrich DUI: john, was meinst du mit "guter darstellung"?
+-- 13:27 -- Ivanka Pantusheva N verlässt den Raum
+-- 13:29 -- Stephan Hartmann BBL verlässt den Raum
+-- 13:30
+-- 13:30 -- Stephan Hartmann BBL betritt den Raum Hauptraum
+Christin Möller MNG: hat es geklappt?
+Silvan Kolb BUX: ok
+-- 13:31 -- Silvan Kolb BUX verlässt den Raum
+-- 13:32 -- John Westfield BBL verlässt den Raum

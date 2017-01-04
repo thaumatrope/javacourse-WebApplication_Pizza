@@ -1,0 +1,324 @@
+-----------------------------------------------
+Betreten des Gruppenraums "Java AK"
+20.12.2016 10:02 Uhr
+-----------------------------------------------
+-- 10:02 -- John Westfield BBL betritt den Raum Hauptraum
+Susanne Schröter: Reader
+Ivanka Pantusheva N: > meldet sich <
+-- 10:02 -- Martin Mind WADGASSEN verlässt den Raum
+-- 10:02 -- Andreas Hellrich LD verlässt den Raum
+-- 10:02 -- John Westfield BBL verlässt den Raum
+-- 10:02 -- John Westfield BBL betritt den Raum Nebenraum -  E
+-- 10:02 -- John Westfield BBL verlässt den Raum
+-- 10:02 -- John Westfield BBL betritt den Raum Hauptraum
+Ivanka Pantusheva N: f
+Foysol Ahmed HAG: K
+Susanne Schröter: Reader
+Ferdinand Schulz LIN: #
+-- 10:03 -- Ferdinand Schulz LIN verlässt den Raum
+Ivanka Pantusheva N: es leift nicht
+-- 10:03 -- Foysol Ahmed HAG verlässt den Raum
+John Westfield BBL: flascher Kurs?
+John Westfield BBL: Sockets und Threads?
+Ivanka Pantusheva N: ja
+Ivanka Pantusheva N: nein
+Ivanka Pantusheva N: darf ich
+Ivanka Pantusheva N: ja
+Ivanka Pantusheva N: nein
+Ivanka Pantusheva N: habe ich nicht
+Ivanka Pantusheva N: start button
+Ivanka Pantusheva N: kann ich drausend 
+Ivanka Pantusheva N: noch ein mal drin
+Ivanka Pantusheva N: ich nicht
+Ivanka Pantusheva N: vas muss ich machen
+Ivanka Pantusheva N: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+John Westfield BBL: Datenbank und Dateien?
+John Westfield BBL: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+Ivanka Pantusheva N: > stimmt zu <
+John Westfield BBL: ok
+Ivanka Pantusheva N: > stimmt zu <
+Susanne Schröter: Reader
+Ivanka Pantusheva N: > stimmt zu <
+-- 10:11 -- John Westfield BBL verlässt den Raum
+-- 10:11 -- John Westfield BBL betritt den Raum Nebenraum -  E
+-- 10:15
+-- 10:19 -- Dorothea Eggers OL verlässt den Raum
+-- 10:23 -- John Westfield BBL verlässt den Raum
+-- 10:23 -- John Westfield BBL betritt den Raum Hauptraum
+Boris Dmitriev DÜS: H
+Rainer Haupt M: Raum I
+John Westfield BBL: Frage 5??
+-- 10:25 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Andreas Hellrich LD: > meldet sich <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+-- 10:26 -- Martin Mind WADGASSEN betritt den Raum Hauptraum
+John Westfield BBL: Frage 5 war eine Fangfrage
+Martin Mind WADGASSEN: den hab ich versemmelt :(
+Rainer Haupt M: war das mit getDbConnection?
+-- 10:30
+-- 10:34 -- Christin Möller MNG betritt den Raum Hauptraum
+Susanne Schröter: > ist momentan nicht ansprechbar <
+Susanne Schröter: > ist wieder ansprechbar <
+Christin Möller MNG: da war aber nichts von db dabei
+Christin Möller MNG: sockets
+Boris Dmitriev DÜS: oh
+John Westfield BBL: falscher Test
+John Westfield BBL: XD
+-- 10:38 -- Susanne Schröter verlässt den Raum
+-- 10:38 -- Christin Möller MNG verlässt den Raum
+-- 10:39 -- Ivanka Pantusheva N verlässt den Raum
+-- 10:39 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+Ivanka Pantusheva N: warum höre ich dich nicht
+-- 10:42 -- Susanne Schröter betritt den Raum Hauptraum
+-- 10:42 -- Ivanka Pantusheva N verlässt den Raum
+-- 10:42 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+-- 10:45
+John Westfield BBL: Tretminen LEK
+-- 10:52 -- Stefan Truong S betritt den Raum Hauptraum
+Stefan Truong S: > meldet sich <
+-- 10:52 -- Ferdinand Schulz LIN betritt den Raum Hauptraum
+Stefan Truong S: > meldet sich <
+Stefan Truong S: > meldet sich <
+-- 10:53 -- Susanne Schröter verlässt den Raum
+-- 10:53 -- Stefan Truong S verlässt den Raum
+Rainer Haupt M: afk, bewerbungstelefonat
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+John Westfield BBL: viel Glück
+-- 10:56 -- Susanne Schröter betritt den Raum Hauptraum
+-- 10:58 -- Ivanka Pantusheva N verlässt den Raum
+Martin Mind WADGASSEN: mute?
+-- 10:58 -- Ivanka Pantusheva N betritt den Raum Hauptraum
+-- 10:58 -- Susanne Schröter verlässt den Raum
+-- 10:58 -- Martin Mind WADGASSEN verlässt den Raum
+-- 11:00
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+-- 11:02 -- Susanne Schröter betritt den Raum Hauptraum
+-- 11:02 -- Martin Mind WADGASSEN betritt den Raum Hauptraum
+Andreas Hellrich LD: afk, bewerbungen überarbeiten
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+-- 11:03 -- Stefan Truong S betritt den Raum Hauptraum
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+-- 11:05 -- Martin Mind WADGASSEN verlässt den Raum
+-- 11:06 -- Adam Schwemlein BBL betritt den Raum Hauptraum
+Ferdinand Schulz LIN: > meldet sich <
+-- 11:07 -- Foysol Ahmed HAG betritt den Raum Hauptraum
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > meldet sich <
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+-- 11:15
+-- 11:17 -- Susanne Schröter verlässt den Raum
+Stefan Truong S: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+-- 11:18 -- Christin Möller MNG betritt den Raum Hauptraum
+-- 11:18 -- Susanne Schröter verlässt den Raum
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+Christin Möller MNG: > ist momentan nicht ansprechbar <
+Ivanka Pantusheva N: > ist momentan nicht ansprechbar <
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+Foysol Ahmed HAG: > ist momentan nicht ansprechbar <
+Boris Dmitriev DÜS: > ist wieder ansprechbar <
+-- 11:26 -- Boris Dmitriev DÜS verlässt den Raum
+-- 11:30
+Christin Möller MNG: > ist wieder ansprechbar <
+-- 11:45
+Rainer Haupt M: > ist wieder ansprechbar <
+-- 12:00
+Rainer Haupt M: > ist momentan nicht ansprechbar <
+-- 12:15
+Rainer Haupt M: > ist wieder ansprechbar <
+Foysol Ahmed HAG: > ist wieder ansprechbar <
+-- 12:29 -- Foysol Ahmed HAG verlässt den Raum
+-- 12:30
+-- 12:32 -- Martin Mind WADGASSEN betritt den Raum Hauptraum
+Martin Mind WADGASSEN: > ist momentan nicht ansprechbar <
+Andreas Hellrich LD: > ist wieder ansprechbar <
+Stefan Truong S: > ist wieder ansprechbar <
+Ivanka Pantusheva N: > ist wieder ansprechbar <
+-- 12:34 -- Dorothea Eggers OL betritt den Raum Hauptraum
+-- 12:35 -- Boris Dmitriev DÜS betritt den Raum Hauptraum
+-- 12:35 -- Susanne Schröter betritt den Raum Hauptraum
+Adam Schwemlein BBL: > ist wieder ansprechbar <
+Boris Dmitriev DÜS: > meldet sich <
+Rainer Haupt M: :)
+Christin Möller MNG: fragen zu projekt nachher?
+Ferdinand Schulz LIN: > meldet sich <
+John Westfield BBL: wer?
+Christin Möller MNG: > stimmt zu <
+Christin Möller MNG: brauchst du das pdf?
+Martin Mind WADGASSEN: > ist wieder ansprechbar <
+John Westfield BBL: np
+Ferdinand Schulz LIN: > meldet sich <
+Christin Möller MNG: > meldet sich <
+Stefan Truong S: > meldet sich <
+Stefan Truong S: > meldet sich <
+Dorothea Eggers OL: > stimmt zu <
+-- 12:45
+Christin Möller MNG: hab ich auch was gefunden
+Ferdinand Schulz LIN: > meldet sich <
+Christin Möller MNG: wäre auch ein großes B. bei Db
+Christin Möller MNG: https://docs.oracle.com/cd/B28359_01/appdev.111/b28765/getconn.htm#TDPJD138
+Christin Möller MNG: die war blöde
+Boris Dmitriev DÜS: deswegen .next()
+Ferdinand Schulz LIN: next !!
+Christin Möller MNG: ach die liegt es nur im speicher
+John Westfield BBL: > meldet sich <
+Christin Möller MNG: > hat verstanden <
+Stefan Truong S: klasse interface?
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: > stimmt zu <
+Ferdinand Schulz LIN: > meldet sich <
+Christin Möller MNG: tRow gibt es
+Boris Dmitriev DÜS: > stimmt zu <
+-- 13:00
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: wieder leer?
+Christin Möller MNG: die 3 bestimmt
+Christin Möller MNG: die 5 bei dir
+Ivanka Pantusheva N: > meldet sich <
+Ivanka Pantusheva N: enschuldigung
+Ivanka Pantusheva N: nexte frage
+Ivanka Pantusheva N: nexte der frage hat
+Stefan Truong S: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: > meldet sich <
+Andreas Hellrich LD: > meldet sich <
+Stefan Truong S: nächste lek?
+-- 13:15
+Stefan Truong S: versuchs wars wert
+John Westfield BBL: Integer.toString(number)
+Adam Schwemlein BBL: > meldet sich <
+John Westfield BBL: afk
+Dorothea Eggers OL: kurz weg
+Dorothea Eggers OL: > ist momentan nicht ansprechbar <
+Dorothea Eggers OL: > ist wieder ansprechbar <
+Ferdinand Schulz LIN: > meldet sich <
+-- 13:29 -- Robert Heinrich DUI betritt den Raum Hauptraum
+Robert Heinrich DUI: ibb internet war weg
+-- 13:30
+Boris Dmitriev DÜS: > stimmt zu <
+Christin Möller MNG: 4
+Christin Möller MNG: und 7.
+Christin Möller MNG: 10:30
+Ferdinand Schulz LIN: wannLEK
+Robert Heinrich DUI: > meldet sich <
+Christin Möller MNG: die war einfacher
+Robert Heinrich DUI: :)
+Adam Schwemlein BBL: > applaudiert <
+-- 13:45
+Boris Dmitriev DÜS: Sandwich fertig(:
+Boris Dmitriev DÜS: in safee
+John Westfield BBL: XD
+John Westfield BBL: bis 1M und nur bei modulo 10k etwas ausgeben
+Robert Heinrich DUI: pack sleep() in main() ?
+Christin Möller MNG: vorher war erst kaffee dann sandwich
+John Westfield BBL: > meldet sich <
+Stefan Truong S: > meldet sich <
+Christin Möller MNG: > meldet sich <
+Boris Dmitriev DÜS: > stimmt zu <
+-- 14:00
+Stefan Truong S: > meldet sich <
+John Westfield BBL: > stimmt nicht zu <
+Robert Heinrich DUI: nutzt die vm multicore?
+Christin Möller MNG: > meldet sich <
+John Westfield BBL: > meldet sich <
+Robert Heinrich DUI: > stimmt zu <
+Robert Heinrich DUI: cool
+Christin Möller MNG: kommt vom bs?
+John Westfield BBL: > stimmt zu <
+Robert Heinrich DUI: > meldet sich <
+Ivanka Pantusheva N: > meldet sich <
+Ivanka Pantusheva N: nee
+Ivanka Pantusheva N: ich werde nur hören
+Boris Dmitriev DÜS: import
+Boris Dmitriev DÜS: ?
+John Westfield BBL: Decorate
+John Westfield BBL: > meldet sich <
+-- 14:15
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: die main hat volle prio
+John Westfield BBL: setPriority()
+Boris Dmitriev DÜS: > meldet sich <
+John Westfield BBL: > stimmt zu <
+Adam Schwemlein BBL: > stimmt zu <
+Rainer Haupt M: > stimmt zu <
+Christin Möller MNG: ne
+Martin Mind WADGASSEN: nur konsultation
+Dorothea Eggers OL: nein
+Robert Heinrich DUI: nur konsultation
+Boris Dmitriev DÜS: > meldet sich <
+Christin Möller MNG: nur konsultation
+Ferdinand Schulz LIN: > meldet sich <
+Christin Möller MNG: XD
+John Westfield BBL: ;)
+-- 14:30
+Stefan Truong S: > meldet sich <
+Robert Heinrich DUI: > meldet sich <
+Rainer Haupt M: :)
+Robert Heinrich DUI: gehören demons immer main()?
+Christin Möller MNG: susanne hat :P
+Adam Schwemlein BBL: > meldet sich <
+Boris Dmitriev DÜS: > meldet sich <
+Adam Schwemlein BBL: > stimmt zu <
+Boris Dmitriev DÜS: > stimmt zu <
+John Westfield BBL: > stimmt zu <
+John Westfield BBL: mutexe und semaphore?
+Stefan Truong S: sollen wir vorarbeiten wegen der LEK?
+John Westfield BBL: > stimmt zu <
+Christin Möller MNG: können wir die nicht um 8 gleich schreiben?
+Christin Möller MNG: brauchen wir dich doch nicht
+Adam Schwemlein BBL: > hat eine Frage <
+Adam Schwemlein BBL: > hat eine Frage <
+Rainer Haupt M: > stimmt zu <
+Christin Möller MNG: paralele threads XD
+Dorothea Eggers OL: Schwierig, komme mit Bus
+John Westfield BBL: ok
+Adam Schwemlein BBL: evtl. Stau
+Christin Möller MNG: wir müssen um 8 da sein
+Ferdinand Schulz LIN: > meldet sich <
+Robert Heinrich DUI: > stimmt zu <
+-- 14:45
+Ivanka Pantusheva N: teilen sie
+Boris Dmitriev DÜS: )
+Rainer Haupt M: :)
+-- 14:48 -- Dorothea Eggers OL verlässt den Raum
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Christin Möller MNG: klingt gut
+Christin Möller MNG: inhalte
+Christin Möller MNG: steht doch auch auf den zertifikaten drauf
+Christin Möller MNG: der inhalt
+Christin Möller MNG:  
+Christin Möller MNG: ist doch hübsch
+Christin Möller MNG: wann hast du die zertifikate gemacht
+Robert Heinrich DUI: cool :)
+Christin Möller MNG: mit wie viel jahren erfahrung
+Stefan Truong S: heh
+Christin Möller MNG: muss ich noch warten und arbeiten )
+Robert Heinrich DUI: manche firmen verlangen die
+Ferdinand Schulz LIN: > meldet sich <
+Christin Möller MNG: initiativ
+Christin Möller MNG: macht fast jeder große konzern
+Adam Schwemlein BBL: Dateitransfer wird nicht fertig
+Stefan Truong S: excel lol
+-- 15:00
+Christin Möller MNG: schönen feierabend
+-- 15:01 -- Martin Mind WADGASSEN verlässt den Raum
+-- 15:01 -- Susanne Schröter verlässt den Raum
+John Westfield BBL: > ist momentan nicht ansprechbar <
+-- 15:02 -- Boris Dmitriev DÜS verlässt den Raum
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+John Westfield BBL: > ist wieder ansprechbar <
+John Westfield BBL: > ist momentan nicht ansprechbar <
+-- 15:04 -- Ivanka Pantusheva N verlässt den Raum
+John Westfield BBL: > ist wieder ansprechbar <
+-- 15:05 -- John Westfield BBL verlässt den Raum
+Andreas Hellrich LD: > ist momentan nicht ansprechbar <
+Adam Schwemlein BBL: > ist momentan nicht ansprechbar <
+-- 15:07 -- John Westfield BBL betritt den Raum Hauptraum
+-- 15:12 -- John Westfield BBL verlässt den Raum
