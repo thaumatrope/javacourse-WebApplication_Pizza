@@ -50,11 +50,11 @@ public class Kunde extends DataAccess {
         this.ort = ort;
     }
 
-    public int getPlz() {
+    public String getPlz() {
         return plz;
     }
 
-    public void setPlz(int plz) {
+    public void setPlz(String plz) {
         this.plz = plz;
     }
 
