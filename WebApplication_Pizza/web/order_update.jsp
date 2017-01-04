@@ -3,6 +3,7 @@
     Created on : 29.12.2016, 13:02:58
     Author     : User704
 --%>
+<%@page import="java.util.List"%>
 <%@page import="com.westfield.pizza.Bestellung"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -32,10 +33,10 @@
         </th> 
     </tr>  
     <% 
-        ArrayList<Bestellung> orders = myLieferung.getMyBestellungen();
+        List<Bestellung> orders = myLieferung.getMyBestellungen();
         orders.add(myBestellung);
         int i = 1;
-        double gesamtpreis = 0;
+        double gesamtpreis = 0; // - > Bean
         for(Bestellung temp : orders){
             temp.setPosition(i++);
             gesamtpreis += Double.parseDouble(temp.getPreis());
