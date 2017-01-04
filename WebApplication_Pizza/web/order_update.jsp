@@ -55,7 +55,10 @@
             </td>  
             <th style="width: 80px"> 
                 <%= pizzaService.printPreisFormatted(gesamtpreis)%>
-            </th> 
+            </th>           
+             <td style="width: 150px; text-align: right">
+                <button id="delete" onclick="delete_item()" />Löschen</button>
+            </td>
         </tr>      
     <%       
         }    
