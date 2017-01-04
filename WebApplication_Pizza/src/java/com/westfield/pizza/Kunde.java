@@ -9,13 +9,13 @@ package com.westfield.pizza;
  *
  * @author John Westfield
  */
-public class Kunde {
+public class Kunde extends DataAccess {
     
     private int kundennummer;
     private String vorname;
     private String nachname;
     private String ort;
-    private int plz;
+    private String plz;
     private String strasse;
 
     public int getKundennummer() {

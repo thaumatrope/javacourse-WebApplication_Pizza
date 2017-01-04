@@ -9,7 +9,7 @@ package com.westfield.pizza;
  *
  * @author jwest
  */
-public class Bestellung {
+public class Bestellung extends DataAccess {
     
     private int menge;
     private String preis;

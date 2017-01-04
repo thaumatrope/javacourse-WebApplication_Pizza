@@ -16,7 +16,7 @@ import java.util.Locale;
  *
  * @author User704
  */
-public class Pizza {
+public class Pizza extends DataAccess {
     
     private static List<Pizza> pizzaAngebot = new ArrayList();
     private String name;

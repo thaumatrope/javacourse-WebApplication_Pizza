@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author jwest
  */
-public class Lieferung {
+public class Lieferung extends DataAccess {
     
     private List<Bestellung> myBestellungen;
     private int bestellnummer;
