@@ -33,4 +33,17 @@ public class Lieferung extends DataAccess {
         myBestellungen = new ArrayList();
     }
     
+    public double getGesamtsumme(){        
+        double summe = 0;
+        
+        for(Bestellung best : this.myBestellungen){
+            summe = Double.parseDouble(best.getPreis());
+        }
+        return summe;
+    }
+    
+    public void deletePosition(int pos) {        
+        this.myBestellungen.remove(pos);
+    }
+    
 }

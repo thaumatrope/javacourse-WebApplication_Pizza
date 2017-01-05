@@ -14,5 +14,15 @@
                 <root id="test.src.dir"/>
             </test-roots>
         </data>
+        <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>Anzahl</word>
+            <word>ausfüllen</word>
+            <word>Bitte</word>
+            <word>Einzelpreis</word>
+            <word>Gesamtpreis</word>
+            <word>Hinzufügen</word>
+            <word>Löschen</word>
+            <word>Sorte</word>
+        </spellchecker-wordlist>
     </configuration>
 </project>

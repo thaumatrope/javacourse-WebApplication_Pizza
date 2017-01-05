@@ -71,23 +71,19 @@
                  
             }       
             
-            function add_item(){
+            function delete_item(pos){
             
                 var query = 'mode=delete' +
-                        '&menge='+document.getElementById("select_menge").value +                        
-                        '&sorte='+document.getElementById("select_sorte").value +
-                        '&preis='+document.getElementById("gesamtpreis").innerHTML;
-                
+                        '&pos='+pos;                
                 send(query);
             }
             
-             function delete_item(){
+             function add_item(){
             
                 var query = 'mode=add' +
                         '&menge='+document.getElementById("select_menge").value +
                         '&sorte='+document.getElementById("select_sorte").value +
-                        '&preis='+document.getElementById("gesamtpreis").innerHTML;
-                
+                        '&preis='+document.getElementById("gesamtpreis").innerHTML;                
                 send(query);
             }
 

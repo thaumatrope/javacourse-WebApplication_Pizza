@@ -33,13 +33,15 @@
         </th> 
     </tr>  
     <% 
+        String mode = request.getParameter("mode");
+        if(mode.equals("delete")){
+            myLieferung.deletePosition(Integer.parseInt(request.getParameter("id")));
+        }
         List<Bestellung> orders = myLieferung.getMyBestellungen();
         orders.add(myBestellung);
-        int i = 1;
-        double gesamtpreis = 0; // - > Bean
+        int i = 1;        
         for(Bestellung temp : orders){
-            temp.setPosition(i++);
-            gesamtpreis += Double.parseDouble(temp.getPreis());
+            temp.setPosition(i);            
     %>        
         <tr> 
             <td>
@@ -55,13 +57,14 @@
                 <%= temp.getPreis()%>
             </td>  
             <th style="width: 80px"> 
-                <%= pizzaService.printPreisFormatted(gesamtpreis)%>
+                <%= pizzaService.printPreisFormatted(myLieferung.getGesamtsumme())%>
             </th>           
              <td style="width: 150px; text-align: right">
-                <button id="delete" onclick="delete_item()" />Löschen</button>
+                <button id="delete" onclick="delete_item(<%= i %>)" />Löschen</button>
             </td>
         </tr>      
-    <%       
+    <%   
+        i++;
         }    
     %>
 </table>

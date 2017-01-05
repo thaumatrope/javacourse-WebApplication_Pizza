@@ -7,6 +7,7 @@ package com.westfield.pizza;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -17,7 +18,7 @@ import javax.sql.DataSource;
  *
  * @author John Westfield
  */
-public class DataAccess {
+public class DataAccess {   
     
     public Connection getConnectionPool() {
         try {            
