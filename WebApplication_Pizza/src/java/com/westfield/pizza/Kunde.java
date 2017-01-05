@@ -98,6 +98,15 @@ public class Kunde extends DataAccess {
             return false;
         }        
     }
+    
+     public boolean checkKundennummer(){    
+        Set kdnr = snatchKundennummern();
+        if(kdnr.contains(new Integer(this.kundennummer))){
+            return true;
+        }else{
+            return false;
+        }        
+    }
    
     public Set<Integer> snatchKundennummern(){
         Connection con = null;

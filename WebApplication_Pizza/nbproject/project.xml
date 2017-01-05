@@ -17,13 +17,25 @@
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
             <word>Anzahl</word>
             <word>ausfüllen</word>
+            <word>Bereits</word>
             <word>Bitte</word>
             <word>Einzelpreis</word>
+            <word>gefunden</word>
             <word>Gesamtpreis</word>
             <word>Hinzufügen</word>
+            <word>Kunde</word>
+            <word>Kundennummer</word>
             <word>Löschen</word>
+            <word>Nachname</word>
+            <word>Neukunde</word>
+            <word>nicht</word>
+            <word>PLZ</word>
             <word>Postenpreis</word>
+            <word>prüfen</word>
             <word>Sorte</word>
+            <word>Stadt</word>
+            <word>Strasse</word>
+            <word>Vorname</word>
         </spellchecker-wordlist>
     </configuration>
 </project>

@@ -90,7 +90,7 @@
             function send(query){              
                 
                 var xmlhttp = new XMLHttpRequest();    
-                xmlhttp.open("POST", 'order_update.jsp', true);
+                xmlhttp.open("POST", 'landing_update.jsp', true);
                   
                 //Send the proper header information along with the request
                 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -174,13 +174,11 @@
                         
                     </div>
                     <br><hr><br>                  
-                    <form action="bestellung.jsp" method="post"> 
-                        <table border="0" style="table-layout:fixed">                        
+                    <form action="order.jsp" method="post"> 
+                        <table border="0">                        
                             <tr>
-                                <td style="width:80px;"><input type="submit" value="Abschicken"></td>
-                                <td style="width:150px;"></td>
-                                <td style="width:80px;"></td>
-                                <td style="width:150px;"></td>
+                                <td style="width:80px;"><input type="submit" value="Bestellung überprüfen"></td>
+                                <td style="width:350px;"></td>                                
                             </tr>
                         </table>                     
                     </form> 
