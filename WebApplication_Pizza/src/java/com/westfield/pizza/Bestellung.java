@@ -19,6 +19,12 @@ public class Bestellung extends DataAccess {
     public String getPreis() {
         return preis;
     }
+    
+     public double getPreisDouble() {        
+        System.out.println("Bestellung - getPreisDouble double: " + Double.parseDouble(this.preis));
+        
+        return Double.parseDouble(this.preis);
+    }
 
     public void setPreis(String preis) {        
         this.preis = preis;

@@ -33,17 +33,26 @@ public class Lieferung extends DataAccess {
         myBestellungen = new ArrayList();
     }
     
-    public double getGesamtsumme(){        
+    public double getGesamtsumme(int pos){  
+        System.out.println("Lieferung - Gesamtsumme: positions" + pos);
         double summe = 0;
-        
-        for(Bestellung best : this.myBestellungen){
-            summe = Double.parseDouble(best.getPreis());
+        for(Bestellung best : this.myBestellungen){            
+            if(this.myBestellungen.indexOf(best) < pos){
+                System.out.println("Lieferung - Gesamtsumme: check - best.getPosition() <= pos : " + this.myBestellungen.indexOf(best) + " <= " + pos);
+                summe += best.getPreisDouble();
+            }
         }
+        System.out.println("Lieferung - Gesamtsumme: " + summe);
         return summe;
     }
     
     public void deletePosition(int pos) {        
-        this.myBestellungen.remove(pos);
+        this.myBestellungen.remove(pos - 1);
+    }
+    
+    public void addPosition(Bestellung bestell) { 
+        
+        this.myBestellungen.add(bestell);
     }
     
 }

@@ -74,7 +74,7 @@
             function delete_item(pos){
             
                 var query = 'mode=delete' +
-                        '&pos='+pos;                
+                        '&pos='+pos;  
                 send(query);
             }
             
@@ -99,7 +99,8 @@
              
                 xmlhttp.onreadystatechange = function() {//Call a function when the state changes.
                     if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                        //var text = xmlhttp.responseText;                    
+                        //var text = xmlhttp.responseText; 
+                        //alert(text);
                         document.getElementById("bestellungen").innerHTML = xmlhttp.responseText;
                     }
                 }                

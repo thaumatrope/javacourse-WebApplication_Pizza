@@ -22,6 +22,7 @@
             <word>Gesamtpreis</word>
             <word>Hinzufügen</word>
             <word>Löschen</word>
+            <word>Postenpreis</word>
             <word>Sorte</word>
         </spellchecker-wordlist>
     </configuration>
