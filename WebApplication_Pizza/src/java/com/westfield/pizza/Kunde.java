@@ -33,6 +33,16 @@ public class Kunde extends DataAccess {
         return kundennummer;
     }
 
+    public void setKundennummer(String nummer){
+        int kundennummer;
+        try {
+           kundennummer = Integer.parseInt(nummer);
+        } catch (NumberFormatException e) {
+            System.out.println("Kunde: NumberFormatException - keine Zahl aus 'String nummer': " + nummer);
+            return;
+        }
+        this.kundennummer = kundennummer;  
+    }       
     public void setKundennummer(int kundennummer) {
         this.kundennummer = kundennummer;
     }
@@ -99,13 +109,21 @@ public class Kunde extends DataAccess {
         }        
     }
     
-     public boolean checkKundennummer(){    
-        Set kdnr = snatchKundennummern();
-        if(kdnr.contains(new Integer(this.kundennummer))){
-            return true;
-        }else{
-            return false;
-        }        
+    public boolean checkKundennummer(String nummer){ 
+        
+        int kundennummer;
+        try {
+           kundennummer = Integer.parseInt(nummer);
+        } catch (NumberFormatException e) {
+              return false;
+        }
+        return this.checkKundennummer(kundennummer); 
+    }
+    
+    public boolean checkKundennummer(){  
+        
+        return this.checkKundennummer(this.kundennummer);
+       
     }
    
     public Set<Integer> snatchKundennummern(){
@@ -161,10 +179,13 @@ public class Kunde extends DataAccess {
         PreparedStatement stm = null;
         boolean stored = false;
         try {
-            
+            System.out.println("Kunde store() - start");
             con = this.getConnectionPool();
-            if(con == null) return false;
-            stm = con.prepareStatement("INSERT INTO kunde (kundennummer, vorname, nachname, strasse, ort, plz) VALUES(?,?,?)");
+            if(con == null) {
+                System.out.println("Kunde store() - no Connection Pool");
+                return false;
+            }
+            stm = con.prepareStatement("INSERT INTO kunde (kundennummer, vorname, nachname, strasse, ort, plz) VALUES(?,?,?,?,?,?)");
             stm.setInt(1, this.getKundennummer());
             stm.setString(2, this.getVorname());
             stm.setString(3, this.getNachname());
@@ -212,27 +233,11 @@ public class Kunde extends DataAccess {
         } catch (SQLException ex) {
             
         } finally {
-            try {
-                if (rs != null) {
-                    rs.close();
-                }
-            } catch (Exception e) {
-                
-            }
-            try {
-                if (stm != null) {
-                    stm.close();
-                }
-            } catch (Exception e) {
-               
-            }
-            try {
-                if (con != null) {
-                    con.close();
-                }
-            } catch (Exception e) {
-              
-            }
+            
+            try { if (rs != null) rs.close(); } catch (Exception e) {}
+            try { if( stm != null) stm.close(); } catch(Exception e) {}
+            try { if( con != null) con.close(); } catch(Exception e) {}            
+           
         }
         return this;
     }

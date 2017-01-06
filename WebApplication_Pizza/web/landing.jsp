@@ -174,7 +174,7 @@
                         
                     </div>
                     <br><hr><br>                  
-                    <form action="order.jsp" method="post"> 
+                    <form action="kunden.jsp" method="post"> 
                         <table border="0">                        
                             <tr>
                                 <td style="width:80px;"><input type="submit" value="Bestellung überprüfen"></td>
