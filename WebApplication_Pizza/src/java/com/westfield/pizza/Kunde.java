@@ -175,6 +175,46 @@ public class Kunde extends DataAccess {
     }
     
     public boolean store(){
+        
+         if(this.checkKundennummer(this.getKundennummer())){ 
+             return this.insertKunde();
+         } else {
+            return this.updateKunde();
+         }
+    }
+    
+     public boolean updateKunde(){
+        Connection con = null;
+        PreparedStatement stm = null;
+        boolean stored = false;
+        try {
+            System.out.println("Kunde update() - start");
+            con = this.getConnectionPool();
+            if(con == null) {
+                System.out.println("Kunde update() - no Connection Pool");
+                return false;
+            }
+            stm = con.prepareStatement("UPDATE kunde SET vorname = ?, nachname = ?, strasse = ?, ort = ?, plz = ? WHERE kundennummer = ?");
+            stm.setString(1, this.getVorname());
+            stm.setString(2, this.getNachname());
+            stm.setString(3, this.getStrasse());
+            stm.setString(4, this.getOrt());
+            stm.setString(5, this.getPlz());
+            stm.setInt(6, this.getKundennummer());
+            int rows = stm.executeUpdate();
+            con.commit();
+            stored = rows == 1;
+        } catch (SQLException ex) {          
+            stored = false;
+        } finally {
+            try { if( stm != null) stm.close(); } catch(Exception e) {}
+            try { if( con != null) con.close(); } catch(Exception e) {}
+        }
+        return stored;
+    }
+     
+     
+    public boolean insertKunde(){
         Connection con = null;
         PreparedStatement stm = null;
         boolean stored = false;
