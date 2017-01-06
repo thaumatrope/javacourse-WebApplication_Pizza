@@ -111,9 +111,17 @@
 
                     <table border="0" style="table-layout:fixed">                        
                         <tr>
-                            <td style="width:80px;"><input type="submit" value="Bestellung abschliessen" name="button"></td>
+                            <td style="width:80px;">
+                                <form action="bestellung.jsp" method="post">                      
+                                    <input type="submit" value="Bestellung abschliessen" name="button">
+                                </form>
+                            </td>
                             <td style="width:400px;"></td>
-                            <td style="width:80px;"><input type="submit" value="Bestellung löschen" name="button"></td>
+                            <td style="width:80px;">
+                                <form action="landing.jsp" method="post">                      
+                                    <input type="submit" value="Bestellung löschen" name="button">
+                                </form>
+                            </td>    
                         </tr>
                     </table>                     
             </fieldset>
