@@ -18,7 +18,7 @@
    System.out.println("kunden_update.jsp reached!");
    if(myKunde.checkKundennummer(request.getParameter("kundennummer"))){ 
            
-        myKunde = myKunde.snatch(myKunde.getKundennummer());
+        myKunde = myKunde.snatch(request.getParameter("kundennummer"));
  
 // <div id="kundendaten">     
 %>

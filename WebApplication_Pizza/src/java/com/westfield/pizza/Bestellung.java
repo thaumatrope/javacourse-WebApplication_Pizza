@@ -20,10 +20,18 @@ public class Bestellung extends DataAccess {
         return preis;
     }
     
-     public double getPreisDouble() {        
-        System.out.println("Bestellung - getPreisDouble double: " + Double.parseDouble(this.preis));
+     public double getPreisDouble() {  
+         
+        double tmp;
+        try {
+           tmp = Double.parseDouble(this.preis);
+           System.out.println("Bestellung - getPreisDouble double: " + Double.parseDouble(this.preis));
+        } catch (NumberFormatException e) {
+            System.out.println("Bestellung-getPreisDouble: NumberFormatException");
+            return 0.0;
+        }         
+        return tmp;        
         
-        return Double.parseDouble(this.preis);
     }
 
     public void setPreis(String preis) {        

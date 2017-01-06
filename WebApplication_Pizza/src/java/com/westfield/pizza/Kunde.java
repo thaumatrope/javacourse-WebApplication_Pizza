@@ -204,7 +204,18 @@ public class Kunde extends DataAccess {
         return stored;
     }
     
-    public Kunde snatch (int kdnummer) {
+    public Kunde snatch (String nummer) {
+        
+        int kundennummer;
+        try {
+           kundennummer = Integer.parseInt(nummer);
+        } catch (NumberFormatException e) {
+              return new Kunde();
+        }
+        return this.snatch(kundennummer); 
+    }
+    
+    public Kunde snatch (int kundennummer) {
         Connection con = null;
         Statement stm = null;        
         ResultSet rs = null;
@@ -217,7 +228,7 @@ public class Kunde extends DataAccess {
                 return null;
             }
             stm = con.createStatement();
-            rs = stm.executeQuery("SELECT * FROM kunde WHERE kundennummer = '" + kdnummer + "'");
+            rs = stm.executeQuery("SELECT * FROM kunde WHERE kundennummer = '" + kundennummer + "'");
             
             while (rs.next()) {
                 

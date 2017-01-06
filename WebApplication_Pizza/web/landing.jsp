@@ -3,15 +3,16 @@
     Created on : 29.12.2016, 12:16:08
     Author     : User704
 --%>
-
+<%
+    if(!session.isNew()){
+        session.invalidate();
+    }
+%>
 <%@page import="com.westfield.pizza.Pizza"%>
 <%@page import="com.westfield.pizza.PizzaService"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <jsp:useBean id="pizzaService" class="com.westfield.pizza.PizzaService" scope="application"></jsp:useBean> 
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -39,36 +40,21 @@
                 
                 var menge = parseInt(document.getElementById("select_menge").value);
                 var selection = document.getElementById("select_sorte").value;
-                  
-                if (selection == "<%= Pizza.getPizzaAngebot().get(0).getName() %>") {
-                    document.getElementById("einzelpreis").innerHTML = "<%= Pizza.getPizzaAngebot().get(0).getPreisFormatted() %>";
-                    var temp = "<%= Pizza.getPizzaAngebot().get(0).getPreis() %>";
-                    document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();           
-
-                } else if (selection == "<%= Pizza.getPizzaAngebot().get(1).getName() %>") {
-                    document.getElementById("einzelpreis").innerHTML  = "<%= Pizza.getPizzaAngebot().get(1).getPreisFormatted() %>";
-                    var temp = "<%= Pizza.getPizzaAngebot().get(1).getPreis() %>";
+                 
+                if(false){                    
+                }              
+<%              
+                for(Pizza einePizza: pizzaService.getPizzaAngebot()){
+%>
+                else if (selection == "<%= einePizza.getName()%>") {
+                    document.getElementById("einzelpreis").innerHTML  = "<%= einePizza.getPreis() %>";
+                    var temp = "<%= einePizza.getPreis() %>";
                     document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
-
-                } else if (selection == "<%= Pizza.getPizzaAngebot().get(2).getName() %>") {
-                    document.getElementById("einzelpreis").innerHTML = "<%= Pizza.getPizzaAngebot().get(2).getPreisFormatted() %>";
-                    var temp = "<%= Pizza.getPizzaAngebot().get(2).getPreis() %>";
-                    document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
-
-                } else if (selection == "<%= Pizza.getPizzaAngebot().get(3).getName() %>") {
-                    document.getElementById("einzelpreis").innerHTML = "<%= Pizza.getPizzaAngebot().get(3).getPreisFormatted() %>"; 
-                    var temp = "<%= Pizza.getPizzaAngebot().get(3).getPreis() %>";
-                    document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
-
-                } else if (selection == "<%= Pizza.getPizzaAngebot().get(4).getName() %>") {
-                    document.getElementById("einzelpreis").innerHTML = "<%= Pizza.getPizzaAngebot().get(4).getPreisFormatted() %>"; 
-                    var temp = "<%= Pizza.getPizzaAngebot().get(4).getPreis() %>";
-                    document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
-
                 }
-                
-                 
-                 
+<%
+                }
+%>
+              
             }       
             
             function delete_item(pos){
@@ -139,7 +125,7 @@
                             <td> <input style="width: 50px; text-align: right" type="number" min="1" max="10" value="1" id="select_menge" onchange="change()"> </td>
                             <td> <select id="select_sorte" name="pizza" onchange="change();">                                  
                             <%      
-                                List<Pizza> sorten = Pizza.getPizzaAngebot();
+                                List<Pizza> sorten = pizzaService.getPizzaAngebot();
                                 for(Pizza myPizza : sorten){
                                     out.print("<option value=\"" + myPizza.getName() + "\">"+ myPizza.getName() + "</option>");
                                 

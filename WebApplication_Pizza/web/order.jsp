@@ -107,15 +107,15 @@
                     <br><hr><br> 
                      
                     <form action="bestellung.jsp" method="post">
-                        <table border="0" style="table-layout:fixed">                        
-                            <tr>
-                                <td style="width:80px;"><input type="submit" value="Bestellung abschliessen" name="button"></td>
-                                <td style="width:400px;"></td>
-                                <td style="width:80px;"><input type="submit" value="Bestellung löschen" name="button"></td>
-                            </tr>
+                    </form> 
 
-                        </table> 
-                    </form>            
+                    <table border="0" style="table-layout:fixed">                        
+                        <tr>
+                            <td style="width:80px;"><input type="submit" value="Bestellung abschliessen" name="button"></td>
+                            <td style="width:400px;"></td>
+                            <td style="width:80px;"><input type="submit" value="Bestellung löschen" name="button"></td>
+                        </tr>
+                    </table>                     
             </fieldset>
             </div>
         </div>

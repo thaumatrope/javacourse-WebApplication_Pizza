@@ -18,19 +18,13 @@ import java.util.Locale;
  */
 public class Pizza extends DataAccess {
     
-    private static List<Pizza> pizzaAngebot = new ArrayList();
     private String name;
-    private Double preis;
+    private String preis;
+   
     
-    
-    public static List<Pizza> getPizzaAngebot() {
-        return pizzaAngebot;
-    }   
-    
-    public Pizza(String name, Double preis){
+    public Pizza(String name, String preis){
         this.name = name;
-        this.preis = preis;
-        this.pizzaAngebot.add(this);
+        this.preis = preis;        
     }    
     
     public String getName() {
@@ -41,35 +35,27 @@ public class Pizza extends DataAccess {
         this.name = name;
     }
 
-    public Double getPreis() {
+    public String getPreis() {
         return preis;
     }
+    
+    public double getPreisDouble() {
+        double tmp;
+        try {
+           tmp = Double.parseDouble(this.preis);
+        } catch (NumberFormatException e) {
+            System.out.println("Pizza-getPreisDouble: NumberFormatException");
+              return 0.0;
+        } 
+        
+        return tmp;
+    }
 
-    public void setPreis(Double preis) {
+    public void setPreis(String preis) {        
+        
         this.preis = preis;
     }
     
-    public String getPreisFormatted() {
-        
-        DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.GERMAN);
-        otherSymbols.setDecimalSeparator('.');
-        otherSymbols.setGroupingSeparator('.'); 
-        NumberFormat formatter = new DecimalFormat(".00", otherSymbols);
-        
-        //NumberFormat formatter = new DecimalFormat();        
-        return formatter.format(this.preis);
-  
-    }    
-    
-    public double getPizzaPreis (String name){
-        
-        for (Pizza myPizza : this.pizzaAngebot){
-            
-            if(myPizza.getName().equals(name)){
-                return myPizza.getPreis();
-            }
-        }
-        return 0;
-    }
+   
     
 }
