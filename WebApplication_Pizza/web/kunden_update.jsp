@@ -22,7 +22,7 @@
  
 // <div id="kundendaten">     
 %>
-<form action="order.jsp" method="post">                
+<form action="order.jsp" method="post" id="order">                
 
     <fieldset style="width:780px;">
        <legend>Kundendaten:<span class="bold-red" id="feedback_daten"></span></legend>
