@@ -12,7 +12,12 @@
 <%@page import="com.westfield.pizza.PizzaService"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean id="pizzaService" class="com.westfield.pizza.PizzaService" scope="application"></jsp:useBean> 
+<jsp:useBean id="pizzaService" class="com.westfield.pizza.PizzaService" scope="application"></jsp:useBean>
+<jsp:useBean id="myLieferung" class="com.westfield.pizza.Lieferung" scope="session"></jsp:useBean>
+<jsp:scriptlet>
+    myLieferung.setIp(request.getRemoteAddr());
+    myLieferung.setSessionid(request.getSession(true).getId());
+</jsp:scriptlet>
 <!DOCTYPE html>
 <html>
     <head>

@@ -177,9 +177,9 @@ public class Kunde extends DataAccess {
     public boolean store(){
         
          if(this.checkKundennummer(this.getKundennummer())){ 
-             return this.insertKunde();
+            return this.updateKunde(); 
          } else {
-            return this.updateKunde();
+            return this.insertKunde();            
          }
     }
     

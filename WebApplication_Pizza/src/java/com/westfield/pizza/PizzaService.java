@@ -8,6 +8,11 @@ import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -94,4 +99,17 @@ public class PizzaService extends DataAccess implements AutoCloseable {
         }
         return 0;
     }
+    
+    public String getCurrentDateTimeString(){
+        
+        LocalDateTime myDateTime = LocalDateTime.now();
+        //LocalDate myDate = LocalDate.now();
+        //LocalTime myTime = LocalTime.now();
+        //Locale myLocale = new Locale("de","DE");
+        //DateTimeFormatter myFormatter = DateTimeFormatter.ofPattern(pattern, Locale.GERMANY);
+        
+        System.out.println(myDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)));
+        return myDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
+        
+     }
 }
