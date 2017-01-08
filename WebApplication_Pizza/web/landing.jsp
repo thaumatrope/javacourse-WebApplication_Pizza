@@ -18,6 +18,7 @@
     } catch (IllegalStateException ex){
         out.println("Shitty");
     }
+    session.setMaxInactiveInterval(900);
     Lieferung myLieferung = new Lieferung();
     myLieferung.setIp(request.getRemoteAddr());
     System.out.println("landing.jsp - myLieferung.getIP(): " +  myLieferung.getIp());

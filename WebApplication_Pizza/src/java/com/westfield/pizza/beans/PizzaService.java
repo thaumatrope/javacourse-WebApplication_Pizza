@@ -1,4 +1,4 @@
-package com.westfield.pizza;
+package com.westfield.pizza.beans;
 
 
 import java.sql.Connection;
@@ -53,7 +53,9 @@ public class PizzaService extends DataAccess implements AutoCloseable {
             rs = stm.executeQuery("SELECT * FROM pizza ORDER BY sorte ASC");
             
             while (rs.next()) {
-                Pizza coldPizza = new Pizza(rs.getString("sorte"), rs.getString("preis"));
+                Pizza coldPizza = new Pizza();
+                coldPizza.setName(rs.getString("sorte"));
+                coldPizza.setPreis(rs.getString("preis"));
                 tempPizzaBox.add(coldPizza);
             }
 

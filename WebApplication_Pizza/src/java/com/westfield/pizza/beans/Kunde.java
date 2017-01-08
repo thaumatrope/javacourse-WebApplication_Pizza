@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.westfield.pizza;
+package com.westfield.pizza.beans;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -29,14 +29,10 @@ public class Kunde extends DataAccess {
     private String plz;
     private String strasse;
 
-    public Kunde (){
-        System.out.println("Kunde - Konstruktor - Valid Kunde erstellt.");
+    public Kunde (){        
     }
 
-    public Kunde (int kundennummer){        
-        this.snatch(kundennummer);
-        System.out.println("Kunde(int kundennummer) - Konstruktor - Valid Kunde erstellt.");
-    }
+    
     public int getKundennummer() {
         return kundennummer;
     }
@@ -46,7 +42,7 @@ public class Kunde extends DataAccess {
         try {
            kundennummer = Integer.parseInt(nummer);
         } catch (NumberFormatException e) {
-            System.out.println("Kunde: NumberFormatException - keine Zahl aus 'String nummer': " + nummer);
+            //System.out.println("Kunde: NumberFormatException - keine Zahl aus 'String nummer': " + nummer);
             return;
         }
         this.kundennummer = kundennummer;  
@@ -196,10 +192,10 @@ public class Kunde extends DataAccess {
         PreparedStatement stm = null;
         boolean stored = false;
         try {
-            System.out.println("Kunde update() - start");
+            //System.out.println("Kunde update() - start");
             con = this.getConnectionPool();
             if(con == null) {
-                System.out.println("Kunde update() - no Connection Pool");
+                //System.out.println("Kunde update() - no Connection Pool");
                 return false;
             }
             stm = con.prepareStatement("UPDATE kunde SET vorname = ?, nachname = ?, strasse = ?, ort = ?, plz = ? WHERE kundennummer = ?");
@@ -227,10 +223,10 @@ public class Kunde extends DataAccess {
         PreparedStatement stm = null;
         boolean stored = false;
         try {
-            System.out.println("Kunde store() - start");
+            //System.out.println("Kunde store() - start");
             con = this.getConnectionPool();
             if(con == null) {
-                System.out.println("Kunde store() - no Connection Pool");
+                //System.out.println("Kunde store() - no Connection Pool");
                 return false;
             }
             stm = con.prepareStatement("INSERT INTO kunde (kundennummer, vorname, nachname, strasse, ort, plz) VALUES(?,?,?,?,?,?)");

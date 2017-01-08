@@ -15,9 +15,9 @@ import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
-import com.westfield.pizza.Bestellung;
-import com.westfield.pizza.Lieferung;
-import com.westfield.pizza.Kunde;
+import com.westfield.pizza.beans.Bestellung;
+import com.westfield.pizza.beans.Lieferung;
+import com.westfield.pizza.beans.Kunde;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -54,7 +54,7 @@ public class PDFServlet extends HttpServlet {
         HttpSession mySession = req.getSession();
         Lieferung myLieferung;
         PdfPCell pcell;
-        Paragraph p;
+        Phrase p;
         
         try {
             resp.setContentType("application/pdf");
@@ -62,7 +62,7 @@ public class PDFServlet extends HttpServlet {
             
             if (mySession.getAttribute("myLieferung") != null) {
                 myLieferung = (Lieferung) mySession.getAttribute("myLieferung");
-                Kunde myKunde = new Kunde(myLieferung.getKundennummer());
+                Kunde myKunde = new Kunde().snatch(myLieferung.getKundennummer());
                         
                 PdfWriter.getInstance(document, bos);
                 
@@ -109,20 +109,19 @@ public class PDFServlet extends HttpServlet {
                     table2.addCell("" + myBestellung.getMenge());
                     table2.addCell(myBestellung.getSorte());  
                     
-                    pcell = new PdfPCell();   
-                    p = new Paragraph(myBestellung.getPreis()); 
-                    p.setAlignment(Element.ALIGN_RIGHT);
-                    pcell.addElement(p);
-
+                    p = new Phrase(myBestellung.getPreis()); 
+                    pcell = new PdfPCell(p);
+                    pcell.setVerticalAlignment(Element.ALIGN_MIDDLE);
+                    pcell.setHorizontalAlignment(Element.ALIGN_RIGHT);
+                
                     table2.addCell(pcell);
 
                     //table2.addCell(myBestellung.getPreis());
-                    
-                    pcell = new PdfPCell();
-                    p = new Paragraph(myLieferung.printPreisFormatted(myLieferung.getGesamtsumme(myBestellung.getPosition()))); 
-                    p.setAlignment(Element.ALIGN_RIGHT);
-                    pcell.addElement(p);                  
-                  
+                    p = new Phrase(myLieferung.printPreisFormatted(myLieferung.getGesamtsumme(myBestellung.getPosition()))); 
+                    pcell = new PdfPCell(p);
+                    pcell.setVerticalAlignment(Element.ALIGN_MIDDLE);
+                    pcell.setHorizontalAlignment(Element.ALIGN_RIGHT);
+                   
                     table2.addCell(pcell);
                     
                     

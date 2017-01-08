@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.westfield.pizza;
+package com.westfield.pizza.beans;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -41,10 +41,10 @@ public class Bestellung extends DataAccess {
          
         double tmp;
         try {
-           tmp = Double.parseDouble(this.preis);
-           System.out.println("Bestellung - getPreisDouble double: " + Double.parseDouble(this.preis));
+            tmp = Double.parseDouble(this.preis);
+            //System.out.println("Bestellung - getPreisDouble double: " + Double.parseDouble(this.preis));
         } catch (NumberFormatException e) {
-            System.out.println("Bestellung-getPreisDouble: NumberFormatException");
+            // System.out.println("Bestellung-getPreisDouble: NumberFormatException");
             return 0.0;
         }         
         return tmp;        
@@ -53,7 +53,7 @@ public class Bestellung extends DataAccess {
 
     public void setPreis(String preis) {        
         this.preis = preis;
-        System.out.println("Bestellung: preis gesetzt - " + this.preis);
+        //System.out.println("Bestellung: preis gesetzt - " + this.preis);
     }   
 
     public String getSorte() {
@@ -62,10 +62,8 @@ public class Bestellung extends DataAccess {
 
     public void setSorte(String sorte) {
         this.sorte = sorte;
-        System.out.println("Bestellung: sorte gesetzt - " + this.sorte);
-    }
-    
-    
+        //System.out.println("Bestellung: sorte gesetzt - " + this.sorte);
+    }   
 
     public int getPosition() {
         return position;
@@ -81,13 +79,11 @@ public class Bestellung extends DataAccess {
 
     public void setMenge(int menge) {
         this.menge = menge;
-        System.out.println("Bestellung: menge gesetzt - " + this.menge);
+        //System.out.println("Bestellung: menge gesetzt - " + this.menge);
     }
 
-     public boolean store(){      
-        
-        return this.insertBestellung();         
-           
+     public boolean store(){        
+        return this.insertBestellung();          
     }
     
      public boolean insertBestellung(){

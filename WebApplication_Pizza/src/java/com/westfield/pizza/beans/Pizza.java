@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.westfield.pizza;
+package com.westfield.pizza.beans;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -21,11 +21,6 @@ public class Pizza extends DataAccess {
     private String name;
     private String preis;
    
-    
-    public Pizza(String name, String preis){
-        this.name = name;
-        this.preis = preis;        
-    }    
     
     public String getName() {
         return name;

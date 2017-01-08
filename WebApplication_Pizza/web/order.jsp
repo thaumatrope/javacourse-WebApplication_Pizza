@@ -16,13 +16,13 @@
 <%   
     if(myKunde.getKundennummer() == 0){
         myKunde.setKundennummer(myKunde.getNewKundennummer());
-        out.println("Neue Kundenummer gesetzt!");
+        System.out.println("Neue Kundenummer gesetzt!");
     }
 
     if(myKunde.store()){
-        out.println("Kunde gespeichert!");
+        System.out.println("Kunde gespeichert!");
     }else{
-        out.println("Fehler: Kunde nicht gespeichert!");
+        System.out.println("Fehler: Kunde nicht gespeichert!");
     }    
 %>
 <!DOCTYPE html>
