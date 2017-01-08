@@ -92,7 +92,7 @@ public class Kunde extends DataAccess {
     }
     
     public int getNewKundennummer(){
-        Set kdnr = snatchKundennummern();
+        Set<Integer> kdnr = snatchKundennummern();
         int length = kdnr.size();
         int newkdnr = 0;
         Random rand = new Random();
@@ -133,7 +133,7 @@ public class Kunde extends DataAccess {
     public Set<Integer> snatchKundennummern(){
         Connection con = null;
         Statement stm = null;
-        Set kdnr = new HashSet();
+        Set<Integer> kdnr = new HashSet<>();
         ResultSet rs = null;
 
         try {

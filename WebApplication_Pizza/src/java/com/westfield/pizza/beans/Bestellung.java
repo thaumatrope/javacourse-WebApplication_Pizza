@@ -121,7 +121,7 @@ public class Bestellung extends DataAccess {
         Statement stm = null;        
         ResultSet rs = null;
         
-        List<Bestellung> tempList = new ArrayList();
+        List<Bestellung> tempList = new ArrayList<>();
 
         try {
             

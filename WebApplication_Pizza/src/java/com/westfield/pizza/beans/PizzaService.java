@@ -40,7 +40,7 @@ public class PizzaService extends DataAccess implements AutoCloseable {
         Connection con = null;
         Statement stm = null;        
         ResultSet rs = null;
-        List<Pizza> tempPizzaBox = new ArrayList();
+        List<Pizza> tempPizzaBox = new ArrayList<>();
         
         try {
             

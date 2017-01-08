@@ -76,7 +76,7 @@ public class Lieferung extends DataAccess {
     }    
     
     public Lieferung(){        
-        myBestellungen = new ArrayList();
+        myBestellungen = new ArrayList<>();
     }
     
     public double getGesamtsumme(int pos){  
