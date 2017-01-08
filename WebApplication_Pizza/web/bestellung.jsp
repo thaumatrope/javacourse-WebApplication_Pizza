@@ -16,7 +16,7 @@
     if(myLieferung.store()){
         System.out.println("bestellung.jsp: myLieferung - saved");
 %>
-        <jsp:forward page="generate/do.pdf"></jsp:forward>
+        <jsp:forward page="/generate/do.pdf" />
 <%
     } else{
         System.out.println("bestellung.jsp: myLieferung - NOT saved");

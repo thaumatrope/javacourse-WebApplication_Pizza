@@ -6,7 +6,13 @@ package com.westfield.servlet.pdf;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
+import com.itextpdf.text.Font;
 import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.Phrase;
+import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.BaseFont;
+import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.westfield.pizza.Bestellung;
@@ -47,6 +53,8 @@ public class PDFServlet extends HttpServlet {
         PdfPTable table1;
         HttpSession mySession = req.getSession();
         Lieferung myLieferung;
+        PdfPCell pcell;
+        Paragraph p;
         
         try {
             resp.setContentType("application/pdf");
@@ -58,29 +66,39 @@ public class PDFServlet extends HttpServlet {
                         
                 PdfWriter.getInstance(document, bos);
                 
-                document.open();
+                document.open();                
                 
-                document.add(new Paragraph("Pizza World - Lieferung: " + myLieferung.getBestellnummer() + " / Datum: " + myLieferung.getDatum()));
-                document.add(new Paragraph(""));
-                document.add(new Paragraph(""));
-                document.add(new Paragraph("--------------------------------------------------------------------------"));
-                document.add(new Paragraph(""));
-                document.add(new Paragraph(""));
+                document.add(new Paragraph("Pizza World"));
+                document.add(new Paragraph(" "));
+                document.add(new Paragraph("Liefernummer: " + myLieferung.getBestellnummer()));
+                document.add(new Paragraph("Datum: " + myLieferung.getDatum()));
+                document.add(new Paragraph(" "));
+                document.add(new Paragraph(" "));
                 document.add(new Paragraph("Lieferanschrift:"));
+                document.add(new Paragraph(" "));
+                document.add(new Paragraph(" "));
                 table1 = new PdfPTable(1);
-                table1.addCell("Name: " + myKunde.getVorname() + " " + myKunde.getNachname());
-                table1.addCell("Strasse: " + myKunde.getStrasse());
-                table1.addCell("Ort: " + myKunde.getPlz() + " " + myKunde.getOrt());
+                table1.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+                table1.setWidthPercentage(100);
+                table1.addCell(myKunde.getVorname() + " " + myKunde.getNachname());
+                table1.addCell(myKunde.getStrasse());
+                table1.addCell(myKunde.getPlz() + " " + myKunde.getOrt());
                 document.add(table1);
                 
-                document.add(new Paragraph(""));
-                document.add(new Paragraph("--------------------------------------------------------------------------"));
-                document.add(new Paragraph(""));
+                document.add(new Paragraph(" "));
+                document.add(new Paragraph(" "));
+                document.add(new Paragraph("Bestellung:"));
+                document.add(new Paragraph(" "));
+                document.add(new Paragraph(" "));
                 
                 table2 = new PdfPTable(5);
+                table2.setWidthPercentage(100);
+                //table2.setLockedWidth(true);                
+                table2.setHorizontalAlignment(PdfPTable.ALIGN_RIGHT);
+                table2.setWidths(new float[]{1, 1, 3, 1, 1});
                 table2.addCell("Position"); 
                 table2.addCell("Menge");
-                table2.addCell("Sorte");
+                table2.addCell("Sorte");               
                 table2.addCell("Preis");
                 table2.addCell("Gesamtpreis");
                               
@@ -89,9 +107,26 @@ public class PDFServlet extends HttpServlet {
                      
                     table2.addCell("" + myBestellung.getPosition()); 
                     table2.addCell("" + myBestellung.getMenge());
-                    table2.addCell(myBestellung.getSorte());
-                    table2.addCell(myBestellung.getPreis());
-                    table2.addCell(myLieferung.printPreisFormatted(myLieferung.getGesamtsumme(myBestellung.getPosition())));
+                    table2.addCell(myBestellung.getSorte());  
+                    
+                    pcell = new PdfPCell();   
+                    p = new Paragraph(myBestellung.getPreis()); 
+                    p.setAlignment(Element.ALIGN_RIGHT);
+                    pcell.addElement(p);
+
+                    table2.addCell(pcell);
+
+                    //table2.addCell(myBestellung.getPreis());
+                    
+                    pcell = new PdfPCell();
+                    p = new Paragraph(myLieferung.printPreisFormatted(myLieferung.getGesamtsumme(myBestellung.getPosition()))); 
+                    p.setAlignment(Element.ALIGN_RIGHT);
+                    pcell.addElement(p);                  
+                  
+                    table2.addCell(pcell);
+                    
+                    
+                    //table2.addCell(myLieferung.printPreisFormatted(myLieferung.getGesamtsumme(myBestellung.getPosition())));
       
                 }
                 
