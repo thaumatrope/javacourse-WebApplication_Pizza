@@ -1,0 +1,4 @@
+     * Importieren des MySQL Drivers
+     * --> Glassfish Domain: gehe auf Tools->Servers->zu Domainordnerverzeichnis gehen-> auf lib befinden sich alle Treiber die der Glassfish hat
+     * --> Gehe auf Netbeans Ordner->ide->modules->ext->mysql-connector-java.5.1.jar kopieren
+     * --> jar datei in den Domainordner kopieren(ohne Ordner)
