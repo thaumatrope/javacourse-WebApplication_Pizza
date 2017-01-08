@@ -29,6 +29,14 @@ public class Kunde extends DataAccess {
     private String plz;
     private String strasse;
 
+    public Kunde (){
+        System.out.println("Kunde - Konstruktor - Valid Kunde erstellt.");
+    }
+
+    public Kunde (int kundennummer){        
+        this.snatch(kundennummer);
+        System.out.println("Kunde(int kundennummer) - Konstruktor - Valid Kunde erstellt.");
+    }
     public int getKundennummer() {
         return kundennummer;
     }

@@ -4,13 +4,14 @@
  */
 package com.westfield.servlet.pdf;
 
-import com.daa.ctrl.MyBean;
-import com.daa.model.Kunde;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.westfield.pizza.Bestellung;
+import com.westfield.pizza.Lieferung;
+import com.westfield.pizza.Kunde;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -44,54 +45,65 @@ public class PDFServlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) {
         Document document = new Document();
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        PdfPTable table2;
         PdfPTable table1;
-        PdfPTable table;
-        MyBean sessBean=null;
+        HttpSession mySession = req.getSession();
+        Lieferung myLieferung;
+        
         try {
             resp.setContentType("application/pdf");
-            //benötigter Zugriff auf die im Sessionscope
-            //abgelegte Bean
-            HttpSession sess = req.getSession();
-            if (sess.getAttribute("myBean") != null) {
-                sessBean = (MyBean) sess.getAttribute("myBean");
+            //benötigter Zugriff auf die im Sessionscope abgelegte Bean
             
-                // document = new Document();
-                //bos = new ByteArrayOutputStream();
+            if (mySession.getAttribute("myLieferung") != null) {
+                myLieferung = (Lieferung) mySession.getAttribute("myLieferung");
+                Kunde myKunde = new Kunde(myLieferung.getKundennummer());
+                        
                 PdfWriter.getInstance(document, bos);
                 
                 document.open();
-               
+                
+                document.add(new Paragraph("Pizza World - Lieferung: " + myLieferung.getBestellnummer() + " / Datum: " + myLieferung.getDatum()));
+                document.add(new Paragraph(""));
+                document.add(new Paragraph(""));
+                document.add(new Paragraph("--------------------------------------------------------------------------"));
+                document.add(new Paragraph(""));
+                document.add(new Paragraph(""));
+                document.add(new Paragraph("Lieferanschrift:"));
+                table1 = new PdfPTable(1);
+                table1.addCell("Name: " + myKunde.getVorname() + " " + myKunde.getNachname());
+                table1.addCell("Strasse: " + myKunde.getStrasse());
+                table1.addCell("Ort: " + myKunde.getPlz() + " " + myKunde.getOrt());
+                document.add(table1);
+                
+                document.add(new Paragraph(""));
+                document.add(new Paragraph("--------------------------------------------------------------------------"));
+                document.add(new Paragraph(""));
+                
+                table2 = new PdfPTable(5);
+                table2.addCell("Position"); 
+                table2.addCell("Menge");
+                table2.addCell("Sorte");
+                table2.addCell("Preis");
+                table2.addCell("Gesamtpreis");
+                              
                 //Schleife dient nur zur Demonstration des Dokument Objectes aus der Library iText
-                for (int i = 1; i < 10; i++) {
-                    document.add(new Paragraph("Das ist ein Absatz  " + i));
-                    table1 = new PdfPTable(2);
-                    table1.addCell("Spalte1");
-                    
-                    table1.addCell("Spalte2");
-
-                    document.add(table1);
-                    document.add(new Paragraph("neue Tabelle"));
-                     document.add(new Paragraph(""));
-                    table=new PdfPTable(3);
-                    table.addCell("Nachname");
-                    
-                    table.addCell("Vorname");
-                    table.addCell("Spaltenanzahl");
-                    table.addCell(sessBean.getMyKunde().getKunde_nachname());
-                    
-                    table.addCell(sessBean.getMyKunde().getKunde_vorname());
-                    table.addCell("3te Spalte");
-                    table.addCell(sessBean.getMyKunde().getKunde_nachname());
-                    
-                    table.addCell(sessBean.getMyKunde().getKunde_vorname());
-                    table.addCell("3te Spalte");
-                    document.add(table);
-                    document.newPage();
+                for (Bestellung myBestellung : myLieferung.getMyBestellungen()) {
+                     
+                    table2.addCell("" + myBestellung.getPosition()); 
+                    table2.addCell("" + myBestellung.getMenge());
+                    table2.addCell(myBestellung.getSorte());
+                    table2.addCell(myBestellung.getPreis());
+                    table2.addCell(myLieferung.printPreisFormatted(myLieferung.getGesamtsumme(myBestellung.getPosition())));
+      
                 }
+                
+                 document.add(table2);
+                 document.newPage();
+                 
                 }
            else{
-                 PdfWriter.getInstance(document, bos);
-                 document.open();
+                PdfWriter.getInstance(document, bos);
+                document.open();
                
                 document.add(new Paragraph("Session abgelaufen  " ));
             }

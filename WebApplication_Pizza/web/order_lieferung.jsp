@@ -7,7 +7,6 @@
 <%@page import="java.util.List"%>
 <%@page import="com.westfield.pizza.Bestellung"%>
 <%@page import="java.util.ArrayList"%>
-<jsp:useBean id="pizzaService" class="com.westfield.pizza.PizzaService" scope="application"></jsp:useBean>
 <jsp:useBean id="myLieferung" class="com.westfield.pizza.Lieferung" scope="session"></jsp:useBean>
 <jsp:useBean id="myBestellung" class="com.westfield.pizza.Bestellung" scope="page"></jsp:useBean> 
 <table> 
@@ -48,7 +47,7 @@
             <%= temp.getPreis()%>
         </td>  
         <th style="width: 80px"> 
-            <%= pizzaService.printPreisFormatted(myLieferung.getGesamtsumme(temp.getPosition()))%>
+            <%= myLieferung.printPreisFormatted(myLieferung.getGesamtsumme(temp.getPosition()))%>
         </th>           
 
     </tr> 

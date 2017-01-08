@@ -5,15 +5,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.text.NumberFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 
 
@@ -40,20 +36,6 @@ public class PizzaService extends DataAccess implements AutoCloseable {
         System.out.println("PizzaExpress: Applikation closes.");
     }
     
-        
-    public String printPreisFormatted(double preis) {
-        
-        DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.GERMAN);
-        otherSymbols.setDecimalSeparator('.');
-        otherSymbols.setGroupingSeparator('.'); 
-        NumberFormat formatter = new DecimalFormat(".00", otherSymbols);
-        
-        //NumberFormat formatter = new DecimalFormat();        
-        return formatter.format(preis);
-  
-    }  
-    
-   
     public List<Pizza> getPizzaAngebot() {
         Connection con = null;
         Statement stm = null;        

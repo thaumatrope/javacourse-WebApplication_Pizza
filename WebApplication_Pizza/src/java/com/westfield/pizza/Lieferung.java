@@ -10,8 +10,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  *
@@ -205,6 +209,18 @@ public class Lieferung extends DataAccess {
         }
         
     }
+    
+    public String printPreisFormatted(double preis) {
+        
+        DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.GERMAN);
+        otherSymbols.setDecimalSeparator('.');
+        otherSymbols.setGroupingSeparator('.'); 
+        NumberFormat formatter = new DecimalFormat(".00", otherSymbols);
+        
+        //NumberFormat formatter = new DecimalFormat();        
+        return formatter.format(preis);
+  
+    }  
     
     
 }
