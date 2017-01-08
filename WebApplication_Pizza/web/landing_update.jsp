@@ -6,11 +6,21 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
 <%@page import="com.westfield.pizza.Bestellung"%>
+<%@page import="com.westfield.pizza.Lieferung"%>
+
 <%@page import="java.util.ArrayList"%>
 <jsp:useBean id="pizzaService" class="com.westfield.pizza.PizzaService" scope="application"></jsp:useBean>
 <jsp:useBean id="myLieferung" class="com.westfield.pizza.Lieferung" scope="session"></jsp:useBean>
 <jsp:useBean id="myBestellung" class="com.westfield.pizza.Bestellung" scope="page"></jsp:useBean> 
 <jsp:setProperty property="*" name="myBestellung"/>
+<%
+    
+    System.out.println("landing_update.jsp - session.getId(): " + session.getId());
+    System.out.println("landing_update.jsp - request.getSession().getId(): " + request.getSession().getId());
+    System.out.println("landing_update.jsp - myLieferung.getIP(): " +  myLieferung.getIp());
+    System.out.println("landing_update.jsp - myLieferung.getSessionid(): " + myLieferung.getSessionid());
+
+%>
 <table> 
     <tr>
         <th>
@@ -62,7 +72,7 @@
                 <%= temp.getPreis()%>
             </td>  
             <th style="width: 80px"> 
-                <%= pizzaService.printPreisFormatted(myLieferung.getGesamtsumme(temp.getPosition()))%>
+                <%= myLieferung.printPreisFormatted(myLieferung.getGesamtsumme(temp.getPosition()))%>
             </th>           
              <td style="width: 150px; text-align: right">
                 <button id="delete" onclick="delete_item(<%= temp.getPosition()%>)" />Löschen</button>

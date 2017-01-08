@@ -109,6 +109,8 @@ public class Lieferung extends DataAccess {
             System.out.println("Lieferung insert() - succeeded");
             
             if(snatchLast(this.getKundennummer())){
+                
+                System.out.println("Lieferung insert() - snatchLast(kundennummer) succeeded: " + this.getKundennummer());
             
                 for(Bestellung best : this.getMyBestellungen()){
 
@@ -141,10 +143,14 @@ public class Lieferung extends DataAccess {
                 System.out.println("Lieferung insert() - no Connection Pool");
                 return false;
             }
-            stm = con.prepareStatement("INSERT INTO lieferung (kundennummer, datum, ip, sessionid) VALUES(?,?,?,?)");
+            stm = con.prepareStatement("INSERT INTO lieferung (kundennummer, datum, ip, sessionid) VALUES (?,?,?,?)");
+            System.out.println("Lieferung insert() - getKundennummer: " + this.getKundennummer());
             stm.setInt(1, this.getKundennummer());
-            stm.setString(2, this.getDatum());   
+            System.out.println("Lieferung insert() - getDatum: " + this.getDatum());
+            stm.setString(2, this.getDatum());  
+            System.out.println("Lieferung insert() - getIp: " + this.getIp());
             stm.setString(3, this.getIp()); 
+            System.out.println("Lieferung insert() - getSessionid: " + this.getSessionid());
             stm.setString(4, this.getSessionid()); 
             int rows = stm.executeUpdate();
             con.commit();
@@ -178,13 +184,14 @@ public class Lieferung extends DataAccess {
 
         try {
             
+            System.out.println("Lieferung snatchLast() - return: entry");
             con = getConnectionPool();
             
              if (con == null) {
                 return false;
             }
             stm = con.createStatement();
-            rs = stm.executeQuery("SELECT TOP 1 * FROM Lieferung WHERE kundennummer = " + nummer + " ORDER BY bestellnummer DESC'");
+            rs = stm.executeQuery("SELECT * FROM lieferung WHERE kundennummer = " + nummer + " ORDER BY bestellnummer DESC LIMIT 1");
             
             while (rs.next()) {                
                 this.kundennummer = rs.getInt("kundennummer");
@@ -194,6 +201,12 @@ public class Lieferung extends DataAccess {
                 this.sessionid = rs.getString("sessionid");  
             }
             
+            System.out.println("Lieferung snatchLast() - kundennummer: " + this.getKundennummer());
+            System.out.println("Lieferung snatchLast() - bestellnummer: " + this.getBestellnummer());
+            System.out.println("Lieferung snatchLast() - datum: " + this.getDatum());
+            System.out.println("Lieferung snatchLast() - ip: " + this.getIp());
+            System.out.println("Lieferung snatchLast() - sessionid: " + this.getSessionid());
+              
             return true;
             
         } catch (SQLException ex) {

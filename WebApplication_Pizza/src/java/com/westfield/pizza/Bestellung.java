@@ -84,7 +84,7 @@ public class Bestellung extends DataAccess {
         System.out.println("Bestellung: menge gesetzt - " + this.menge);
     }
 
-     public boolean store(){
+     public boolean store(){      
         
         return this.insertBestellung();         
            

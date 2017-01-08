@@ -3,26 +3,29 @@
     Created on : 29.12.2016, 12:16:08
     Author     : User704
 --%>
+<%@page import="com.westfield.pizza.Lieferung"%>
+<%@page import="com.westfield.pizza.Pizza" %>
+<%@page import="com.westfield.pizza.PizzaService" %>
+<%@page import="java.util.List" %>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<jsp:useBean id="pizzaService" class="com.westfield.pizza.PizzaService" scope="application"></jsp:useBean>
 <%
     try
-    {
-        if((session != null) && (!session.isNew())){
-            session.invalidate();
+    {             
+        if(!request.getSession(true).isNew()){            
+            session.invalidate();                   
         }
     } catch (IllegalStateException ex){
-     
+        out.println("Shitty");
     }
-%>
-<%@page import="com.westfield.pizza.Pizza"%>
-<%@page import="com.westfield.pizza.PizzaService"%>
-<%@page import="java.util.List"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean id="pizzaService" class="com.westfield.pizza.PizzaService" scope="application"></jsp:useBean>
-<jsp:useBean id="myLieferung" class="com.westfield.pizza.Lieferung" scope="session"></jsp:useBean>
-<jsp:scriptlet>
+    Lieferung myLieferung = new Lieferung();
     myLieferung.setIp(request.getRemoteAddr());
-    myLieferung.setSessionid(request.getSession(true).getId());
-</jsp:scriptlet>
+    System.out.println("landing.jsp - myLieferung.getIP(): " +  myLieferung.getIp());
+    myLieferung.setSessionid(request.getSession(true).getId()); 
+    System.out.println("landing.jsp - myLieferung.getSessionid(): " + myLieferung.getSessionid());
+    request.getSession().setAttribute("myLieferung", myLieferung);
+      
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -51,21 +54,20 @@
                 var menge = parseInt(document.getElementById("select_menge").value);
                 var selection = document.getElementById("select_sorte").value;
                  
-                if(false){                    
-                }              
-<%              
-                for(Pizza einePizza: pizzaService.getPizzaAngebot()){
-%>
-                else if (selection == "<%= einePizza.getName()%>") {
-                    document.getElementById("einzelpreis").innerHTML  = "<%= einePizza.getPreis() %>";
-                    var temp = "<%= einePizza.getPreis() %>";
-                    document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
-                }
-<%
-                }
-%>
+                if(false){}                    
+                              
               
-            }       
+                <% for(Pizza einePizza: pizzaService.getPizzaAngebot()){ %>
+
+                    else if (selection == "<%= einePizza.getName()%>") {
+                        document.getElementById("einzelpreis").innerHTML  = "<%= einePizza.getPreis() %>";
+                        var temp = "<%= einePizza.getPreis() %>";
+                        document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();
+                    }
+
+                <% } %>
+ 
+            }     
             
             function delete_item(pos){
             
@@ -103,10 +105,10 @@
                 xmlhttp.send(query); 
             }
             
-            
         </script>
     </head>
     <body>
+        <%-- <h1>Hello Pizza World!<%= //" - SessionID: " + currentSessionID ;%></h1> --%>
         <h1>Hello Pizza World!</h1>
         <div>
          
@@ -133,7 +135,7 @@
                          </tr>
                         <tr>
                             <td> <input style="width: 50px; text-align: right" type="number" min="1" max="10" value="1" id="select_menge" onchange="change()"> </td>
-                            <td> <select id="select_sorte" name="pizza" onchange="change();">                                  
+                            <td> <select id="select_sorte" name="pizza" onchange="change();">                               
                             <%      
                                 List<Pizza> sorten = pizzaService.getPizzaAngebot();
                                 for(Pizza myPizza : sorten){
@@ -153,13 +155,9 @@
                             <td style="width: 80px">
                                 <button id="add" onclick="add_item()" />Hinzufügen</button>
 
-                            </td>
-                            
-                            
-                           
+                            </td>  
                             
                         </tr>
-                        
                         
                     </table> 
                     <br><hr><br>        

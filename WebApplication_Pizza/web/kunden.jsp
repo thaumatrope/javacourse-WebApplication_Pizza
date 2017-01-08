@@ -10,6 +10,13 @@
     Author     : John Westfield
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean id="myLieferung" class="com.westfield.pizza.Lieferung" scope="session"></jsp:useBean>
+<%
+    System.out.println("landing.jsp - session.getId(): " + session.getId());
+    System.out.println("landing.jsp - request.getSession().getId(): " + request.getSession().getId());
+    System.out.println("landing.jsp - myLieferung.getIP(): " +  myLieferung.getIp());
+    System.out.println("landing.jsp - myLieferung.getSessionid(): " + myLieferung.getSessionid());
+%>
 <!DOCTYPE html>
 <html>
     <head>

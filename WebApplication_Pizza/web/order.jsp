@@ -13,7 +13,7 @@
 <jsp:useBean id="myLieferung" class="com.westfield.pizza.Lieferung" scope="session"></jsp:useBean>
 <jsp:useBean id="myKunde" class="com.westfield.pizza.Kunde" scope="session"></jsp:useBean>
 <jsp:setProperty property="*" name="myKunde"/>
-<%
+<%   
     if(myKunde.getKundennummer() == 0){
         myKunde.setKundennummer(myKunde.getNewKundennummer());
         out.println("Neue Kundenummer gesetzt!");
@@ -23,8 +23,7 @@
         out.println("Kunde gespeichert!");
     }else{
         out.println("Fehler: Kunde nicht gespeichert!");
-    }
-    
+    }    
 %>
 <!DOCTYPE html>
 <html>
