@@ -10,7 +10,7 @@
     Author     : John Westfield
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean id="myLieferung" class="com.westfield.pizza.Lieferung" scope="session"></jsp:useBean>
+<jsp:useBean id="myLieferung" class="com.westfield.pizza.beans.Lieferung" scope="session"></jsp:useBean>
 <%
     System.out.println("landing.jsp - session.getId(): " + session.getId());
     System.out.println("landing.jsp - request.getSession().getId(): " + request.getSession().getId());

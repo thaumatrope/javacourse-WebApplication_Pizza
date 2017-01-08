@@ -5,13 +5,13 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
-<%@page import="com.westfield.pizza.Bestellung"%>
-<%@page import="com.westfield.pizza.Lieferung"%>
+<%@page import="com.westfield.pizza.beans.Bestellung"%>
+<%@page import="com.westfield.pizza.beans.Lieferung"%>
 
 <%@page import="java.util.ArrayList"%>
-<jsp:useBean id="pizzaService" class="com.westfield.pizza.PizzaService" scope="application"></jsp:useBean>
-<jsp:useBean id="myLieferung" class="com.westfield.pizza.Lieferung" scope="session"></jsp:useBean>
-<jsp:useBean id="myBestellung" class="com.westfield.pizza.Bestellung" scope="page"></jsp:useBean> 
+<jsp:useBean id="pizzaService" class="com.westfield.pizza.beans.PizzaService" scope="application"></jsp:useBean>
+<jsp:useBean id="myLieferung" class="com.westfield.pizza.beans.Lieferung" scope="session"></jsp:useBean>
+<jsp:useBean id="myBestellung" class="com.westfield.pizza.beans.Bestellung" scope="page"></jsp:useBean> 
 <jsp:setProperty property="*" name="myBestellung"/>
 <%
     

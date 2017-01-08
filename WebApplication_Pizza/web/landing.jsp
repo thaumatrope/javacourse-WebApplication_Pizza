@@ -3,12 +3,12 @@
     Created on : 29.12.2016, 12:16:08
     Author     : User704
 --%>
-<%@page import="com.westfield.pizza.Lieferung"%>
-<%@page import="com.westfield.pizza.Pizza" %>
-<%@page import="com.westfield.pizza.PizzaService" %>
+<%@page import="com.westfield.pizza.beans.Lieferung"%>
+<%@page import="com.westfield.pizza.beans.Pizza" %>
+<%@page import="com.westfield.pizza.beans.PizzaService" %>
 <%@page import="java.util.List" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
-<jsp:useBean id="pizzaService" class="com.westfield.pizza.PizzaService" scope="application"></jsp:useBean>
+<jsp:useBean id="pizzaService" class="com.westfield.pizza.beans.PizzaService" scope="application"></jsp:useBean>
 <%
     try
     {             
@@ -55,8 +55,7 @@
                 var menge = parseInt(document.getElementById("select_menge").value);
                 var selection = document.getElementById("select_sorte").value;
                  
-                if(false){}                    
-                              
+                if(false){}                              
               
                 <% for(Pizza einePizza: pizzaService.getPizzaAngebot()){ %>
 

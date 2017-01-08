@@ -8,12 +8,12 @@
 <!DOCTYPE html>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.westfield.pizza.PizzaService"%>
-<%@page import="com.westfield.pizza.Lieferung"%>
-<%@page import="com.westfield.pizza.Bestellung"%>
-<%@page import="com.westfield.pizza.Kunde"%>
-<jsp:useBean id="pizzaService" class="com.westfield.pizza.PizzaService" scope="application"></jsp:useBean>
-<jsp:useBean id="myKunde" class="com.westfield.pizza.Kunde" scope="session"></jsp:useBean>
+<%@page import="com.westfield.pizza.beans.PizzaService"%>
+<%@page import="com.westfield.pizza.beans.Lieferung"%>
+<%@page import="com.westfield.pizza.beans.Bestellung"%>
+<%@page import="com.westfield.pizza.beans.Kunde"%>
+<jsp:useBean id="pizzaService" class="com.westfield.pizza.beans.PizzaService" scope="application"></jsp:useBean>
+<jsp:useBean id="myKunde" class="com.westfield.pizza.beans.Kunde" scope="session"></jsp:useBean>
 <%
    System.out.println("kunden_update.jsp reached!");
    if(myKunde.checkKundennummer(request.getParameter("kundennummer"))){ 
