@@ -4,8 +4,13 @@
     Author     : User704
 --%>
 <%
-    if(!session.isNew()){
-        session.invalidate();
+    try
+    {
+        if((session != null) && (!session.isNew())){
+            session.invalidate();
+        }
+    } catch (IllegalStateException ex){
+     
     }
 %>
 <%@page import="com.westfield.pizza.Pizza"%>

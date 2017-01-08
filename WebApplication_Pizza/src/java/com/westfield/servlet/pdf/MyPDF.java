@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.westfield.pdf;
+package com.westfield.servlet.pdf;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -75,7 +75,7 @@ public class MyPDF {
             //for ( PrintService s : PrintServiceLookup.lookupPrintServices( null, null ) )System.out.println( s.getName() );
 
         } catch (DocumentException ex) {
-            Logger.getLogger(PdfServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PDFServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
           return bos;
     }

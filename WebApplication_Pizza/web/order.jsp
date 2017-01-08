@@ -104,10 +104,7 @@
 
                     </div>
 
-                    <br><hr><br> 
-                     
-                    <form action="bestellung.jsp" method="post">
-                    </form> 
+                    <br><hr><br>  
 
                     <table border="0" style="table-layout:fixed">                        
                         <tr>

@@ -102,22 +102,30 @@ public class Lieferung extends DataAccess {
         
         if(this.insertLieferung()){
             
-            for(Bestellung best : this.getMyBestellungen()){
-                
-                if(!best.store()){ 
-                    System.out.println("Bestellung - store failed!");
-                    return false;
-                }
-            }
+            System.out.println("Lieferung insert() - succeeded");
             
-            return true;
-        } else {
-            return false;
-        }        
-           
+            if(snatchLast(this.getKundennummer())){
+            
+                for(Bestellung best : this.getMyBestellungen()){
+
+                    best.setBestellnummer(this.getBestellnummer());
+
+                    if(!best.store()){ 
+                        System.out.println("Bestellung - store failed!");
+                        return false;
+                    }
+                }
+            
+                return true;
+            }
+        } 
+        
+        return false;
+                         
     }
     
      public boolean insertLieferung(){
+         
         Connection con = null;
         PreparedStatement stm = null;
         boolean stored = false;
@@ -129,7 +137,7 @@ public class Lieferung extends DataAccess {
                 System.out.println("Lieferung insert() - no Connection Pool");
                 return false;
             }
-            stm = con.prepareStatement("INSERT INTO Lieferung (kundennummer, datum, ip, sessionid) VALUES(?,?)");
+            stm = con.prepareStatement("INSERT INTO lieferung (kundennummer, datum, ip, sessionid) VALUES(?,?,?,?)");
             stm.setInt(1, this.getKundennummer());
             stm.setString(2, this.getDatum());   
             stm.setString(3, this.getIp()); 
@@ -143,6 +151,7 @@ public class Lieferung extends DataAccess {
             try { if( stm != null) stm.close(); } catch(Exception e) {}
             try { if( con != null) con.close(); } catch(Exception e) {}
         }
+        System.out.println("Lieferung insert() - return: stored = " + stored);
         return stored;
     } 
      
