@@ -9,7 +9,7 @@
 <%@page import="com.westfield.pizza.beans.Lieferung"%>
 
 <%@page import="java.util.ArrayList"%>
-<jsp:useBean id="pizzaService" class="com.westfield.pizza.beans.PizzaService" scope="application"></jsp:useBean>
+<jsp:useBean id="pizzaService" class="com.westfield.pizza.controller.PizzaService" scope="application"></jsp:useBean>
 <jsp:useBean id="myLieferung" class="com.westfield.pizza.beans.Lieferung" scope="session"></jsp:useBean>
 <jsp:useBean id="myBestellung" class="com.westfield.pizza.beans.Bestellung" scope="page"></jsp:useBean> 
 <jsp:setProperty property="*" name="myBestellung"/>

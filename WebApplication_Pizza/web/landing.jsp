@@ -5,10 +5,10 @@
 --%>
 <%@page import="com.westfield.pizza.beans.Lieferung"%>
 <%@page import="com.westfield.pizza.beans.Pizza" %>
-<%@page import="com.westfield.pizza.beans.PizzaService" %>
+<%@page import="com.westfield.pizza.controller.PizzaService" %>
 <%@page import="java.util.List" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
-<jsp:useBean id="pizzaService" class="com.westfield.pizza.beans.PizzaService" scope="application"></jsp:useBean>
+<jsp:useBean id="pizzaService" class="com.westfield.pizza.controller.PizzaService" scope="application"></jsp:useBean>
 <%
     try
     {             
@@ -59,7 +59,7 @@
               
                 <% for(Pizza einePizza: pizzaService.getPizzaAngebot()){ %>
 
-                    else if (selection == "<%= einePizza.getName()%>") {
+                    else if (selection == "<%= einePizza.getName()%>"){
                         document.getElementById("einzelpreis").innerHTML  = "<%= einePizza.getPreis() %>";
                         var temp = "<%= einePizza.getPreis() %>";
                         document.getElementById("gesamtpreis").innerHTML = (parseFloat(temp) * menge).toFixed(2).toString();

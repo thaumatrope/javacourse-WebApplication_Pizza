@@ -1,6 +1,8 @@
-package com.westfield.pizza.beans;
+package com.westfield.pizza.controller;
 
 
+import com.westfield.pizza.beans.DataAccess;
+import com.westfield.pizza.beans.Pizza;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,7 +23,6 @@ import java.util.Set;
 
 public class PizzaService extends DataAccess implements AutoCloseable {
     
-    private Set<Integer> kundennummern;
     private static List<Pizza> pizzaAngebot;
 
     public PizzaService(){

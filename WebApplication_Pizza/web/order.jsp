@@ -6,10 +6,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.westfield.pizza.beans.PizzaService"%>
+<%@page import="com.westfield.pizza.controller.PizzaService"%>
 <%@page import="com.westfield.pizza.beans.Lieferung"%>
 <%@page import="com.westfield.pizza.beans.Kunde"%>
-<jsp:useBean id="pizzaService" class="com.westfield.pizza.beans.PizzaService" scope="application"></jsp:useBean>
+<jsp:useBean id="pizzaService" class="com.westfield.pizza.controller.PizzaService" scope="application"></jsp:useBean>
 <jsp:useBean id="myLieferung" class="com.westfield.pizza.beans.Lieferung" scope="session"></jsp:useBean>
 <jsp:useBean id="myKunde" class="com.westfield.pizza.beans.Kunde" scope="session"></jsp:useBean>
 <jsp:setProperty property="*" name="myKunde"/>
