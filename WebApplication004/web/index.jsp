@@ -10,7 +10,6 @@
 <%@page contentType="text/html"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 <%@taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
-<%@include file="org.apache.derby.jdbc.EmbeddedDriver" %>
 
 <html>
    <head>
@@ -19,19 +18,19 @@
    </head>
    <body>
       
-      <sql:setDataSource driver="org.apache.derby.jdbc.EmbeddedDriver" 
+      <sql:setDataSource driver="org.apache.derby.jdbc.ClientDriver" 
                          url="jdbc:derby://localhost:1527/sample"
                          user="app" 
-                         password="" 
-                         var="APP" 
+                         password="app" 
+                         var="exampleDS" 
                          scope="request" />
       
       <sql:query dataSource="${exampleDS}" 
                  var="javax_servlet_jsp_jstl_sql_Result" 
                  maxRows="10" 
                  startRow="0"
-                 sql="SELECT * FROM customer WHERE ID > ?">
-         <sql:param value="1" />
+                 sql="SELECT * FROM customer">
+         
       </sql:query>
       
       <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
