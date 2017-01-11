@@ -29,7 +29,7 @@
                  var="javax_servlet_jsp_jstl_sql_Result" 
                  maxRows="10" 
                  startRow="0"
-                 sql="SELECT * FROM customer">
+                 sql="SELECT * FROM customer" >
          
       </sql:query>
       
