@@ -11,6 +11,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
@@ -20,6 +22,10 @@ import java.util.Set;
  * @author John Westfield
  */
 public class Kunde extends DataAccess {
+    
+     /*** Validation ***/
+    private List<String> errors = new LinkedList<String>();
+    private boolean valid = false;
     
     private int kundennummer;
     private String vorname;
@@ -295,6 +301,43 @@ public class Kunde extends DataAccess {
         }
         return this;
     }
+    
+        
+   /*** Validation ***/
+
+   public List<String> getErrors() {
+      return errors;
+   }   
+   
+   public boolean isValid() {
+      return valid;
+   }
+
+   /* input validation */
+   
+   public void validate() {
+
+      // Zurücksetzen des Flags und der Fehlerliste
+      this.valid = true;
+      this.errors = new LinkedList<String>();
+
+      // Überprüfe den eingegebenen Namen
+      if (name == null || name.length() == 0) {
+         this.valid = false;
+         this.errors.add("Bitte geben Sie einen Namen ein.");
+      }
+
+      // Überprüfe die Syntax der E-Mail-Adresse
+      if (eMail == null || eMail.length() == 0) {
+         this.valid = false;
+         this.errors.add("Bitte geben Sie die eMail-Adresse ein.");
+      }
+
+      if (eMail != null && eMail.indexOf("@") == -1) {
+         this.valid = false;
+         this.errors.add("Ungültiges Format der eMail-Adresse.");
+      }
+   }
     
     
 }
