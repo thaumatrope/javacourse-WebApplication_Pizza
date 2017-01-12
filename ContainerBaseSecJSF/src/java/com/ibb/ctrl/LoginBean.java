@@ -54,7 +54,7 @@ public class LoginBean implements Serializable{
     }
     public boolean isLogedIn(){
         HttpServletRequest request=(HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
-        if(request.isUserInRole("abteilungsleiter")){
+        if(request.isUserInRole("admin")){
             return true;
         }
         return false;
