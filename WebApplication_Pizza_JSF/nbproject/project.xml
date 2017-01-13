@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.web.project</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/web-project/3">
+            <name>WebApplication_Pizza_JSF</name>
+            <minimum-ant-version>1.6.5</minimum-ant-version>
+            <web-module-libraries>
+                <library dirs="200">
+                    <file>${file.reference.itext-pdfa-5.5.9.jar-1}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.itext-xtra-5.5.9.jar-1}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.itextpdf-5.5.9.jar-1}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.xmlworker-5.5.9.jar-1}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+            </web-module-libraries>
+            <web-module-additional-libraries/>
+            <source-roots>
+                <root id="src.dir"/>
+            </source-roots>
+            <test-roots>
+                <root id="test.src.dir"/>
+            </test-roots>
+        </data>
+        <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>Anzahl</word>
+            <word>ausfüllen</word>
+            <word>Bereits</word>
+            <word>Bestellung</word>
+            <word>Bestätigung</word>
+            <word>Bitte</word>
+            <word>der</word>
+            <word>eingeben</word>
+            <word>Einzelpreis</word>
+            <word>gefunden</word>
+            <word>Gesamtpreis</word>
+            <word>Hinzufügen</word>
+            <word>Ihre</word>
+            <word>Kunde</word>
+            <word>Kundendaten</word>
+            <word>Kundennummer</word>
+            <word>Lieferdaten</word>
+            <word>Lieferung</word>
+            <word>Löschen</word>
+            <word>Nachname</word>
+            <word>Neukunde</word>
+            <word>nicht</word>
+            <word>PLZ</word>
+            <word>Postenpreis</word>
+            <word>prüfen</word>
+            <word>SessionID</word>
+            <word>Sorte</word>
+            <word>Stadt</word>
+            <word>Strasse</word>
+            <word>Vorname</word>
+        </spellchecker-wordlist>
+    </configuration>
+</project>
