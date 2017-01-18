@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:form id="form_login">
+    <h:panelGrid columns="2" style="width: 100%">  
+         
+            <h:commandButton id="submit_login" 
+                styleClass="button-login"
+                value="#{pizzaLogin.buttonLogin}"
+                action="#{pizzaLogin.login()}"> 
+            </h:commandButton>       
+       
+            <h:commandButton id="submit_register" styleClass="button-login button-register"
+                value="#{pizzaLogin.buttonRegister}"
+                action="#{pizzaLogin.register()}"> 
+            </h:commandButton>
+        
+    </h:panelGrid>
+    
+    <hr style="margin: 10px 0px" /> 
+    
+    <h:panelGrid columns="2" style="width: 100%">  
+    
+        <h:panelGroup style="width: 100%">
+            <fieldset>            
+                <legend>Email</legend>
+
+                <h:inputText id="email" style="width: 100%;"
+                    value="#{pizzaLogin.myEmail}" />
+            </fieldset>
+        </h:panelGroup>
+        <h:panelGroup style="width: 100%">
+            <fieldset>
+                 <legend>Password</legend>
+                 <h:inputSecret redisplay="false" style="width: 100%;"
+                     value="#{pizzaLogin.myPassword}" />
+             </fieldset>       
+         </h:panelGroup>
+    </h:panelGrid>
+        
+    </h:form>
+    
+</ui:composition>
