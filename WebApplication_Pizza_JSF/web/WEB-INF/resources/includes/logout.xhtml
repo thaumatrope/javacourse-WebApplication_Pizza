@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:form id="form_logout">
+    <h:panelGrid columns="2">  
+         
+            <h:commandButton id="submit_login" rendered="false"
+                value="#{pizzaLogin.buttonLogin}"
+                action="#{pizzaLogin.login()}"> 
+            </h:commandButton>       
+       
+            <h:commandButton id="submit_logout"
+                value="#{pizzaLogin.buttonLogout}"
+                action="#{pizzaLogin.logout()}"> 
+            </h:commandButton>
+        
+    </h:panelGrid>
+    
+    <hr style="margin: 10px 0px" /> 
+    
+    <h:panelGrid columns="2">  
+    
+        <h:panelGroup>
+            <fieldset>            
+                <legend>Email</legend>
+
+                <h:inputText id="email"
+                    value="#{pizzaLogin.myEmail}" />
+            </fieldset>
+        </h:panelGroup>
+        <h:panelGroup>
+            <fieldset>
+                 <legend>Password</legend>
+                 <h:inputSecret redisplay="false"
+                     value="#{pizzaLogin.myPassword}" />
+             </fieldset>       
+         </h:panelGroup>
+    </h:panelGrid>
+        
+    </h:form>
+    
+</ui:composition>

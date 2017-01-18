@@ -1,0 +1,112 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 14, 2017, 2:10:18 AM
+    Author     : John Westfield
+*/
+
+.edge-header {
+     width: 25%;
+}
+
+.center-header {
+     width: 50%;
+     text-align: center;
+}
+
+.top-alignment {
+     vertical-align: top;
+}
+
+.middle-alignment {
+     vertical-align: middle;
+}
+
+.header-font{
+    font-size: 55px;
+    line-height: 65px;
+
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-weight: bold;
+    color: #DDDD11;
+    text-shadow: 0 0 5px #A5414F, 0 0 10px #A5414F,
+             0 0 20px #A5414F, 0 0 30px #A5414F,
+             0 0 40px #A5414F;
+
+
+}
+
+
+.button-login {
+    -moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+    -webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+    box-shadow: 0px 1px 0px 0px #f0f7fa;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33bdef), color-stop(1, #019ad2));
+    background:-moz-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+    background:-webkit-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+    background:-o-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+    background:-ms-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+    background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bdef', endColorstr='#019ad2',GradientType=0);
+    background-color:#33bdef;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    border:3px solid #057fd0;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    padding:6px 31px;
+    text-decoration:none;
+    text-shadow:0px 0px 0px #5b6178;
+}
+.button-login:hover {
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2), color-stop(1, #33bdef));
+        background:-moz-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background:-webkit-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background:-o-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background:-ms-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#019ad2', endColorstr='#33bdef',GradientType=0);
+        background-color:#019ad2;
+}
+.button-login:active {
+        position:relative;
+        top:1px;
+}
+
+.button-register {
+    float: right;
+}
+
+.login_buster{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 80%;
+    height: 200px;
+    width: 240px; 
+}
+
+html {
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+
+
+.topPanel {
+    margin: auto; 
+    width: 75%;   
+    height: 100vh
+}
+
+#header {
+    border: 3px solid green; 
+    padding: 10px;
+}

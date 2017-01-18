@@ -5,12 +5,18 @@
  */
 package com.westfield.pizza.beans;
 
+import com.westfield.pizza.dao.DataAccess;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
 
 
 /**
  *
  * @author User704
  */
+@ManagedBean
+@SessionScoped
 public class Pizza extends DataAccess {
     
     private String name;

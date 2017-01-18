@@ -159,12 +159,8 @@ public class Kunde extends DataAccess {
             
         } finally {
             try {
-                if (rs != null) {
-                    rs.close();
-                }
-            } catch (Exception e) {
-                
-            }
+                if (rs != null) {rs.close();}
+            } catch (Exception e) {}
             try {
                 if (stm != null) {
                     stm.close();

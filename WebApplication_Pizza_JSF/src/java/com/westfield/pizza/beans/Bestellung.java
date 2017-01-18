@@ -5,6 +5,7 @@
  */
 package com.westfield.pizza.beans;
 
+import com.westfield.pizza.dao.DataAccess;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,11 +13,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 /**
  *
  * @author jwest
  */
+@ManagedBean
+@SessionScoped
 public class Bestellung extends DataAccess {
     
     private int menge;

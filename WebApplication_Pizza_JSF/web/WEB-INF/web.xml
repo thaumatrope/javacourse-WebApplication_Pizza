@@ -4,6 +4,12 @@
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
     </context-param>
+    <context-param>
+        <param-name>
+          javax.faces.WEBAPP_RESOURCES_DIRECTORY
+        </param-name>
+        <param-value>/WEB-INF/resources</param-value>
+    </context-param>
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
@@ -11,7 +17,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>/faces/*</url-pattern>
+        <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -19,8 +25,47 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>faces/index.xhtml</welcome-file>
-        <welcome-file>landing.jsp</welcome-file>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>landing.xhtml</welcome-file>
     </welcome-file-list>
+    <security-constraint>
+        <display-name>adminbereich</display-name>
+        <web-resource-collection>
+            <web-resource-name>admin</web-resource-name>
+            <description/>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <display-name>kundenbereich</display-name>
+        <web-resource-collection>
+            <web-resource-name>kunden</web-resource-name>
+            <description/>
+            <url-pattern>/kunden/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>kunde</role-name>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>jdbcRealm_PizzaJSF</realm-name>
+        <form-login-config>
+            <form-login-page>/landing.xhtml</form-login-page>
+            <form-error-page>/landing.xhtml</form-error-page>
+        </form-login-config>
+    </login-config>
+    <security-role>
+        <description/>
+        <role-name>admin</role-name>
+    </security-role>
+    <security-role>
+        <description/>
+        <role-name>kunde</role-name>
+    </security-role>
 </web-app>

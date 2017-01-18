@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+
+    <h:body>
+        <h:form>
+            <h:dataTable value="#{myBean.myList}" var="sport">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Id" />
+                    </f:facet>
+                    <h:outputText value="#{sport.spId}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Sportart" />
+                    </f:facet>
+                    <h:outputText value="#{sport.bezeichnung}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Bewertung" />
+                    </f:facet>
+                    <h:inputText value="#{sport.bewertung}" />
+                </h:column>
+            </h:dataTable>
+            <h:commandButton action="#{myBean.addElement()}" value="Übernahme" />   
+        </h:form>
+        
+        <h:form>
+
+            <h:panelGrid  columns="2" > 
+                <h:outputLabel for="inEmail" value="Benutzername:" />
+                <h:inputText id="inEmail" value="#{loginBean.myPerson.email}"  />
+                <h:outputLabel for="inPassword" value="Passwort:" />
+                <h:inputSecret id="inPassword" value="#{loginBean.myPerson.password}" />
+            </h:panelGrid>
+            <h:commandButton action="#{loginBean.doSomething()}" value="OK" />
+            <h:commandButton action="#{loginBean.login()}" value="Login" />
+            <h:commandButton action="sprungmarke2" value="Zur Zweite" />
+        </h:form>
+        <h:link outcome="zweite.xhtml" value="Zweite über einen Link">
+            <f:param name="firstname" value="Hans" />
+        </h:link>    
+        <h:outputText value="User ist eingeloggt!" rendered="#{loginBean.logedIn}" />
+        <h:outputText value="User ist nicht eingeloggt!" rendered="#{not loginBean.logedIn}" />
+        <!--Das ist ein Kommentar -->
+        <h:outputText value="#{myBean.myAuswahl.size() lt 1 ?'Noch keine auswahl getätigt!':'Ihre Auswahl'}"  />
+        <h:dataTable value="#{myBean.myAuswahl}" var="s" >
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Id" />
+                </f:facet>
+                <h:outputText value="#{s.spId}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Sportart" />
+                </f:facet>
+                <h:outputText value="#{s.bezeichnung}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Bewertung" />
+                </f:facet>
+                <h:outputText value="#{s.bewertung}" />
+            </h:column>
+        </h:dataTable>
+    </h:body>
+</html>
+

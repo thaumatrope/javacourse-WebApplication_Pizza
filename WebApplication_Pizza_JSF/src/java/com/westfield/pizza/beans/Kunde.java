@@ -5,6 +5,7 @@
  */
 package com.westfield.pizza.beans;
 
+import com.westfield.pizza.dao.DataAccess;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,12 +16,16 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 
 /**
  *
  * @author John Westfield
  */
+@ManagedBean
+@SessionScoped
 public class Kunde extends DataAccess {
     
      /*** Validation ***/
@@ -28,16 +33,33 @@ public class Kunde extends DataAccess {
     private boolean valid = false;
     
     private int kundennummer;
+    private String email;
+    private String password;
     private String vorname;
     private String nachname;
     private String ort;
     private String plz;
     private String strasse;
-
-    public Kunde (){        
+    
+    public Kunde(){        
+    }
+    
+    public String getEmail() {
+        return email;
     }
 
-    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+       
     public int getKundennummer() {
         return kundennummer;
     }
@@ -45,9 +67,10 @@ public class Kunde extends DataAccess {
     public void setKundennummer(String nummer){
         int kundennummer;
         try {
-           kundennummer = Integer.parseInt(nummer);
+            kundennummer = Integer.parseInt(nummer);
         } catch (NumberFormatException e) {
-            //System.out.println("Kunde: NumberFormatException - keine Zahl aus 'String nummer': " + nummer);
+            System.out.println("Kunde: NumberFormatException - keine Zahl aus 'String nummer': " + nummer);
+            this.kundennummer = 0; 
             return;
         }
         this.kundennummer = kundennummer;  
@@ -315,28 +338,57 @@ public class Kunde extends DataAccess {
 
    /* input validation */
    
-   public void validate() {
+    public void validate_kundennumer() {
+        
+         // Zurücksetzen des Flags und der Fehlerliste
+        this.valid = true;
+        this.errors = new LinkedList<String>();
+        
+        // Überprüfe die eingegebene Kundennummer
+        if (kundennummer == 0){
+            
+            this.valid = false;
+            this.errors.add("Bitte geben sie eine gültige Kundennumer an.");
+            
+        }
+        
+    }
+   
+     public void validate() {
+       
+        // Initialization methid as well!!
+        this.validate_kundennumer(); 
+   
+        // Überprüfe den eingegebenen Vornamen
+        if (vorname == null || vorname.length() == 0) {
+           this.valid = false;
+           this.errors.add("Bitte geben sie einen gültigen Vornamen an.");
+        }
 
-      // Zurücksetzen des Flags und der Fehlerliste
-      this.valid = true;
-      this.errors = new LinkedList<String>();
+        // Überprüfe den eingegebenen Nachnamen
+        if (nachname == null || nachname.length() == 0) {
+           this.valid = false;
+           this.errors.add("Bitte geben sie einen gültigen Nachnamen an.");
+        }
 
-      // Überprüfe den eingegebenen Namen
-      if (name == null || name.length() == 0) {
-         this.valid = false;
-         this.errors.add("Bitte geben Sie einen Namen ein.");
-      }
+        // Überprüfe den eingegebenen Ort
+        if (ort == null || ort.length() == 0) {
+           this.valid = false;
+           this.errors.add("Bitte geben sie einen gültigen Ortsnamen an.");
+        }
 
-      // Überprüfe die Syntax der E-Mail-Adresse
-      if (eMail == null || eMail.length() == 0) {
-         this.valid = false;
-         this.errors.add("Bitte geben Sie die eMail-Adresse ein.");
-      }
+         // Überprüfe den eingegebenen Plz
+        if (plz == null || plz.length() == 0 || plz.length() > 5) {
+           this.valid = false;
+           this.errors.add("Bitte geben sie eine gültige Postleitzahl an. (5-stellig)");
+        }
 
-      if (eMail != null && eMail.indexOf("@") == -1) {
-         this.valid = false;
-         this.errors.add("Ungültiges Format der eMail-Adresse.");
-      }
+        // Überprüfe die Syntax des Strassennamen
+        if (strasse == null || strasse.length() == 0) {
+           this.valid = false;
+           this.errors.add("Bitte geben sie einen gültigen Strassennamen an.");
+        }
+     
    }
     
     

@@ -5,6 +5,7 @@
  */
 package com.westfield.pizza.beans;
 
+import com.westfield.pizza.dao.DataAccess;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,11 +17,15 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 /**
  *
  * @author jwest
  */
+@ManagedBean
+@SessionScoped
 public class Lieferung extends DataAccess {
     
     private List<Bestellung> myBestellungen;
