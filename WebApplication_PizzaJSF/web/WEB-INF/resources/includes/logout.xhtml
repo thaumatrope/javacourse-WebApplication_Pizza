@@ -15,12 +15,12 @@ and open the template in the editor.
          
             <h:commandButton id="submit_login" rendered="false"
                 value="#{pizzaLogin.buttonLogin}"
-                action="#{pizzaLogin.login()}"> 
+                action="#{pizzaLogin.doLogin()}"> 
             </h:commandButton>       
        
             <h:commandButton id="submit_logout"
                 value="#{pizzaLogin.buttonLogout}"
-                action="#{pizzaLogin.logout()}"> 
+                action="#{pizzaLogin.doLogout()}"> 
             </h:commandButton>
         
     </h:panelGrid>

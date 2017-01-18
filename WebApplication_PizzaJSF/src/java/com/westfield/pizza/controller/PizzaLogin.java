@@ -65,9 +65,9 @@ public class PizzaLogin implements Serializable {
         return myEmail;
     }
 
-    public void setMyEmail(String myEmail) {
-        System.out.println("kunde: setMyEmail: " + myEmail);
+    public void setMyEmail(String myEmail) {        
         this.myEmail = myEmail.trim();
+        System.out.println("kunde: setMyEmail: " + this.myEmail);
     }
 
     public String getMyPassword() {
@@ -75,22 +75,23 @@ public class PizzaLogin implements Serializable {
     }
 
     public void setMyPassword(String myPassword) {
-        System.out.println("kunde: setMyPassword: " + myPassword);
         this.myPassword = myPassword.trim();
-    }
-   
-    public void register(){
+        System.out.println("kunde: setMyPassword: " + this.myPassword);
         
     }
     
-    public boolean isLoggedIn(){
-        
+    public boolean isLoggedIn(){        
         return false;
     }
-    
-    public String login(){
+   
+    public void doRegister(){
         
-        System.out.println("PizzaLogin -- login() start...");
+    }    
+    
+    
+    public String doLogin(){
+        
+        System.out.println("PizzaLogin -- doLogin() start...");
         
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         HttpSession session = request.getSession();       
@@ -101,19 +102,19 @@ public class PizzaLogin implements Serializable {
             //request.authenticate
             //myKunde.snatch(this.getMyEmail());
             
-            System.out.println("PizzaLogin -- Logged In");
+            System.out.println("PizzaLogin -- doLogin() -> Logged In");
             
         } catch (ServletException ex) {
             //username oder Passwort falsch
-            System.out.println("PizzaLogin -- NOT Logged In -- username oder password falsch");
+            System.out.println("PizzaLogin -- doLogin() -> NOT Logged In -- username oder password falsch");
             Logger.getLogger(PizzaLogin.class.getName()).log(Level.SEVERE, null, ex);
-            return "login_failed";
+            return "outcomeBadLogin";
         }
         
-        return "login_ok";
+        return "outcomeGoodLogin";
     }  
     
-    public String logout(){
+    public String doLogout(){
         
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
                 
@@ -122,14 +123,14 @@ public class PizzaLogin implements Serializable {
             request.getSession().invalidate();         
             myKunde = null;
             
-            System.out.println("PizzaLogin -- Logged Out");
+            System.out.println("PizzaLogin -- doLogout() -> Logged Out");
             
         } catch (ServletException ex) {
             //username oder Passwort falsch
-            System.out.println("PizzaLogin -- NOT Logged Out -- error");
+            System.out.println("PizzaLogin -- doLogout() -> NOT Logged Out -- error");
             Logger.getLogger(PizzaLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        return "logoff";
+        return "outcomeLogout";
     }
 }

@@ -4,7 +4,6 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-
 <!DOCTYPE html>
 <html lang="en"
     xmlns="http://www.w3.org/1999/xhtml"
@@ -29,12 +28,12 @@ and open the template in the editor.
                                 <h:commandButton id="submit_login" 
                                     styleClass="button-login"
                                     value="#{pizzaLogin.buttonLogin}"
-                                    action="#{pizzaLogin.login()}"> 
+                                    action="#{pizzaLogin.doLogin()}"> 
                                 </h:commandButton>       
 
                                 <h:commandButton id="submit_register" styleClass="button-login button-register"
                                     value="#{pizzaLogin.buttonRegister}"
-                                    action="#{pizzaLogin.register()}"> 
+                                    action="#{pizzaLogin.doRegister()}"> 
                                 </h:commandButton>
 
                         </h:panelGrid>
