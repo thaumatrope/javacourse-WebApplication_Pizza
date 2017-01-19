@@ -49,7 +49,7 @@ public class Kunde extends DataAccess {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email = email.trim();
     }
 
     public String getPassword() {
@@ -57,7 +57,7 @@ public class Kunde extends DataAccess {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password.trim();
     }
        
     public int getKundennummer() {
@@ -74,7 +74,8 @@ public class Kunde extends DataAccess {
             return;
         }
         this.kundennummer = kundennummer;  
-    }       
+    }     
+    
     public void setKundennummer(int kundennummer) {
         this.kundennummer = kundennummer;
     }
@@ -84,7 +85,7 @@ public class Kunde extends DataAccess {
     }
 
     public void setVorname(String vorname) {
-        this.vorname = vorname;
+        this.vorname = vorname.trim();
     }
 
     public String getNachname() {
@@ -92,7 +93,7 @@ public class Kunde extends DataAccess {
     }
 
     public void setNachname(String nachname) {
-        this.nachname = nachname;
+        this.nachname = nachname.trim();
     }
 
     public String getOrt() {
@@ -100,7 +101,7 @@ public class Kunde extends DataAccess {
     }
 
     public void setOrt(String ort) {
-        this.ort = ort;
+        this.ort = ort.trim();
     }
 
     public String getPlz() {
@@ -108,7 +109,7 @@ public class Kunde extends DataAccess {
     }
 
     public void setPlz(String plz) {
-        this.plz = plz;
+        this.plz = plz.trim();
     }
 
     public String getStrasse() {
@@ -116,7 +117,7 @@ public class Kunde extends DataAccess {
     }
 
     public void setStrasse(String strasse) {
-        this.strasse = strasse;
+        this.strasse = strasse.trim();
     }
     
     public int getNewKundennummer(){
@@ -132,6 +133,21 @@ public class Kunde extends DataAccess {
         
     }
      
+    public boolean checkEmail(String email){    
+        Set emailAdressen = snatchEmail();
+        if(emailAdressen.contains(email)){
+            return true;
+        }else{
+            return false;
+        }        
+    }
+    
+    public boolean checkEmail(){  
+        
+        return this.checkEmail(this.email);
+       
+    }
+    
     public boolean checkKundennummer(int nummer){    
         Set kdnr = snatchKundennummern();
         if(kdnr.contains(new Integer(nummer))){
@@ -139,6 +155,12 @@ public class Kunde extends DataAccess {
         }else{
             return false;
         }        
+    }
+    
+    public boolean checkKundennummer(){  
+        
+        return this.checkKundennummer(this.kundennummer);
+       
     }
     
     public boolean checkKundennummer(String nummer){ 
@@ -150,13 +172,7 @@ public class Kunde extends DataAccess {
               return false;
         }
         return this.checkKundennummer(kundennummer); 
-    }
-    
-    public boolean checkKundennummer(){  
-        
-        return this.checkKundennummer(this.kundennummer);
-       
-    }
+    }   
    
     public Set<Integer> snatchKundennummern(){
         Connection con = null;
@@ -172,7 +188,7 @@ public class Kunde extends DataAccess {
                 return null;
             }
             stm = con.createStatement();
-            rs = stm.executeQuery("SELECT kundennummer FROM kunde");
+            rs = stm.executeQuery("SELECT kundennummer FROM benutzer");
             
             while (rs.next()) {
                 kdnr.add((Integer)rs.getInt("kundennummer"));                   
@@ -181,29 +197,41 @@ public class Kunde extends DataAccess {
         } catch (SQLException ex) {
             
         } finally {
-            try {
-                if (rs != null) {
-                    rs.close();
-                }
-            } catch (Exception e) {
-                
-            }
-            try {
-                if (stm != null) {
-                    stm.close();
-                }
-            } catch (Exception e) {
-               
-            }
-            try {
-                if (con != null) {
-                    con.close();
-                }
-            } catch (Exception e) {
-              
-            }
+            try { if (rs != null) { rs.close(); } } catch (Exception e) {}
+            try { if (stm != null) { stm.close(); } } catch (Exception e) {}
+            try { if (con != null) { con.close(); } } catch (Exception e) {}
         }
         return kdnr;
+    }
+    
+    public Set<String> snatchEmail(){
+        Connection con = null;
+        Statement stm = null;
+        Set<String> kdnemail = new HashSet<>();
+        ResultSet rs = null;
+
+        try {
+            
+            con = getConnectionPool();
+            
+             if (con == null) {
+                return null;
+            }
+            stm = con.createStatement();
+            rs = stm.executeQuery("SELECT email FROM benutzer");
+            
+            while (rs.next()) {
+                kdnemail.add(rs.getString("email").trim());                   
+            }
+
+        } catch (SQLException ex) {
+            
+        } finally {
+            try { if (rs != null) { rs.close(); } } catch (Exception e) {}
+            try { if (stm != null) { stm.close(); } } catch (Exception e) {}
+            try { if (con != null) { con.close(); } } catch (Exception e) {}
+        }
+        return kdnemail;
     }
     
     public boolean store(){
@@ -215,7 +243,7 @@ public class Kunde extends DataAccess {
          }
     }
     
-     public boolean updateKunde(){
+    public boolean updateKunde(){
         Connection con = null;
         PreparedStatement stm = null;
         boolean stored = false;
@@ -226,13 +254,15 @@ public class Kunde extends DataAccess {
                 //System.out.println("Kunde update() - no Connection Pool");
                 return false;
             }
-            stm = con.prepareStatement("UPDATE kunde SET vorname = ?, nachname = ?, strasse = ?, ort = ?, plz = ? WHERE kundennummer = ?");
-            stm.setString(1, this.getVorname());
-            stm.setString(2, this.getNachname());
-            stm.setString(3, this.getStrasse());
-            stm.setString(4, this.getOrt());
-            stm.setString(5, this.getPlz());
-            stm.setInt(6, this.getKundennummer());
+            stm = con.prepareStatement("UPDATE benutzer SET email = ?, password = ?, vorname = ?, nachname = ?, strasse = ?, ort = ?, plz = ? WHERE kundennummer = ?");
+            stm.setString(1, this.getEmail());
+            stm.setString(2, this.getPassword());
+            stm.setString(3, this.getVorname());
+            stm.setString(4, this.getNachname());
+            stm.setString(5, this.getStrasse());
+            stm.setString(6, this.getOrt());
+            stm.setString(7, this.getPlz());
+            stm.setInt(8, this.getKundennummer());
             int rows = stm.executeUpdate();
             con.commit();
             stored = rows == 1;
@@ -244,8 +274,7 @@ public class Kunde extends DataAccess {
         }
         return stored;
     }
-     
-     
+          
     public boolean insertKunde(){
         Connection con = null;
         PreparedStatement stm = null;
@@ -257,13 +286,16 @@ public class Kunde extends DataAccess {
                 //System.out.println("Kunde store() - no Connection Pool");
                 return false;
             }
-            stm = con.prepareStatement("INSERT INTO kunde (kundennummer, vorname, nachname, strasse, ort, plz) VALUES(?,?,?,?,?,?)");
-            stm.setInt(1, this.getKundennummer());
-            stm.setString(2, this.getVorname());
-            stm.setString(3, this.getNachname());
-            stm.setString(4, this.getStrasse());
-            stm.setString(5, this.getOrt());
-            stm.setString(6, this.getPlz());
+            stm = con.prepareStatement("INSERT INTO benutzer (email, password, vorname, nachname, strasse, ort, plz, kundennummer) VALUES(?,?,?,?,?,?,?,?)");
+           
+            stm.setString(1, this.getEmail());
+            stm.setString(2, this.getPassword());
+            stm.setString(3, this.getVorname());
+            stm.setString(4, this.getNachname());
+            stm.setString(5, this.getStrasse());
+            stm.setString(6, this.getOrt());
+            stm.setString(7, this.getPlz());
+            stm.setInt(8, this.getKundennummer());
             int rows = stm.executeUpdate();
             con.commit();
             stored = rows == 1;
@@ -276,18 +308,66 @@ public class Kunde extends DataAccess {
         return stored;
     }
     
-    public Kunde snatch (String nummer) {
+    public Kunde snatch (String email) {
         
-        int kundennummer;
+        Connection con = null;
+        Statement stm = null;        
+        ResultSet rs = null;  
+        
+        System.out.println("Kunde:snatch ("+ email + ")");
+        
         try {
-           kundennummer = Integer.parseInt(nummer);
-        } catch (NumberFormatException e) {
-              return new Kunde();
+            
+            con = getConnectionPool();
+            
+             if (con == null) {
+                return null;
+            }
+            stm = con.createStatement();
+            rs = stm.executeQuery("SELECT * FROM benutzer WHERE email = '" + email + "'");
+            
+            while (rs.next()) {
+                
+                this.kundennummer = rs.getInt("kundennummer");
+                this.vorname = rs.getString("vorname");
+                this.nachname = rs.getString("nachname");
+                this.ort = rs.getString("ort");
+                this.plz = rs.getString("plz");
+                this.strasse = rs.getString("strasse");
+                this.email = rs.getString("email");
+                this.password = rs.getString("password");     
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();       
+            System.out.println("Kunde:snatch ("+ email + ") - ERROR");
+            return this;
+            
+        } finally {
+            
+            try { if (rs != null) rs.close(); } catch (Exception e) {}
+            try { if( stm != null) stm.close(); } catch(Exception e) {}
+            try { if( con != null) con.close(); } catch(Exception e) {}  
+               
         }
-        return this.snatch(kundennummer); 
+        
+        System.out.println("Kunde:snatch ("+ this.email + ") + SUCCESS");
+        
+        return this;
     }
     
-    public Kunde snatch (int kundennummer) {
+////    public Kunde snatch (String nummer) {
+//        
+//        int kundennummer;
+//        try {
+//           kundennummer = Integer.parseInt(nummer);
+//        } catch (NumberFormatException e) {
+//              return new Kunde();
+//        }
+//        return this.snatch(kundennummer); 
+//    }
+    
+   public Kunde snatch (int kundennummer) {
         Connection con = null;
         Statement stm = null;        
         ResultSet rs = null;
@@ -300,7 +380,7 @@ public class Kunde extends DataAccess {
                 return null;
             }
             stm = con.createStatement();
-            rs = stm.executeQuery("SELECT * FROM kunde WHERE kundennummer = '" + kundennummer + "'");
+            rs = stm.executeQuery("SELECT * FROM benutzer WHERE kundennummer = '" + kundennummer + "'");
             
             while (rs.next()) {
                 
@@ -310,7 +390,8 @@ public class Kunde extends DataAccess {
                 this.ort = rs.getString("ort");
                 this.plz = rs.getString("plz");
                 this.strasse = rs.getString("strasse");
-                                   
+                this.email = rs.getString("email");
+                this.password = rs.getString("password");     
             }
 
         } catch (SQLException ex) {
@@ -338,7 +419,7 @@ public class Kunde extends DataAccess {
 
    /* input validation */
    
-    public void validate_kundennumer() {
+   public void validate_kundennumer() {
         
          // Zurücksetzen des Flags und der Fehlerliste
         this.valid = true;
@@ -354,7 +435,7 @@ public class Kunde extends DataAccess {
         
     }
    
-     public void validate() {
+   public void validate() {
        
         // Initialization methid as well!!
         this.validate_kundennumer(); 

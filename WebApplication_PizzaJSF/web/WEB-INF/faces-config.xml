@@ -3,26 +3,47 @@
               xmlns="http://xmlns.jcp.org/xml/ns/javaee"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+ 
+    <application>
+        <locale-config>
+            <default-locale>de</default-locale>
+            <supported-locale>en</supported-locale>
+        </locale-config>
+        <resource-bundle>
+            <base-name>com.westfield.pizza.util.messages</base-name>
+            <var>msg</var>
+        </resource-bundle>
+        
+    </application>     
+
     
     <navigation-rule>
-        <from-view-id>/*.xhtml</from-view-id>
-        <navigation-case>
-            <from-action>#{pizzaLogin.doLogout()}</from-action>
-            <from-outcome>outcomeLogout</from-outcome>
-            <to-view-id>/landing.xhtml</to-view-id>
-        </navigation-case>        
-    </navigation-rule>
-    <navigation-rule>
-        <from-view-id>/landing.xhtml</from-view-id>
-        <navigation-case>
-            <from-action>#{pizzaLogin.doLogin()}</from-action>
-            <from-outcome>outcomeGoodLogin</from-outcome>
+        <from-view-id>*</from-view-id>
+        <navigation-case>                  
+            <from-outcome>success_login</from-outcome>
             <to-view-id>/kunden/angebot.xhtml</to-view-id>
+            <redirect/>
         </navigation-case> 
-         <navigation-case>
-            <from-action>#{pizzaLogin.doLogin()}</from-action>
-            <from-outcome>outcomeBadLogin</from-outcome>
+         <navigation-case>                   
+            <from-outcome>failed_login</from-outcome>
             <to-view-id>/landing.xhtml</to-view-id>
+            <redirect/>
         </navigation-case>        
+   
+        <navigation-case>
+            <from-outcome>success_logout</from-outcome>      
+            <to-view-id>/landing.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        
+          <navigation-case>
+            <from-outcome>forward_register</from-outcome>      
+            <to-view-id>/register.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>        
+                            
     </navigation-rule>
+    
 </faces-config>
+
+ 

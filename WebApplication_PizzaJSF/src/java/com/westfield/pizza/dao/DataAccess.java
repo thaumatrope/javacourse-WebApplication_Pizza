@@ -26,7 +26,7 @@ public class DataAccess {
             Context ctx=new InitialContext();
             
             //Get a connection
-            DataSource ds = (DataSource) ctx.lookup("jdbc/pizzaWorld");//
+            DataSource ds = (DataSource) ctx.lookup("jdbc/pizzaworldJSF");//
            
             Connection conn=ds.getConnection();
             conn.setAutoCommit(false);
@@ -47,7 +47,7 @@ public class DataAccess {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             
             //Get a connection            
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pizzaWorld?zeroDateTimeBehavior=convertToNull", "root", "root");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pizzaworld_jsf?zeroDateTimeBehavior=convertToNull", "root", "root");
             
             
             conn.setAutoCommit(false);

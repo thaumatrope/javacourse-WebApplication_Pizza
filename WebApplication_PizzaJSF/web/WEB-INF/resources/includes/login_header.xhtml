@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:panelGrid columns="3" style="width: 100%" columnClasses="edge-header middle-alignment, center-header middle-alignment, edge-header top-alignment"> 
+                <h:graphicImage library="image" name="PizzaWorld.gif"/>
+                <h:outputText value="Welcome to PizzaWorld!" styleClass="header-font" />
+                <h:panelGroup layout="block" style="float: right; width: 100%">
+                    <h:form id="form_login">
+                        <h:panelGrid columns="2" style="width: 100%">  
+
+                                <h:commandButton id="submit_login" 
+                                    styleClass="button-default"
+                                    value="#{msg.buttonLogin}"
+                                    action="#{pizzaLogin.doLogin()}"> 
+                                </h:commandButton>       
+
+                                <h:commandButton id="submit_register" styleClass="button-default button-align-right"
+                                    value="#{msg.buttonRegister}"
+                                    action="#{pizzaLogin.goRegister()}"> 
+                                </h:commandButton>
+
+                        </h:panelGrid>
+
+                        <hr style="margin: 10px 0px" /> 
+
+                        <h:panelGrid columns="2" style="width: 100%">  
+
+                            <h:panelGroup style="width: 100%">
+                                <fieldset>            
+                                    <legend>#{msg.labelEmail}</legend>
+
+                                    <h:inputText id="email" style="width: 100%;"
+                                        value="#{pizzaLogin.myEmail}" />
+                                </fieldset>
+                            </h:panelGroup>
+                            <h:panelGroup style="width: 100%">
+                                <fieldset>
+                                     <legend>#{msg.labelPasswort}</legend>
+                                     <h:inputSecret redisplay="false" style="width: 100%;"
+                                         value="#{pizzaLogin.myPassword}" />
+                                 </fieldset>       
+                             </h:panelGroup>
+                        </h:panelGrid>                        
+                     </h:form>
+                    
+                </h:panelGroup>
+            </h:panelGrid>
+    
+</ui:composition>

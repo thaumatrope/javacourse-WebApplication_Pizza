@@ -23,35 +23,60 @@ import javax.servlet.http.HttpSession;
 @ManagedBean
 @SessionScoped
 public class PizzaLogin implements Serializable {
+   
     
     private Kunde myKunde;
     private String myEmail;
     private String myPassword;
     
-    private final String buttonLogin = "Login";
-    private final String buttonLogout = "Logout";
-    private final String buttonRegister = "Register";
-    
+    private final String OUTCOME_SUCCESS_LOGIN = "success_login";
+    private final String OUTCOME_FAILED_LOGIN = "failed_login";
+    private final String OUTCOME_SUCCESS_LOGOUT = "success_logout";
+    private final String OUTCOME_FAILED_LOGOUT = "failed_logout";
+    private final String OUTCOME_REGISTER_ME = "forward_register";
+    private final String OUTCOME_SUCCESS_REGISTER = "success_register";
+    private final String OUTCOME_FAILED_REGISTER = "success_register";
+
     static final long serialVersionUID = 1L;
     
-    
-    public PizzaLogin(){
-        
-        myKunde = new Kunde();
-        
+    public PizzaLogin(){        
+        myKunde = new Kunde();        
+    }
+     
+    public String getOUTCOME_SUCCESS_REGISTER() {
+        return OUTCOME_SUCCESS_REGISTER;
     }
 
-    public String getButtonLogin() {
-        return buttonLogin;
+    public String getOUTCOME_FAILED_REGISTER() {
+        return OUTCOME_FAILED_REGISTER;
+    }
+     
+    public String getOUTCOME_REGISTER_ME() {
+        return OUTCOME_REGISTER_ME;
     }
 
-    public String getButtonRegister() {
-        return buttonRegister;
+
+    public String getOUTCOME_SUCCESS_LOGIN() {
+        return OUTCOME_SUCCESS_LOGIN;
     }
-    
-    public String getButtonLogout() {
-        return buttonLogout;
+
+    public String getOUTCOME_FAILED_LOGIN() {
+        return OUTCOME_FAILED_LOGIN;
     }
+
+    public String getOUTCOME_SUCCESS_LOGOUT() {
+        return OUTCOME_SUCCESS_LOGOUT;
+    }
+
+    public String getOUTCOME_FAILED_LOGOUT() {
+        return OUTCOME_FAILED_LOGOUT;
+    }
+
+   
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }  
 
     public Kunde getMyKunde() {
         return myKunde;
@@ -80,13 +105,35 @@ public class PizzaLogin implements Serializable {
         
     }
     
-    public boolean isLoggedIn(){        
-        return false;
+  
+    public boolean isLoggedIn(){  
+        
+        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+        
+        if(request.isUserInRole("adminRolle") || request.isUserInRole("kundenRolle")){
+            return true;
+        } else {
+            return false;
+        }
     }
    
-    public void doRegister(){
+    public String goRegister(){
         
-    }    
+        System.out.println("PizzaLogin -- goRegister() start...");
+        
+        return OUTCOME_REGISTER_ME;
+        
+    }  
+    
+    public String doRegister(){
+        
+        System.out.println("PizzaLogin -- doRegister() start...");
+        
+        return OUTCOME_SUCCESS_REGISTER;
+        
+    }  
+    
+    
     
     
     public String doLogin(){
@@ -99,8 +146,8 @@ public class PizzaLogin implements Serializable {
         try {
             
             request.login(this.getMyEmail(), this.getMyPassword());
-            //request.authenticate
-            //myKunde.snatch(this.getMyEmail());
+            //request.authenticate ???
+            this.setMyKunde(myKunde.snatch(this.getMyEmail()));
             
             System.out.println("PizzaLogin -- doLogin() -> Logged In");
             
@@ -108,10 +155,10 @@ public class PizzaLogin implements Serializable {
             //username oder Passwort falsch
             System.out.println("PizzaLogin -- doLogin() -> NOT Logged In -- username oder password falsch");
             Logger.getLogger(PizzaLogin.class.getName()).log(Level.SEVERE, null, ex);
-            return "outcomeBadLogin";
+            return OUTCOME_FAILED_LOGIN;
         }
         
-        return "outcomeGoodLogin";
+        return OUTCOME_SUCCESS_LOGIN;
     }  
     
     public String doLogout(){
@@ -123,14 +170,19 @@ public class PizzaLogin implements Serializable {
             request.getSession().invalidate();         
             myKunde = null;
             
+            System.out.println(FacesContext.getCurrentInstance().getViewRoot().getViewId());
+            
             System.out.println("PizzaLogin -- doLogout() -> Logged Out");
+            
             
         } catch (ServletException ex) {
             //username oder Passwort falsch
             System.out.println("PizzaLogin -- doLogout() -> NOT Logged Out -- error");
             Logger.getLogger(PizzaLogin.class.getName()).log(Level.SEVERE, null, ex);
+            return OUTCOME_FAILED_LOGOUT;
         }
         
-        return "outcomeLogout";
+        return OUTCOME_SUCCESS_LOGOUT;
+        
     }
 }
