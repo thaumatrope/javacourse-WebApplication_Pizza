@@ -36,8 +36,16 @@
             </test-roots>
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>Adressen</word>
+            <word>auf</word>
+            <word>des</word>
             <word>eingeloggt</word>
+            <word>Korrektheit</word>
+            <word>Objekt</word>
             <word>PizzaWorld</word>
+            <word>syntaktische</word>
+            <word>Validiert</word>
+            <word>übergebenen</word>
         </spellchecker-wordlist>
     </configuration>
 </project>
