@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <application>
+        <locale-config>
+            <default-locale>de</default-locale>
+            <supported-locale>en</supported-locale>
+            <supported-locale>fa</supported-locale>
+        </locale-config>
+    </application>   
+    <navigation-rule>
+        
+        <navigation-case>
+            <from-outcome>sprungmarke2</from-outcome>
+            <to-view-id>/zweite.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>sprungmarke3</from-outcome>
+            <to-view-id>/dritte.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>sprungmarke1</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>case1</from-outcome>
+            <to-view-id>/zweite.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>case2</from-outcome>
+            <to-view-id>/dritte.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

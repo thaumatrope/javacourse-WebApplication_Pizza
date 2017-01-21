@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <f:loadBundle var="msg" basename="messages" />
+    </h:head>
+    <h:messages infoStyle="color:green" warnStyle="color:blue" errorStyle="color:red" fatalStyle="color:orange"/>
+
+    <h:body dir="#{myBean.direction}" >
+       
+            <h:outputText  value="#{msg.title}" />
+            <h:form>
+                <h:commandButton action="#{myBean.switchLang('de')}" value="Deutsch" />
+                <h:commandButton action="#{myBean.switchLang('en')}" value="Englisch" />
+                <h:commandButton action="#{myBean.switchLang('fa')}" value="Persisch" />
+            </h:form>
+            <h:form>
+                <h:dataTable value="#{myBean.myList}" var="sport">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Id" />
+                        </f:facet>
+                        <h:outputText value="#{sport.spId}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{msg.sport}" />
+                        </f:facet>
+                        <h:outputText value="#{sport.bezeichnung}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{msg.assessment}" />
+                        </f:facet>
+                        <h:inputText value="#{sport.bewertung}" />
+                    </h:column>
+                </h:dataTable>
+                <h:commandButton action="#{myBean.addElement()}" value="#{msg.add}" />   
+            </h:form>
+
+            <h:form>
+
+                <h:panelGrid  id="pg" columns="2" > 
+                    <h:outputLabel for="inEmail" value="#{msg.user}" />
+                    <h:inputText id="inEmail" value="#{loginBean.myPerson.email}" >
+                        <f:validator validatorId="emailValidator" />
+                    </h:inputText>    
+                    <h:outputLabel for="inPassword" value="#{msg.passwort}"  />
+                    <h:inputSecret id="inPassword" value="#{loginBean.myPerson.password}" required="true" requiredMessage="Password ist ein Pflichtfeld" />
+                </h:panelGrid>
+                <h:commandButton action="#{loginBean.doSomething()}" value="OK" />
+                <h:commandButton action="#{loginBean.login()}" value="#{msg.login}" />
+                <h:commandButton action="sprungmarke2" value="#{msg.second}" />
+            </h:form>
+
+            <h:outputText value="#{msg.userislogedin}" rendered="#{loginBean.logedIn}" />
+            <h:outputText value="#{msg.userisntlogedin}" rendered="#{not loginBean.logedIn}" />
+            <!--Das ist ein Kommentar -->
+            <h:outputText value="#{myBean.myAuswahl.size() lt 1 ?'Noch keine auswahl getätigt!':'Ihre Auswahl'}"  />
+            <h:dataTable value="#{myBean.myAuswahl}" var="s" >
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Id" />
+                    </f:facet>
+                    <h:outputText value="#{s.spId}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg.sport}" />
+                    </f:facet>
+                    <h:outputText value="#{s.bezeichnung}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg.assessment}" />
+                    </f:facet>
+                    <h:outputText value="#{s.bewertung}" />
+                </h:column>
+            </h:dataTable>
+     
+    </h:body>
+</html>
+
