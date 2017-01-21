@@ -12,12 +12,8 @@
         <resource-bundle>
             <base-name>com.westfield.pizza.util.messages</base-name>
             <var>msg</var>
-        </resource-bundle>
-        
+        </resource-bundle>        
     </application>  
-    
-          
-
     
     <navigation-rule>
         <from-view-id>*</from-view-id>
@@ -38,11 +34,25 @@
             <redirect/>
         </navigation-case>
         
-          <navigation-case>
+        <navigation-case>
             <from-outcome>forward_register</from-outcome>      
             <to-view-id>/register.xhtml</to-view-id>
             <redirect/>
-        </navigation-case>        
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>success_register</from-outcome>      
+            <to-view-id>/kunden/angebot.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case> 
+        
+         <navigation-case>
+            <from-outcome>failed_register</from-outcome>      
+            <to-view-id>/register.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case> 
+        
+                      
                             
     </navigation-rule>
     

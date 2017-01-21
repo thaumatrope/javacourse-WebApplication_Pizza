@@ -22,8 +22,7 @@ import javax.servlet.http.HttpSession;
  */
 @ManagedBean
 @SessionScoped
-public class PizzaLogin implements Serializable {
-   
+public class PizzaLogin implements Serializable {   
     
     private Kunde myKunde;
     private String myEmail;
@@ -35,7 +34,7 @@ public class PizzaLogin implements Serializable {
     private final String OUTCOME_FAILED_LOGOUT = "failed_logout";
     private final String OUTCOME_REGISTER_ME = "forward_register";
     private final String OUTCOME_SUCCESS_REGISTER = "success_register";
-    private final String OUTCOME_FAILED_REGISTER = "success_register";
+    private final String OUTCOME_FAILED_REGISTER = "failed_register";
 
     static final long serialVersionUID = 1L;
     
@@ -92,7 +91,7 @@ public class PizzaLogin implements Serializable {
 
     public void setMyEmail(String myEmail) {        
         this.myEmail = myEmail.trim();
-        System.out.println("kunde: setMyEmail: " + this.myEmail);
+        System.out.println("PizzaLogin: setMyEmail: " + this.myEmail);
     }
 
     public String getMyPassword() {
@@ -101,10 +100,31 @@ public class PizzaLogin implements Serializable {
 
     public void setMyPassword(String myPassword) {
         this.myPassword = myPassword.trim();
-        System.out.println("kunde: setMyPassword: " + this.myPassword);
+        System.out.println("PizzaLogin: setMyPassword: " + this.myPassword);
         
+    }    
+       
+    public boolean isLoggedInAsAdmin(){  
+        
+        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+        
+        if(request.isUserInRole("adminRolle")){
+            return true;
+        } else {
+            return false;
+        }
     }
     
+    public boolean isLoggedInAsBenutzer(){  
+        
+        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+        
+        if(request.isUserInRole("kundenRolle")){
+            return true;
+        } else {
+            return false;
+        }
+    }    
   
     public boolean isLoggedIn(){  
         
@@ -127,14 +147,32 @@ public class PizzaLogin implements Serializable {
     
     public String doRegister(){
         
-        System.out.println("PizzaLogin -- doRegister() start...");
+        String outcome = null;
         
-        return OUTCOME_SUCCESS_REGISTER;
+        System.out.println("PizzaLogin -- doRegister() start...");  
+        
+        this.setMyPassword(myKunde.getPassword());
+        this.setMyEmail(myKunde.getEmail());
+        
+        if (!myKunde.store()){            
+            System.out.println("PizzaLogin -- myKunde.store() not stored...");
+            return OUTCOME_FAILED_REGISTER;
+        }else {
+            
+            System.out.println("PizzaLogin -- myKunde.store() stored...");
+        }        
+        
+        outcome = this.doLogin();
+        
+        if(outcome.equals(OUTCOME_FAILED_LOGIN)){           
+            outcome = OUTCOME_FAILED_REGISTER;
+        } else {            
+            outcome = OUTCOME_SUCCESS_REGISTER;
+        }         
+        
+        return outcome;
         
     }  
-    
-    
-    
     
     public String doLogin(){
         
@@ -147,7 +185,8 @@ public class PizzaLogin implements Serializable {
             
             request.login(this.getMyEmail(), this.getMyPassword());
             //request.authenticate ???
-            this.setMyKunde(myKunde.snatch(this.getMyEmail()));
+            this.myKunde.snatch(this.getMyEmail());
+
             
             System.out.println("PizzaLogin -- doLogin() -> Logged In");
             

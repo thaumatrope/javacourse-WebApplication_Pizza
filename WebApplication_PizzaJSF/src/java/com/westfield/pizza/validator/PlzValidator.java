@@ -13,8 +13,8 @@ import javax.faces.validator.ValidatorException;
 
 /**
  * Validiert eMail-Adressen auf syntaktische Korrektheit
- */
- @FacesValidator(value = "emailValidator")
+*/
+@FacesValidator(value = "plzValidator")
 public class PlzValidator implements Validator {
 
    /**
@@ -24,38 +24,38 @@ public class PlzValidator implements Validator {
      * @param obj
     */
   
-   @Override
-   public void validate(FacesContext ctx, UIComponent component, Object obj)
-      throws ValidatorException {
+    @Override
+    public void validate(FacesContext ctx, UIComponent component, Object obj)
+       throws ValidatorException {
 
-      // Ressourcen-Bundle laden
-      ResourceBundle bundle = ResourceBundle.getBundle("messages", ctx.getViewRoot().getLocale());
+        // Ressourcen-Bundle laden
+        ResourceBundle bundle = ResourceBundle.getBundle("com.westfield.pizza.util.messages", ctx.getViewRoot().getLocale());
 
-      // Fehlermeldung auslesen
-      String errorKey = "errorlabelEmail";
-      String errorMsg = bundle.getString(errorKey);
+        // Fehlermeldung auslesen
+        String errorKey = "errorlabelPlz";
+        String errorMsg = bundle.getString(errorKey);
 
-      // Fehlermeldung im Kontext speichern, damit diese ggf. auch in der JSP zur Verf�gung steht
-      FacesMessage msg = new FacesMessage(errorMsg);
+        // Fehlermeldung im Kontext speichern, damit diese ggf. auch in der JSP zur Verf�gung steht
+        FacesMessage msg = new FacesMessage( FacesMessage.SEVERITY_ERROR, errorMsg, null);
 
-      // 'null' ist ebenfalls ein ung�ltiger Wert
-      if (obj == null) {
+        // 'null' ist ebenfalls ein ungültiger Wert
+        if (obj == null) {
          throw new ValidatorException(msg);
-      }
+        }
 
-      // Muster g�ltiger eMail-Adressen als Regular Expression
-      String pattern =
-         "^[\\w-]+(?:\\.[\\w-]+)*@(?:[\\w-]+\\.)+[a-zA-Z]{2,7}$";
+        // Muster gültiger eMail-Adressen als Regular Expression
+        String pattern = "\\d{5}";
 
-      // Pattern-Instanz erzeugen
-      Pattern p = Pattern.compile(pattern);
+        // Pattern-Instanz erzeugen
+        Pattern p = Pattern.compile(pattern);
 
-      // Auf Gültigkeit Überprüfen
-      Matcher m = p.matcher(obj.toString());
-      if (!m.matches()) {
+        // Auf Gültigkeit Überprüfen
+        Matcher m = p.matcher(obj.toString());
+
+        if (!m.matches()) {
          // Wert nicht gültig
          throw new ValidatorException(msg);
-      }
-   }
-}
+        }
 
+    }
+ }

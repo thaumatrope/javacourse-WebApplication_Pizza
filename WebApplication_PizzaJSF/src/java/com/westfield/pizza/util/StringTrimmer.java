@@ -20,7 +20,7 @@ public class StringTrimmer implements Converter {
     @Override
     public Object getAsObject(FacesContext context, UIComponent component, String value) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return value != null ? value.trim() : null;
+        return value != null ? value.trim() : "";
     }
 
     @Override

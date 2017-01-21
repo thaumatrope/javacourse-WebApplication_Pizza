@@ -15,12 +15,11 @@ and open the template in the editor.
         <title><ui:insert name="title">Welcome to PizzaWorld</ui:insert></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
-    <h:body>
+    <h:body>      
         <h:panelGroup layout="block" styleClass="topPanel">
         <div id="header">           
             <ui:include src="/WEB-INF/resources/includes/login_header.xhtml" />           
-        </div>  
-                   
+        </div>           
         
         <div id="menu"></div>
         <div id="content" style="background-color: white; height: 100vh; display: flex;">    
@@ -30,6 +29,7 @@ and open the template in the editor.
         </div>
         <div id="footer"></div>
         </h:panelGroup>
+        
     </h:body>
 
 </html>

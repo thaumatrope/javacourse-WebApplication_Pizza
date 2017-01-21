@@ -6,6 +6,7 @@
 package com.westfield.pizza.beans;
 
 import com.westfield.pizza.dao.DataAccess;
+import java.security.MessageDigest;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -256,7 +257,7 @@ public class Kunde extends DataAccess {
             }
             stm = con.prepareStatement("UPDATE benutzer SET email = ?, password = ?, vorname = ?, nachname = ?, strasse = ?, ort = ?, plz = ? WHERE kundennummer = ?");
             stm.setString(1, this.getEmail());
-            stm.setString(2, this.getPassword());
+            stm.setString(2, this.sha256(this.getPassword()));
             stm.setString(3, this.getVorname());
             stm.setString(4, this.getNachname());
             stm.setString(5, this.getStrasse());
@@ -272,6 +273,7 @@ public class Kunde extends DataAccess {
             try { if( stm != null) stm.close(); } catch(Exception e) {}
             try { if( con != null) con.close(); } catch(Exception e) {}
         }
+         
         return stored;
     }
           
@@ -289,13 +291,34 @@ public class Kunde extends DataAccess {
             stm = con.prepareStatement("INSERT INTO benutzer (email, password, vorname, nachname, strasse, ort, plz, kundennummer) VALUES(?,?,?,?,?,?,?,?)");
            
             stm.setString(1, this.getEmail());
-            stm.setString(2, this.getPassword());
+            stm.setString(2, this.sha256(this.getPassword()));
             stm.setString(3, this.getVorname());
             stm.setString(4, this.getNachname());
             stm.setString(5, this.getStrasse());
             stm.setString(6, this.getOrt());
             stm.setString(7, this.getPlz());
             stm.setInt(8, this.getKundennummer());
+            int rows = stm.executeUpdate();
+            con.commit();
+            stored = rows == 1;
+        } catch (SQLException ex) {          
+            stored = false;
+        } finally {
+            try { if( stm != null) stm.close(); } catch(Exception e) {}
+            try { if( con != null) con.close(); } catch(Exception e) {}
+        }
+        
+        try {
+            //System.out.println("Kunde store() - start");
+            con = this.getConnectionPool();
+            if(con == null) {
+                //System.out.println("Kunde store() - no Connection Pool");
+                return false;
+            }
+            stm = con.prepareStatement("INSERT INTO gruppe (name, email) VALUES (?,?)");
+           
+            stm.setString(1, "user");
+            stm.setString(2, this.getEmail());            
             int rows = stm.executeUpdate();
             con.commit();
             stored = rows == 1;
@@ -404,6 +427,28 @@ public class Kunde extends DataAccess {
            
         }
         return this;
+    }
+   
+   
+   public String sha256(String base) {
+        
+        try{
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] hash = digest.digest(base.getBytes("UTF-8"));
+            StringBuffer hexString = new StringBuffer();
+
+            for (int i = 0; i < hash.length; i++) {
+                String hex = Integer.toHexString(0xff & hash[i]);
+                if(hex.length() == 1) hexString.append('0');
+                hexString.append(hex);
+            }
+
+            return hexString.toString();
+            
+        } catch(Exception ex){
+           System.out.println("Kunde - sha256(String base) failed!");
+           throw new RuntimeException(ex);
+        }
     }
     
         
