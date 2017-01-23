@@ -30,29 +30,28 @@ and open the template in the editor.
                 
                 <h:panelGroup layout="block"  style="width: 60%; margin: auto; padding: 20px">
                                    
-                    <h:dataTable var="pizza" value="#{pizzaService.pizzaAngebot}">
+                    <h:dataTable var="bestellposten" value="#{pizzaService.pizzaAngebot}">
                         <h:column>
                             <f:facet name="sorte">
                                 <h:outputText value="#{msg.pizzaSorte}"/>
                             </f:facet>
                             <h:panelGrid columns="1">
-                                <h:graphicImage library="image" name="#{pizza.image}" styleClass="pizzaImage"/>                                
+                                <h:graphicImage library="image" name="#{bestellposten.image}" styleClass="pizzaImage"/>                                
                             </h:panelGrid>
                         </h:column>
                          <h:column>
                             <f:facet name="menge">
                                 <h:outputText value="#{msg.pizzaMenge}"/>
                             </f:facet>
-                            <h:inputText id="number" p:type="number" p:min="1" p:max="10"  value="#{pizza.menge}" styleClass="numberSpin" />
-
+                            <h:inputText id="number" p:type="number" p:min="0" p:max="10"  value="#{bestellposten.menge}" styleClass="numberSpin" />
                         </h:column> 
                         <h:column>
                             <f:facet name="preis">
                                 <h:outputText value="#{msg.pizzaPreis}"/>
                             </f:facet>
                             <h:panelGrid columns="1" styleClass="info_preis" >
-                                <h:outputText value="#{pizza.sorte}"/>
-                                <h:outputText value="#{pizza.preis} #{msg.Währung}"/>
+                                <h:outputText value="#{bestellposten.sorte}"/>
+                                <h:outputText value="#{bestellposten.preis} #{msg.Währung}"/>
                             </h:panelGrid>
                         </h:column>
                                                  
@@ -67,7 +66,7 @@ and open the template in the editor.
                     <h:commandButton id="submit_bestellung" 
                                      styleClass="button-default button-align-right"
                                      value="#{msg.buttonBestellung}"
-                                     action="#{pizzaLogin.doRegister()}" > 
+                                     action="#{pizzaService.checkBestellung()}" > 
                     </h:commandButton>  
                 </h:panelGroup> 
                 <br/>

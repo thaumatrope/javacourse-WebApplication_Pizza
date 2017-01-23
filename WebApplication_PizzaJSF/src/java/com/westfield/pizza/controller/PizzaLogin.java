@@ -71,8 +71,6 @@ public class PizzaLogin implements Serializable {
         return OUTCOME_FAILED_LOGOUT;
     }
 
-   
-
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }  
@@ -115,7 +113,7 @@ public class PizzaLogin implements Serializable {
         }
     }
     
-    public boolean isLoggedInAsBenutzer(){  
+    public boolean isLoggedInAsBenutzer(){
         
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         
@@ -214,7 +212,7 @@ public class PizzaLogin implements Serializable {
             request.getSession().invalidate();         
             myKunde = null;
             
-            System.out.println(FacesContext.getCurrentInstance().getViewRoot().getViewId());
+            //System.out.println(FacesContext.getCurrentInstance().getViewRoot().getViewId());
             
             System.out.println("PizzaLogin -- doLogout() -> Logged Out");
             
@@ -229,4 +227,5 @@ public class PizzaLogin implements Serializable {
         return OUTCOME_SUCCESS_LOGOUT;
         
     }
+    
 }

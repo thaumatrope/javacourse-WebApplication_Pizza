@@ -1,6 +1,8 @@
 package com.westfield.pizza.controller;
 
 
+import com.westfield.pizza.beans.Bestellposten;
+import com.westfield.pizza.beans.Bestellung;
 import com.westfield.pizza.dao.DataAccess;
 import com.westfield.pizza.beans.Pizza;
 import java.sql.Connection;
@@ -14,6 +16,9 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -24,7 +29,10 @@ import javax.faces.bean.ManagedBean;
 @ApplicationScoped
 public class PizzaService extends DataAccess implements AutoCloseable {
     
-    private static List<Pizza> pizzaAngebot;
+    private static List<Bestellposten> pizzaAngebot;
+    
+    private final String OUTCOME_SUCCESS_ORDER = "success_order";
+    private final String OUTCOME_FAILED_ORDER = "failed_order";
 
     public PizzaService(){ 
             
@@ -38,11 +46,11 @@ public class PizzaService extends DataAccess implements AutoCloseable {
         System.out.println("PizzaExpress: Applikation closes.");
     }
     
-    public List<Pizza> getPizzaAngebot() {
+    public List<Bestellposten> getPizzaAngebot() {
         Connection con = null;
         Statement stm = null;        
         ResultSet rs = null;
-        List<Pizza> tempPizzaBox = new ArrayList<>();
+        List<Bestellposten> tempPizzaBox = new ArrayList<>();
         
         try {
             
@@ -55,7 +63,7 @@ public class PizzaService extends DataAccess implements AutoCloseable {
             rs = stm.executeQuery("SELECT * FROM pizza ORDER BY sorte ASC");
             
             while (rs.next()) {
-                Pizza coldPizza = new Pizza();
+                Bestellposten coldPizza = new Bestellposten();
                 coldPizza.setSorte(rs.getString("sorte"));
                 coldPizza.setPreis(rs.getString("preis"));
                 coldPizza.setImage(rs.getString("image"));
@@ -90,12 +98,41 @@ public class PizzaService extends DataAccess implements AutoCloseable {
     // ????
     public double getPizzaPreis (String sorte){
         
-        for (Pizza myPizza : this.pizzaAngebot){
+        for (Bestellposten myPizza : this.pizzaAngebot){
             
             if(myPizza.getSorte().equals(sorte)){
                 return myPizza.getPreisDouble();
             }
         }
         return 0;
+    }
+    
+    public String checkBestellung() {
+        
+        System.out.println("PizzaService -- checkBestellung() start...");
+        
+        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+        HttpSession session = request.getSession();
+        Bestellung myBestellung = new Bestellung();
+        PizzaService myService  = (PizzaService) session.getAttribute("pizzaService");        
+        myBestellung.setPizzaBestellung(myService.getPizzaAngebot());
+        
+        session.setAttribute("bestellung", myBestellung);
+        
+
+        
+        
+        return OUTCOME_SUCCESS_ORDER;
+    }
+    
+    public String doBestellung() {
+        
+        System.out.println("PizzaService -- checkBestellung() start...");
+        
+        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+        HttpSession session = request.getSession();
+        
+        
+        return OUTCOME_SUCCESS_ORDER;
     }
 }

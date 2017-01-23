@@ -52,6 +52,19 @@
             <redirect/>
         </navigation-case> 
         
+        <navigation-case>
+            <from-outcome>success_order</from-outcome>      
+            <to-view-id>/kunden/bestellung.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>failed_order</from-outcome>      
+            <to-view-id>/kunden/angebot.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        
+        
                       
                             
     </navigation-rule>

@@ -22,15 +22,7 @@ public class Pizza extends DataAccess {
     private String sorte;
     private String preis;
     private String image;
-    private int menge;
-
-    public int getMenge() {
-        return menge;
-    }
-
-    public void setMenge(int menge) {
-        this.menge = menge;
-    }
+   
     
     public String getImage() {
         return image;

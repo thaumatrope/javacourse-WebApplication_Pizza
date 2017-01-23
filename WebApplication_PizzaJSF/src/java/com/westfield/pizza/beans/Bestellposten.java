@@ -5,10 +5,9 @@
  */
 package com.westfield.pizza.beans;
 
-import com.westfield.pizza.dao.DataAccess;
+import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-
 
 
 /**
@@ -17,14 +16,23 @@ import javax.faces.bean.SessionScoped;
  */
 @ManagedBean
 @SessionScoped
-public class Bestellposten extends DataAccess {
+public class Bestellposten extends Pizza implements Serializable {
     
-    private String sorte;
-    private String preis;
     private int bestellnummer;
     private int menge;
     private int position;
     private int id;
+    private String image;
+    
+    static final long serialVersionUID = 1L;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public int getBestellnummer() {
         return bestellnummer;
@@ -56,37 +64,8 @@ public class Bestellposten extends DataAccess {
 
     public void setMenge(int menge) {
         this.menge = menge;
-    }    
-       
-    public String getSorte() {
-        return sorte;
-    }
-
-    public void setSorte(String sorte) {
-        this.sorte = sorte;
-    }
-
-    public String getPreis() {
-        return preis;
-    }
-    
-    public double getPreisDouble() {
-        double tmp;
-        try {
-           tmp = Double.parseDouble(this.preis);
-        } catch (NumberFormatException e) {
-            System.out.println("Pizza-getPreisDouble: NumberFormatException");
-              return 0.0;
-        } 
-        
-        return tmp;
-    }
-
-    public void setPreis(String preis) {        
-        
-        this.preis = preis;
-    }
-    
+    } 
+     
    
     
 }
