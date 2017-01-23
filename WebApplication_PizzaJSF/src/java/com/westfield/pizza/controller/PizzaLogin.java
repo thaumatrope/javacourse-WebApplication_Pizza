@@ -179,7 +179,12 @@ public class PizzaLogin implements Serializable {
         System.out.println("PizzaLogin -- doLogin() start...");
         
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
-        HttpSession session = request.getSession();       
+        HttpSession session = request.getSession();
+        
+        if(request.getRemoteUser() != null){
+            System.out.println("PizzaLogin -- doLogin() already logged in...");
+            return OUTCOME_SUCCESS_LOGIN;
+        }              
         
         try {
             

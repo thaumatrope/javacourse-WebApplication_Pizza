@@ -22,10 +22,12 @@ and open the template in the editor.
         </div>           
         
         <div id="menu"></div>
-        <div id="content" style="background-color: white; height: 100vh; display: flex;">    
-            <ui:fragment rendered="#{not pizzaLogin.isLoggedIn()}" >  
-                <h:graphicImage library="image" name="Ghostbusters_logo.png" styleClass="login_buster"/>
-            </ui:fragment> 
+        <div id="content" style="overflow: hidden">
+            <div class="login_buster_container">
+                <ui:fragment rendered="#{not pizzaLogin.isLoggedIn()}" >  
+                    <h:graphicImage library="image" name="Ghostbusters_logo.png" styleClass="login_buster"/>
+                </ui:fragment>
+            </div>
         </div>
         <div id="footer"></div>
         </h:panelGroup>

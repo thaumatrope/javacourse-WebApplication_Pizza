@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="#{localeBean.language}"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:p="http://xmlns.jcp.org/jsf/passthrough" >
+    <h:head>
+        <h:outputStylesheet library="css" name="main.css"  />
+        <title><ui:insert name="title">Welcome to PizzaWorld</ui:insert></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h:panelGroup layout="block" styleClass="topPanel">
+        <div id="header">                                    
+            <ui:include src="/WEB-INF/resources/includes/logout_header.xhtml" />         
+        </div>  
+                   
+        
+        <div id="menu"></div>
+        <div id="content" style="background-color: white; height: 100vh; display: flex;">    
+          
+            
+             <h:form id="form_register">  
+                
+                <h:panelGroup layout="block"  style="width: 60%; margin: auto; padding: 20px">
+                                   
+                        <h:dataTable var="pizza" value="#{pizzaLogin.pizzaAngebot}">
+                            <h:column>
+                                <f:facet name="sorte">
+                                    <h:outputText value="#{msg.pizzaSorte}"/>
+                                </f:facet>
+                                <h:panelGroup>
+                                    <h:graphicImage library="image" name="#{pizza.image}" styleClass=""/>
+                                    <h:outputText value="#{pizza.sorte}"/>
+                                </h:panelGroup>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="preis">
+                                    <h:outputText value="#{msg.pizzaPreis}"/>
+                                </f:facet>
+                                <h:outputText value="#{pizza.preis}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="menge">
+                                    <h:outputText value="#{msg.pizzaMenge}"/>
+                                </f:facet>
+                                <h:inputText id="number" p:type="number" p:min="1" p:max="10"  value="#{pizza.menge}" />
+                                 
+                            </h:column>                           
+                        </h:dataTable>
+
+                        
+                        <h:panelGroup layout="block"  style="width: 150px; margin: auto; padding: 20px">
+                            
+                            <h:outputLabel id="vorname_label" for="vorname_input" value="#{msg.labelVorname}" />
+                        </h:panelGroup>
+                        <h:panelGroup layout="block"  style="width: 150px; margin: auto; padding: 20px">
+                            
+                        </h:panelGroup>
+                        
+                        
+                        <h:inputText id="vorname_input"
+                                     value="#{pizzaLogin.myKunde.vorname}" required="true" requiredMessage="#{msg.errorlabelVorname}" />
+                        <h:message for="vorname_input" errorStyle="color:red; display:block"/> 
+
+                        <h:outputLabel id="nachname_label" for="nachname_input" 
+                               value="#{msg.labelNachname}" />
+                        <h:inputText id="nachname_input"
+                                     value="#{pizzaLogin.myKunde.nachname}" required="true" requiredMessage="#{msg.errorlabelNachname}" />
+                        <h:message for="nachname_input" errorStyle="color:red; display:block"/>
+
+                        <h:outputLabel id="strasse_label" for="strasse_input" 
+                               value="#{msg.labelStrasse}" />
+                        <h:inputText id="strasse_input"
+                                     value="#{pizzaLogin.myKunde.strasse}" required="true" requiredMessage="#{msg.errorlabelStrasse}" />                                
+                        <h:message for="strasse_input" errorStyle="color:red; display:block"/> 
+
+                        <h:outputLabel id="ort_label" for="ort_input" value="#{msg.labelOrt}" />
+                        <h:inputText id="ort_input" value="#{pizzaLogin.myKunde.ort}" required="true" requiredMessage="#{msg.errorlabelOrt}" />
+                        <h:message for="ort_input" errorStyle="color:red; display:block"/> 
+
+                        <h:outputLabel id="plz_label" for="plz_input" value="#{msg.labelPlz}" />
+                        <h:inputText id="plz_input" value="#{pizzaLogin.myKunde.plz}" >
+                            <f:validator validatorId="plzValidator" />
+                        </h:inputText>                           
+                        <h:message for="plz_input" errorStyle="color:red; display:block"/>
+
+                        <h:outputLabel id="email_label" for="email_input" value="#{msg.labelEmail}" />
+                        <h:inputText id="email_input" value="#{pizzaLogin.myKunde.email}" >
+                            <f:validator validatorId="emailValidator" />
+                        </h:inputText>
+                        <h:message for="email_input" errorStyle="color:red; display:block"/>
+                      
+                        <h:outputLabel id="password_label" for="password_input" value="#{msg.labelPasswort}" />
+                        <h:inputText id="password_input" value="#{pizzaLogin.myKunde.password}" required="true" requiredMessage="#{msg.errorlabelPasswort}"/>
+                        <h:message for="password_input" errorStyle="color:red; display:block"/> 
+
+                    </h:panelGrid> 
+                    
+                    <hr style="margin: 10px 0px" />       
+
+                    <h:commandButton id="submit_register" styleClass="button-default button-align-right"
+                        value="#{msg.buttonRegister}"
+                        action="#{pizzaLogin.doRegister()}"> 
+                    </h:commandButton>  
+
+               </h:panelGroup>
+                
+            </h:form>  
+            
+            
+        </div>
+        <div id="footer"></div>
+        </h:panelGroup>
+    </h:body>
+</html>

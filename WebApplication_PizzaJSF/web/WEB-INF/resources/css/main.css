@@ -85,30 +85,48 @@ and open the template in the editor.
     float: right;
 }
 
+.login_buster_container{ 
+    height: 100%;
+    width: 100%; 
+    display: flex;        
+}
+
 .login_buster{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-    margin-bottom: 80%;
+    margin: auto;
     height: 200px;
     width: 240px; 
+   
 }
 
 html {
     min-height:100%;/* make sure it is at least as tall as the viewport */
-    position:relative;
+
 }
 
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
 
 .topPanel {
     margin: auto; 
-    width: 75%;   
-    height: 100vh
+    width: 75%
 }
 
 #header {
     border: 3px solid green; 
     padding: 10px;
+    
+}
+
+#content {    
+    overflow: auto;
+    background-color: white;
+    border: 3px solid grey; 
+    padding: 10px;
+    height: 600px;
 }
 
 legend {
@@ -130,6 +148,25 @@ legend {
     width: 200px; 
     margin:5px;
     font-family:Arial;
-    font-size:13px;
+    font-size:14px;
     font-weight: normal;
+}
+
+.pizzaImage {
+    height: 150px;
+    width: 200px;
+}
+
+.numberSpin {
+    width: 40px;
+    align: right;
+}
+
+.info_preis {
+    width: 200px;
+    margin:5px;
+    font-family:Arial;
+    font-size:14px;
+    font-weight: normal;
+    
 }

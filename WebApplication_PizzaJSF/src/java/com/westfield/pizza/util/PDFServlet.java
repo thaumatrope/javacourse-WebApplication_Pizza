@@ -15,17 +15,15 @@ import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.westfield.pizza.beans.Bestellposten;
 import com.westfield.pizza.beans.Bestellung;
-import com.westfield.pizza.beans.Lieferung;
 import com.westfield.pizza.beans.Kunde;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.inject.Inject;
-import javax.print.PrintService;
-import javax.print.PrintServiceLookup;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -52,7 +50,7 @@ public class PDFServlet extends HttpServlet {
         PdfPTable table2;
         PdfPTable table1;
         HttpSession mySession = req.getSession();
-        Lieferung myLieferung;
+        Bestellung myBestellung;
         PdfPCell pcell;
         Phrase p;
         
@@ -61,8 +59,8 @@ public class PDFServlet extends HttpServlet {
             //benötigter Zugriff auf die im Sessionscope abgelegte Bean
             
             if (mySession.getAttribute("myLieferung") != null) {
-                myLieferung = (Lieferung) mySession.getAttribute("myLieferung");
-                Kunde myKunde = new Kunde().snatch(myLieferung.getKundennummer());
+                myBestellung = (Bestellung) mySession.getAttribute("bestellung");
+                Kunde myKunde = new Kunde().snatch(myBestellung.getKundennummer());
                         
                 PdfWriter.getInstance(document, bos);
                 
@@ -70,8 +68,8 @@ public class PDFServlet extends HttpServlet {
                 
                 document.add(new Paragraph("Pizza World"));
                 document.add(new Paragraph(" "));
-                document.add(new Paragraph("Liefernummer: " + myLieferung.getBestellnummer()));
-                document.add(new Paragraph("Datum: " + myLieferung.getDatum()));
+                document.add(new Paragraph("Liefernummer: " + myBestellung.getBestellnummer()));
+                document.add(new Paragraph("Datum: " + myBestellung.getDatum()));
                 document.add(new Paragraph(" "));
                 document.add(new Paragraph(" "));
                 document.add(new Paragraph("Lieferanschrift:"));
@@ -103,13 +101,13 @@ public class PDFServlet extends HttpServlet {
                 table2.addCell("Gesamtpreis");
                               
                 //Schleife dient nur zur Demonstration des Dokument Objectes aus der Library iText
-                for (Bestellung myBestellung : myLieferung.getMyBestellungen()) {
+                for (Bestellposten myBestellposten : myBestellung.getPizzaBestellung()) {
                      
-                    table2.addCell("" + myBestellung.getPosition()); 
-                    table2.addCell("" + myBestellung.getMenge());
-                    table2.addCell(myBestellung.getSorte());  
+                    table2.addCell("" + myBestellposten.getPosition()); 
+                    table2.addCell("" + myBestellposten.getMenge());
+                    table2.addCell("" + myBestellposten.getSorte());  
                     
-                    p = new Phrase(myBestellung.getPreis()); 
+                    p = new Phrase(myBestellposten.getPreis()); 
                     pcell = new PdfPCell(p);
                     pcell.setVerticalAlignment(Element.ALIGN_MIDDLE);
                     pcell.setHorizontalAlignment(Element.ALIGN_RIGHT);
@@ -117,7 +115,7 @@ public class PDFServlet extends HttpServlet {
                     table2.addCell(pcell);
 
                     //table2.addCell(myBestellung.getPreis());
-                    p = new Phrase(myLieferung.printPreisFormatted(myLieferung.getGesamtsumme(myBestellung.getPosition()))); 
+                    p = new Phrase(myBestellung.printPreisFormatted(myBestellung.getPartialGesamtsumme(myBestellposten.getPosition()))); 
                     pcell = new PdfPCell(p);
                     pcell.setVerticalAlignment(Element.ALIGN_MIDDLE);
                     pcell.setHorizontalAlignment(Element.ALIGN_RIGHT);
@@ -125,7 +123,7 @@ public class PDFServlet extends HttpServlet {
                     table2.addCell(pcell);
                     
                     
-                    //table2.addCell(myLieferung.printPreisFormatted(myLieferung.getGesamtsumme(myBestellung.getPosition())));
+                    //table2.addCell(myBestellung.printPreisFormatted(myBestellung.getGesamtsumme(myBestellung.getPosition())));
       
                 }
                 

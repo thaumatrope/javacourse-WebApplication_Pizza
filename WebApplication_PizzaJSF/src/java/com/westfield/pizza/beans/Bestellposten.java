@@ -17,12 +17,38 @@ import javax.faces.bean.SessionScoped;
  */
 @ManagedBean
 @SessionScoped
-public class Pizza extends DataAccess {
+public class Bestellposten extends DataAccess {
     
     private String sorte;
     private String preis;
-    private String image;
+    private int bestellnummer;
     private int menge;
+    private int position;
+    private int id;
+
+    public int getBestellnummer() {
+        return bestellnummer;
+    }
+
+    public void setBestellnummer(int bestellnummer) {
+        this.bestellnummer = bestellnummer;
+    }  
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
 
     public int getMenge() {
         return menge;
@@ -30,16 +56,8 @@ public class Pizza extends DataAccess {
 
     public void setMenge(int menge) {
         this.menge = menge;
-    }
-    
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }   
-    
+    }    
+       
     public String getSorte() {
         return sorte;
     }

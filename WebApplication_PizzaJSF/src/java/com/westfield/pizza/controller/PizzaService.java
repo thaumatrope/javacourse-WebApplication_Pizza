@@ -12,19 +12,21 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.List;
-
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+@ManagedBean
+@ApplicationScoped
 public class PizzaService extends DataAccess implements AutoCloseable {
     
     private static List<Pizza> pizzaAngebot;
 
-    public PizzaService(){
+    public PizzaService(){ 
             
         pizzaAngebot = getPizzaAngebot(); 
     
@@ -54,8 +56,9 @@ public class PizzaService extends DataAccess implements AutoCloseable {
             
             while (rs.next()) {
                 Pizza coldPizza = new Pizza();
-                coldPizza.setName(rs.getString("sorte"));
+                coldPizza.setSorte(rs.getString("sorte"));
                 coldPizza.setPreis(rs.getString("preis"));
+                coldPizza.setImage(rs.getString("image"));
                 tempPizzaBox.add(coldPizza);
             }
 
@@ -70,18 +73,7 @@ public class PizzaService extends DataAccess implements AutoCloseable {
         }
         return tempPizzaBox;
     }
-    
-    public double getPizzaPreis (String name){
-        
-        for (Pizza myPizza : this.pizzaAngebot){
-            
-            if(myPizza.getName().equals(name)){
-                return myPizza.getPreisDouble();
-            }
-        }
-        return 0;
-    }
-    
+   
     public String getCurrentDateTimeString(){
         
         LocalDateTime myDateTime = LocalDateTime.now();
@@ -92,5 +84,18 @@ public class PizzaService extends DataAccess implements AutoCloseable {
        
         System.out.println("PizzaService - getCurrentDateTimeString:" + myDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)));
         return myDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
-     }
+    }
+    
+    
+    // ????
+    public double getPizzaPreis (String sorte){
+        
+        for (Pizza myPizza : this.pizzaAngebot){
+            
+            if(myPizza.getSorte().equals(sorte)){
+                return myPizza.getPreisDouble();
+            }
+        }
+        return 0;
+    }
 }
