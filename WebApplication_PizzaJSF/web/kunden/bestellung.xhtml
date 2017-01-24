@@ -29,40 +29,52 @@ and open the template in the editor.
             <h:panelGroup layout="block"  style="width: 60%; margin: auto; padding: 20px">
                 
                 <h:panelGroup>
-                    <h:dataTable var="bestellposten" value="#{bestellung.pizzaBestellung}">
+                    <h:dataTable var="bestell" value="#{pizzaService.myBestellung.pizzaBestellung}"
+                                 columnClasses="bcolumn1,bcolumn2,bcolumn3,bcolumn4,bcolumn5,bcolumn6"
+                                 styleClass="order-table"
+                                 headerClass="order-table-header"
+                                 rowClasses="order-table-odd-row, order-table-even-row" >
+                        
                          <h:column>
-                            <f:facet name="position">
+                            <f:facet name="header">
                                 <h:outputText value="#{msg.pizzaPosition}"/>
                             </f:facet>
                             <h:panelGroup>                                  
-                                <h:outputText value="#{bestellposten.position}"/>
+                                <h:outputText value="#{bestell.position}" />
                             </h:panelGroup>
                         </h:column>
                         <h:column>
-                            <f:facet name="sorte">
+                            <f:facet name="header">
                                 <h:outputText value="#{msg.pizzaSorte}"/>
                             </f:facet>
                             <h:panelGroup>                                   
-                                <h:outputText value="#{bestellposten.sorte}"/>
+                                <h:outputText value="#{bestell.sorte}" />
                             </h:panelGroup>
                         </h:column>
                         <h:column>
-                            <f:facet name="preis">
+                            <f:facet name="header">
                                 <h:outputText value="#{msg.pizzaPreis}"/>
                             </f:facet>
-                            <h:outputText value="#{bestellposten.preis}"/>
+                            <h:outputText value="#{bestell.preis}" />
                         </h:column>
                         <h:column>
-                            <f:facet name="menge">
+                            <f:facet name="header">
                                 <h:outputText value="#{msg.pizzaMenge}"/>
                             </f:facet>
-                            <h:outputText value="#{bestellposten.menge}"/>                                 
+                            <h:outputText value="#{bestell.menge}" />                                 
                         </h:column> 
                         <h:column>
-                            <f:facet name="menge">
+                            <f:facet name="header">
+                                <h:outputText value="#{msg.pizzaPreis}"/>
+                            </f:facet>
+                            <h:outputText value="#{pizzaService.myBestellung.printPreisFormatted(bestell.menge * bestell.preisDouble)}" />
+
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
                                 <h:outputText value="#{msg.pizzaGesamtPreis}"/>
                             </f:facet>
-                            <h:outputText value="#{bestellung.getPartialGesamtsumme(bestellposten.position)}"/>
+                            <h:outputText value="#{pizzaService.myBestellung.printPreisFormatted(pizzaService.myBestellung.getPartialGesamtsumme(bestell.position))}" />
 
                         </h:column>
                     

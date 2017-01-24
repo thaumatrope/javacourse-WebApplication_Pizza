@@ -18,6 +18,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 import com.westfield.pizza.beans.Bestellposten;
 import com.westfield.pizza.beans.Bestellung;
 import com.westfield.pizza.beans.Kunde;
+import com.westfield.pizza.controller.PizzaService;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -34,7 +35,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Schulung_IBB
  */
-@WebServlet(name = "pdf2http", urlPatterns = "/generate/do.pdf")
+@WebServlet(name = "pdf2http", urlPatterns = "/kunden/generate/do.pdf")
 public class PDFServlet extends HttpServlet {
 
     /**
@@ -50,6 +51,7 @@ public class PDFServlet extends HttpServlet {
         PdfPTable table2;
         PdfPTable table1;
         HttpSession mySession = req.getSession();
+        PizzaService myService;
         Bestellung myBestellung;
         PdfPCell pcell;
         Phrase p;
@@ -58,9 +60,10 @@ public class PDFServlet extends HttpServlet {
             resp.setContentType("application/pdf");
             //benötigter Zugriff auf die im Sessionscope abgelegte Bean
             
-            if (mySession.getAttribute("myLieferung") != null) {
-                myBestellung = (Bestellung) mySession.getAttribute("bestellung");
-                Kunde myKunde = new Kunde().snatch(myBestellung.getKundennummer());
+            if (mySession.getAttribute("pizzaService") != null) {
+                myService = (PizzaService) mySession.getAttribute("pizzaService");
+                myBestellung = myService.getMyBestellung();
+                Kunde myKunde = new Kunde().snatchKunde(myBestellung.getKundennummer());
                         
                 PdfWriter.getInstance(document, bos);
                 
@@ -101,7 +104,7 @@ public class PDFServlet extends HttpServlet {
                 table2.addCell("Gesamtpreis");
                               
                 //Schleife dient nur zur Demonstration des Dokument Objectes aus der Library iText
-                for (Bestellposten myBestellposten : myBestellung.getPizzaBestellung()) {
+                for (Bestellposten myBestellposten : myBestellung.getPizzaAngebot()) {
                      
                     table2.addCell("" + myBestellposten.getPosition()); 
                     table2.addCell("" + myBestellposten.getMenge());

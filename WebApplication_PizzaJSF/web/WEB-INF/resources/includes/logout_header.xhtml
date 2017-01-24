@@ -16,7 +16,13 @@ and open the template in the editor.
         <h:outputText value="Welcome to PizzaWorld!" styleClass="header-font" />
         <h:panelGroup layout="block" style="float: right; width: 100%">
             <h:form id="form_logout">
-                <h:panelGrid columns="1" style="width: 100%">  
+                <h:panelGrid columns="2" style="width: 100%">  
+                    
+                    <h:commandButton id="submit_profile"
+                                     styleClass="button-default"
+                                     value="#{msg.buttonProfil}" 
+                                     action="#{pizzaLogin.checkProfilePage()}"> 
+                    </h:commandButton>
 
                     <h:commandButton id="submit_logout"
                                      styleClass="button-default button-align-right"
@@ -31,9 +37,11 @@ and open the template in the editor.
                     <h:panelGroup style="width: 100%">
                         <fieldset>            
                             <legend>#{msg.Hallo} #{pizzaLogin.myKunde.vorname} #{pizzaLogin.myKunde.nachname}</legend>
-                            <h:panelGrid columns="1" style="width: 100%">    
-                                <h:outputText id="outputText_Anmeldetext" value="#{labelAnmeldung}" />
-                                <h:outputText id="outputText_Anmeldename" value="#{pizzaLogin.myEmail}" />
+                            <h:panelGrid columns="2" style="width: 100%">    
+                                <h:outputText id="outputText_Anmeldetext" value="#{msg.labelAnmeldung}" />
+                                <h:outputText id="outputText_Anmeldename" value="#{pizzaLogin.myKunde.email}" />
+                                <h:outputText id="outputText_Kundennumertext" value="#{msg.labelKundennummer}" />
+                                <h:outputText id="outputText_Kundennumer" value="#{pizzaLogin.myKunde.kundennummer}" />
                               </h:panelGrid>    
                         </fieldset>
                    

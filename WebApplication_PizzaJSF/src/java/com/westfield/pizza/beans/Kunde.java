@@ -6,6 +6,7 @@
 package com.westfield.pizza.beans;
 
 import com.westfield.pizza.dao.DataAccess;
+import java.io.Serializable;
 import java.security.MessageDigest;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -25,9 +26,8 @@ import javax.faces.bean.SessionScoped;
  *
  * @author John Westfield
  */
-@ManagedBean
-@SessionScoped
-public class Kunde extends DataAccess {
+
+public class Kunde extends DataAccess implements Serializable {
     
      /*** Validation ***/
     private List<String> errors = new LinkedList<String>();
@@ -41,6 +41,8 @@ public class Kunde extends DataAccess {
     private String ort;
     private String plz;
     private String strasse;
+    
+    private static final long serialVersionUID = 1L;
     
     public Kunde(){        
     }
@@ -331,7 +333,7 @@ public class Kunde extends DataAccess {
         return stored;
     }
     
-    public Kunde snatch (String email) {
+    public Kunde snatchKunde (String email) {
         
         Connection con = null;
         Statement stm = null;        
@@ -390,7 +392,7 @@ public class Kunde extends DataAccess {
 //        return this.snatch(kundennummer); 
 //    }
     
-   public Kunde snatch (int kundennummer) {
+   public Kunde snatchKunde (int kundennummer) {
         Connection con = null;
         Statement stm = null;        
         ResultSet rs = null;

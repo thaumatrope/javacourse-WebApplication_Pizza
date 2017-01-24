@@ -35,8 +35,10 @@ public class PizzaLogin implements Serializable {
     private final String OUTCOME_REGISTER_ME = "forward_register";
     private final String OUTCOME_SUCCESS_REGISTER = "success_register";
     private final String OUTCOME_FAILED_REGISTER = "failed_register";
+    private final String OUTCOME_PROFILE_ADMIN = "profile_admin";
+    private final String OUTCOME_PROFILE_USER = "profile_user";
 
-    static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
     
     public PizzaLogin(){        
         myKunde = new Kunde();        
@@ -54,7 +56,6 @@ public class PizzaLogin implements Serializable {
         return OUTCOME_REGISTER_ME;
     }
 
-
     public String getOUTCOME_SUCCESS_LOGIN() {
         return OUTCOME_SUCCESS_LOGIN;
     }
@@ -67,9 +68,18 @@ public class PizzaLogin implements Serializable {
         return OUTCOME_SUCCESS_LOGOUT;
     }
 
+    public String getOUTCOME_PROFILE_ADMIN() {
+        return OUTCOME_PROFILE_ADMIN;
+    }
+
+    public String getOUTCOME_PROFILE_USER() {
+        return OUTCOME_PROFILE_USER;
+    }
+    
     public String getOUTCOME_FAILED_LOGOUT() {
         return OUTCOME_FAILED_LOGOUT;
     }
+    
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -178,9 +188,10 @@ public class PizzaLogin implements Serializable {
         
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         HttpSession session = request.getSession();
+        this.myKunde.snatchKunde(this.getMyEmail());
         
         if(request.getRemoteUser() != null){
-            System.out.println("PizzaLogin -- doLogin() already logged in...");
+            System.out.println("PizzaLogin -- doLogin() already logged in...");            
             return OUTCOME_SUCCESS_LOGIN;
         }              
         
@@ -188,9 +199,7 @@ public class PizzaLogin implements Serializable {
             
             request.login(this.getMyEmail(), this.getMyPassword());
             //request.authenticate ???
-            this.myKunde.snatch(this.getMyEmail());
-
-            
+                      
             System.out.println("PizzaLogin -- doLogin() -> Logged In");
             
         } catch (ServletException ex) {
@@ -228,4 +237,22 @@ public class PizzaLogin implements Serializable {
         
     }
     
+    public String checkProfilePage() {
+        
+        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+        
+        if(request.isUserInRole("adminRolle")){
+            return OUTCOME_PROFILE_ADMIN;
+        } else {
+            return OUTCOME_PROFILE_USER;
+        }
+        
+    }
+    
+    public String updateUser() {
+        
+        return "";
+    }
+ 
+
 }

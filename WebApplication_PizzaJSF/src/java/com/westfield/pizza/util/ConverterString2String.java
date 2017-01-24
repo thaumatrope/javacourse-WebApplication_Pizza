@@ -14,8 +14,9 @@ import javax.faces.convert.FacesConverter;
  *
  * @author John Westfield
  */
-@FacesConverter(forClass=String.class)
-public class StringTrimmer implements Converter {
+//&@FacesConverter(forClass=String.class) // global
+@FacesConverter("converterString2String")
+public class ConverterString2String implements Converter {
 
     @Override
     public Object getAsObject(FacesContext context, UIComponent component, String value) {

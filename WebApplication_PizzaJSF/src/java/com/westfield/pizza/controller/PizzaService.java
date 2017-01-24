@@ -5,6 +5,8 @@ import com.westfield.pizza.beans.Bestellposten;
 import com.westfield.pizza.beans.Bestellung;
 import com.westfield.pizza.dao.DataAccess;
 import com.westfield.pizza.beans.Pizza;
+import java.io.IOException;
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,8 +16,8 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -26,79 +28,43 @@ import javax.servlet.http.HttpSession;
  * and open the template in the editor.
  */
 @ManagedBean
-@ApplicationScoped
-public class PizzaService extends DataAccess implements AutoCloseable {
-    
-    private static List<Bestellposten> pizzaAngebot;
+@SessionScoped
+public class PizzaService implements Serializable {
+
+    private Bestellung myBestellung;
     
     private final String OUTCOME_SUCCESS_ORDER = "success_order";
     private final String OUTCOME_FAILED_ORDER = "failed_order";
+    
+    private static final long serialVersionUID = 1L;
 
-    public PizzaService(){ 
-            
-        pizzaAngebot = getPizzaAngebot(); 
+    public PizzaService(){
+        
+        this.myBestellung = new Bestellung();
     
     }
+    
+    public Bestellung getMyBestellung() {
+        return myBestellung;
+    }
 
-  
-    @Override
-    public void close() throws Exception {
-        System.out.println("PizzaExpress: Applikation closes.");
+    public void setMyBestellung(Bestellung myBestellung) {
+        this.myBestellung = myBestellung;
     }
     
-    public List<Bestellposten> getPizzaAngebot() {
-        Connection con = null;
-        Statement stm = null;        
-        ResultSet rs = null;
-        List<Bestellposten> tempPizzaBox = new ArrayList<>();
-        
-        try {
-            
-            con = getConnectionPool();
-            
-             if (con == null) {
-                return null;
-            }
-            stm = con.createStatement();
-            rs = stm.executeQuery("SELECT * FROM pizza ORDER BY sorte ASC");
-            
-            while (rs.next()) {
-                Bestellposten coldPizza = new Bestellposten();
-                coldPizza.setSorte(rs.getString("sorte"));
-                coldPizza.setPreis(rs.getString("preis"));
-                coldPizza.setImage(rs.getString("image"));
-                tempPizzaBox.add(coldPizza);
-            }
-
-        } catch (SQLException ex) {
-            
-        } finally {
-            
-            try { if (rs != null) rs.close(); } catch (Exception e) {}
-            try { if( stm != null) stm.close(); } catch(Exception e) {}
-            try { if( con != null) con.close(); } catch(Exception e) {}            
-           
-        }
-        return tempPizzaBox;
+    public String getOUTCOME_SUCCESS_ORDER() {
+        return OUTCOME_SUCCESS_ORDER;
     }
-   
-    public String getCurrentDateTimeString(){
-        
-        LocalDateTime myDateTime = LocalDateTime.now();
-        //LocalDate myDate = LocalDate.now();
-        //LocalTime myTime = LocalTime.now();
-        //Locale myLocale = new Locale("de","DE");
-        //DateTimeFormatter myFormatter = DateTimeFormatter.ofPattern(pattern, Locale.GERMANY);
+
+    public String getOUTCOME_FAILED_ORDER() {
+        return OUTCOME_FAILED_ORDER;
+    }
+
        
-        System.out.println("PizzaService - getCurrentDateTimeString:" + myDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)));
-        return myDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
-    }
-    
-    
     // ????
     public double getPizzaPreis (String sorte){
         
-        for (Bestellposten myPizza : this.pizzaAngebot){
+        for (Bestellposten myPizza : myBestellung.snatchPizzaAngebot()){
             
             if(myPizza.getSorte().equals(sorte)){
                 return myPizza.getPreisDouble();
@@ -110,19 +76,47 @@ public class PizzaService extends DataAccess implements AutoCloseable {
     public String checkBestellung() {
         
         System.out.println("PizzaService -- checkBestellung() start...");
-        
-        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
-        HttpSession session = request.getSession();
-        Bestellung myBestellung = new Bestellung();
-        PizzaService myService  = (PizzaService) session.getAttribute("pizzaService");        
-        myBestellung.setPizzaBestellung(myService.getPizzaAngebot());
-        
-        session.setAttribute("bestellung", myBestellung);
-        
+             
+//        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+//        HttpSession session = request.getSession();
+       
+//        for(int i = 0; i < this.myBestellung.getPizzaBestellung().size(); i++){
+//            if(this.myBestellung.getPizzaBestellung().get(i).getMenge() != 0){
+//                anzahl += this.myBestellung.getPizzaBestellung().get(i).getMenge();
+//                this.myBestellung.getPizzaBestellung().get(i).setPosition(i);
+//            }
+//            
+//        }
 
+        int position = 0;
+        this.myBestellung.getPizzaBestellung().clear();
+        for (Bestellposten myPizza : this.myBestellung.getPizzaAngebot()){
+            
+            if(myPizza.getMenge() > 0){
+                position++;                
+
+                myPizza.setPosition(position);
+                System.out.println("PizzaService -- checkBestellung() added to displayBestellung Menge: " + myPizza.getMenge() + " / Position :" + position);
+                
+                this.myBestellung.getPizzaBestellung().add(myPizza);
+                
+            } else {
+                 myPizza.setPosition(0);
+            }
+        }
         
+        if(this.myBestellung.getPizzaBestellung().size() == 0){
+            
+            System.out.println("PizzaService -- checkBestellung() failed menge: 0 -- end... ");
+            return OUTCOME_FAILED_ORDER;
+            
+        }else{
+            
+            System.out.println("PizzaService -- checkBestellung() success menge: " + this.myBestellung.getPizzaBestellung().size() + " -- end...");
+            return OUTCOME_SUCCESS_ORDER;
+            
+        }   
         
-        return OUTCOME_SUCCESS_ORDER;
     }
     
     public String doBestellung() {
@@ -132,6 +126,28 @@ public class PizzaService extends DataAccess implements AutoCloseable {
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         HttpSession session = request.getSession();
         
+        // Persitieren und PDF, Button Abbruch, Button Einstellungen, Admin infoseiten
+        
+        //Bestellung und Bestellposten speichern
+        if (this.getMyBestellung().store()) {
+            
+            System.out.println("PizzaService -- doBestellung() suceess...");
+            
+            try {
+                
+                FacesContext.getCurrentInstance().getExternalContext().redirect("/kunden/generate/do.pdf");
+                return OUTCOME_SUCCESS_ORDER;
+           
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }     
+            
+        } else{
+            
+            System.out.println("PizzaService -- doBestellung() failed...");
+            
+        }
         
         return OUTCOME_SUCCESS_ORDER;
     }

@@ -30,9 +30,12 @@ and open the template in the editor.
                 
                 <h:panelGroup layout="block"  style="width: 60%; margin: auto; padding: 20px">
                                    
-                    <h:dataTable var="bestellposten" value="#{pizzaService.pizzaAngebot}">
+                    <h:dataTable var="bestellposten" value="#{pizzaService.myBestellung.pizzaAngebot}"
+                                 columnClasses="acolumn1,acolumn2,acolumn3"
+                                 rowClasses="order-table-odd-row,order-table-even-row"
+                                 headerClass="order-table-header" >
                         <h:column>
-                            <f:facet name="sorte">
+                            <f:facet name="header">
                                 <h:outputText value="#{msg.pizzaSorte}"/>
                             </f:facet>
                             <h:panelGrid columns="1">
@@ -40,13 +43,15 @@ and open the template in the editor.
                             </h:panelGrid>
                         </h:column>
                          <h:column>
-                            <f:facet name="menge">
+                            <f:facet name="header">
                                 <h:outputText value="#{msg.pizzaMenge}"/>
                             </f:facet>
-                            <h:inputText id="number" p:type="number" p:min="0" p:max="10"  value="#{bestellposten.menge}" styleClass="numberSpin" />
+                            <h:inputText id="number" p:type="number" p:min="0" p:max="10"  value="#{bestellposten.menge}" styleClass="numberSpin" >
+                                <f:converter converterId="converterString2Number" />
+                            </h:inputText>
                         </h:column> 
                         <h:column>
-                            <f:facet name="preis">
+                            <f:facet name="header">
                                 <h:outputText value="#{msg.pizzaPreis}"/>
                             </f:facet>
                             <h:panelGrid columns="1" styleClass="info_preis" >

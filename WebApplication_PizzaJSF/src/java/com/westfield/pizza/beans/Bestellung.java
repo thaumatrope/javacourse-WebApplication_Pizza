@@ -5,6 +5,7 @@
  */
 package com.westfield.pizza.beans;
 
+import com.westfield.pizza.controller.PizzaLogin;
 import com.westfield.pizza.controller.PizzaService;
 import com.westfield.pizza.dao.DataAccess;
 import java.sql.Connection;
@@ -15,6 +16,9 @@ import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -28,10 +32,10 @@ import javax.servlet.http.HttpSession;
  *
  * @author jwest
  */
-@ManagedBean
-@SessionScoped
+
 public class Bestellung extends DataAccess {
     
+    private List<Bestellposten> pizzaAngebot;
     private List<Bestellposten> pizzaBestellung;
     
     private int bestellnummer;
@@ -39,21 +43,38 @@ public class Bestellung extends DataAccess {
     private String gesamtpreis;  
     private String datum;
     private String ip;
-    private String sessionid;
+    private String sessionid;  
+    
+    private static final long serialVersionUID = 1L;
     
     public Bestellung(){   
         
         //Sessionscope        
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         HttpSession session = request.getSession();
+        PizzaService myService = (PizzaService)session.getAttribute("pizzaService");
         
-        this.datum = ((PizzaService)session.getAttribute("pizzaService")).getCurrentDateTimeString();        
+        System.out.println("Bestellung() - Constructor - this.datum() init");        
+        this.datum = this.getCurrentDateTimeString();  
+        
+        System.out.println("Bestellung() - Constructor - this.sessionid() init");
         this.sessionid = session.getId();
-        this.kundennummer = ((Kunde)session.getAttribute("kunde")).getKundennummer();
+        
+        System.out.println("Bestellung() - Constructor - this.kundennummer() init");
+        this.kundennummer = ((PizzaLogin)session.getAttribute("pizzaLogin")).getMyKunde().getKundennummer();
+        
+        System.out.println("Bestellung() - Constructor - this.ip() init");
         this.ip = request.getRemoteAddr();      
    
-        pizzaBestellung = new ArrayList<>();        
+        pizzaAngebot = this.snatchPizzaAngebot(); 
+        pizzaBestellung = new ArrayList<>();
+        
+        System.out.println("Bestellung() - Constructor - end");
    
+    }
+    
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
     
     public int getKundennummer() {
@@ -96,14 +117,23 @@ public class Bestellung extends DataAccess {
         this.bestellnummer = bestellnummer;
     }
     
+    public List<Bestellposten> getPizzaAngebot() {
+        return pizzaAngebot;
+    }
+
+    public void setPizzaAngebot(List<Bestellposten> pizzaAngebot) {
+        this.pizzaAngebot = pizzaAngebot;
+    }
+
     public List<Bestellposten> getPizzaBestellung() {
         return pizzaBestellung;
     }
 
     public void setPizzaBestellung(List<Bestellposten> pizzaBestellung) {
         this.pizzaBestellung = pizzaBestellung;
-    }
+    }   
 
+    
     public double getGesamtpreisDouble() {  
          
         double tmp;
@@ -115,17 +145,7 @@ public class Bestellung extends DataAccess {
             return 0.0;
         }         
         return tmp;  
-    }
-    
-    public double calculateGesamtpreis(){
-        
-        double gp = 0.0;
-        for (Bestellposten cheapPizza : this.pizzaBestellung) {
-            gp += cheapPizza.getPreisDouble();
-        } 
-        this.setGesamtpreis(this.printPreisFormatted(gp));
-        return gp;
-    }
+    }   
 
     public String getGesamtpreis() {
         return gesamtpreis;
@@ -133,32 +153,22 @@ public class Bestellung extends DataAccess {
             
     public void setGesamtpreis(String preis) {        
         this.gesamtpreis = preis;
-        //System.out.println("Bestellung: preis gesetzt - " + this.preis);
     }
     
-    public String printPreisFormatted(double preis) {
-        
-        DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.GERMAN);
-        otherSymbols.setDecimalSeparator('.');
-        otherSymbols.setGroupingSeparator('.'); 
-        NumberFormat formatter = new DecimalFormat(".00", otherSymbols);
-        
-        //NumberFormat formatter = new DecimalFormat();        
-        return formatter.format(preis);
-  
-    }   
-  
+      
     public boolean store(){  
         
         boolean done = false;
         
+        this.calculateGesamtpreis();
+        
         if (! this.insertBestellung()){            
-            System.out.println("Bestellung insert() - failed");            
+            System.out.println("Bestellung insertBestellung() - failed");            
             
         } else {
             
-            if(!this.fetchBestellnummer(this.getKundennummer())) {            
-                System.out.println("Bestellung fetchkdn() - failed");
+            if(!this.fetchLastBestellnummer(this.getKundennummer())) {            
+                System.out.println("Bestellung fetchLastBestellnummer() - failed");
                 
             } else {  
                 
@@ -173,55 +183,8 @@ public class Bestellung extends DataAccess {
         return done;
     }
     
-    
-     public boolean insertBestellposten(){
-        Connection con = null;
-        PreparedStatement stm = null;
-        boolean stored = false;
-        
-        try {
-            System.out.println("Bestellposten insert() - start");
-            con = this.getConnectionPool();
-            if(con == null) {
-                System.out.println("Bestellposten insert() - no Connection Pool");
-                return false;
-            }
-            
-            int position = 0;
-            for (Bestellposten hotPizza : this.pizzaBestellung) {
-                position++;
-                stm = con.prepareStatement("INSERT INTO bestellposten (lieferung_bestellnummer, position, sorte, menge, preis) VALUES(?,?,?,?,?)");
-                stm.setInt(1, this.getBestellnummer());
-                stm.setInt(2, hotPizza.getPosition());
-                stm.setString(3, hotPizza.getSorte());
-                stm.setString(4, hotPizza.getPreis());
-                stm.setInt(5, hotPizza.getMenge()); 
-                stm.addBatch();
-            }
-            
-            int rows[] = stm.executeBatch();
-            con.commit();
-            
-            int count = 0;
-            for (int i : rows){
-                count += i;                
-            }
-            
-            System.out.println("Bestellposten insert() - count: " + count + ", position: " + position);
-            
-            if (count == position){
-                stored = true;
-            }
-        } catch (SQLException ex) {          
-            stored = false;
-        } finally {
-            try { if( stm != null) stm.close(); } catch(Exception e) {}
-            try { if( con != null) con.close(); } catch(Exception e) {}
-        }
-        return stored;
-    }
-    
     public boolean insertBestellung(){
+        
         Connection con = null;
         PreparedStatement stm = null;
         boolean stored = false;
@@ -250,15 +213,62 @@ public class Bestellung extends DataAccess {
         }
         return stored;
     }
-     
-      public List<Bestellposten> snatchPizzaBestellung(int nummer) { 
     
+    public boolean insertBestellposten(){
+        Connection con = null;
+        PreparedStatement stm = null;
+        boolean stored = false;
+        
+        try {
+            System.out.println("Bestellposten insert() - start");
+            con = this.getConnectionPool();
+            if(con == null) {
+                System.out.println("Bestellposten insert() - no Connection Pool");
+                return false;
+            }
+            
+            int position = 0;
+            for (Bestellposten hotPizza : this.pizzaAngebot) {
+                position++;
+                stm = con.prepareStatement("INSERT INTO bestellposten (lieferung_bestellnummer, position, sorte, einzelpreis, menge) VALUES(?,?,?,?,?)");
+                stm.setInt(1, this.getBestellnummer());
+                stm.setInt(2, hotPizza.getPosition());
+                stm.setString(3, hotPizza.getSorte());
+                stm.setString(4, hotPizza.getPreis());
+                stm.setInt(5, hotPizza.getMenge()); 
+                stm.addBatch();
+            }
+            
+            int rows[] = stm.executeBatch();
+            con.commit();
+            
+            int count = 0;
+            for (int i : rows){
+                count += i;                
+            }
+            
+            System.out.println("Bestellposten insert() - count: " + count + ", position: " + position);
+            
+            if (count == position){
+                stored = true;
+            }
+        } catch (SQLException ex) {          
+            stored = false;
+        } finally {
+            try { if( stm != null) stm.close(); } catch(Exception e) {}
+            try { if( con != null) con.close(); } catch(Exception e) {}
+        }
+        return stored;
+    }    
+    
+         
+    // get Offer   
+    public List<Bestellposten> snatchPizzaAngebot() {
         Connection con = null;
         Statement stm = null;        
         ResultSet rs = null;
+        List<Bestellposten> tempPizzaBox = new ArrayList<>();
         
-        List<Bestellposten> tempBestellung = new ArrayList<>();
-
         try {
             
             con = getConnectionPool();
@@ -267,36 +277,30 @@ public class Bestellung extends DataAccess {
                 return null;
             }
             stm = con.createStatement();
-            rs = stm.executeQuery("SELECT * FROM bestellposten WHERE bestellnummer = " + nummer + " ORDER BY position ASC'");
+            rs = stm.executeQuery("SELECT * FROM pizza ORDER BY sorte ASC");
             
-            while (rs.next()) { 
-                Bestellposten tempBest = new Bestellposten();
-                tempBest.setId(rs.getInt("id")); 
-                tempBest.setBestellnummer(rs.getInt("lieferung_bestellnummer")); 
-                tempBest.setPosition(rs.getInt("position"));
-                tempBest.setSorte(rs.getString("sorte"));   
-                tempBest.setPreis(rs.getString("preis"));
-                tempBest.setMenge(rs.getInt("menge"));
-                tempBestellung.add(tempBest);
+            while (rs.next()) {
+                Bestellposten coldPizza = new Bestellposten();
+                coldPizza.setSorte(rs.getString("sorte"));
+                coldPizza.setPreis(rs.getString("preis"));
+                coldPizza.setImage(rs.getString("image"));
+                tempPizzaBox.add(coldPizza);
             }
-            
-            return tempBestellung;
-            
+
         } catch (SQLException ex) {
-            
-            return null;
             
         } finally {
             
             try { if (rs != null) rs.close(); } catch (Exception e) {}
             try { if( stm != null) stm.close(); } catch(Exception e) {}
-            try { if( con != null) con.close(); } catch(Exception e) {}           
+            try { if( con != null) con.close(); } catch(Exception e) {}            
            
         }
-        
+        return tempPizzaBox;
     }
-      
-    public boolean fetchBestellnummer(int kdnnummer) { 
+    
+    
+    public boolean fetchLastBestellnummer(int kdnnummer) { 
     
         Connection con = null;
         Statement stm = null;        
@@ -330,34 +334,11 @@ public class Bestellung extends DataAccess {
         return true;
         
     }  
-      
-    public double getPartialGesamtsumme(int pos){  
-        System.out.println("Lieferung - Gesamtsumme: positions" + pos);
-        double summe = 0;
-        for(Bestellposten best : this.pizzaBestellung){            
-            if(this.pizzaBestellung.indexOf(best) < pos){
-                System.out.println("Lieferung - Gesamtsumme: check - best.getPosition() <= pos : " + this.pizzaBestellung.indexOf(best) + " <= " + pos);
-                summe += best.getPreisDouble();
-            }
-        }
-        System.out.println("Lieferung - Gesamtsumme: " + summe);
-        return summe;
-    }
     
-    public void deletePosition(int pos) {        
-        this.pizzaBestellung.remove(pos - 1);
-    }
-    
-    public void addPosition(Bestellposten bestell) { 
+    public boolean snatchLastBestellung(){  
         
-        this.pizzaBestellung.add(bestell);
-    }
-    
-      
-    public boolean snatchLast(){  
-        
-        if(snatchLast(this.getKundennummer())){            
-            this.pizzaBestellung = snatchPizzaBestellung(this.getBestellnummer());
+        if(snatchLastBestellung(this.getKundennummer())){            
+            this.pizzaAngebot = snatchPizzaBestellung(this.getBestellnummer());
             return true;
         } else {
            return false; 
@@ -365,7 +346,7 @@ public class Bestellung extends DataAccess {
         
     }
      
-    public boolean snatchLast(int nummer) { 
+    public boolean snatchLastBestellung(int nummer) { 
     
         Connection con = null;
         Statement stm = null;        
@@ -413,7 +394,96 @@ public class Bestellung extends DataAccess {
         
     }
     
+    public List<Bestellposten> snatchPizzaBestellung(int nummer) { 
+    
+        Connection con = null;
+        Statement stm = null;        
+        ResultSet rs = null;
+        
+        List<Bestellposten> tempBestellung = new ArrayList<>();
+
+        try {
+            
+            con = getConnectionPool();
+            
+             if (con == null) {
+                return null;
+            }
+            stm = con.createStatement();
+            rs = stm.executeQuery("SELECT * FROM bestellposten WHERE bestellnummer = " + nummer + " ORDER BY position ASC'");
+            
+            while (rs.next()) { 
+                Bestellposten tempBest = new Bestellposten();
+                tempBest.setId(rs.getInt("id")); 
+                tempBest.setBestellnummer(rs.getInt("lieferung_bestellnummer")); 
+                tempBest.setPosition(rs.getInt("position"));
+                tempBest.setSorte(rs.getString("sorte"));   
+                tempBest.setPreis(rs.getString("einzelpreis"));
+                tempBest.setMenge(rs.getInt("menge"));
+                tempBestellung.add(tempBest);
+            }
+            
+            return tempBestellung;
+            
+        } catch (SQLException ex) {
+            
+            return null;
+            
+        } finally {
+            
+            try { if (rs != null) rs.close(); } catch (Exception e) {}
+            try { if( stm != null) stm.close(); } catch(Exception e) {}
+            try { if( con != null) con.close(); } catch(Exception e) {}           
+           
+        }
+        
+    }
+    
+    // utility methods
+    public String getCurrentDateTimeString(){
+        
+        LocalDateTime myDateTime = LocalDateTime.now();
+        //LocalDate myDate = LocalDate.now();
+        //LocalTime myTime = LocalTime.now();
+        //Locale myLocale = new Locale("de","DE");
+        //DateTimeFormatter myFormatter = DateTimeFormatter.ofPattern(pattern, Locale.GERMANY);
+       
+        System.out.println("PizzaService - getCurrentDateTimeString:" + myDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)));
+        return myDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
+    }
      
-     
-   
+    public double getPartialGesamtsumme(int pos){  
+        System.out.println("Lieferung - Gesamtsumme: positions" + pos);
+        double summe = 0;
+        for(Bestellposten best : this.pizzaBestellung){            
+            if((this.pizzaBestellung.indexOf(best) < pos)){
+                System.out.println("Lieferung - Gesamtsumme: check - best.getPosition() <= pos : " + this.pizzaAngebot.indexOf(best) + " <= " + pos);
+                summe += (best.getPreisDouble() * best.getMenge());
+            }
+        }
+        System.out.println("Lieferung - Gesamtsumme: " + summe);
+        return summe;
+    }
+    
+    public String printPreisFormatted(double preis) {
+        
+        DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.GERMAN);
+        otherSymbols.setDecimalSeparator('.');
+        otherSymbols.setGroupingSeparator('.'); 
+        NumberFormat formatter = new DecimalFormat(".00", otherSymbols);
+        
+        //NumberFormat formatter = new DecimalFormat();        
+        return formatter.format(preis);
+  
+    }   
+
+    // calculate and set string gesamtpreis
+    public void calculateGesamtpreis(){
+        
+        double gp = this.getPartialGesamtsumme(this.pizzaBestellung.size());
+            
+        this.setGesamtpreis(this.printPreisFormatted(gp));
+        
+    }
+    
 }

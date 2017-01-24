@@ -30,23 +30,23 @@ public class LoginFilter implements Filter {
         //HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         //HttpSession session = request.getSession();    
         
-//        HttpServletRequest request = (HttpServletRequest) req;
-//        HttpServletResponse response = (HttpServletResponse) res;
-//
-//        if (request.getRemoteUser() != null){
-//            response.sendRedirect(request.getContextPath() + "/kunden/angebot.xhtml"); // Redirect to home page.
-//        } else {
-//            chain.doFilter(req, res); // User is not logged-in, so just continue request.
-//        }
+        HttpServletRequest request = (HttpServletRequest) req;
+        HttpServletResponse response = (HttpServletResponse) res;
+
+        if (request.getRemoteUser() != null){
+            response.sendRedirect(request.getContextPath() + "/kunden/angebot.xhtml"); // Redirect to home page.
+        } else {
+            chain.doFilter(req, res); // User is not logged-in, so just continue request.
+        }
     }
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void destroy() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

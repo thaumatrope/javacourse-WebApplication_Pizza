@@ -19,16 +19,20 @@ and open the template in the editor.
         <h:panelGroup layout="block" styleClass="topPanel">
         <div id="header">           
             <ui:include src="/WEB-INF/resources/includes/register_header.xhtml" />           
-        </div>  
-                   
-        
-        <div id="menu"></div>
-        <div id="content" style="background-color: white; height: 100vh; padding: 20px">             
-         
-            <h:form id="form_register">  
-                
+        </div>                   
+
+        <div id="menu" style="background-color: white; height: 100vh; float:left; width:150px; margin:0; padding:1em;">
+
+            <h:outputLabel id="settings" value="#{msg.labelEinstellungen}" />
+            
+        </div>
+            
+        <div id="content" style="background-color: white; height: 100vh; padding: 20px; width: 100%; margin-left:180px;">             
+
+            <h:form id="form_profile">  
+
                 <h:panelGroup layout="block"  style="width: 60%; margin: auto; padding: 20px">
-                                   
+
                     <h:panelGrid columns="3" styleClass="register_panel" style="width: 100%" columnClasses="">
 
                         <h:outputLabel id="vorname_label" for="vorname_input" 
@@ -69,7 +73,7 @@ and open the template in the editor.
                             <f:validator validatorId="emailValidator" />
                         </h:inputText>
                         <h:message for="email_input" errorStyle="color:red; display:block"/>
-                      
+
                         <h:outputLabel id="password_label" for="password_input" value="#{msg.labelPasswort}" />
                         <h:inputText id="password_input" value="#{pizzaLogin.myKunde.password}" required="true" requiredMessage="#{msg.errorlabelPasswort}">
                             <f:converter converterId="converterString2String" />
@@ -77,18 +81,18 @@ and open the template in the editor.
                         <h:message for="password_input" errorStyle="color:red; display:block"/> 
 
                     </h:panelGrid> 
-                    
+
                     <hr style="margin: 10px 0px" />       
 
                     <h:commandButton id="submit_register" styleClass="button-default button-align-right"
-                        value="#{msg.buttonRegister}"
-                        action="#{pizzaLogin.doRegister()}"> 
+                                     value="#{msg.buttonUpdateUser}"
+                                     action="#{pizzaLogin.updateUser()}"> 
                     </h:commandButton>  
 
                </h:panelGroup>
-                
+
             </h:form>  
-    
+
         </div>
     <div id="footer"></div>
     </h:panelGroup>

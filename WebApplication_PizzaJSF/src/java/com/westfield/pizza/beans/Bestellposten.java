@@ -17,6 +17,11 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean
 @SessionScoped
 public class Bestellposten extends Pizza implements Serializable {
+  
+//    inherited
+//    private String sorte;
+//    private String preis;
+//    private String image;
     
     private int bestellnummer;
     private int menge;
@@ -24,7 +29,11 @@ public class Bestellposten extends Pizza implements Serializable {
     private int id;
     private String image;
     
-    static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
+    
+    public Bestellposten(){        
+        
+    }
 
     public String getImage() {
         return image;
@@ -65,6 +74,11 @@ public class Bestellposten extends Pizza implements Serializable {
     public void setMenge(int menge) {
         this.menge = menge;
     } 
+    
+    public boolean evaluatePosition(int num){
+        System.out.println("Bestellposten - evaluatePosition(" + num + ") -- evaluates: " + (num > 0) );
+        return (num > 0);
+    }
      
    
     
