@@ -137,8 +137,16 @@ public class Kunde extends DataAccess implements Serializable {
     }
      
     public boolean checkEmail(String email){    
-        Set emailAdressen = snatchEmail();
+        Set<String> emailAdressen = snatchEmail();
         if(emailAdressen.contains(email)){
+            
+            if(this.kundennummer != 0){
+                Kunde testKunde = this.fetchKunde(email);
+                if (this.kundennummer == testKunde.getKundennummer()){
+                    
+                    return false;
+                }
+            }
             return true;
         }else{
             return false;
@@ -237,13 +245,47 @@ public class Kunde extends DataAccess implements Serializable {
         return kdnemail;
     }
     
+    public boolean updatePassword(String pw) {
+        
+        Connection con = null;
+        PreparedStatement stm = null;
+        boolean stored = false;
+        try {
+            System.out.println("Kunde updatePassword() - start");
+            con = this.getConnectionPool();
+            if(con == null) {
+                //System.out.println("Kunde update() - no Connection Pool");
+                return false;
+            }
+            stm = con.prepareStatement("UPDATE benutzer SET password = ? WHERE kundennummer = ?");
+            stm.setString(1, this.sha256(pw.trim()));
+            stm.setInt(2, this.getKundennummer());
+            int rows = stm.executeUpdate();
+            con.commit();
+            stored = rows == 1;
+        } catch (SQLException ex) { 
+            System.out.println("Kunde updatePassword() - failed");
+            stored = false;
+        } finally {
+            try { if( stm != null) stm.close(); } catch(Exception e) {}
+            try { if( con != null) con.close(); } catch(Exception e) {}
+        }
+        System.out.println("Kunde updatePassword() - success"); 
+        return stored;
+        
+    }
+    
     public boolean store(){
         
-         if(this.checkKundennummer(this.getKundennummer())){ 
-            return this.updateKunde(); 
-         } else {
-            return this.insertKunde();            
-         }
+        if(this.getKundennummer() == 0){
+            System.out.println("Kunde: insertKunde() choosen");
+            this.setKundennummer(this.getNewKundennummer());        
+            return this.insertKunde(); 
+            
+        } else {
+            System.out.println("Kunde: updateKunde() choosen");
+            return this.updateKunde();                       
+        }
     }
     
     public boolean updateKunde(){
@@ -251,31 +293,31 @@ public class Kunde extends DataAccess implements Serializable {
         PreparedStatement stm = null;
         boolean stored = false;
         try {
-            //System.out.println("Kunde update() - start");
+            System.out.println("Kunde update() - start");
             con = this.getConnectionPool();
             if(con == null) {
                 //System.out.println("Kunde update() - no Connection Pool");
                 return false;
             }
-            stm = con.prepareStatement("UPDATE benutzer SET email = ?, password = ?, vorname = ?, nachname = ?, strasse = ?, ort = ?, plz = ? WHERE kundennummer = ?");
+            stm = con.prepareStatement("UPDATE benutzer SET email = ?, vorname = ?, nachname = ?, strasse = ?, ort = ?, plz = ? WHERE kundennummer = ?");
             stm.setString(1, this.getEmail());
-            stm.setString(2, this.sha256(this.getPassword()));
-            stm.setString(3, this.getVorname());
-            stm.setString(4, this.getNachname());
-            stm.setString(5, this.getStrasse());
-            stm.setString(6, this.getOrt());
-            stm.setString(7, this.getPlz());
-            stm.setInt(8, this.getKundennummer());
+            stm.setString(2, this.getVorname());
+            stm.setString(3, this.getNachname());
+            stm.setString(4, this.getStrasse());
+            stm.setString(5, this.getOrt());
+            stm.setString(6, this.getPlz());
+            stm.setInt(7, this.getKundennummer());
             int rows = stm.executeUpdate();
             con.commit();
             stored = rows == 1;
-        } catch (SQLException ex) {          
+        } catch (SQLException ex) { 
+            System.out.println("Kunde update() - failed");
             stored = false;
         } finally {
             try { if( stm != null) stm.close(); } catch(Exception e) {}
             try { if( con != null) con.close(); } catch(Exception e) {}
         }
-         
+        System.out.println("Kunde update() - success"); 
         return stored;
     }
           
@@ -333,7 +375,20 @@ public class Kunde extends DataAccess implements Serializable {
         return stored;
     }
     
-    public Kunde snatchKunde (String email) {
+    
+    
+//    public Kunde snatchKunde (String nummer) {
+//        
+//        int kundennummer;
+//        try {
+//           kundennummer = Integer.parseInt(nummer);
+//        } catch (NumberFormatException e) {
+//              return new Kunde();
+//        }
+//        return this.snatchKunde(kundennummer); 
+//    }
+    
+    public void snatchKunde (String email) {
         
         Connection con = null;
         Statement stm = null;        
@@ -346,7 +401,7 @@ public class Kunde extends DataAccess implements Serializable {
             con = getConnectionPool();
             
              if (con == null) {
-                return null;
+               
             }
             stm = con.createStatement();
             rs = stm.executeQuery("SELECT * FROM benutzer WHERE email = '" + email + "'");
@@ -366,7 +421,7 @@ public class Kunde extends DataAccess implements Serializable {
         } catch (SQLException ex) {
             ex.printStackTrace();       
             System.out.println("Kunde:snatch ("+ email + ") - ERROR");
-            return this;
+          
             
         } finally {
             
@@ -378,21 +433,60 @@ public class Kunde extends DataAccess implements Serializable {
         
         System.out.println("Kunde:snatch ("+ this.email + ") + SUCCESS");
         
-        return this;
+      
     }
     
-////    public Kunde snatch (String nummer) {
-//        
-//        int kundennummer;
-//        try {
-//           kundennummer = Integer.parseInt(nummer);
-//        } catch (NumberFormatException e) {
-//              return new Kunde();
-//        }
-//        return this.snatch(kundennummer); 
-//    }
+    public Kunde fetchKunde (String email) {
+        
+        Connection con = null;
+        Statement stm = null;        
+        ResultSet rs = null; 
+        Kunde newKunde = new Kunde();
+        
+        System.out.println("Kunde:fetch ("+ email + ")");
+        
+        try {
+            
+            con = getConnectionPool();
+            
+             if (con == null) {
+                return null;
+            }
+            stm = con.createStatement();
+            rs = stm.executeQuery("SELECT * FROM benutzer WHERE email = '" + email + "'");
+            
+            while (rs.next()) {
+                
+                newKunde.setKundennummer(rs.getInt("kundennummer"));
+                newKunde.setVorname(rs.getString("vorname"));
+                newKunde.setNachname(rs.getString("nachname"));
+                newKunde.setOrt(rs.getString("ort"));
+                newKunde.setPlz(rs.getString("plz"));
+                newKunde.setStrasse(rs.getString("strasse"));
+                newKunde.setEmail(rs.getString("email"));
+                newKunde.setPassword(rs.getString("password"));     
+            }
+
+        } catch (SQLException ex) {
+            
+            ex.printStackTrace();       
+            System.out.println("Kunde:fetch ("+ newKunde.getEmail() + ") - ERROR");
+            return this;
+            
+        } finally {
+            
+            try { if (rs != null) rs.close(); } catch (Exception e) {}
+            try { if( stm != null) stm.close(); } catch(Exception e) {}
+            try { if( con != null) con.close(); } catch(Exception e) {}  
+               
+        }
+        
+        System.out.println("Kunde:fetch ("+ newKunde.getEmail() + ") + SUCCESS");
+        
+        return newKunde;
+    }
     
-   public Kunde snatchKunde (int kundennummer) {
+    public Kunde snatchKunde (int kundennummer) {
         Connection con = null;
         Statement stm = null;        
         ResultSet rs = null;
@@ -430,9 +524,8 @@ public class Kunde extends DataAccess implements Serializable {
         }
         return this;
     }
-   
-   
-   public String sha256(String base) {
+      
+    public String sha256(String base) {
         
         try{
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -454,19 +547,19 @@ public class Kunde extends DataAccess implements Serializable {
     }
     
         
-   /*** Validation ***/
+    /*** Validation ***/
 
-   public List<String> getErrors() {
+    public List<String> getErrors() {
       return errors;
    }   
    
-   public boolean isValid() {
+    public boolean isValid() {
       return valid;
    }
 
-   /* input validation */
+    /* input validation */
    
-   public void validate_kundennumer() {
+    public void validate_kundennumer() {
         
          // Zurücksetzen des Flags und der Fehlerliste
         this.valid = true;
@@ -482,7 +575,7 @@ public class Kunde extends DataAccess implements Serializable {
         
     }
    
-   public void validate() {
+    public void validate() {
        
         // Initialization methid as well!!
         this.validate_kundennumer(); 

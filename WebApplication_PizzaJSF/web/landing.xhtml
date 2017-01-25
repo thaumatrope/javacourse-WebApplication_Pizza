@@ -13,7 +13,7 @@ and open the template in the editor.
     <h:head>
         <h:outputStylesheet library="css" name="main.css"  />
         <title><ui:insert name="title">Welcome to PizzaWorld</ui:insert></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>       
     </h:head>
     <h:body>      
         <h:panelGroup layout="block" styleClass="topPanel">
@@ -22,7 +22,7 @@ and open the template in the editor.
         </div>           
         
         <div id="menu"></div>
-        <div id="content" style="overflow: hidden">
+        <div id="content" style="overflow: hidden">            
             <div class="login_buster_container">
                 <ui:fragment rendered="#{not pizzaLogin.isLoggedIn()}" >  
                     <h:graphicImage library="image" name="Ghostbusters_logo.png" styleClass="login_buster"/>

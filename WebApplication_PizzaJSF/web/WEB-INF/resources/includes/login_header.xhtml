@@ -37,7 +37,6 @@ and open the template in the editor.
                             <h:panelGroup style="width: 100%">
                                 <fieldset>            
                                     <legend>#{msg.labelEmail}</legend>
-
                                     <h:inputText id="email" style="width: 100%;" value="#{pizzaLogin.myEmail}" />
                                 </fieldset>
                             </h:panelGroup>
@@ -47,7 +46,10 @@ and open the template in the editor.
                                      <h:inputSecret redisplay="false" style="width: 100%;" value="#{pizzaLogin.myPassword}" />
                                  </fieldset>       
                              </h:panelGroup>
-                        </h:panelGrid>                        
+                        </h:panelGrid> 
+                        <h:panelGrid columns="1" style="width: 100%">                            
+                            <h:messages infoStyle="color:green" warnStyle="color:blue" errorStyle="color:red" fatalStyle="color:orange" globalOnly="true" style="margin: 10px; padding-left: 5px;" />                            
+                        </h:panelGrid> 
                      </h:form>
                     
                 </h:panelGroup>

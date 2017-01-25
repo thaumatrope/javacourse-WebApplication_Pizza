@@ -8,6 +8,212 @@ and open the template in the editor.
     Author     : John Westfield
 */
 
+html {
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.topPanel {
+    margin: auto; 
+    width: 75%
+}
+
+#header {
+    border: 3px solid green; 
+    padding: 10px;
+    
+}
+
+#content {    
+    overflow: auto;
+    background-color: white;
+    border: 3px solid grey; 
+    padding: 10px;
+    height: 700px;
+}
+
+#menu_content {
+    background-color: white;
+    padding: 10px;
+    height: 700px;
+}
+
+legend {
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.register_panel label {
+    width: 80px;
+    margin:5px;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;    
+}
+
+
+.register_panel input {
+    width: 200px; 
+    margin:5px;
+    font-family:Arial;
+    font-size:14px;
+    font-weight: normal;
+}
+
+.form-password{
+    margin: 30px 10px;
+    font-family:Arial;
+    font-size:14px;
+    font-weight: bold;    
+}
+
+.form-password input{
+    font-weight: normal;
+}
+
+.pizzaImage {
+    height: 150px;
+    width: 200px;
+}
+
+.numberSpin {
+    width: 40px;
+    align: right;
+}
+
+.info_preis {
+    width: 200px;
+    margin:5px;
+    font-family:Arial;
+    font-size:14px;
+    font-weight: normal;
+    
+}
+
+.order-table{
+	border-collapse:collapse;
+}
+
+.order-table-header{
+	text-align:center;
+	background:none repeat scroll 0 0 #E5E5E5;
+	border-bottom:1px solid #BBBBBB;
+	padding:16px;
+        min-width: 50px;
+        margin: 10px;
+}
+
+.order-table-odd-row{
+	text-align:center;
+	background:none repeat scroll 0 0 #FFFFFFF;
+	border-top:1px solid #BBBBBB;
+}
+
+.order-table-even-row{
+	text-align:center;
+	background:none repeat scroll 0 0 #F9F9F9;
+	border-top:1px solid #BBBBBB;
+}
+
+.bcolumn1 {
+    width: 15%
+}
+
+.bcolumn2 {
+    width: 40%
+}
+
+.bcolumn3 {
+    width: 15%
+}
+
+.bcolumn4 {
+    width: 15%
+}
+
+.bcolumn5 {
+    width: 15%
+}
+
+.bcolumn6{
+    
+}
+
+.acolumn1 {
+    width: 200px
+}
+
+.acolumn2 {
+    width: 100px
+}
+
+.acolumn3 {
+    width: 200px
+}
+
+.ccolumn1 {
+    width: 300px
+}
+
+.ccolumn2 {
+    width: 100%
+}
+
+tr:empty {
+    display: none;
+}
+
+.button-menu {
+    -moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+    -webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+    box-shadow: 0px 1px 0px 0px #f0f7fa;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33bdef), color-stop(1, #019ad2));
+    background:-moz-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+    background:-webkit-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+    background:-o-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+    background:-ms-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+    background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bdef', endColorstr='#019ad2',GradientType=0);
+    background-color:#33bdef;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    border:3px solid #057fd0;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    padding:6px 31px;
+    text-decoration:none;
+    text-shadow:0px 0px 0px #5b6178;
+    margin: 10px;
+}
+
+.button-menu:hover {
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2), color-stop(1, #33bdef));
+        background:-moz-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background:-webkit-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background:-o-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background:-ms-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#019ad2', endColorstr='#33bdef',GradientType=0);
+        background-color:#019ad2;
+}
+.button-menu:active {
+        position:relative;
+        top:1px;
+}
+
 .edge-header {
      width: 25%;
 }
@@ -96,142 +302,4 @@ and open the template in the editor.
     height: 200px;
     width: 240px; 
    
-}
-
-html {
-    min-height:100%;/* make sure it is at least as tall as the viewport */
-
-}
-
-body {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
-
-.topPanel {
-    margin: auto; 
-    width: 75%
-}
-
-#header {
-    border: 3px solid green; 
-    padding: 10px;
-    
-}
-
-#content {    
-    overflow: auto;
-    background-color: white;
-    border: 3px solid grey; 
-    padding: 10px;
-    height: 600px;
-}
-
-legend {
-    font-family:Arial;
-    font-size:13px;
-    font-weight:bold;
-}
-
-.register_panel label {
-    width: 80px;
-    margin:5px;
-    font-family:Arial;
-    font-size:13px;
-    font-weight:bold;    
-}
-
-
-.register_panel input {
-    width: 200px; 
-    margin:5px;
-    font-family:Arial;
-    font-size:14px;
-    font-weight: normal;
-}
-
-.pizzaImage {
-    height: 150px;
-    width: 200px;
-}
-
-.numberSpin {
-    width: 40px;
-    align: right;
-}
-
-.info_preis {
-    width: 200px;
-    margin:5px;
-    font-family:Arial;
-    font-size:14px;
-    font-weight: normal;
-    
-}
-
-.order-table{
-	border-collapse:collapse;
-}
-
-.order-table-header{
-	text-align:center;
-	background:none repeat scroll 0 0 #E5E5E5;
-	border-bottom:1px solid #BBBBBB;
-	padding:16px;
-        min-width: 50px;
-        margin: 10px;
-}
-
-.order-table-odd-row{
-	text-align:center;
-	background:none repeat scroll 0 0 #FFFFFFF;
-	border-top:1px solid #BBBBBB;
-}
-
-.order-table-even-row{
-	text-align:center;
-	background:none repeat scroll 0 0 #F9F9F9;
-	border-top:1px solid #BBBBBB;
-}
-
-.bcolumn1 {
-    width: 15%
-}
-
-.bcolumn2 {
-    width: 40%
-}
-
-.bcolumn3 {
-    width: 15%
-}
-
-.bcolumn4 {
-    width: 15%
-}
-
-.bcolumn5 {
-    width: 15%
-}
-
-.bcolumn6{
-    
-}
-
-.acolumn1 {
-    width: 200px
-}
-
-.acolumn2 {
-    width: 100px
-}
-
-.acolumn3 {
-    width: 200px
-}
-
-tr:empty {
-    display: none;
 }

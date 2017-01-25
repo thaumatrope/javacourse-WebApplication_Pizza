@@ -9,87 +9,47 @@ and open the template in the editor.
     xmlns="http://www.w3.org/1999/xhtml"
     xmlns:f="http://xmlns.jcp.org/jsf/core"
     xmlns:h="http://xmlns.jcp.org/jsf/html"
-    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
         <h:outputStylesheet library="css" name="main.css"  />
         <title><ui:insert name="title">Welcome to PizzaWorld</ui:insert></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
-    <h:body>
+     <h:body>
         <h:panelGroup layout="block" styleClass="topPanel">
         <div id="header">           
-            <ui:include src="/WEB-INF/resources/includes/register_header.xhtml" />           
-        </div>  
-                   
-        
-        <div id="menu"></div>
-        <div id="content" style="background-color: white; height: 100vh; padding: 20px">             
-         
-            <h:form id="form_register">  
+            <ui:include src="/WEB-INF/resources/includes/profile_header.xhtml" />           
+        </div>                   
+
+        <h:panelGrid columns="2" columnClasses="ccolumn1,ccolumn2" >
+            <h:panelGroup>              
+
+                <ui:include src="/WEB-INF/resources/includes/user_menu.xhtml" /> 
+               
+            </h:panelGroup>
+            <h:panelGroup> 
+                  
+                <c:choose>
+                    <c:when test="#{pizzaService.myContent eq 'PROFILE'}">
+                        <ui:include src="/WEB-INF/resources/includes/user_profile.xhtml" />   
+                    </c:when>
+                    <c:when test="#{pizzaService.myContent eq 'PASSWORD'}}">
+                        <ui:include src="/WEB-INF/resources/includes/user_password.xhtml" />   
+                    </c:when>
+                    <c:when test="#{pizzaService.myContent eq 'SESSION'}}">
+                        <ui:include src="/WEB-INF/resources/includes/admin_sessions.xhtml" />   
+                    </c:when>
+                    <c:when test="#{pizzaService.myContent eq 'ORDER'}}">
+                        <ui:include src="/WEB-INF/resources/includes/admin_dailyorders.xhtml" />   
+                    </c:when>
+                    <c:otherwise>
+                        <p>Default content not available</p>
+                    </c:otherwise>
+                </c:choose>
                 
-                <h:panelGroup layout="block"  style="width: 60%; margin: auto; padding: 20px">
-                                   
-                    <h:panelGrid columns="3" styleClass="register_panel" style="width: 100%" columnClasses="">
-
-                        <h:outputLabel id="vorname_label" for="vorname_input" 
-                               value="#{msg.labelVorname}" />
-                        <h:inputText id="vorname_input" value="#{pizzaLogin.myKunde.vorname}" required="true" requiredMessage="#{msg.errorlabelVorname}">
-                            <f:converter converterId="converterString2String" />
-                        </h:inputText>
-                        <h:message for="vorname_input" errorStyle="color:red; display:block"/> 
-
-                        <h:outputLabel id="nachname_label" for="nachname_input" 
-                               value="#{msg.labelNachname}" />
-                        <h:inputText id="nachname_input" value="#{pizzaLogin.myKunde.nachname}" required="true" requiredMessage="#{msg.errorlabelNachname}" >
-                            <f:converter converterId="converterString2String" />
-                        </h:inputText>
-                        <h:message for="nachname_input" errorStyle="color:red; display:block"/>
-
-                        <h:outputLabel id="strasse_label" for="strasse_input" 
-                               value="#{msg.labelStrasse}" />
-                        <h:inputText id="strasse_input" value="#{pizzaLogin.myKunde.strasse}" required="true" requiredMessage="#{msg.errorlabelStrasse}" > 
-                            <f:converter converterId="converterString2String" />
-                        </h:inputText>
-                        <h:message for="strasse_input" errorStyle="color:red; display:block"/> 
-
-                        <h:outputLabel id="ort_label" for="ort_input" value="#{msg.labelOrt}" />
-                        <h:inputText id="ort_input" value="#{pizzaLogin.myKunde.ort}" required="true" requiredMessage="#{msg.errorlabelOrt}">
-                            <f:converter converterId="converterString2String" />
-                        </h:inputText>
-                        <h:message for="ort_input" errorStyle="color:red; display:block"/> 
-
-                        <h:outputLabel id="plz_label" for="plz_input" value="#{msg.labelPlz}" />
-                        <h:inputText id="plz_input" value="#{pizzaLogin.myKunde.plz}" >
-                            <f:validator validatorId="plzValidator" />
-                        </h:inputText>                           
-                        <h:message for="plz_input" errorStyle="color:red; display:block"/>
-
-                        <h:outputLabel id="email_label" for="email_input" value="#{msg.labelEmail}" />
-                        <h:inputText id="email_input" value="#{pizzaLogin.myKunde.email}" >
-                            <f:validator validatorId="emailValidator" />
-                        </h:inputText>
-                        <h:message for="email_input" errorStyle="color:red; display:block"/>
-                      
-                        <h:outputLabel id="password_label" for="password_input" value="#{msg.labelPasswort}" />
-                        <h:inputText id="password_input" value="#{pizzaLogin.myKunde.password}" required="true" requiredMessage="#{msg.errorlabelPasswort}">
-                            <f:converter converterId="converterString2String" />
-                        </h:inputText>
-                        <h:message for="password_input" errorStyle="color:red; display:block"/> 
-
-                    </h:panelGrid> 
-                    
-                    <hr style="margin: 10px 0px" />       
-
-                    <h:commandButton id="submit_register" styleClass="button-default button-align-right"
-                        value="#{msg.buttonRegister}"
-                        action="#{pizzaLogin.doRegister()}"> 
-                    </h:commandButton>  
-
-               </h:panelGroup>
-                
-            </h:form>  
-    
-        </div>
+            </h:panelGroup>
+        </h:panelGrid>
     <div id="footer"></div>
     </h:panelGroup>
     </h:body>

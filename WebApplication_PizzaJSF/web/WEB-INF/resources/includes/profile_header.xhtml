@@ -15,9 +15,14 @@ and open the template in the editor.
         <h:outputText value="Welcome to PizzaWorld!" styleClass="header-font" />
         <h:panelGroup layout="block" style="float: right; width: 100%">
             <h:form id="form_register_cancel">
-                <h:panelGrid columns="1" style="width: 100%">  
+                <h:panelGrid columns="2" style="width: 100%">  
                          
-                    <h:commandButton id="submit_logout"
+                    <h:commandButton id="submit_profile_exit" 
+                                styleClass="button-default"
+                                value="#{msg.buttonExitProfile}"
+                                action="profile_exit"> 
+                    </h:commandButton>
+                     <h:commandButton id="submit_logout"
                                      styleClass="button-default button-align-right"
                                      value="#{msg.buttonLogout}" 
                                      action="#{pizzaLogin.doLogout()}"> 

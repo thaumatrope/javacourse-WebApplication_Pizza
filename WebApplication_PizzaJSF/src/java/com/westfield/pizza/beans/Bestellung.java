@@ -163,7 +163,7 @@ public class Bestellung extends DataAccess {
         this.calculateGesamtpreis();
         
         if (! this.insertBestellung()){            
-            System.out.println("Bestellung insertBestellung() - failed");            
+            System.out.println("Bestellung store() - after insertBestellung() - failed");            
             
         } else {
             
@@ -196,16 +196,23 @@ public class Bestellung extends DataAccess {
                 return false;
             }
             stm = con.prepareStatement("INSERT INTO bestellung (kundennummer, gesamtpreis, datum, ip, sessionid) VALUES(?,?,?,?,?)");
+            System.out.println("Bestellung: insertBestellung() - getKundennummer - " + this.getKundennummer());
             stm.setInt(1, this.getKundennummer());
+            System.out.println("Bestellung: insertBestellung() - getGesamtpreis - " + this.getGesamtpreis());
             stm.setString(2, this.getGesamtpreis());
+            System.out.println("Bestellung: insertBestellung() - getDatum - " + this.getDatum());
             stm.setString(3, this.getDatum());
+            System.out.println("Bestellung: insertBestellung() - getIp - " + this.getIp());
             stm.setString(4, this.getIp());
+            System.out.println("Bestellung: insertBestellung() - getSessionid - " + this.getSessionid());
             stm.setString(4, this.getSessionid());   
             
             int rows = stm.executeUpdate();
             con.commit();
+            System.out.println("Bestellung: insertBestellung() - rows - " + rows);
             stored = rows == 1;
-        } catch (SQLException ex) {          
+        } catch (SQLException ex) {  
+            System.out.println("Bestellung insert() - failed");
             stored = false;
         } finally {
             try { if( stm != null) stm.close(); } catch(Exception e) {}

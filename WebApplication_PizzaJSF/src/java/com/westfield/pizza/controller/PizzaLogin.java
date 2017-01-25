@@ -7,11 +7,14 @@ package com.westfield.pizza.controller;
 
 import com.westfield.pizza.beans.Kunde;
 import java.io.Serializable;
+import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.faces.validator.ValidatorException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -35,9 +38,15 @@ public class PizzaLogin implements Serializable {
     private final String OUTCOME_REGISTER_ME = "forward_register";
     private final String OUTCOME_SUCCESS_REGISTER = "success_register";
     private final String OUTCOME_FAILED_REGISTER = "failed_register";
-    private final String OUTCOME_PROFILE_ADMIN = "profile_admin";
-    private final String OUTCOME_PROFILE_USER = "profile_user";
-
+    private final String OUTCOME_SUCCESS_UPDATE_USER = "success_update_user";
+    private final String OUTCOME_FAILED_UPDATE_USER = "failed_update_user";
+    private final String OUTCOME_SUCCESS_UPDATE_ADMIN = "success_update_admin";
+    private final String OUTCOME_FAILED_UPDATE_ADMIN = "failed_update_admin";
+    private final String OUTCOME_SUCCESS_UPDATEPW_USER = "success_updatepw_user";
+    private final String OUTCOME_FAILED_UPDATEPW_USER = "failed_updatepw_user";
+    private final String OUTCOME_SUCCESS_UPDATEPW_ADMIN = "success_updatepw_admin";
+    private final String OUTCOME_FAILED_UPDATEPW_ADMIN = "failed_updatepw_admin";
+  
     private static final long serialVersionUID = 1L;
     
     public PizzaLogin(){        
@@ -68,19 +77,44 @@ public class PizzaLogin implements Serializable {
         return OUTCOME_SUCCESS_LOGOUT;
     }
 
-    public String getOUTCOME_PROFILE_ADMIN() {
-        return OUTCOME_PROFILE_ADMIN;
-    }
-
-    public String getOUTCOME_PROFILE_USER() {
-        return OUTCOME_PROFILE_USER;
-    }
-    
     public String getOUTCOME_FAILED_LOGOUT() {
         return OUTCOME_FAILED_LOGOUT;
     }
-    
 
+    public String getOUTCOME_SUCCESS_UPDATEPW_USER() {
+        return OUTCOME_SUCCESS_UPDATEPW_USER;
+    }
+
+    public String getOUTCOME_FAILED_UPDATEPW_USER() {
+        return OUTCOME_FAILED_UPDATEPW_USER;
+    }
+
+    public String getOUTCOME_SUCCESS_UPDATEPW_ADMIN() {
+        return OUTCOME_SUCCESS_UPDATEPW_ADMIN;
+    }
+
+    public String getOUTCOME_FAILED_UPDATEPW_ADMIN() {
+        return OUTCOME_FAILED_UPDATEPW_ADMIN;
+    }
+
+    public String getOUTCOME_SUCCESS_UPDATE_USER() {
+        return OUTCOME_SUCCESS_UPDATE_USER;
+    }
+
+    public String getOUTCOME_FAILED_UPDATE_USER() {
+        return OUTCOME_FAILED_UPDATE_USER;
+    }
+
+    public String getOUTCOME_SUCCESS_UPDATE_ADMIN() {
+        return OUTCOME_SUCCESS_UPDATE_ADMIN;
+    }
+
+    public String getOUTCOME_FAILED_UPDATE_ADMIN() {
+        return OUTCOME_FAILED_UPDATE_ADMIN;
+    }
+    
+    
+    
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }  
@@ -90,7 +124,9 @@ public class PizzaLogin implements Serializable {
     }
 
     public void setMyKunde(Kunde myKunde) {
+        
         this.myKunde = myKunde;
+   
     }
 
     public String getMyEmail() {
@@ -116,33 +152,21 @@ public class PizzaLogin implements Serializable {
         
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         
-        if(request.isUserInRole("adminRolle")){
-            return true;
-        } else {
-            return false;
-        }
+        return request.isUserInRole("adminRolle");
     }
     
     public boolean isLoggedInAsBenutzer(){
         
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         
-        if(request.isUserInRole("kundenRolle")){
-            return true;
-        } else {
-            return false;
-        }
-    }    
-  
+        return request.isUserInRole("kundenRolle");
+    }
+    
     public boolean isLoggedIn(){  
         
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         
-        if(request.isUserInRole("adminRolle") || request.isUserInRole("kundenRolle")){
-            return true;
-        } else {
-            return false;
-        }
+        return request.isUserInRole("adminRolle") || request.isUserInRole("kundenRolle");
     }
    
     public String goRegister(){
@@ -187,30 +211,52 @@ public class PizzaLogin implements Serializable {
         System.out.println("PizzaLogin -- doLogin() start...");
         
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
-        HttpSession session = request.getSession();
-        this.myKunde.snatchKunde(this.getMyEmail());
+        HttpSession session = request.getSession();        
         
         if(request.getRemoteUser() != null){
-            System.out.println("PizzaLogin -- doLogin() already logged in...");            
+            System.out.println("PizzaLogin -- doLogin() already logged in...");  
+            this.doLoginInit(this.getMyEmail()); 
             return OUTCOME_SUCCESS_LOGIN;
         }              
         
         try {
             
-            request.login(this.getMyEmail(), this.getMyPassword());
-            //request.authenticate ???
-                      
-            System.out.println("PizzaLogin -- doLogin() -> Logged In");
+            request.login(this.getMyEmail(), this.getMyPassword());           
             
         } catch (ServletException ex) {
             //username oder Passwort falsch
             System.out.println("PizzaLogin -- doLogin() -> NOT Logged In -- username oder password falsch");
             Logger.getLogger(PizzaLogin.class.getName()).log(Level.SEVERE, null, ex);
+
+            ResourceBundle bundle = ResourceBundle.getBundle("com.westfield.pizza.util.messages", FacesContext.getCurrentInstance().getViewRoot().getLocale());
+
+            // Fehlermeldung auslesen
+            String errorKey = "loginerror";            
+            String errorMsg = bundle.getString(errorKey);
+            System.out.println("PizzaLogin: doLogin() - errorMessage: " + errorMsg);
+
+            // Fehlermeldung im Kontext speichern, damit diese ggf. auch in der JSP zur Verf�gung steht
+            //FacesMessage msg = new FacesMessage( FacesMessage.SEVERITY_ERROR, errorMsg, null);
+          
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, errorMsg, null));
+                
             return OUTCOME_FAILED_LOGIN;
-        }
+           
+    
+        } 
+        
+        this.doLoginInit(this.getMyEmail());          
+        System.out.println("PizzaLogin -- doLogin() -> Logged In");
         
         return OUTCOME_SUCCESS_LOGIN;
-    }  
+    }
+    
+    private void doLoginInit(String identifier){
+        
+        this.myKunde.snatchKunde(identifier);
+        this.myEmail = "";
+        this.myPassword = "";
+    }
     
     public String doLogout(){
         
@@ -237,22 +283,42 @@ public class PizzaLogin implements Serializable {
         
     }
     
-    public String checkProfilePage() {
-        
-        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
-        
-        if(request.isUserInRole("adminRolle")){
-            return OUTCOME_PROFILE_ADMIN;
-        } else {
-            return OUTCOME_PROFILE_USER;
-        }
-        
-    }
-    
     public String updateUser() {
         
-        return "";
-    }
- 
+        System.out.println("PizzaLogin -- updateUser() start...");  
+        
+        if (!myKunde.store()){            
+            System.out.println("PizzaLogin -- myKunde.updateUser() not updated...");
+            if(this.isLoggedInAsAdmin()){
+                return OUTCOME_FAILED_UPDATE_ADMIN;
+            }else {
+                return OUTCOME_FAILED_UPDATE_USER;
+            }
+        }else {            
+            System.out.println("PizzaLogin -- myKunde.updateUser() updated...");            
+             if(this.isLoggedInAsAdmin()){
+                return OUTCOME_SUCCESS_UPDATE_ADMIN;
+            }else {
+                return OUTCOME_SUCCESS_UPDATE_USER;
+            }
+        }
+   
+    } 
+    
+    public String updatePassword() {
+        
+        System.out.println("PizzaLogin -- updatePassword() start...");  
+    
+        if (!myKunde.updatePassword(this.myPassword)){            
+            System.out.println("PizzaLogin -- myKunde.updatePassword() not updated...");
+            return OUTCOME_FAILED_UPDATEPW_USER;
+        }else {            
+            System.out.println("PizzaLogin -- myKunde.updatePassword() updated...");
+            this.doLoginInit(this.getMyKunde().getEmail()); 
+            return OUTCOME_SUCCESS_UPDATEPW_USER;
+        }
+   
+    }    
+    
 
 }

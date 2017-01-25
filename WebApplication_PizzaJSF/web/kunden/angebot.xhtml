@@ -19,7 +19,7 @@ and open the template in the editor.
     <h:body>
         <h:panelGroup layout="block" styleClass="topPanel">
         <div id="header">                                    
-            <ui:include src="/WEB-INF/resources/includes/logout_header.xhtml" />         
+            <ui:include src="/WEB-INF/resources/includes/logout_header.xhtml" />    
         </div>  
                    
         
@@ -28,7 +28,7 @@ and open the template in the editor.
             
              <h:form id="form_angebot">  
                 
-                <h:panelGroup layout="block"  style="width: 60%; margin: auto; padding: 20px">
+                <h:panelGroup layout="block"  style="width: 50%; margin: auto; padding: 20px">
                                    
                     <h:dataTable var="bestellposten" value="#{pizzaService.myBestellung.pizzaAngebot}"
                                  columnClasses="acolumn1,acolumn2,acolumn3"

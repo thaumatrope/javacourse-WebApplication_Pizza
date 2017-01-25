@@ -35,6 +35,11 @@ public class PizzaService implements Serializable {
     
     private final String OUTCOME_SUCCESS_ORDER = "success_order";
     private final String OUTCOME_FAILED_ORDER = "failed_order";
+    private final String OUTCOME_PROFILE_ADMIN = "profile_admin";
+    private final String OUTCOME_PROFILE_USER = "profile_user";
+    private final String OUTCOME_PROFILE_EXIT = "profile_exit";
+    
+    private String myContent;
     
     private static final long serialVersionUID = 1L;
 
@@ -58,6 +63,33 @@ public class PizzaService implements Serializable {
 
     public String getOUTCOME_FAILED_ORDER() {
         return OUTCOME_FAILED_ORDER;
+    }
+
+    public String getOUTCOME_PROFILE_ADMIN() {
+        return OUTCOME_PROFILE_ADMIN;
+    }
+
+    public String getOUTCOME_PROFILE_USER() {
+        return OUTCOME_PROFILE_USER;
+    }
+
+    public String getOUTCOME_PROFILE_EXIT() {
+        return OUTCOME_PROFILE_EXIT;
+    }
+
+    
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+    
+    
+
+    public String getMyContent() {
+        return myContent;
+    }
+
+    public void setMyContent(String myContent) {
+        this.myContent = myContent;
     }
 
        
@@ -126,7 +158,7 @@ public class PizzaService implements Serializable {
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         HttpSession session = request.getSession();
         
-        // Persitieren und PDF, Button Abbruch, Button Einstellungen, Admin infoseiten
+        // Persitieren und PDF, Button Bestellung ändern, Button Einstellungen, Admin infoseiten
         
         //Bestellung und Bestellposten speichern
         if (this.getMyBestellung().store()) {
@@ -151,4 +183,33 @@ public class PizzaService implements Serializable {
         
         return OUTCOME_SUCCESS_ORDER;
     }
+
+    public void checkProfilePage(String content){
+        
+        System.out.println("PizzaService: checkProfilePage(\"" + content + "\")");
+        this.setMyContent(content);        
+       
+    }
+    
+    public String checkProfilePage() {
+        
+        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+
+        this.setMyContent("PROFILE"); 
+        if(request.isUserInRole("adminRolle")){
+            return OUTCOME_PROFILE_ADMIN;
+        } else {
+            return OUTCOME_PROFILE_USER;
+        }
+        
+    }
+    
+    public String exitProfilePage() {
+        
+        this.setMyContent("PROFILE"); 
+        
+        return OUTCOME_PROFILE_EXIT;
+        
+    }
+
 }

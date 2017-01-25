@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+
+    <div id="menu_content">         
+
+        <hr style="margin: 10px 0px" /> 
+        
+        <h:panelGrid columns="1" styleClass="button_panel" style="width: 100%" columnClasses="">
+            <h:form id="menu_nav">   
+            <h:commandButton id="button_content_profile" styleClass="button-menu"
+                         value="#{msg.buttonMenuProfile}"
+                         action="#{pizzaService.checkProfilePage('PROFILE')}"> 
+            </h:commandButton>
+            <h:commandButton id="button_content_password" styleClass="button-menu"
+                         value="#{msg.buttonMenuPasswort}"
+                         action="#{pizzaService.checkProfilePage('PASSWORD')}"> 
+            </h:commandButton>
+            <h:commandButton id="button_content_session" styleClass="button-menu" rendered="#{request.isUserInRole('admin')}"
+                             value="#{msg.buttonMenuSessions}"
+                             action="#{pizzaService.checkProfilePage('SESSION')}"> 
+            </h:commandButton>
+            <h:commandButton id="button_content_order" styleClass="button-menu" rendered="#{request.isUserInRole('admin')}"
+                             value="#{msg.buttonMenuDailyOrders}"
+                             action="#{pizzaService.checkProfilePage('ORDER')}"> 
+            </h:commandButton>
+            </h:form> 
+        </h:panelGrid> 
+
+        <hr style="margin: 10px 0px" /> 
+        
+   </div>
+    
+</ui:composition>

@@ -24,8 +24,7 @@
         </navigation-case> 
          <navigation-case>                   
             <from-outcome>failed_login</from-outcome>
-            <to-view-id>/landing.xhtml</to-view-id>
-            <redirect/>
+            <to-view-id>/landing.xhtml</to-view-id>           
         </navigation-case>        
    
         <navigation-case>
@@ -74,7 +73,62 @@
             <from-outcome>profile_user</from-outcome>      
             <to-view-id>/kunden/user.xhtml</to-view-id>
             <redirect/>
-        </navigation-case>                      
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>profile_exit</from-outcome>      
+            <to-view-id>/kunden/angebot.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        
+         <navigation-case>
+            <from-outcome>success_update_user</from-outcome>      
+            <to-view-id>/kunden/user.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>failed_update_user</from-outcome>      
+            <to-view-id>/kunden/angebot.xhtml</to-view-id>
+        </navigation-case>  
+        
+          <navigation-case>
+            <from-outcome>success_update_admin</from-outcome>      
+            <to-view-id>/admin/user.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>failed_update_admin</from-outcome>      
+            <to-view-id>/admin/angebot.xhtml</to-view-id>
+        </navigation-case>  
+        
+        <navigation-case>
+            <from-outcome>success_updatepw_user</from-outcome>      
+            <to-view-id>/kunden/user.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>failed_updatepw_user</from-outcome>      
+            <to-view-id>/kunden/user.xhtml</to-view-id>
+          
+        </navigation-case>   
+        
+           <navigation-case>
+            <from-outcome>success_updatepw_admin</from-outcome>      
+            <to-view-id>/admin/user.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>failed_updatepw_admin</from-outcome>      
+            <to-view-id>/admin/user.xhtml</to-view-id>
+          
+        </navigation-case>   
+        
+                         
+                                    
                             
     </navigation-rule>
     
