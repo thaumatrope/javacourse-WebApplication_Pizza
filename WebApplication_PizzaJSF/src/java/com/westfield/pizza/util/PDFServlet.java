@@ -35,9 +35,10 @@ import javax.servlet.http.HttpSession;
  *
  * @author Schulung_IBB
  */
-@WebServlet(name = "pdf2http", urlPatterns = "/kunden/generate/do.pdf")
-public class PDFServlet extends HttpServlet {
 
+@WebServlet(name = "pdf2http", urlPatterns = "/generate/do.pdf")
+public class PDFServlet extends HttpServlet {
+    
     /**
      *
      * @param req
@@ -104,7 +105,7 @@ public class PDFServlet extends HttpServlet {
                 table2.addCell("Gesamtpreis");
                               
                 //Schleife dient nur zur Demonstration des Dokument Objectes aus der Library iText
-                for (Bestellposten myBestellposten : myBestellung.getPizzaAngebot()) {
+                for (Bestellposten myBestellposten : myBestellung.getPizzaBestellung()) {
                      
                     table2.addCell("" + myBestellposten.getPosition()); 
                     table2.addCell("" + myBestellposten.getMenge());
@@ -123,8 +124,7 @@ public class PDFServlet extends HttpServlet {
                     pcell.setVerticalAlignment(Element.ALIGN_MIDDLE);
                     pcell.setHorizontalAlignment(Element.ALIGN_RIGHT);
                    
-                    table2.addCell(pcell);
-                    
+                    table2.addCell(pcell);                   
                     
                     //table2.addCell(myBestellung.printPreisFormatted(myBestellung.getGesamtsumme(myBestellung.getPosition())));
       

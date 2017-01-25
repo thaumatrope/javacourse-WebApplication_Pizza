@@ -205,7 +205,7 @@ public class Bestellung extends DataAccess {
             System.out.println("Bestellung: insertBestellung() - getIp - " + this.getIp());
             stm.setString(4, this.getIp());
             System.out.println("Bestellung: insertBestellung() - getSessionid - " + this.getSessionid());
-            stm.setString(4, this.getSessionid());   
+            stm.setString(5, this.getSessionid());   
             
             int rows = stm.executeUpdate();
             con.commit();
@@ -235,9 +235,11 @@ public class Bestellung extends DataAccess {
             }
             
             int position = 0;
-            for (Bestellposten hotPizza : this.pizzaAngebot) {
+            stm = con.prepareStatement("INSERT INTO bestellposten (lieferung_bestellnummer, position, sorte, einzelpreis, menge) VALUES(?,?,?,?,?)");
+            
+            for (Bestellposten hotPizza : this.pizzaBestellung) {
                 position++;
-                stm = con.prepareStatement("INSERT INTO bestellposten (lieferung_bestellnummer, position, sorte, einzelpreis, menge) VALUES(?,?,?,?,?)");
+                
                 stm.setInt(1, this.getBestellnummer());
                 stm.setInt(2, hotPizza.getPosition());
                 stm.setString(3, hotPizza.getSorte());

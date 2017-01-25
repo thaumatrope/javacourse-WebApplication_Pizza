@@ -167,7 +167,7 @@ public class PizzaService implements Serializable {
             
             try {
                 
-                FacesContext.getCurrentInstance().getExternalContext().redirect("/kunden/generate/do.pdf");
+                FacesContext.getCurrentInstance().getExternalContext().redirect(request.getContextPath() + "/generate/do.pdf");
                 return OUTCOME_SUCCESS_ORDER;
            
             } catch (IOException e) {
