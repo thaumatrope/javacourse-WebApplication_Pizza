@@ -20,7 +20,6 @@ import javax.servlet.http.HttpSessionListener;
  * @author John Westfield
  */
 @WebListener
-@ManagedBean
 public class SessionListener implements HttpSessionListener{
     
     /**
