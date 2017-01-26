@@ -14,7 +14,7 @@
     </head>
     <body>
         <%
-        HttpSession delSession=ActiveSessionsListener.getActiveSessions().get(session.getId());
+        HttpSession delSession= ActiveSessionsListener.getActiveSessions().get(session.getId());
          // session.invalidate();
         //  response.sendRedirect("index.jsp");
          %>   
