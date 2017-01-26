@@ -32,7 +32,8 @@ import javax.servlet.http.HttpSession;
 public class PizzaService implements Serializable {
 
     private Bestellung myBestellung;
-    
+    private List<Bestellung> myDailyBestellungen;
+
     private final String OUTCOME_SUCCESS_ORDER = "success_order";
     private final String OUTCOME_FAILED_ORDER = "failed_order";
     private final String OUTCOME_PROFILE_ADMIN = "profile_admin";
@@ -40,13 +41,15 @@ public class PizzaService implements Serializable {
     private final String OUTCOME_PROFILE_EXIT = "profile_exit";
     
     private String myContent;
+    private int dailyMenge;
+    private double dailyGesamtpreis;  
     
     private static final long serialVersionUID = 1L;
 
     public PizzaService(){
         
         this.myBestellung = new Bestellung();
-    
+        this.myDailyBestellungen = new ArrayList<>();
     }
     
     public Bestellung getMyBestellung() {
@@ -56,6 +59,31 @@ public class PizzaService implements Serializable {
     public void setMyBestellung(Bestellung myBestellung) {
         this.myBestellung = myBestellung;
     }
+    
+    public int getDailyMenge() {
+        return dailyMenge;
+    }
+
+    public void setDailyMenge(int dailyMenge) {
+        this.dailyMenge = dailyMenge;
+    }
+
+    public double getDailyGesamtpreis() {
+        return dailyGesamtpreis;
+    }
+
+    public void setDailyGesamtpreis(double dailyGesamtpreis) {
+        this.dailyGesamtpreis = dailyGesamtpreis;
+    }
+    
+    public List<Bestellung> getMyDailyBestellungen() {
+        return myDailyBestellungen;
+    }
+
+    public void setMyDailyBestellungen(List<Bestellung> myDailyBestellungen) {
+        this.myDailyBestellungen = myDailyBestellungen;
+    }
+       
     
     public String getOUTCOME_SUCCESS_ORDER() {
         return OUTCOME_SUCCESS_ORDER;
@@ -187,7 +215,17 @@ public class PizzaService implements Serializable {
     public void checkProfilePage(String content){
         
         System.out.println("PizzaService: checkProfilePage(\"" + content + "\")");
-        this.setMyContent(content);        
+        this.setMyContent(content); 
+        
+        if(content.equals("ORDER")){
+            
+            String myDate = this.getMyBestellung().getCurrentDateString();
+            
+            this.setMyDailyBestellungen(this.getMyBestellung().snatchDailyBestellung(myDate));
+            
+            this.setDailyMenge(this.getMyBestellung().calculateDailyMenge(this.getMyDailyBestellungen()));
+            this.setDailyGesamtpreis(this.getMyBestellung().calculateDailyGesamtpreis(this.getMyDailyBestellungen()));  
+        }
        
     }
     

@@ -65,7 +65,7 @@ and open the template in the editor.
                         </h:column> 
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{msg.pizzaPreis}"/>
+                                <h:outputText value="#{msg.pizzaPostenPreis}"/>
                             </f:facet>
                             <h:outputText value="#{pizzaService.myBestellung.printPreisFormatted(bestell.menge * bestell.preisDouble)}" />
 
@@ -84,11 +84,18 @@ and open the template in the editor.
 
                 <hr style="margin: 10px 0px" />            
                     
-                 <h:form id="form_bestellung">  
-                    <h:commandButton id="submit_register" styleClass="button-default button-align-right"
-                                     value="#{msg.buttonBestellungAufgeben}"
-                        action="#{pizzaService.doBestellung()}"> 
-                    </h:commandButton>
+                <h:form id="form_bestellung"> 
+                     <h:panelGrid id="panel" columns="2" border="1" cellpadding="10" cellspacing="1" styleClass="register_panel" style="width: 100%" columnClasses=""> 
+                        <h:commandButton id="submit_cancel_order" styleClass="button-default"
+                                         value="#{msg.buttonAbbruch}"
+                                         action="cancel_order"> 
+                        </h:commandButton>
+
+                        <h:commandButton id="submit_register" styleClass="button-default button-align-right"
+                                         value="#{msg.buttonBestellungAufgeben}"
+                            action="#{pizzaService.doBestellung()}"> 
+                        </h:commandButton>
+                    </h:panelGrid>
                 </h:form>                  
 
             </h:panelGroup>

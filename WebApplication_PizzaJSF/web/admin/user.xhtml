@@ -16,7 +16,7 @@ and open the template in the editor.
         <title><ui:insert name="title">Welcome to PizzaWorld</ui:insert></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
-     <h:body>
+    <h:body>
         <h:panelGroup layout="block" styleClass="topPanel">
         <div id="header">           
             <ui:include src="/WEB-INF/resources/includes/profile_header.xhtml" />           
@@ -34,13 +34,13 @@ and open the template in the editor.
                     <c:when test="#{pizzaService.myContent eq 'PROFILE'}">
                         <ui:include src="/WEB-INF/resources/includes/user_profile.xhtml" />   
                     </c:when>
-                    <c:when test="#{pizzaService.myContent eq 'PASSWORD'}}">
+                    <c:when test="#{pizzaService.myContent eq 'PASSWORD'}">
                         <ui:include src="/WEB-INF/resources/includes/user_password.xhtml" />   
                     </c:when>
-                    <c:when test="#{pizzaService.myContent eq 'SESSION'}}">
+                    <c:when test="#{pizzaService.myContent eq 'SESSION'}">
                         <ui:include src="/WEB-INF/resources/includes/admin_sessions.xhtml" />   
                     </c:when>
-                    <c:when test="#{pizzaService.myContent eq 'ORDER'}}">
+                    <c:when test="#{pizzaService.myContent eq 'ORDER'}">
                         <ui:include src="/WEB-INF/resources/includes/admin_dailyorders.xhtml" />   
                     </c:when>
                     <c:otherwise>

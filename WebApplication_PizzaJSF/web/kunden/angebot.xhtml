@@ -46,7 +46,7 @@ and open the template in the editor.
                             <f:facet name="header">
                                 <h:outputText value="#{msg.pizzaMenge}"/>
                             </f:facet>
-                            <h:inputText id="number" p:type="number" p:min="0" p:max="10"  value="#{bestellposten.menge}" styleClass="numberSpin" >
+                            <h:inputText id="number" p:type="number" p:min="0" p:max="20"  value="#{bestellposten.menge}" styleClass="numberSpin" >
                                 <f:converter converterId="converterString2Number" />
                             </h:inputText>
                         </h:column> 

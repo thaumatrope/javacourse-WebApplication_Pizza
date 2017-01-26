@@ -26,11 +26,11 @@ and open the template in the editor.
                          value="#{msg.buttonMenuPasswort}"
                          action="#{pizzaService.checkProfilePage('PASSWORD')}"> 
             </h:commandButton>
-            <h:commandButton id="button_content_session" styleClass="button-menu" rendered="#{request.isUserInRole('admin')}"
+                <h:commandButton id="button_content_session" styleClass="button-menu" rendered="#{pizzaLogin.loggedInAsAdmin}"
                              value="#{msg.buttonMenuSessions}"
                              action="#{pizzaService.checkProfilePage('SESSION')}"> 
             </h:commandButton>
-            <h:commandButton id="button_content_order" styleClass="button-menu" rendered="#{request.isUserInRole('admin')}"
+            <h:commandButton id="button_content_order" styleClass="button-menu" rendered="#{pizzaLogin.loggedInAsAdmin}"
                              value="#{msg.buttonMenuDailyOrders}"
                              action="#{pizzaService.checkProfilePage('ORDER')}"> 
             </h:commandButton>

@@ -16,6 +16,7 @@ import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -363,7 +364,7 @@ public class Bestellung extends DataAccess {
 
         try {
             
-            //System.out.println("Lieferung snatchLast() - return: entry");
+            //System.out.println("Bestellung snatchLastBestellung() - return: entry");
             con = getConnectionPool();
             
              if (con == null) {
@@ -381,11 +382,11 @@ public class Bestellung extends DataAccess {
                 this.gesamtpreis = rs.getString("gesamtpreis");
             }
             
-//            System.out.println("Lieferung snatchLast() - kundennummer: " + this.getKundennummer());
-//            System.out.println("Lieferung snatchLast() - bestellnummer: " + this.getBestellnummer());
-//            System.out.println("Lieferung snatchLast() - datum: " + this.getDatum());
-//            System.out.println("Lieferung snatchLast() - ip: " + this.getIp());
-//            System.out.println("Lieferung snatchLast() - sessionid: " + this.getSessionid());
+//            System.out.println("Bestellung snatchLastBestellung() - kundennummer: " + this.getKundennummer());
+//            System.out.println("Bestellung snatchLastBestellung() - bestellnummer: " + this.getBestellnummer());
+//            System.out.println("Bestellung snatchLastBestellung() - datum: " + this.getDatum());
+//            System.out.println("Bestellung snatchLastBestellung() - ip: " + this.getIp());
+//            System.out.println("Bestellung snatchLastBestellung() - sessionid: " + this.getSessionid());
               
             return true;
             
@@ -448,6 +449,52 @@ public class Bestellung extends DataAccess {
         
     }
     
+    public List<Bestellung> snatchDailyBestellung(String date) {
+        
+        Connection con = null;
+        Statement stm = null;        
+        ResultSet rs = null;
+        List<Bestellung> dailyBestellung = new ArrayList<>(); 
+
+        try {
+            
+            System.out.println("Bestellung snatchDailyBestellung() - return: entry");
+            con = getConnectionPool();
+            
+             if (con == null) {
+                return null;
+            }
+            stm = con.createStatement();
+            
+            System.out.println("Bestellung snatchDailyBestellung() - date: " + date.trim());
+            rs = stm.executeQuery("SELECT * FROM bestellung WHERE datum LIKE '" + date.trim() + "%' ORDER BY datum DESC");
+            
+            while (rs.next()) { 
+                Bestellung myBestellung = new Bestellung();
+                myBestellung.setKundennummer(rs.getInt("kundennummer"));
+                myBestellung.setBestellnummer(rs.getInt("bestellnummer"));
+                myBestellung.setDatum(rs.getString("datum"));
+                myBestellung.setIp(rs.getString("ip"));
+                myBestellung.setSessionid(rs.getString("sessionid")); 
+                myBestellung.setGesamtpreis(rs.getString("gesamtpreis"));
+                dailyBestellung.add(myBestellung);
+            }
+              
+            return dailyBestellung;
+            
+        } catch (SQLException ex) {
+            
+            return null;
+            
+        } finally {
+            
+            try { if (rs != null) rs.close(); } catch (Exception e) {}
+            try { if( stm != null) stm.close(); } catch(Exception e) {}
+            try { if( con != null) con.close(); } catch(Exception e) {}           
+           
+        }
+    }
+    
     // utility methods
     public String getCurrentDateTimeString(){
         
@@ -460,7 +507,19 @@ public class Bestellung extends DataAccess {
         System.out.println("PizzaService - getCurrentDateTimeString:" + myDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)));
         return myDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
     }
-     
+    
+    public String getCurrentDateString(){
+        
+        LocalDate myDate = LocalDate.now();
+        //LocalDate myDate = LocalDate.now();
+        //LocalTime myTime = LocalTime.now();
+        //Locale myLocale = new Locale("de","DE");
+        //DateTimeFormatter myFormatter = DateTimeFormatter.ofPattern(pattern, Locale.GERMANY);
+       
+        System.out.println("PizzaService - getCurrentDateString:" + myDate.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)));
+        return myDate.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM));
+    }
+    
     public double getPartialGesamtsumme(int pos){  
         System.out.println("Lieferung - Gesamtsumme: positions" + pos);
         double summe = 0;
@@ -492,6 +551,67 @@ public class Bestellung extends DataAccess {
         double gp = this.getPartialGesamtsumme(this.pizzaBestellung.size());
             
         this.setGesamtpreis(this.printPreisFormatted(gp));
+        
+    }
+    
+    public double calculateDailyGesamtpreis(List<Bestellung> bestellungen){
+        
+        double dailygp = 0;
+        for(Bestellung bestell : bestellungen){
+            dailygp += bestell.getGesamtpreisDouble();
+        }
+        return dailygp;
+    }
+    
+    public int calculateDailyMenge(List<Bestellung> bestellungen){
+        
+        Connection con = null;
+        Statement stm = null;        
+        ResultSet rs = null;
+        int dailyMenge = 0;        
+
+        try {
+            
+            System.out.println("Bestellung calculateDailyMenge() - entry");
+            con = getConnectionPool();
+            
+             if (con == null) {
+                return 0;
+            }
+            stm = con.createStatement();
+            dailyMenge = 0;
+            
+            for(Bestellung myBestell : bestellungen) {
+            
+                System.out.println("Bestellung calculateDailyMenge() - bestellnummer: " + myBestell.getBestellnummer());
+                rs = stm.executeQuery("SELECT position, menge FROM bestellposten WHERE lieferung_bestellnummer = " +  myBestell.getBestellnummer() + " ORDER BY position ASC");
+                int tmpMenge = 0;
+                int tmpPosition = 0;
+                while (rs.next()) { 
+                    tmpMenge = rs.getInt("menge");
+                    tmpPosition = rs.getInt("position");
+                    System.out.println("Bestellung calculateDailyMenge() - menge: " + tmpMenge + " at pos: " + tmpPosition + " for bsnr: " + myBestell.getBestellnummer());
+                    dailyMenge += tmpMenge;    
+                }
+            } 
+            
+            System.out.println("Bestellung calculateDailyMenge() - return: " + dailyMenge + " - success");
+              
+            return dailyMenge;
+            
+        } catch (SQLException ex) {
+            
+            System.out.println("Bestellung calculateDailyMenge() - return: 0 - failed");
+            
+            return 0;
+            
+        } finally {
+            
+            try { if (rs != null) rs.close(); } catch (Exception e) {}
+            try { if( stm != null) stm.close(); } catch(Exception e) {}
+            try { if( con != null) con.close(); } catch(Exception e) {}           
+           
+        }
         
     }
     

@@ -15,7 +15,7 @@ and open the template in the editor.
     <div id="content" >
         <h:form id="form_content">
 
-        <h:panelGrid columns="3" styleClass="register_panel" style="width: 100%" columnClasses="">
+        <h:panelGrid columns="3" styleClass="register_panel" style="width: 100%" columnClasses="dcolumn1,dcolumn2,dcolumn3">
 
             <h:outputLabel id="vorname_label" for="vorname_input" 
                    value="#{msg.labelVorname}" />
@@ -58,12 +58,20 @@ and open the template in the editor.
 
         </h:panelGrid> 
 
-        <hr style="margin: 10px 0px" />       
+        <hr style="margin: 10px 0px" /> 
+        
+        <h:panelGrid columns="2" styleClass="button-panel" style="width: 100%">
+            
+            <h:messages infoStyle="color:green" warnStyle="color:blue" errorStyle="color:red" fatalStyle="color:orange"
+                        globalOnly="true"
+                        style="margin: 5px; padding-left: 10px"/>            
 
-        <h:commandButton id="submit_update_user" styleClass="button-default button-align-right"
-                         value="#{msg.buttonUpdateUser}"
-                         action="#{pizzaLogin.updateUser()}"> 
-        </h:commandButton>
+            <h:commandButton id="submit_update_user" styleClass="button-default button-align-right"
+                             value="#{msg.buttonUpdateUser}"
+                             action="#{pizzaLogin.updateUser()}"> 
+            </h:commandButton>
+        
+        </h:panelGrid>
         
         </h:form>    
     </div>

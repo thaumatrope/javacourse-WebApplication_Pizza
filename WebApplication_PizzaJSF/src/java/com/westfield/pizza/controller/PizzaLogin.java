@@ -295,8 +295,21 @@ public class PizzaLogin implements Serializable {
                 return OUTCOME_FAILED_UPDATE_USER;
             }
         }else {            
-            System.out.println("PizzaLogin -- myKunde.updateUser() updated...");            
-             if(this.isLoggedInAsAdmin()){
+            System.out.println("PizzaLogin -- myKunde.updateUser() updated..."); 
+            
+            ResourceBundle bundle = ResourceBundle.getBundle("com.westfield.pizza.util.messages", FacesContext.getCurrentInstance().getViewRoot().getLocale());
+
+            // Fehlermeldung auslesen
+            String infoKey = "labelUpdateUserSuccess";            
+            String infoMsg = bundle.getString(infoKey);
+            System.out.println("PizzaLogin: doLogin() - infoMessage: " + infoMsg);
+
+            // Fehlermeldung im Kontext speichern, damit diese ggf. auch in der JSP zur Verf�gung steht
+            //FacesMessage msg = new FacesMessage( FacesMessage.SEVERITY_ERROR, errorMsg, null);
+          
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, infoMsg, null));
+            
+            if(this.isLoggedInAsAdmin()){
                 return OUTCOME_SUCCESS_UPDATE_ADMIN;
             }else {
                 return OUTCOME_SUCCESS_UPDATE_USER;
@@ -311,11 +324,35 @@ public class PizzaLogin implements Serializable {
     
         if (!myKunde.updatePassword(this.myPassword)){            
             System.out.println("PizzaLogin -- myKunde.updatePassword() not updated...");
-            return OUTCOME_FAILED_UPDATEPW_USER;
-        }else {            
+            if(this.isLoggedInAsAdmin()){
+                return OUTCOME_FAILED_UPDATEPW_ADMIN;
+            }else {
+                return OUTCOME_FAILED_UPDATEPW_USER;
+            }
+             
+        }else { 
+            
+            ResourceBundle bundle = ResourceBundle.getBundle("com.westfield.pizza.util.messages", FacesContext.getCurrentInstance().getViewRoot().getLocale());
+
+            // Fehlermeldung auslesen
+            String infoKey = "labelUpdatePWSuccess";            
+            String infoMsg = bundle.getString(infoKey);
+            System.out.println("PizzaLogin: doLogin() - infoMessage: " + infoMsg);
+
+            // Fehlermeldung im Kontext speichern, damit diese ggf. auch in der JSP zur Verf�gung steht
+            //FacesMessage msg = new FacesMessage( FacesMessage.SEVERITY_ERROR, errorMsg, null);
+          
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, infoMsg, null));
+            
+            
             System.out.println("PizzaLogin -- myKunde.updatePassword() updated...");
             this.doLoginInit(this.getMyKunde().getEmail()); 
-            return OUTCOME_SUCCESS_UPDATEPW_USER;
+             if(this.isLoggedInAsAdmin()){
+                return OUTCOME_SUCCESS_UPDATEPW_ADMIN;
+            }else {
+                return OUTCOME_SUCCESS_UPDATEPW_USER;
+            }
+             
         }
    
     }    
