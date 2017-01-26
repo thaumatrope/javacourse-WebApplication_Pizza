@@ -30,8 +30,16 @@ public class SessionListener implements HttpSessionListener{
 
     public  List<HttpSession> getActiveSessions() {
         
-        List<HttpSession> tmpSessions = new ArrayList<>(activeSessions.values());
-               
+        List<HttpSession> tmpSessions;
+        
+        if(activeSessions.isEmpty()){
+            
+            tmpSessions = new ArrayList<>(); 
+        } else {
+        
+            tmpSessions = new ArrayList<>(activeSessions.values());
+       
+        }        
         return tmpSessions;
     }
 
