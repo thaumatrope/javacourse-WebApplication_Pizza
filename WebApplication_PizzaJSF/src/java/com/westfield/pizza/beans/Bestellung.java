@@ -575,7 +575,7 @@ public class Bestellung extends DataAccess {
             System.out.println("Bestellung calculateDailyMenge() - entry");
             con = getConnectionPool();
             
-             if (con == null) {
+            if (con == null) {
                 return 0;
             }
             stm = con.createStatement();
