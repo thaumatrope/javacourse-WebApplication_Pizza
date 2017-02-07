@@ -56,7 +56,7 @@ public class JGUI4Adventure extends JGUI {
     private JButton clearQuestButton;
     
     // Center Panel
-    private JPanel middlePanel;
+    private JPanel centerPanel;
     private JScrollPane listscroller;
     private JScrollPane scrollTextArea;
     private JLabel createQuestname; 
@@ -116,7 +116,7 @@ public class JGUI4Adventure extends JGUI {
         
         this.add(topPanel);
         this.rightPanel = new JPanel();
-        this.middlePanel = new JPanel();        
+        this.centerPanel = new JPanel();        
           
         // Panels Arrays
         inputAnswers = new JTextField[10];
@@ -835,17 +835,17 @@ public class JGUI4Adventure extends JGUI {
          
         JPanel panel = null;
         
-        middlePanel.removeAll();
-        middlePanel.setLayout(new BoxLayout( middlePanel, BoxLayout.Y_AXIS ));
-        middlePanel.setBackground(new Color(180,180,180));
-        middlePanel.setOpaque(true);
-        middlePanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        centerPanel.removeAll();
+        centerPanel.setLayout(new BoxLayout( centerPanel, BoxLayout.Y_AXIS ));
+        centerPanel.setBackground(new Color(180,180,180));
+        centerPanel.setOpaque(true);
+        centerPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
         
         // Questname Panel - Label
         createQuestnamePanel = this.getLabelPanel();
         createQuestname = new JLabel("Quest Name:"); // MessageText if error RED/BOLD
         createQuestnamePanel.add(createQuestname);      
-        this.middlePanel.add(createQuestnamePanel);      
+        this.centerPanel.add(createQuestnamePanel);      
         
         // TextField - Questname
         panel = this.getEntryPanel();
@@ -853,13 +853,13 @@ public class JGUI4Adventure extends JGUI {
         inputQuestname.setEditable(true);
         panel.add(inputQuestname);
         this.inputQuestname.getDocument().addDocumentListener(this);
-        this.middlePanel.add(panel);               
+        this.centerPanel.add(panel);               
             
         // Test Panel - Label
         createTextPanel = this.getLabelPanel();
         createText = new JLabel("Quest Text:"); // MessageText if error RED/BOLD
         createTextPanel.add(createText);      
-        this.middlePanel.add(createTextPanel);   
+        this.centerPanel.add(createTextPanel);   
      
         
         inputQuesttext = new JTextArea(20, 0);
@@ -869,13 +869,13 @@ public class JGUI4Adventure extends JGUI {
         inputQuesttext.setMargin( new Insets(10,10,10,10) );
         
         this.scrollTextArea = new JScrollPane(inputQuesttext,ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER); 
-        this.middlePanel.add(scrollTextArea);
+        this.centerPanel.add(scrollTextArea);
         
         // AnswerType Panel - Label
         createAnswerTypePanel = this.getLabelPanel();
         createAnswerType = new JLabel("Quest AnswerType:"); // MessageText if error RED/BOLD
         createAnswerTypePanel.add(createAnswerType);      
-        this.middlePanel.add(createAnswerTypePanel);       
+        this.centerPanel.add(createAnswerTypePanel);       
         
         //Group the radio buttons.
        
@@ -897,27 +897,27 @@ public class JGUI4Adventure extends JGUI {
         //typeTextInput.setActionCommand(typeTextInput);
         panel = this.getRadioButtonPanel();
         panel.add(typeCheckbox);        
-        this.middlePanel.add(panel);   
+        this.centerPanel.add(panel);   
         groupAnswerType.add(typeCheckbox);
         
         panel = this.getRadioButtonPanel();
         panel.add(typeRadiobutton);
-        this.middlePanel.add(panel);
+        this.centerPanel.add(panel);
         groupAnswerType.add(typeRadiobutton);
                 
         panel = this.getRadioButtonPanel();
         panel.add(typeStringInput);
-        this.middlePanel.add(panel);
+        this.centerPanel.add(panel);
         groupAnswerType.add(typeStringInput);
         
         panel = this.getRadioButtonPanel();
         panel.add(typeIntegerInput);
-        this.middlePanel.add(panel);
+        this.centerPanel.add(panel);
         groupAnswerType.add(typeIntegerInput);
                 
         panel = this.getRadioButtonPanel();
         panel.add(typeDoubleInput);
-        this.middlePanel.add(panel);
+        this.centerPanel.add(panel);
         groupAnswerType.add(typeDoubleInput);
 
  
@@ -932,7 +932,7 @@ public class JGUI4Adventure extends JGUI {
         createAnswersPanel = this.getLabelPanel();
         createAnswers = new JLabel("Quest Answer(s):"); // MessageText if error RED/BOLD
         createAnswersPanel.add(createAnswers);      
-        this.middlePanel.add(createAnswersPanel);
+        this.centerPanel.add(createAnswersPanel);
         
         // Answer - Spinner
         panel = this.getEntryPanel();
@@ -940,18 +940,18 @@ public class JGUI4Adventure extends JGUI {
         mySpinner= new JSpinner(modelSpinner); 
         mySpinner.addChangeListener(this);
         panel.add(mySpinner);       
-        this.middlePanel.add(panel);  
+        this.centerPanel.add(panel);  
         
         // Panel - answerContainerPanel
         this.answerContainerPanel = this.getContainerPanel("FlowL");
-        this.middlePanel.add(answerContainerPanel);       
+        this.centerPanel.add(answerContainerPanel);       
         this.displayModeCreate_AnswerPanels();
 
         // JScrollpane - Panel
         int v=ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED;
         int h=ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER; 
         
-        this.centerPanelScrollable = new JScrollPane(middlePanel,v,h);
+        this.centerPanelScrollable = new JScrollPane(centerPanel,v,h);
         centerPanelScrollable.setPreferredSize(new Dimension(this.getWidth()- 250, Integer.MAX_VALUE));
         this.validate();
      }
@@ -1013,17 +1013,17 @@ public class JGUI4Adventure extends JGUI {
         
         JPanel panel = null;
         
-        middlePanel.removeAll();
-        middlePanel.setLayout(new BoxLayout( middlePanel, BoxLayout.Y_AXIS ));
-        middlePanel.setBackground(new Color(180,180,180));
-        middlePanel.setOpaque(true);
-        middlePanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        centerPanel.removeAll();
+        centerPanel.setLayout(new BoxLayout( centerPanel, BoxLayout.Y_AXIS ));
+        centerPanel.setBackground(new Color(180,180,180));
+        centerPanel.setOpaque(true);
+        centerPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
         
         // Questname Panel - Label
         panel = this.getLabelPanel();
         createQuestname = new JLabel(); 
         createQuestnamePanel.add(createQuestname);      
-        this.middlePanel.add(createQuestnamePanel);      
+        this.centerPanel.add(createQuestnamePanel);      
 
         private JLabel playerPanel;
         private JLabel questPanel;
@@ -1071,7 +1071,7 @@ public class JGUI4Adventure extends JGUI {
         int v=ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED;
         int h=ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER; 
         
-        this.centerPanelScrollable = new JScrollPane(middlePanel,v,h);
+        this.centerPanelScrollable = new JScrollPane(centerPanel,v,h);
         centerPanelScrollable.setPreferredSize(new Dimension(this.getWidth()- 250, Integer.MAX_VALUE));
         this.validate();
      }

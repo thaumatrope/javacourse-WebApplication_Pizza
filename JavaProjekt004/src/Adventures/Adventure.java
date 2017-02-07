@@ -18,9 +18,9 @@ import Quests.Quest4JGUI;
  */
 public class Adventure {
     
-    private Random rand = new Random();
+    private Random rand;
     private Spieler mySpieler;
-    private ArrayList<Quest4JGUI> myQuestsPlayedList = new ArrayList<>();
+    private ArrayList<Quest4JGUI> myQuestsPlayedList;
     private ArrayList<String> myQuestNamePool;
     
     
@@ -31,6 +31,8 @@ public class Adventure {
     
     public Adventure (Spieler spieler){
         
+        myQuestsPlayedList = new ArrayList<>();
+        this.rand = new Random();
         this.mySpieler = spieler;
         this.stage = 0;    
         

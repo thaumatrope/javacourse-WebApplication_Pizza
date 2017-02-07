@@ -25,7 +25,7 @@ public class JavaProjekt004 {
     
     public static void main(String[] args) throws InterruptedException {
                    
-       // Thread 
+       // Thread for GUI
        JGUI4Adventure myGUI = null;
        myGUI = new JGUI4Adventure("Willkommen zum Java Basics Adventure!");
        
